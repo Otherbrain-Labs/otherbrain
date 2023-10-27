@@ -2,19 +2,88 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
+enum Arch {
+  llama
+  starcoder
+  mpt
+}
+
+enum TrainedFor {
+  chat
+  instruct
+  other
+}
+
 model User {
-  id        Int     @id @default(autoincrement())
-  email     String  @unique
-  password  String
+  id       String   @id @default(cuid())
+  email    String   @unique
+  password String
+  Review   Review[]
+}
+
+model Author {
+  id    String @id @default(cuid())
+  slug  String @unique
+  name  String @unique
+  url   String
+  blurb String
+
+  Model Model[]
+}
+
+model Model {
+  id            String     @id @default(cuid())
+  slug          String
+  datePublished DateTime
+  name          String
+  description   String
+  author        String
+  numParameters String
+  trainedFor    TrainedFor
+  arch          Arch
+  authorId      String
+
+  reviews Review[]
+  files   File[]
+  authors Author   @relation(fields: [authorId], references: [id])
+
+  @@index([authorId, slug], name: "authorId_slug_unique")
+}
+
+model File {
+  id                 String @id @default(cuid())
+  name               String @unique
+  url                String
+  sizeBytes          Int
+  quantization       String
+  format             String
+  publisherName      String
+  publisherSocialUrl String
+  sha256checksum     String
+  respository        String
+  respositoryUrl     String
+  modelId            String
+  model              Model  @relation(fields: [modelId], references: [id])
+}
+
+model Review {
+  id      String @id @default(cuid())
+  stars   Int
+  text    String
+  userId  String
+  modelId String
+
+  user  User  @relation(fields: [userId], references: [id])
+  model Model @relation(fields: [modelId], references: [id])
 }
