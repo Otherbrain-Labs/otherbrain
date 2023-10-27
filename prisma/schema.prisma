@@ -28,7 +28,7 @@ model User {
   id       String   @id @default(cuid())
   email    String   @unique
   password String
-  Review   Review[]
+  reviews  Review[]
 }
 
 model Author {
@@ -38,7 +38,7 @@ model Author {
   url   String
   blurb String
 
-  Model Model[]
+  models Model[]
 }
 
 model Model {
