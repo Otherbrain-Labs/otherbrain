@@ -46,7 +46,7 @@ CREATE TABLE "File" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "url" TEXT NOT NULL,
-    "sizeBytes" INTEGER NOT NULL,
+    "sizeBytes" BIGINT NOT NULL,
     "quantization" TEXT NOT NULL,
     "format" TEXT NOT NULL,
     "publisherName" TEXT NOT NULL,
@@ -80,7 +80,7 @@ CREATE UNIQUE INDEX "Author_slug_key" ON "Author"("slug");
 CREATE UNIQUE INDEX "Author_name_key" ON "Author"("name");
 
 -- CreateIndex
-CREATE INDEX "authorId_slug_unique" ON "Model"("authorId", "slug");
+CREATE UNIQUE INDEX "Model_authorId_slug_key" ON "Model"("authorId", "slug");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "File_name_key" ON "File"("name");

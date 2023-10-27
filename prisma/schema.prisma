@@ -2,8 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["jsonProtocol"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -59,14 +58,14 @@ model Model {
   files   File[]
   author  Author   @relation(fields: [authorId], references: [id])
 
-  @@index([authorId, slug], name: "authorId_slug_unique")
+  @@unique([authorId, slug])
 }
 
 model File {
   id                 String @id @default(cuid())
   name               String @unique
   url                String
-  sizeBytes          Int
+  sizeBytes          BigInt
   quantization       String
   format             String
   publisherName      String
