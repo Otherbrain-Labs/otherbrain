@@ -66,20 +66,13 @@ async function loadCatalog() {
   for (const model of catalog) {
     const slug = model.name.toLowerCase().replace(" ", "-");
 
-    var dbModel = await prisma.Model.findUnique({ slug });
-
-    if (dbModel) {
-      console.log("skipping", model.name);
-      return;
-    } else {
-      console.log("adding", model.name);
-    }
-
-    var author = await prisma.Author.where({
-      name: model.author.name,
+    var author = await prisma.author.findFirst({
+      where: {
+        name: model.author.name,
+      },
     });
     if (!author) {
-      author = await prisma.Author.create({
+      author = await prisma.author.create({
         data: {
           name: model.author.name,
           url: model.author.url,
@@ -89,12 +82,48 @@ async function loadCatalog() {
       });
     }
 
-    dbModel = await prisma.Model.create({
+    var dbModel = await prisma.model.findFirst({
+      where: { authorId: author.id, slug },
+    });
+
+    if (dbModel) {
+      console.log(dbModel);
+      console.log("skipping", model.name);
+      return;
+    } else {
+      console.log("adding", model.name);
+    }
+
+    if (
+      !(
+        model.trainedFor === "chat" ||
+        model.trainedFor === "instruct" ||
+        model.trainedFor === "other"
+      )
+    ) {
+      throw new Error(
+        "trainedFor must be one of 'chat', 'instruct', or 'other'"
+      );
+    }
+
+    if (
+      !(
+        model.arch === "llama" ||
+        model.arch === "starcoder" ||
+        model.arch === "mpt"
+      )
+    ) {
+      throw new Error(
+        "trainedFor must be one of 'llama', 'starcoder', or 'mpt'"
+      );
+    }
+
+    dbModel = await prisma.model.create({
       data: {
         authorId: author.id,
         name: model.name,
         description: model.description,
-        datePublished: model.datePublished,
+        datePublished: new Date(model.datePublished),
         numParameters: model.numParameters,
         trainedFor: model.trainedFor,
         arch: model.arch,
@@ -106,7 +135,7 @@ async function loadCatalog() {
 
     // for each file in the model, create a new File in the database
     model.files.all.forEach((file) => {
-      prisma.File.create({
+      prisma.file.create({
         data: {
           name: file.name,
           url: file.url,
@@ -116,7 +145,7 @@ async function loadCatalog() {
           sha256checksum: file.sha256checksum,
           repository: file.respository,
           repositoryUrl: file.repositoryUrl,
-          modelId: dbModel.id,
+          modelId: dbModel!.id,
           publisherName: file.publisher.name,
           publisherSocialUrl: file.publisher.socialUrl,
         },

@@ -48,15 +48,16 @@ model Model {
   datePublished DateTime
   name          String
   description   String
-  author        String
   numParameters String
   trainedFor    TrainedFor
   arch          Arch
   authorId      String
+  canonicalUrl  String
+  downloadUrl   String
 
   reviews Review[]
   files   File[]
-  authors Author   @relation(fields: [authorId], references: [id])
+  author  Author   @relation(fields: [authorId], references: [id])
 
   @@index([authorId, slug], name: "authorId_slug_unique")
 }
@@ -71,8 +72,8 @@ model File {
   publisherName      String
   publisherSocialUrl String
   sha256checksum     String
-  respository        String
-  respositoryUrl     String
+  repository         String
+  repositoryUrl      String
   modelId            String
   model              Model  @relation(fields: [modelId], references: [id])
 }
