@@ -3,10 +3,8 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import AuthStatus from "@/components/auth-status";
-import { Suspense } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
+import { MainNav } from "@/components/main-nav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,11 +42,8 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <MainNav />
           <Toaster />
-          <ModeToggle />
-          <Suspense fallback="Loading...">
-            <AuthStatus />
-          </Suspense>
           {children}
         </ThemeProvider>
       </body>
