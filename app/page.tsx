@@ -14,6 +14,7 @@ export default function Home() {
         />
         <div className="text-center max-w-screen-sm mb-10 mt-10">
           <h1 className="text-stone-200 font-bold text-2xl">OTHERBRAIN</h1>
+          <h2>AI model catalog and reviews</h2>
         </div>
       </div>
     </div>
