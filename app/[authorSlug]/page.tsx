@@ -26,10 +26,10 @@ export default async function Home({
   }
 
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex h-screen">
       <div className="w-screen h-screen flex flex-col">
         <div className="text-center max-w-screen-lg mb-10 mt-10 ml-auto mr-auto">
-          <h1 className="text-white">{author.name}</h1>
+          <h1>{author.name}</h1>
 
           {author.models.map((model) => (
             <div key={model.slug}>

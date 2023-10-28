@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import AuthStatus from "@/components/auth-status";
 import { Suspense } from "react";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,11 +38,19 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
-        <Toaster />
-        <Suspense fallback="Loading...">
-          <AuthStatus />
-        </Suspense>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster />
+          <ModeToggle />
+          <Suspense fallback="Loading...">
+            <AuthStatus />
+          </Suspense>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
