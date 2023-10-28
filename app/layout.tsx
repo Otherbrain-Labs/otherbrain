@@ -1,6 +1,6 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import AuthStatus from "@/components/auth-status";
@@ -11,8 +11,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const title = "OTHERBRAIN";
-const description = "LLM Model Reviews";
+const title = "Otherbrain";
+const description = "AI Model Reviews";
 
 export const metadata: Metadata = {
   title,
@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     title,
     description,
   },
-  themeColor: "#FFF",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000",
 };
 
 export default async function RootLayout({
