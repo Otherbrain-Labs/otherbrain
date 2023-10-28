@@ -8,7 +8,7 @@ export function MainNav() {
   return (
     <div className="flex my-2 max-w-5xl mx-auto">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <span className="font-bold">OtherBrain</span>
+        <span className="font-bold">Otherbrain</span>
       </Link>
 
       <div className="align-self-end">
