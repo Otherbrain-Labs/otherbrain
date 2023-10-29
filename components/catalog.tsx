@@ -1,7 +1,13 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 
 async function loadModels() {
   const models = await prisma.model.findMany({
@@ -20,16 +26,24 @@ type CatalogCardProps = {
 };
 
 async function CatalogCard({ model }: CatalogCardProps) {
+  const date = new Date(model.datePublished);
+  const dateFormatted = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+
   return (
     <Card className="max-w-md">
       <CardHeader>
         <CardTitle>
           <Link href={`/${model.author.slug}/${model.slug}`}>{model.name}</Link>
         </CardTitle>
+        <CardDescription>{dateFormatted}</CardDescription>
       </CardHeader>
       <CardContent>
         {model.description && (
-          <p className="text-sm line-clamp-3">{model.description}</p>
+          <p className="text-sm line-clamp-4">{model.description}</p>
         )}
       </CardContent>
     </Card>

@@ -69,7 +69,7 @@ export default async function Home({
         {model.files.map((file) => (
           <div
             key={file.id}
-            className="border rounded-xl shadow p-3 inline-block hover:bg-accent"
+            className="border rounded shadow p-3 inline-block hover:bg-accent"
           >
             <span className="text-lg font-semibold">{file.quantization}</span>
             <span className="text-sm ml-2">
