@@ -53,6 +53,8 @@ model Model {
   authorId      String
   canonicalUrl  String
   downloadUrl   String
+  // stars         Float      @default(0)
+  // numReviews    Int        @default(0)
 
   reviews Review[]
   files   File[]
