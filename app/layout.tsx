@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider";
 import { MainNav } from "@/components/main-nav";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,9 +43,11 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MainNav />
-          <Toaster />
-          {children}
+          <div className="max-w-5xl mx-auto">
+            <MainNav />
+            <Toaster />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
