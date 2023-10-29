@@ -53,12 +53,11 @@ export default async function Home({
           </div>
         </div>
         <div>
-          by:{" "}
           <Link
             href={"/" + author.slug}
-            className="font-semibold hover:underline"
+            className="hover:underline text-muted-foreground"
           >
-            {author.name}
+            by {author.name}
           </Link>
         </div>
       </div>
