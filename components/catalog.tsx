@@ -21,14 +21,16 @@ type CatalogCardProps = {
 
 async function CatalogCard({ model }: CatalogCardProps) {
   return (
-    <Card>
+    <Card className="max-w-md">
       <CardHeader>
         <CardTitle>
           <Link href={`/${model.author.slug}/${model.slug}`}>{model.name}</Link>
         </CardTitle>
       </CardHeader>
-      <CardContent className="line-clamp-3">
-        {model.description && <p className="text-sm">{model.description}</p>}
+      <CardContent>
+        {model.description && (
+          <p className="text-sm line-clamp-3">{model.description}</p>
+        )}
       </CardContent>
     </Card>
   );
