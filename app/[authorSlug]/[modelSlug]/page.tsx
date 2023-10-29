@@ -70,7 +70,7 @@ export default async function Home({
             </Tooltip>
           </div>
           <div className="justify-self-end">
-            <span>Release: {dateFormatted}</span>
+            <span>Released {dateFormatted}</span>
           </div>
         </div>
         <div>
