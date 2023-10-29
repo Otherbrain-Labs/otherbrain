@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { bytesFormat } from "@/lib/utils";
 
 export default async function Home({
   params,
@@ -63,12 +64,20 @@ export default async function Home({
       </div>
       <p className="mt-4">{model.description}</p>
 
-      <h2 className="text-xl font-semibold mt-4">Files</h2>
-      {model.files.map((file) => (
-        <div key={file.id}>
-          <h3 className="text-lg font-semibold">{file.quantization}</h3>
-        </div>
-      ))}
+      <h2 className="text-xl font-semibold mt-4 mb-2">Files</h2>
+      <div className="w-full inline-grid grid-cols-4 gap-3">
+        {model.files.map((file) => (
+          <div
+            key={file.id}
+            className="border rounded-xl shadow p-3 inline-block hover:bg-accent"
+          >
+            <span className="text-lg font-semibold">{file.quantization}</span>
+            <span className="text-sm ml-2">
+              {bytesFormat(Number(file.sizeBytes))}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

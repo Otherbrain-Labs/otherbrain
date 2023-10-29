@@ -39,7 +39,6 @@ export default async function Home({
           >
             {model.name}
           </Link>
-          x{" "}
         </div>
       ))}
     </div>
