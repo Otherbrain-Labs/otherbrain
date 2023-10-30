@@ -14,29 +14,24 @@ export default async function Home({
 }: {
   params: { authorSlug: string; modelSlug: string };
 }) {
-  const author = await prisma.author.findUnique({
-    where: {
-      slug: params.authorSlug,
-    },
-  });
-
-  if (!author) {
-    notFound();
-  }
-
   const model = await prisma.model.findFirst({
     where: {
-      authorId: author.id,
       slug: params.modelSlug,
+      author: {
+        slug: params.authorSlug,
+      },
     },
     include: {
       reviews: true,
+      author: true,
     },
   });
 
-  if (!model) {
+  if (!model || !model.author) {
     notFound();
   }
+
+  const { author } = model;
 
   const date = new Date(model.datePublished);
   const dateFormatted = new Intl.DateTimeFormat("en-US", {

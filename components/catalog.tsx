@@ -1,13 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardHeader, CardTitle } from "./ui/card";
 import Star from "./ui/Star";
 
 async function loadModels() {
