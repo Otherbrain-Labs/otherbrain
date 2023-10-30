@@ -64,7 +64,6 @@ export default async function Catalog() {
   const models = await loadModels();
   return (
     <div className="my-6">
-      <Input className="mb-6 max-w-md" placeholder="Search a model name..." />
       <ul className="flex flex-col gap-4">
         {models.map((model) => (
           <li key={model.id}>
