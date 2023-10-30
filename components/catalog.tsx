@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import Star from "./ui/Star";
 
 async function loadModels() {
   const models = await prisma.model.findMany({
@@ -33,19 +34,28 @@ async function CatalogCard({ model }: CatalogCardProps) {
     day: "2-digit",
   }).format(date);
 
+  const href = `/${model.author.slug}/${model.slug}`;
+
   return (
     <Card className="max-w-md">
       <CardHeader>
         <CardTitle>
-          <Link href={`/${model.author.slug}/${model.slug}`}>{model.name}</Link>
+          <Link href={href}>{model.name}</Link>
         </CardTitle>
-        <CardDescription>{dateFormatted}</CardDescription>
+        <div className="flex items-center text-xs text-muted-foreground pt-1">
+          {dateFormatted}
+          <span className="w-1 h-1 mx-1.5 bg-muted-foreground rounded-full"></span>
+          <Star />
+          <p className="font-bold dark:text-white">4.95</p>
+          <span className="w-1 h-1 mx-1.5 bg-muted-foreground rounded-full"></span>
+          <Link
+            href={href}
+            className="underline hover:no-underline dark:text-white"
+          >
+            73 reviews
+          </Link>
+        </div>
       </CardHeader>
-      <CardContent>
-        {model.description && (
-          <p className="text-sm line-clamp-4">{model.description}</p>
-        )}
-      </CardContent>
     </Card>
   );
 }
