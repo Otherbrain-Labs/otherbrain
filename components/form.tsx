@@ -68,7 +68,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           id="email"
           name="email"
           type="email"
-          placeholder="panic@thedis.co"
+          placeholder="brain@gmail.com"
           autoComplete="email"
           required
           className="mt-1 block w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"

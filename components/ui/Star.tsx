@@ -1,7 +1,17 @@
-export default function Star() {
+import { cn } from "@/lib/utils";
+
+type StarProps = {
+  filled: boolean;
+  className?: string;
+};
+
+export default function Star({ filled, className }: StarProps) {
   return (
     <svg
-      className="w-4 h-4 text-yellow-300 mr-1"
+      className={cn("w-4 h-4", className, {
+        "text-yellow-400": filled,
+        "text-gray-300": !filled,
+      })}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
