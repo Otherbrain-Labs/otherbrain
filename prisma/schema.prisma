@@ -1,27 +1,10 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider          = "postgresql"
-  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
-}
-
-enum Arch {
-  llama
-  starcoder
-  mpt
-}
-
-enum TrainedFor {
-  chat
-  instruct
-  other
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
 }
 
 model User {
@@ -32,12 +15,11 @@ model User {
 }
 
 model Author {
-  id    String @id @default(cuid())
-  slug  String @unique
-  name  String @unique
-  url   String
-  blurb String
-
+  id     String  @id @default(cuid())
+  slug   String  @unique
+  name   String  @unique
+  url    String
+  blurb  String
   models Model[]
 }
 
@@ -53,10 +35,9 @@ model Model {
   authorId      String
   canonicalUrl  String
   downloadUrl   String
-
-  reviews Review[]
-  files   File[]
-  author  Author   @relation(fields: [authorId], references: [id])
+  files         File[]
+  author        Author     @relation(fields: [authorId], references: [id])
+  reviews       Review[]
 
   @@unique([authorId, slug])
 }
@@ -83,7 +64,18 @@ model Review {
   text    String
   userId  String
   modelId String
+  model   Model  @relation(fields: [modelId], references: [id])
+  user    User   @relation(fields: [userId], references: [id])
+}
 
-  user  User  @relation(fields: [userId], references: [id])
-  model Model @relation(fields: [modelId], references: [id])
+enum Arch {
+  llama
+  starcoder
+  mpt
+}
+
+enum TrainedFor {
+  chat
+  instruct
+  other
 }
