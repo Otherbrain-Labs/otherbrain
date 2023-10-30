@@ -2,6 +2,12 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bytesFormat } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default async function Home({
   params,
@@ -45,20 +51,34 @@ export default async function Home({
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <h1 className="text-2xl font-semibold mr-2">{model.name}</h1>
-            <span className="mr-2">{model.numParameters}</span>
-            <span className="">Architecture: {model.arch}</span>
+            <Tooltip>
+              <TooltipTrigger>
+                <Badge className="mr-2">{model.numParameters}</Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Parameter count</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger>
+                <Badge>{model.arch}</Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Architecture</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
           <div className="justify-self-end">
-            <span>Release: {dateFormatted}</span>
+            <span>Released {dateFormatted}</span>
           </div>
         </div>
         <div>
-          by:{" "}
           <Link
             href={"/" + author.slug}
-            className="font-semibold hover:underline"
+            className="hover:underline text-muted-foreground"
           >
-            {author.name}
+            by {author.name}
           </Link>
         </div>
       </div>
@@ -69,7 +89,7 @@ export default async function Home({
         {model.files.map((file) => (
           <div
             key={file.id}
-            className="border rounded-xl shadow p-3 inline-block hover:bg-accent"
+            className="border rounded shadow p-3 inline-block hover:bg-accent"
           >
             <span className="text-lg font-semibold">{file.quantization}</span>
             <span className="text-sm ml-2">
