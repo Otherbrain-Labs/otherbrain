@@ -30,7 +30,7 @@ export default async function Home({
       slug: params.modelSlug,
     },
     include: {
-      files: true,
+      reviews: true,
     },
   });
 
@@ -69,16 +69,36 @@ export default async function Home({
               </TooltipContent>
             </Tooltip>
           </div>
+          <div className="justify-self-end">
+            <span>Released {dateFormatted}</span>
+          </div>
         </div>
-        <div className="text-muted-foreground">
-          by{" "}
-          <Link href={"/" + author.slug} className="hover:underline">
-            {author.name}
+        <div>
+          <Link
+            href={"/" + author.slug}
+            className="hover:underline text-muted-foreground"
+          >
+            by {author.name}
           </Link>
-          , {dateFormatted}
         </div>
       </div>
       <p className="mt-4">{model.description}</p>
+
+      <h2 className="text-xl font-semibold mt-4 mb-2">Reviews</h2>
+      {model.reviews.length === 0 ? (
+        <div>No reviews yet</div>
+      ) : (
+        <div className="w-full inline-grid grid-cols-4 gap-3">
+          {model.reviews.map((review) => (
+            <div
+              key={review.id}
+              className="border rounded shadow p-3 inline-block hover:bg-accent"
+            >
+              <span className="text-sm ml-2">{review.text}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
