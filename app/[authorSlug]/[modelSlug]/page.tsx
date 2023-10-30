@@ -69,17 +69,13 @@ export default async function Home({
               </TooltipContent>
             </Tooltip>
           </div>
-          <div className="justify-self-end">
-            <span>Released {dateFormatted}</span>
-          </div>
         </div>
-        <div>
-          <Link
-            href={"/" + author.slug}
-            className="hover:underline text-muted-foreground"
-          >
-            by {author.name}
+        <div className="text-muted-foreground">
+          by{" "}
+          <Link href={"/" + author.slug} className="hover:underline">
+            {author.name}
           </Link>
+          , {dateFormatted}
         </div>
       </div>
       <p className="mt-4">{model.description}</p>
