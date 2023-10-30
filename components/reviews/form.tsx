@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { revalidatePath } from "next/cache";
+import StarRater from "@/components/ui/star-rater";
 
 export default function ReviewsForm({ modelId }: { modelId: string }) {
   async function create(formData: FormData) {
@@ -42,6 +43,16 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
     >
       <div>
         <label
+          htmlFor="stars"
+          className="block text-xs text-muted-foreground uppercase"
+        >
+          Stars
+        </label>
+        <StarRater rating={2} />
+      </div>
+
+      <div>
+        <label
           htmlFor="text"
           className="block text-xs text-muted-foreground uppercase"
         >
@@ -51,21 +62,6 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
           id="text"
           name="text"
           placeholder="Your review"
-          required
-          className="mt-1 block w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="stars"
-          className="block text-xs text-muted-foreground uppercase"
-        >
-          Stars
-        </label>
-        <input
-          id="stars"
-          name="stars"
-          type="number"
           required
           className="mt-1 block w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
         />

@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import ReviewsForm from "@/components/reviews/form";
+import StarRater from "@/components/ui/star-rater";
 
 export default async function Home({
   params,

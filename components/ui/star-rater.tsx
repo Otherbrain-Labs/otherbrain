@@ -4,12 +4,6 @@
 // usage:
 // <StarRater rating={rating} onChange={setRating} />
 //
-// where rating is a number between 0 and 5
-// and setRating is a function that sets the rating
-//
-// note: the onChange function is called with the new rating
-// after the user clicks a star
-//
 
 "use client";
 
@@ -18,23 +12,32 @@ import Star from "./star";
 
 export type StarRaterProps = {
   rating: number;
-  onChange: (rating: number) => void;
 };
 
-export default function StarRater({ rating, onChange }: StarRaterProps) {
+export default function StarRater({}: StarRaterProps) {
   const [hoverRating, setHoverRating] = useState(0);
+  const [rating, setRating] = useState(0);
 
   return (
     <div className="flex items-center">
+      <input
+        id="stars"
+        name="stars"
+        type="number"
+        className="hidden mt-1 w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
+        value={rating}
+      />
+
       {[...Array(5)].map((_, i) => {
         const starNumber = i + 1;
         return (
           <button
             key={i}
             className="focus:outline-none"
-            onClick={() => onChange(starNumber)}
+            onClick={() => setRating(starNumber)}
             onMouseEnter={() => setHoverRating(starNumber)}
             onMouseLeave={() => setHoverRating(0)}
+            type="button"
           >
             <Star
               filled={starNumber <= (hoverRating || rating)}
