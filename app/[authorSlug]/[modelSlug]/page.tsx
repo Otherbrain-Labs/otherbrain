@@ -1,19 +1,22 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { bytesFormat } from "@/lib/utils";
+import { getServerSession } from "next-auth/next";
 import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import ReviewsForm from "@/components/reviews/form";
 
 export default async function Home({
   params,
 }: {
   params: { authorSlug: string; modelSlug: string };
 }) {
+  const session = await getServerSession();
+
   const model = await prisma.model.findFirst({
     where: {
       slug: params.modelSlug,
@@ -76,6 +79,7 @@ export default async function Home({
       <p className="mt-4">{model.description}</p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">Reviews</h2>
+      {session && <ReviewsForm modelId={model.id} />}
       {model.reviews.length === 0 ? (
         <div>No reviews yet</div>
       ) : (
