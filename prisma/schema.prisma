@@ -60,13 +60,14 @@ model File {
 }
 
 model Review {
-  id      String @id @default(cuid())
-  stars   Int
-  text    String
-  userId  String
-  modelId String
-  model   Model  @relation(fields: [modelId], references: [id])
-  user    User   @relation(fields: [userId], references: [id])
+  id          String  @id @default(cuid())
+  stars       Int
+  text        String
+  externalUrl String?
+  userId      String
+  modelId     String
+  model       Model   @relation(fields: [modelId], references: [id])
+  user        User    @relation(fields: [userId], references: [id])
 }
 
 enum Arch {

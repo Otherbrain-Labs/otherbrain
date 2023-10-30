@@ -1,22 +1,15 @@
-import prisma from "@/lib/prisma";
 import Link from "next/link";
+import { loadModels } from "@/app/page";
+import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
 import { Card, CardHeader, CardTitle } from "./ui/card";
 import Star from "./ui/Star";
 
-async function loadModels() {
-  const models = await prisma.model.findMany({
-    include: {
-      author: true,
-    },
-    orderBy: {
-      datePublished: "desc",
-    },
-  });
-  return models;
-}
+type Models =
+  | Awaited<ReturnType<typeof loadModels>>
+  | Awaited<ReturnType<typeof loadAuthorModels>>;
 
 type CatalogCardProps = {
-  model: Awaited<ReturnType<typeof loadModels>>[number];
+  model: Models[number];
 };
 
 async function CatalogCard({ model }: CatalogCardProps) {
@@ -53,8 +46,11 @@ async function CatalogCard({ model }: CatalogCardProps) {
   );
 }
 
-export default async function Catalog() {
-  const models = await loadModels();
+export default async function Catalog({ models }: { models: Models }) {
+  if (models === null) {
+    return null;
+  }
+
   return (
     <div className="my-6">
       <ul className="flex flex-col gap-4">

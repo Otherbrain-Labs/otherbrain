@@ -1,12 +1,27 @@
+import prisma from "@/lib/prisma";
 import Catalog from "@/components/catalog";
 
+export async function loadModels() {
+  const models = await prisma.model.findMany({
+    include: {
+      author: true,
+    },
+    orderBy: {
+      datePublished: "desc",
+    },
+  });
+  return models;
+}
+
 export default async function Home() {
+  const models = await loadModels();
+
   return (
     <div className="flex min-h-screen">
       <div className="w-screen min-h-screen flex flex-col justify-center">
         <h1 className="font-bold text-5xl">Otherbrain</h1>
         <h2>AI model catalog and reviews</h2>
-        <Catalog />
+        <Catalog models={models} />
       </div>
     </div>
   );
