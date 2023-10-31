@@ -5,14 +5,7 @@ import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
 
 import { Column, ColumnDef } from "@tanstack/react-table";
 import { Button } from "../ui/button";
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  ChevronDown,
-  ChevronUp,
-  ChevronsUpDown,
-} from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Star from "../ui/star";
@@ -29,13 +22,13 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   day: "2-digit",
 });
 
-function SortHeader({
-  column,
-  title,
-}: {
-  column: Column<Model>;
-  title: String;
-}) {
+export const idToTitle: Record<string, string> = {
+  name: "Name",
+  stars: "Stars",
+  lastDateModified: "Updated",
+};
+
+function SortHeader({ column }: { column: Column<Model> }) {
   return (
     <Button
       variant="link"
@@ -48,7 +41,7 @@ function SortHeader({
             "font-bold": column.getIsSorted(),
           })}
         >
-          {title}
+          {idToTitle[column.id]}
         </span>
         {!column.getIsSorted() && (
           <ArrowUpDown className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-50" />
@@ -65,7 +58,7 @@ function SortHeader({
 export const columns: ColumnDef<Model>[] = [
   {
     accessorKey: "name",
-    header: ({ column }) => <SortHeader column={column} title="Name" />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
       const href = `/${model.author.slug}/${model.slug}`;
@@ -79,7 +72,7 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "stars",
-    header: ({ column }) => <SortHeader column={column} title="Stars" />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
       return (
@@ -93,7 +86,7 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "lastDateModified",
-    header: ({ column }) => <SortHeader column={column} title="Updated" />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
       const date = model.lastModifiedDate;
