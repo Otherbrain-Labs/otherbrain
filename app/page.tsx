@@ -7,7 +7,7 @@ export async function loadModels() {
       author: true,
     },
     orderBy: {
-      datePublished: "desc",
+      lastModifiedDate: "desc",
     },
   });
   return models;

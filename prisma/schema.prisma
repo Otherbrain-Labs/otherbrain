@@ -9,54 +9,49 @@ datasource db {
 }
 
 model User {
-  id       String   @id @default(cuid())
-  email    String   @unique
+  id       String @id @default(cuid())
+  email    String @unique
   password String
-  reviews  Review[]
+
+  reviews Review[]
 }
 
 model Author {
-  id     String  @id @default(cuid())
-  slug   String  @unique
-  name   String  @unique
-  url    String
-  blurb  String
+  id       String @id @default(cuid())
+  slug     String @unique
+  name     String
+  remoteId String
+
   models Model[]
 }
 
 model Model {
-  id            String     @id @default(cuid())
-  slug          String
-  datePublished DateTime
-  name          String
-  description   String
-  numParameters String
-  trainedFor    TrainedFor
-  arch          Arch
-  authorId      String
-  canonicalUrl  String
-  downloadUrl   String
-  files         File[]
-  author        Author     @relation(fields: [authorId], references: [id])
-  reviews       Review[]
+  id               String   @id @default(cuid())
+  slug             String
+  name             String
+  lastModifiedDate DateTime
+  numParameters    String?
+  arch             Arch
+  license          String?
+  remoteId         String
+  ggufId           String
+  authorId         String
+
+  files   File[]
+  reviews Review[]
+  author  Author   @relation(fields: [authorId], references: [id])
 
   @@unique([authorId, slug])
 }
 
 model File {
-  id                 String @id @default(cuid())
-  name               String @unique
-  url                String
-  sizeBytes          BigInt
-  quantization       String
-  format             String
-  publisherName      String
-  publisherSocialUrl String
-  sha256checksum     String
-  repository         String
-  repositoryUrl      String
-  modelId            String
-  model              Model  @relation(fields: [modelId], references: [id])
+  id           String @id @default(cuid())
+  name         String @unique
+  quantization String
+  format       String
+
+  modelId String
+  model   Model  @relation(fields: [modelId], references: [id])
 }
 
 model Review {
@@ -66,18 +61,17 @@ model Review {
   externalUrl String?
   userId      String
   modelId     String
-  model       Model   @relation(fields: [modelId], references: [id])
-  user        User    @relation(fields: [userId], references: [id])
+
+  model Model @relation(fields: [modelId], references: [id])
+  user  User  @relation(fields: [userId], references: [id])
 }
 
 enum Arch {
   llama
   starcoder
-  mpt
-}
-
-enum TrainedFor {
-  chat
-  instruct
+  mistral
+  falcon
+  tinyllama
+  aquila
   other
 }
