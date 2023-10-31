@@ -23,8 +23,8 @@ export default async function Home() {
           Model Catalog & Reviews
         </h1>
         <h2 className="text-1xl text-muted-foreground pt-2 pb-4 max-w-lg">
-          When LLM's compete, you win. Browse reviews and benchmarks of the
-          latest models to find the perfect one for your use-case.
+          Browse reviews and benchmarks of the latest models to find the perfect
+          one for your use-case. When LLM's compete, you win.
         </h2>
         <Catalog models={models} />
       </div>
