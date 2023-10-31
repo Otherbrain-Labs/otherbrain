@@ -5,7 +5,7 @@ import fs from "fs";
 function writeJSONToFile(json: any) {
   const jsonString = JSON.stringify(json, null, 2);
 
-  fs.writeFile(`${__dirname}/../data/thebloke.json`, jsonString, (err) => {
+  fs.writeFile(`${__dirname}/../data/catalog.json`, jsonString, (err) => {
     if (err) {
       console.error("Error writing JSON to file:", err);
     } else {

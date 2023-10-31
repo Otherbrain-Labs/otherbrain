@@ -37,6 +37,13 @@ model Model {
   ggufId           String
   authorId         String
 
+  // Benchmarks
+  average    Float?
+  arc        Float?
+  hellaswag  Float?
+  mmlu       Float?
+  truthfulqa Float?
+
   files   File[]
   reviews Review[]
   author  Author   @relation(fields: [authorId], references: [id])

@@ -80,6 +80,37 @@ export default async function Home({
         </div>
       </div>
 
+      {model.average && (
+        <div>
+          <h2 className="text-xl font-semibold mt-4 mb-2">Benchmarks</h2>
+          {!!model.average && (
+            <div>
+              <strong>Average:</strong> {model.average}
+            </div>
+          )}
+          {!!model.arc && (
+            <div>
+              <strong>ARC (25-shot):</strong> {model.arc}
+            </div>
+          )}
+          {!!model.hellaswag && (
+            <div>
+              <strong>HellaSwag (10-shot):</strong> {model.hellaswag}
+            </div>
+          )}
+          {!!model.mmlu && (
+            <div>
+              <strong>MMLU (5-shot):</strong> {model.mmlu}
+            </div>
+          )}
+          {!!model.truthfulqa && (
+            <div>
+              <strong>TruthfulQA (0-shot):</strong> {model.truthfulqa}
+            </div>
+          )}
+        </div>
+      )}
+
       <h2 className="text-xl font-semibold mt-4 mb-2">Reviews</h2>
       {session && <ReviewsForm modelId={model.id} />}
       {model.reviews.length === 0 ? (
