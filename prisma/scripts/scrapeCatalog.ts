@@ -5,17 +5,13 @@ import fs from "fs";
 function writeJSONToFile(json: any) {
   const jsonString = JSON.stringify(json, null, 2);
 
-  fs.writeFile(
-    `${__dirname}/../prisma/data/thebloke.json`,
-    jsonString,
-    (err) => {
-      if (err) {
-        console.error("Error writing JSON to file:", err);
-      } else {
-        console.log("JSON written to file successfully!");
-      }
+  fs.writeFile(`${__dirname}/../data/thebloke.json`, jsonString, (err) => {
+    if (err) {
+      console.error("Error writing JSON to file:", err);
+    } else {
+      console.log("JSON written to file successfully!");
     }
-  );
+  });
 }
 
 async function scrape() {
