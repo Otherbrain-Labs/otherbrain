@@ -33,7 +33,7 @@ function parseModelInfo(modelInfo: any) {
     if (safetensors) {
       numParameters = Math.round(safetensors / 1000000000) + "B";
     } else {
-      numParameters = modelName.match(/\d*B/)?.[0];
+      numParameters = modelName.match(/\d+[Bb]/)?.[0].toUpperCase();
     }
 
     const files: { name: string; format: string; quantization: string }[] =
