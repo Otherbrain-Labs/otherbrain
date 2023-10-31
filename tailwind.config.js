@@ -79,6 +79,10 @@ module.exports = {
       maxHeight: {
         screen: ["100vh", "100dvh"],
       },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

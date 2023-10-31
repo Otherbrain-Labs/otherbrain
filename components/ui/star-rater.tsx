@@ -1,9 +1,5 @@
 // small ui component for inputting a star rating
 // hovering stars lights them up and clicking sets the rating
-//
-// usage:
-// <StarRater rating={rating} onChange={setRating} />
-//
 
 "use client";
 
