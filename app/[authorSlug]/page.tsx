@@ -11,7 +11,7 @@ export async function loadModels(authorId: string) {
       author: true,
     },
     orderBy: {
-      datePublished: "desc",
+      lastModifiedDate: "desc",
     },
   });
   return models;
@@ -36,7 +36,6 @@ export default async function Home({
   return (
     <div className="mt-6">
       <h1 className="text-2xl font-semibold">{author.name}</h1>
-      <p className="mt-2">{author.blurb}</p>
 
       <h2 className="text-xl font-semibold mt-4">Models</h2>
       <Catalog models={models} />

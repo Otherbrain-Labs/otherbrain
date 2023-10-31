@@ -1,8 +1,5 @@
-import Link from "next/link";
 import { loadModels } from "@/app/page";
 import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
-import { Card, CardHeader, CardTitle } from "./ui/card";
-import Star from "./ui/star";
 import { DataTable } from "./catalog-table/data-table";
 import { columns } from "./catalog-table/columns";
 

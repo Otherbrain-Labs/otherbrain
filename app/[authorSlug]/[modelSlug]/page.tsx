@@ -37,7 +37,7 @@ export default async function Home({
 
   const { author } = model;
 
-  const date = new Date(model.datePublished);
+  const date = new Date(model.lastModifiedDate);
   const dateFormatted = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "2-digit",

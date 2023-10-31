@@ -92,11 +92,11 @@ export const columns: ColumnDef<Model>[] = [
     invertSorting: true,
   },
   {
-    accessorKey: "datePublished",
-    header: ({ column }) => <SortHeader column={column} title="Published" />,
+    accessorKey: "lastDateModified",
+    header: ({ column }) => <SortHeader column={column} title="Updated" />,
     cell: ({ row }) => {
       const model = row.original;
-      const date = model.datePublished;
+      const date = model.lastModifiedDate;
       const formatted = dateFormatter.format(date);
       return <span>{formatted}</span>;
     },
