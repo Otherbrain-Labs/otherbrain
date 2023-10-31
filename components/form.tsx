@@ -13,24 +13,27 @@ export default function Form({ type }: { type: "login" | "register" }) {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
         setLoading(true);
         if (type === "login") {
-          signIn("credentials", {
-            redirect: false,
-            email: e.currentTarget.email.value,
-            password: e.currentTarget.password.value,
-            // @ts-ignore
-          }).then(({ error }) => {
-            if (error) {
-              setLoading(false);
+          try {
+            await signIn("credentials", {
+              redirect: false,
+              email: e.currentTarget.email.value,
+              password: e.currentTarget.password.value,
+              // @ts-ignore
+            });
+            router.refresh();
+            router.push("/");
+          } catch (error) {
+            setLoading(false);
+            if (error instanceof Error) {
+              toast.error(error.message);
+            } else if (typeof error === "string") {
               toast.error(error);
-            } else {
-              router.refresh();
-              router.push("/");
             }
-          });
+          }
         } else {
           fetch("/api/auth/register", {
             method: "POST",

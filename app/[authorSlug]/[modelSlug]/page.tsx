@@ -77,7 +77,6 @@ export default async function Home({
           , {dateFormatted}
         </div>
       </div>
-      <p className="mt-4">{model.description}</p>
 
       <h2 className="text-xl font-semibold mt-4 mb-2">Reviews</h2>
       {session && <ReviewsForm modelId={model.id} />}
