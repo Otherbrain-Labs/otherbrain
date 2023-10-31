@@ -45,11 +45,13 @@ export default async function Home({
   }).format(date);
 
   return (
-    <div className="mt-6">
+    <div className="mt-16">
       <div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-semibold mr-2">{model.name}</h1>
+            <h1 className="text-2xl md:text-4xl font-semibold mr-2">
+              {model.name}
+            </h1>
             <Tooltip>
               <TooltipTrigger>
                 <Badge className="mr-2">{model.numParameters}</Badge>

@@ -22,6 +22,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { DataTableViewOptions } from "./data-table-view-options";
+import { SearchIcon } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -53,10 +54,12 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center pb-4">
+      <div className="flex items-center pb-2">
         {data.length > 5 && (
           <Input
-            placeholder="Filter by model name..."
+            icon={<SearchIcon className="h-4 w-4 text-muted-foreground" />}
+            iconPosition="left"
+            placeholder="Search models..."
             value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("name")?.setFilterValue(event.target.value)
@@ -66,7 +69,7 @@ export function DataTable<TData, TValue>({
         )}
         <DataTableViewOptions table={table} />
       </div>
-      <Table>
+      <Table className="border">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>

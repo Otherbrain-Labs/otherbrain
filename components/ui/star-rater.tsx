@@ -20,7 +20,7 @@ export default function StarRater({}: StarRaterProps) {
         id="stars"
         name="stars"
         type="number"
-        className="hidden mt-1 w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
+        className="hidden mt-1 w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
         value={rating}
       />
 

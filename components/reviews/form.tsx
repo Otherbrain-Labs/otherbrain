@@ -63,7 +63,7 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
           name="text"
           placeholder="Your review"
           required
-          className="mt-1 block w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
+          className="mt-1 block w-full appearance-none rounded-md border border-border px-3 py-2 placeholder-muted-foreground focus:border-accent focus:outline-none focus:ring-accent sm:text-sm"
         />
       </div>
 
