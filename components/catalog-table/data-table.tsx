@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { DataTableViewOptions } from "./data-table-view-options";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -52,8 +53,8 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      {data.length > 5 && (
-        <div className="flex items-center pb-4">
+      <div className="flex items-center pb-4">
+        {data.length > 5 && (
           <Input
             placeholder="Filter by model name..."
             value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
@@ -62,8 +63,9 @@ export function DataTable<TData, TValue>({
             }
             className="max-w-sm"
           />
-        </div>
-      )}
+        )}
+        <DataTableViewOptions table={table} />
+      </div>
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
