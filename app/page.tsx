@@ -17,8 +17,8 @@ export default async function Home() {
   const models = await loadModels();
 
   return (
-    <div className="flex min-h-screen">
-      <div className="w-screen min-h-screen flex flex-col justify-center">
+    <div className="flex h-full">
+      <div className="w-screen h-full flex flex-col justify-center">
         <h1 className="font-bold text-5xl">Otherbrain</h1>
         <h2>AI model catalog and reviews</h2>
         <Catalog models={models} />

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { loadModels } from "@/app/page";
 import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
 import { Card, CardHeader, CardTitle } from "./ui/card";
-import Star from "./ui/Star";
+import Star from "./ui/star";
 
 type Models =
   | Awaited<ReturnType<typeof loadModels>>
@@ -31,7 +31,7 @@ async function CatalogCard({ model }: CatalogCardProps) {
         <div className="flex items-center text-xs text-muted-foreground pt-1">
           {dateFormatted}
           <span className="w-1 h-1 mx-1.5 bg-muted-foreground rounded-full"></span>
-          <Star />
+          <Star filled />
           <p className="font-bold dark:text-white">4.95</p>
           <span className="w-1 h-1 mx-1.5 bg-muted-foreground rounded-full"></span>
           <Link
