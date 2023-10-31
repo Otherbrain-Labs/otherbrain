@@ -54,11 +54,9 @@ function SortHeader({
           <ArrowUpDown className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-50" />
         )}
         {column.getIsSorted() === "desc" && (
-          <ArrowUp className="ml-2 h-4 w-4" />
-        )}
-        {column.getIsSorted() === "asc" && (
           <ArrowDown className="ml-2 h-4 w-4" />
         )}
+        {column.getIsSorted() === "asc" && <ArrowUp className="ml-2 h-4 w-4" />}
       </span>
     </Button>
   );
@@ -77,6 +75,7 @@ export const columns: ColumnDef<Model>[] = [
         </Link>
       );
     },
+    sortingFn: "alphanumeric",
   },
   {
     accessorKey: "stars",
@@ -90,6 +89,7 @@ export const columns: ColumnDef<Model>[] = [
         </div>
       );
     },
+    invertSorting: true,
   },
   {
     accessorKey: "datePublished",
@@ -100,5 +100,7 @@ export const columns: ColumnDef<Model>[] = [
       const formatted = dateFormatter.format(date);
       return <span>{formatted}</span>;
     },
+    sortingFn: "datetime",
+    invertSorting: true,
   },
 ];
