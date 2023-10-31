@@ -85,7 +85,7 @@ export const columns: ColumnDef<Model>[] = [
       return (
         <div className="flex items-center">
           <Star filled />
-          <span className="ml-1">{4.96}</span>
+          <span className="relative left-1 top-0.5">{4.96}</span>
         </div>
       );
     },
@@ -101,6 +101,5 @@ export const columns: ColumnDef<Model>[] = [
       return <span>{formatted}</span>;
     },
     sortingFn: "datetime",
-    invertSorting: true,
   },
 ];
