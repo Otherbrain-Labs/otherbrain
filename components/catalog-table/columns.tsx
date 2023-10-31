@@ -80,7 +80,7 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "stars",
-    header: "Stars",
+    header: ({ column }) => <SortHeader column={column} title="Stars" />,
     cell: ({ row }) => {
       const model = row.original;
       return (
