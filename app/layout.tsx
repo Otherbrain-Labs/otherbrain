@@ -1,17 +1,11 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans, GeistMono } from "geist/font";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider";
 import { MainNav } from "@/components/main-nav";
-import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 const title = "Otherbrain";
 const description = "AI Model Reviews";
@@ -36,8 +30,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.variable}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning // next-themes needs this to apply .light/.dark
+    >
+      <body>
         <TooltipProvider>
           <ThemeProvider
             attribute="class"
@@ -45,7 +43,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="max-w-5xl mx-auto px-2">
+            <div className="max-w-5xl mx-auto px-4">
               <MainNav />
               <Toaster />
               {children}
