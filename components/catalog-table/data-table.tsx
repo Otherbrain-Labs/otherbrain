@@ -6,7 +6,10 @@ import {
   SortingState,
   flexRender,
   getCoreRowModel,
+  getFacetedRowModel,
+  getFacetedUniqueValues,
   getFilteredRowModel,
+  getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
@@ -19,10 +22,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { DataTableViewOptions } from "./data-table-view-options";
-import { SearchIcon } from "lucide-react";
+import { DataTablePagination } from "./data-table-pagination";
+import { DataTableToolbar } from "./data-table-toolbar";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -46,30 +48,24 @@ export function DataTable<TData, TValue>({
     getFilteredRowModel: getFilteredRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getFacetedRowModel: getFacetedRowModel(),
+    getFacetedUniqueValues: getFacetedUniqueValues(),
     state: {
       sorting,
       columnFilters,
+    },
+    initialState: {
+      pagination: {
+        pageSize: 30,
+      },
     },
   });
 
   return (
     <div>
-      <div className="flex items-center pb-2">
-        {data.length > 5 && (
-          <Input
-            icon={<SearchIcon className="h-4 w-4 text-muted-foreground" />}
-            iconPosition="left"
-            placeholder="Search models..."
-            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-            onChange={(event) =>
-              table.getColumn("name")?.setFilterValue(event.target.value)
-            }
-            className="max-w-sm"
-          />
-        )}
-        <DataTableViewOptions table={table} />
-      </div>
-      <Table className="border">
+      <DataTableToolbar table={table} />
+      <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
@@ -111,6 +107,7 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
+      <DataTablePagination table={table} />
     </div>
   );
 }

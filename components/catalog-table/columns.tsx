@@ -59,11 +59,13 @@ function SortHeader({ column }: { column: Column<Model> }) {
   );
 }
 
-function ScoreCell({ cell }: { cell: Cell<Model, Number | undefined> }) {
+function ScoreCell({ cell }: { cell: Cell<Model, unknown> }) {
   const v = cell.getValue();
   return (
     <div className="flex items-center">
-      <span className="relative left-1 top-0.5">{v ? `${v}` : "--"}</span>
+      <span className="relative left-1 top-0.5">
+        {typeof v === "number" ? `${v}` : "--"}
+      </span>
     </div>
   );
 }
@@ -116,6 +118,9 @@ export const columns: ColumnDef<Model>[] = [
     accessorKey: "numParameters",
     header: ({ column }) => <SortHeader column={column} />,
     invertSorting: true,
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id));
+    },
   },
   {
     accessorKey: "average",

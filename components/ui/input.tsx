@@ -27,7 +27,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <>
         {icon ? (
-          <div className="relative inline-block h-10">
+          <div className="relative inline-block h-8">
             {iconPosition !== "right" && (
               <span className={cn(InputVariants({ iconPosition }))}>
                 {icon}
