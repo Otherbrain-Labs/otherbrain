@@ -2,19 +2,20 @@ import prisma from "../../lib/prisma";
 import scores from "../data/scores.json";
 
 export async function loadScores() {
-  const [originalCount, remoteIds] = await prisma.$transaction([
+  const [originalCount, existingIds] = await prisma.$transaction([
     prisma.model.count({
       where: { average: { not: null } },
     }),
     prisma.model.findMany({
+      where: { average: null },
       select: { remoteId: true },
     }),
   ]);
 
   let count = 0;
-  const remoteIdsFlat = remoteIds.map((model) => model.remoteId);
+  const existingIdsFlat = existingIds.map((model) => model.remoteId);
   for (const score of scores) {
-    if (!remoteIdsFlat.includes(score.model)) {
+    if (!existingIdsFlat.includes(score.model)) {
       continue;
     }
     try {
@@ -34,6 +35,6 @@ export async function loadScores() {
     }
   }
   console.log(
-    `Added ${count - originalCount} new scores, updated ${count} models total`
+    `Added ${count} new scores, ${count + originalCount} scores total`
   );
 }

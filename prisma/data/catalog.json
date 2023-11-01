@@ -2,7 +2,7 @@
   {
     "_id": "64e6673c0df4c63f21cb3933",
     "id": "TheBloke/PuddleJumper-13B-GGUF",
-    "likes": 18,
+    "likes": 17,
     "private": false,
     "downloads": 1,
     "tags": [
@@ -38,7 +38,7 @@
       ],
       "downloads": 1,
       "library_name": "transformers",
-      "likes": 18,
+      "likes": 17,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -150,7 +150,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4462,
+      "downloads": 4644,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -413,7 +413,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6061,
+      "downloads": 6215,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -716,7 +716,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4866,
+      "downloads": 5070,
       "library_name": "transformers",
       "likes": 18,
       "model-index": null,
@@ -838,7 +838,7 @@
     "id": "TheBloke/CodeLlama-7B-Instruct-GGUF",
     "likes": 67,
     "private": false,
-    "downloads": 371,
+    "downloads": 380,
     "tags": [
       "transformers",
       "llama",
@@ -876,7 +876,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 371,
+      "downloads": 380,
       "library_name": "transformers",
       "likes": 67,
       "model-index": null,
@@ -990,7 +990,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 45525,
+      "downloads": 46426,
       "library_name": "transformers",
       "likes": 83,
       "model-index": null,
@@ -1098,7 +1098,7 @@
     "id": "TheBloke/CodeLlama-7B-Python-GGUF",
     "likes": 32,
     "private": false,
-    "downloads": 72,
+    "downloads": 71,
     "tags": [
       "transformers",
       "llama",
@@ -1134,7 +1134,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 72,
+      "downloads": 71,
       "library_name": "transformers",
       "likes": 32,
       "model-index": null,
@@ -1245,7 +1245,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 22390,
+      "downloads": 23153,
       "library_name": "transformers",
       "likes": 63,
       "model-index": null,
@@ -1354,7 +1354,7 @@
     "id": "TheBloke/CodeLlama-7B-GGUF",
     "likes": 45,
     "private": false,
-    "downloads": 168,
+    "downloads": 176,
     "tags": [
       "transformers",
       "llama",
@@ -1390,7 +1390,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 168,
+      "downloads": 176,
       "library_name": "transformers",
       "likes": 45,
       "model-index": null,
@@ -1501,9 +1501,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 114888,
+      "downloads": 118229,
       "library_name": "transformers",
-      "likes": 167,
+      "likes": 168,
       "model-index": null,
       "config": {
         "architectures": [
@@ -1612,9 +1612,9 @@
   {
     "_id": "64e7bafd0c47bf287ca550b8",
     "id": "TheBloke/CodeLlama-13B-GGUF",
-    "likes": 31,
+    "likes": 33,
     "private": false,
-    "downloads": 72,
+    "downloads": 74,
     "tags": [
       "transformers",
       "llama",
@@ -1650,9 +1650,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 72,
+      "downloads": 74,
       "library_name": "transformers",
-      "likes": 31,
+      "likes": 33,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -1761,7 +1761,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 25314,
+      "downloads": 27546,
       "library_name": "transformers",
       "likes": 52,
       "model-index": null,
@@ -1877,7 +1877,7 @@
     "id": "TheBloke/CodeLlama-13B-Instruct-GGUF",
     "likes": 66,
     "private": false,
-    "downloads": 262,
+    "downloads": 265,
     "tags": [
       "transformers",
       "llama",
@@ -1915,7 +1915,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 262,
+      "downloads": 265,
       "library_name": "transformers",
       "likes": 66,
       "model-index": null,
@@ -2029,7 +2029,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 91475,
+      "downloads": 99508,
       "library_name": "transformers",
       "likes": 76,
       "model-index": null,
@@ -2158,7 +2158,7 @@
     "id": "TheBloke/CodeLlama-13B-Python-GGUF",
     "likes": 20,
     "private": false,
-    "downloads": 35,
+    "downloads": 38,
     "tags": [
       "transformers",
       "llama",
@@ -2194,7 +2194,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 35,
+      "downloads": 38,
       "library_name": "transformers",
       "likes": 20,
       "model-index": null,
@@ -2305,7 +2305,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7124,
+      "downloads": 7308,
       "library_name": "transformers",
       "likes": 24,
       "model-index": null,
@@ -2410,7 +2410,7 @@
     "id": "TheBloke/CodeLlama-34B-GGUF",
     "likes": 47,
     "private": false,
-    "downloads": 63,
+    "downloads": 65,
     "tags": [
       "transformers",
       "llama",
@@ -2446,7 +2446,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 63,
+      "downloads": 65,
       "library_name": "transformers",
       "likes": 47,
       "model-index": null,
@@ -2557,9 +2557,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 37999,
+      "downloads": 38383,
       "library_name": "transformers",
-      "likes": 125,
+      "likes": 126,
       "model-index": null,
       "config": {
         "architectures": [
@@ -2602,7 +2602,8 @@
         "aiconaca/codellama-CodeLlama-34b-hf",
         "imjunaidafzal/can-it-run-llm",
         "muellerzr/can-it-run-llm",
-        "pminervini/tmp"
+        "pminervini/tmp",
+        "ashbuilds/codellama-CodeLlama-34b-hf"
       ],
       "safetensors": {
         "parameters": {
@@ -2844,9 +2845,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6112,
+      "downloads": 6528,
       "library_name": "transformers",
-      "likes": 61,
+      "likes": 62,
       "model-index": null,
       "config": {
         "architectures": [
@@ -3123,9 +3124,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 74741,
+      "downloads": 73088,
       "library_name": "transformers",
-      "likes": 176,
+      "likes": 181,
       "model-index": null,
       "config": {
         "architectures": [
@@ -3416,7 +3417,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4762,
+      "downloads": 4952,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -3701,7 +3702,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4550,
+      "downloads": 4743,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -4012,7 +4013,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5501,
+      "downloads": 5705,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -4348,7 +4349,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4776,
+      "downloads": 4993,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -4697,7 +4698,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 16966,
+      "downloads": 16613,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -4863,7 +4864,7 @@
     "id": "TheBloke/WizardCoder-Python-34B-V1.0-GGUF",
     "likes": 68,
     "private": false,
-    "downloads": 43,
+    "downloads": 42,
     "tags": [
       "transformers",
       "llama",
@@ -4903,7 +4904,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 43,
+      "downloads": 42,
       "library_name": "transformers",
       "likes": 68,
       "model-index": [
@@ -5064,7 +5065,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 118829,
+      "downloads": 118995,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -5413,7 +5414,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4472,
+      "downloads": 4655,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -5683,7 +5684,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4714,
+      "downloads": 4896,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -5824,7 +5825,7 @@
     "id": "TheBloke/Genz-70b-GGUF",
     "likes": 8,
     "private": false,
-    "downloads": 23,
+    "downloads": 22,
     "tags": [
       "transformers",
       "llama",
@@ -5856,7 +5857,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 23,
+      "downloads": 22,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -5993,7 +5994,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4863,
+      "downloads": 5017,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -6125,7 +6126,7 @@
     "id": "TheBloke/Llama-2-70B-Orca-200k-GGUF",
     "likes": 20,
     "private": false,
-    "downloads": 4,
+    "downloads": 6,
     "tags": [
       "transformers",
       "llama",
@@ -6163,7 +6164,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4,
+      "downloads": 6,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -6307,7 +6308,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4708,
+      "downloads": 4897,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -6589,7 +6590,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4536,
+      "downloads": 4725,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -6710,7 +6711,7 @@
     "id": "TheBloke/Airoboros-L2-70B-2.1-GGUF",
     "likes": 21,
     "private": false,
-    "downloads": 4,
+    "downloads": 1,
     "tags": [
       "transformers",
       "llama",
@@ -6738,7 +6739,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4,
+      "downloads": 1,
       "library_name": "transformers",
       "likes": 21,
       "model-index": null,
@@ -6848,7 +6849,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4748,
+      "downloads": 4936,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -7120,7 +7121,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4609,
+      "downloads": 4802,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -7370,7 +7371,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10767,
+      "downloads": 11181,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -7532,7 +7533,7 @@
     "id": "TheBloke/WizardCoder-Python-13B-V1.0-GGUF",
     "likes": 31,
     "private": false,
-    "downloads": 37,
+    "downloads": 36,
     "tags": [
       "transformers",
       "llama",
@@ -7572,7 +7573,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 37,
+      "downloads": 36,
       "library_name": "transformers",
       "likes": 31,
       "model-index": [
@@ -7733,7 +7734,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1737,
+      "downloads": 1840,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -7761,7 +7762,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 73,
+      "likes": 74,
       "model-index": [
         {
           "name": "WizardCoder-Python-13B-V1.0",
@@ -7884,9 +7885,9 @@
   {
     "_id": "64ed95f6ee71252c6c942002",
     "id": "TheBloke/Phind-CodeLlama-34B-v2-GGUF",
-    "likes": 92,
+    "likes": 96,
     "private": false,
-    "downloads": 122,
+    "downloads": 91,
     "tags": [
       "transformers",
       "llama",
@@ -7916,9 +7917,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 122,
+      "downloads": 91,
       "library_name": "transformers",
-      "likes": 92,
+      "likes": 96,
       "model-index": [
         {
           "name": "Phind-CodeLlama-34B-v1",
@@ -8067,7 +8068,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 25544,
+      "downloads": 26402,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -8095,7 +8096,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 420,
+      "likes": 432,
       "model-index": [
         {
           "name": "Phind-CodeLlama-34B-v1",
@@ -8202,7 +8203,8 @@
         "Breaua/Phind-Phind-CodeLlama-34B-v2",
         "pminervini/tmp",
         "Cheree/Phind-Phind-CodeLlama-34B-v2",
-        "Cheree/Phind-Phind-CodeLlama-34B-v2a"
+        "Cheree/Phind-Phind-CodeLlama-34B-v2a",
+        "francojc/Phind-Phind-CodeLlama-34B-v2"
       ],
       "siblings": [
         {
@@ -8435,7 +8437,7 @@
         "has_space",
         "region:us"
       ],
-      "downloads": 5622,
+      "downloads": 5848,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -8725,7 +8727,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4557,
+      "downloads": 4748,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -9167,7 +9169,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4610,
+      "downloads": 4814,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -9271,7 +9273,7 @@
     "id": "TheBloke/Airoboros-L2-13B-2.1-GGUF",
     "likes": 16,
     "private": false,
-    "downloads": 65,
+    "downloads": 64,
     "tags": [
       "transformers",
       "llama",
@@ -9299,7 +9301,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 65,
+      "downloads": 64,
       "library_name": "transformers",
       "likes": 16,
       "model-index": null,
@@ -9403,7 +9405,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4677,
+      "downloads": 4871,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -9651,7 +9653,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9775,
+      "downloads": 10273,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -9781,7 +9783,7 @@
     "id": "TheBloke/Airoboros-L2-7B-2.1-GGUF",
     "likes": 12,
     "private": false,
-    "downloads": 41,
+    "downloads": 94,
     "tags": [
       "transformers",
       "llama",
@@ -9809,7 +9811,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 41,
+      "downloads": 94,
       "library_name": "transformers",
       "likes": 12,
       "model-index": null,
@@ -9913,7 +9915,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4540,
+      "downloads": 4728,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -10148,7 +10150,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4643,
+      "downloads": 4847,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -10377,7 +10379,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4623,
+      "downloads": 4822,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -10589,7 +10591,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4619,
+      "downloads": 4818,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -10712,7 +10714,7 @@
     "id": "TheBloke/Athena-v1-GGUF",
     "likes": 24,
     "private": false,
-    "downloads": 278,
+    "downloads": 252,
     "tags": [
       "transformers",
       "llama",
@@ -10738,7 +10740,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 278,
+      "downloads": 252,
       "library_name": "transformers",
       "likes": 24,
       "model-index": null,
@@ -10836,7 +10838,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4847,
+      "downloads": 5046,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -11128,7 +11130,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4919,
+      "downloads": 5429,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -11668,7 +11670,7 @@
     "id": "TheBloke/MythoMax-L2-Kimiko-v2-13B-GGUF",
     "likes": 15,
     "private": false,
-    "downloads": 86,
+    "downloads": 76,
     "tags": [
       "transformers",
       "llama",
@@ -11694,7 +11696,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 86,
+      "downloads": 76,
       "library_name": "transformers",
       "likes": 15,
       "model-index": null,
@@ -11793,7 +11795,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 507,
+      "downloads": 492,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -12315,7 +12317,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2,
+      "downloads": 1,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -12827,7 +12829,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4755,
+      "downloads": 4940,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -13107,7 +13109,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 638,
+      "downloads": 343,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -13209,7 +13211,7 @@
     "id": "TheBloke/Yarn-Llama-2-7B-128K-GGUF",
     "likes": 18,
     "private": false,
-    "downloads": 7,
+    "downloads": 4,
     "tags": [
       "transformers",
       "llama",
@@ -13239,7 +13241,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7,
+      "downloads": 4,
       "library_name": "transformers",
       "likes": 18,
       "model-index": null,
@@ -13348,7 +13350,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 332,
+      "downloads": 301,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -13589,7 +13591,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1273,
+      "downloads": 1264,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -13617,7 +13619,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 92,
+      "likes": 93,
       "model-index": null,
       "config": {
         "architectures": [
@@ -13694,7 +13696,7 @@
   {
     "_id": "64f1a2eedcdd48d279defc89",
     "id": "TheBloke/Yarn-Llama-2-13B-64K-GGUF",
-    "likes": 18,
+    "likes": 19,
     "private": false,
     "downloads": 36,
     "tags": [
@@ -13728,7 +13730,7 @@
       ],
       "downloads": 36,
       "library_name": "transformers",
-      "likes": 18,
+      "likes": 19,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -13834,7 +13836,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 491,
+      "downloads": 286,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -13937,7 +13939,7 @@
     "id": "TheBloke/Airoboros-33B-2.1-GGUF",
     "likes": 15,
     "private": false,
-    "downloads": 14,
+    "downloads": 8,
     "tags": [
       "transformers",
       "llama",
@@ -13965,7 +13967,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14,
+      "downloads": 8,
       "library_name": "transformers",
       "likes": 15,
       "model-index": null,
@@ -14061,7 +14063,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4543,
+      "downloads": 4737,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -14313,7 +14315,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4648,
+      "downloads": 4849,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -14542,7 +14544,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4655,
+      "downloads": 4855,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -14765,7 +14767,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4570,
+      "downloads": 4768,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -15286,7 +15288,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9117,
+      "downloads": 9469,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -15411,7 +15413,7 @@
     "id": "TheBloke/Speechless-Llama2-Hermes-Orca-Platypus-WizardLM-13B-GGUF",
     "likes": 40,
     "private": false,
-    "downloads": 680,
+    "downloads": 676,
     "tags": [
       "transformers",
       "llama",
@@ -15457,7 +15459,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 680,
+      "downloads": 676,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -15605,7 +15607,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5359,
+      "downloads": 5558,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -15731,7 +15733,7 @@
     "id": "TheBloke/Asclepius-13B-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 1,
+    "downloads": 0,
     "tags": [
       "transformers",
       "llama",
@@ -15767,7 +15769,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 0,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -15873,7 +15875,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 273,
+      "downloads": 305,
       "library_name": "transformers",
       "likes": 10,
       "model-index": null,
@@ -15963,7 +15965,7 @@
     "id": "TheBloke/OpenBuddy-Llama2-13B-v11.1-GGUF",
     "likes": 17,
     "private": false,
-    "downloads": 14,
+    "downloads": 15,
     "tags": [
       "transformers",
       "llama",
@@ -16011,7 +16013,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14,
+      "downloads": 15,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16150,7 +16152,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9568,
+      "downloads": 9959,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16250,7 +16252,7 @@
     "id": "TheBloke/Llama-2-7B-GGUF",
     "likes": 55,
     "private": false,
-    "downloads": 904,
+    "downloads": 923,
     "tags": [
       "transformers",
       "llama",
@@ -16294,7 +16296,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 904,
+      "downloads": 923,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16416,9 +16418,9 @@
   {
     "_id": "64f60811b8cc49b414fe5cdf",
     "id": "TheBloke/Llama-2-7b-Chat-GGUF",
-    "likes": 113,
+    "likes": 114,
     "private": false,
-    "downloads": 4083,
+    "downloads": 4155,
     "tags": [
       "transformers",
       "llama",
@@ -16462,7 +16464,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4083,
+      "downloads": 4155,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16490,7 +16492,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 113,
+      "likes": 114,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -16597,7 +16599,7 @@
     "id": "TheBloke/Llama-2-13B-chat-GGUF",
     "likes": 83,
     "private": false,
-    "downloads": 1137,
+    "downloads": 1170,
     "tags": [
       "transformers",
       "llama",
@@ -16641,7 +16643,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1137,
+      "downloads": 1170,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16765,7 +16767,7 @@
     "id": "TheBloke/Llama-2-13B-GGUF",
     "likes": 27,
     "private": false,
-    "downloads": 164,
+    "downloads": 169,
     "tags": [
       "transformers",
       "llama",
@@ -16807,7 +16809,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 164,
+      "downloads": 169,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -16928,7 +16930,7 @@
     "id": "TheBloke/Llama-2-70B-chat-GGUF",
     "likes": 47,
     "private": false,
-    "downloads": 305,
+    "downloads": 310,
     "tags": [
       "transformers",
       "llama",
@@ -16972,7 +16974,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 305,
+      "downloads": 310,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -17397,7 +17399,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 11544,
+      "downloads": 12404,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -17425,7 +17427,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 24,
+      "likes": 25,
       "model-index": null,
       "config": {
         "architectures": [
@@ -17625,7 +17627,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 187,
+      "downloads": 190,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -17736,7 +17738,7 @@
     "id": "TheBloke/L2-MythoMax22b-Instruct-Falseblock-GGUF",
     "likes": 4,
     "private": false,
-    "downloads": 1,
+    "downloads": 0,
     "tags": [
       "transformers",
       "llama",
@@ -17764,7 +17766,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 0,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -17984,7 +17986,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4715,
+      "downloads": 4913,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -18249,7 +18251,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 36134,
+      "downloads": 37612,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -18386,7 +18388,7 @@
     "id": "TheBloke/MythoMix-L2-13B-GGUF",
     "likes": 3,
     "private": false,
-    "downloads": 19,
+    "downloads": 18,
     "tags": [
       "transformers",
       "llama",
@@ -18414,7 +18416,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 19,
+      "downloads": 18,
       "library_name": "transformers",
       "likes": 3,
       "model-index": null,
@@ -18518,7 +18520,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4847,
+      "downloads": 5037,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -18647,9 +18649,9 @@
   {
     "_id": "64f6a23433753a192d84ca08",
     "id": "TheBloke/vicuna-13B-v1.5-16K-GGUF",
-    "likes": 28,
+    "likes": 30,
     "private": false,
-    "downloads": 86,
+    "downloads": 88,
     "tags": [
       "transformers",
       "llama",
@@ -18679,9 +18681,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 86,
+      "downloads": 88,
       "library_name": "transformers",
-      "likes": 28,
+      "likes": 30,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -18780,7 +18782,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 52748,
+      "downloads": 52814,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -18877,9 +18879,9 @@
   {
     "_id": "64f6a51bda8bcca7aaa18084",
     "id": "TheBloke/vicuna-13B-v1.5-GGUF",
-    "likes": 8,
+    "likes": 9,
     "private": false,
-    "downloads": 8,
+    "downloads": 9,
     "tags": [
       "transformers",
       "llama",
@@ -18909,9 +18911,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8,
+      "downloads": 9,
       "library_name": "transformers",
-      "likes": 8,
+      "likes": 9,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -19010,7 +19012,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 93935,
+      "downloads": 94637,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -19038,7 +19040,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 111,
+      "likes": 112,
       "model-index": null,
       "config": {
         "architectures": [
@@ -19065,6 +19067,7 @@
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
         "shimizukawa/python-no-senpai",
+        "atimughal662/InfoFusion",
         "TheVortexProject/open_llm_leaderboard",
         "kelvin-t-lu/chatbot",
         "shimizukawa/oss-doc-search",
@@ -19113,7 +19116,7 @@
     "id": "TheBloke/vicuna-7B-v1.5-16K-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 34,
+    "downloads": 31,
     "tags": [
       "transformers",
       "llama",
@@ -19143,7 +19146,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 34,
+      "downloads": 31,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -19244,7 +19247,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 17852,
+      "downloads": 18674,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -19272,7 +19275,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 59,
+      "likes": 60,
       "model-index": null,
       "config": {
         "architectures": [
@@ -19335,9 +19338,9 @@
   {
     "_id": "64f6a9796537390231ad3d1d",
     "id": "TheBloke/vicuna-7B-v1.5-GGUF",
-    "likes": 8,
+    "likes": 9,
     "private": false,
-    "downloads": 18,
+    "downloads": 20,
     "tags": [
       "transformers",
       "llama",
@@ -19367,9 +19370,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 18,
+      "downloads": 20,
       "library_name": "transformers",
-      "likes": 8,
+      "likes": 9,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -19468,7 +19471,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 92749,
+      "downloads": 98761,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -19496,7 +19499,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 87,
+      "likes": 89,
       "model-index": null,
       "config": {
         "architectures": [
@@ -19522,6 +19525,7 @@
         "Sharathhebbar24/One-stop-for-Open-source-models",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "TheVortexProject/open_llm_leaderboard",
         "kelvin-t-lu/chatbot",
         "imjunaidafzal/can-it-run-llm",
@@ -19990,7 +19994,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4558,
+      "downloads": 4742,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -20239,7 +20243,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5961,
+      "downloads": 6192,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -20489,7 +20493,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4726,
+      "downloads": 4914,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -20732,7 +20736,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4655,
+      "downloads": 4834,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -20970,7 +20974,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4548,
+      "downloads": 4729,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -21079,7 +21083,7 @@
     "id": "TheBloke/Nous-Hermes-Llama-2-7B-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 5,
+    "downloads": 9,
     "tags": [
       "transformers",
       "llama",
@@ -21115,7 +21119,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5,
+      "downloads": 9,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -21232,7 +21236,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 22689,
+      "downloads": 24506,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -21505,7 +21509,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 44060,
+      "downloads": 44222,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -21640,7 +21644,7 @@
     "id": "TheBloke/AlpacaCielo2-7B-8K-GGUF",
     "likes": 4,
     "private": false,
-    "downloads": 3,
+    "downloads": 1,
     "tags": [
       "transformers",
       "llama",
@@ -21666,7 +21670,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 1,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -21863,7 +21867,7 @@
   {
     "_id": "64f6d722fb61db9a85cae857",
     "id": "TheBloke/EverythingLM-13B-16K-GGUF",
-    "likes": 2,
+    "likes": 3,
     "private": false,
     "downloads": 0,
     "tags": [
@@ -21895,7 +21899,7 @@
       ],
       "downloads": 0,
       "library_name": "transformers",
-      "likes": 2,
+      "likes": 3,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -21997,7 +22001,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4475,
+      "downloads": 4672,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -22232,7 +22236,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4471,
+      "downloads": 4651,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -22485,7 +22489,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4960,
+      "downloads": 5157,
       "library_name": "transformers",
       "likes": 104,
       "model-index": null,
@@ -22711,7 +22715,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4808,
+      "downloads": 4998,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -22805,7 +22809,7 @@
     "id": "TheBloke/WizardLM-13B-V1.2-GGUF",
     "likes": 9,
     "private": false,
-    "downloads": 20,
+    "downloads": 23,
     "tags": [
       "transformers",
       "llama",
@@ -22839,7 +22843,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 20,
+      "downloads": 23,
       "library_name": "transformers",
       "likes": 9,
       "model-index": null,
@@ -22947,7 +22951,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 20722,
+      "downloads": 20154,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -22975,7 +22979,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 168,
+      "likes": 169,
       "model-index": null,
       "config": {
         "architectures": [
@@ -22997,9 +23001,11 @@
         "h2oai/h2ogpt-chatbot2",
         "upstage/open-ko-llm-leaderboard",
         "gsaivinay/open_llm_leaderboard",
+        "toloka/open-llm-leaderboard",
         "AFischer1985/wizardlm-13b-v1-2-q4-0-gguf",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "TheJoker2019/WizardLM-WizardLM-13B-V1.2",
         "AdiS/WizardLM-WizardLM-13B-V1.2",
         "saikrishnam/WizardLM-WizardLM-13B-V1.2",
@@ -23191,7 +23197,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5057,
+      "downloads": 5441,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -23437,7 +23443,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5195,
+      "downloads": 5393,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -23668,7 +23674,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4535,
+      "downloads": 4727,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -23945,7 +23951,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4958,
+      "downloads": 5155,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -24437,7 +24443,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4436,
+      "downloads": 4616,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -24948,7 +24954,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10752,
+      "downloads": 11132,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -25172,7 +25178,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4954,
+      "downloads": 5144,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -25395,7 +25401,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4626,
+      "downloads": 4818,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -25488,7 +25494,7 @@
     "id": "TheBloke/Dolphin-Llama2-7B-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 8,
+    "downloads": 12,
     "tags": [
       "transformers",
       "llama",
@@ -25518,7 +25524,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8,
+      "downloads": 12,
       "library_name": "transformers",
       "likes": 2,
       "model-index": null,
@@ -25626,7 +25632,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4817,
+      "downloads": 5014,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -25908,7 +25914,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10143,
+      "downloads": 10637,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -26135,7 +26141,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4602,
+      "downloads": 4796,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -26384,7 +26390,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4820,
+      "downloads": 5018,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -26667,7 +26673,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4547,
+      "downloads": 4739,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -26906,7 +26912,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 23160,
+      "downloads": 23323,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -27276,7 +27282,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5303,
+      "downloads": 5470,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -27934,7 +27940,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4554,
+      "downloads": 4744,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -28051,7 +28057,7 @@
     "id": "TheBloke/chronos-13b-v2-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 1,
+    "downloads": 0,
     "tags": [
       "transformers",
       "llama",
@@ -28085,7 +28091,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 0,
       "library_name": "transformers",
       "likes": 2,
       "model-index": null,
@@ -28195,7 +28201,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 18401,
+      "downloads": 18249,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -28742,7 +28748,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 22939,
+      "downloads": 23889,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -29018,7 +29024,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1960,
+      "downloads": 1987,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -29278,7 +29284,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4533,
+      "downloads": 4713,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -29554,7 +29560,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4499,
+      "downloads": 4681,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -29820,7 +29826,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6504,
+      "downloads": 6711,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -30057,7 +30063,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4545,
+      "downloads": 4736,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -30437,7 +30443,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4538,
+      "downloads": 4717,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -30943,7 +30949,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4729,
+      "downloads": 4924,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -31175,7 +31181,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 21,
+      "downloads": 31,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -32139,7 +32145,7 @@
     "id": "TheBloke/Vigogne-2-13B-Instruct-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 2,
+    "downloads": 1,
     "tags": [
       "transformers",
       "llama",
@@ -32175,7 +32181,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2,
+      "downloads": 1,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -32298,7 +32304,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5014,
+      "downloads": 5223,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -32615,7 +32621,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4576,
+      "downloads": 4770,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -32732,9 +32738,9 @@
   {
     "_id": "64f78649cb48ea77521db38d",
     "id": "TheBloke/LlongOrca-13B-16K-GGUF",
-    "likes": 7,
+    "likes": 8,
     "private": false,
-    "downloads": 15,
+    "downloads": 16,
     "tags": [
       "transformers",
       "llama",
@@ -32774,7 +32780,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 15,
+      "downloads": 16,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -32802,7 +32808,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 7,
+      "likes": 8,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -32913,7 +32919,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5286,
+      "downloads": 6091,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -33062,7 +33068,7 @@
   {
     "_id": "64f78668aca1280775860431",
     "id": "TheBloke/OpenOrca-Platypus2-13B-GGUF",
-    "likes": 12,
+    "likes": 13,
     "private": false,
     "downloads": 25,
     "tags": [
@@ -33134,7 +33140,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 12,
+      "likes": 13,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -33247,7 +33253,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 19012,
+      "downloads": 19591,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -33540,7 +33546,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5541,
+      "downloads": 5728,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -33784,7 +33790,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4622,
+      "downloads": 4801,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -34070,7 +34076,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6811,
+      "downloads": 6896,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -34370,7 +34376,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4698,
+      "downloads": 4885,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -34657,7 +34663,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4950,
+      "downloads": 5155,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -34873,7 +34879,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4491,
+      "downloads": 4672,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -34976,7 +34982,7 @@
     "id": "TheBloke/Pygmalion-2-13B-GGUF",
     "likes": 11,
     "private": false,
-    "downloads": 79,
+    "downloads": 83,
     "tags": [
       "transformers",
       "llama",
@@ -35022,7 +35028,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 79,
+      "downloads": 83,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -35171,7 +35177,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 11245,
+      "downloads": 11434,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -35492,7 +35498,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9754,
+      "downloads": 10006,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -35611,7 +35617,7 @@
     "id": "TheBloke/Mythalion-13B-GGUF",
     "likes": 46,
     "private": false,
-    "downloads": 302,
+    "downloads": 298,
     "tags": [
       "transformers",
       "llama",
@@ -35657,7 +35663,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 302,
+      "downloads": 298,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -35805,7 +35811,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10588,
+      "downloads": 10415,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -36109,7 +36115,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4935,
+      "downloads": 5133,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -36345,7 +36351,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4714,
+      "downloads": 4900,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -36593,7 +36599,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4475,
+      "downloads": 4655,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -36714,7 +36720,7 @@
     "id": "TheBloke/StableBeluga-7B-GGUF",
     "likes": 3,
     "private": false,
-    "downloads": 12,
+    "downloads": 9,
     "tags": [
       "transformers",
       "llama",
@@ -36758,7 +36764,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 12,
+      "downloads": 9,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -36900,7 +36906,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7401947,
+      "downloads": 7537305,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -37046,7 +37052,7 @@
     "id": "TheBloke/Llama-2-7B-32K-Instruct-GGUF",
     "likes": 33,
     "private": false,
-    "downloads": 392,
+    "downloads": 390,
     "tags": [
       "transformers",
       "llama",
@@ -37080,7 +37086,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 392,
+      "downloads": 390,
       "library_name": "transformers",
       "likes": 33,
       "model-index": null,
@@ -37193,7 +37199,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 17384,
+      "downloads": 18303,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -37221,7 +37227,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 124,
+      "likes": 126,
       "model-index": null,
       "config": {
         "architectures": [
@@ -37306,7 +37312,7 @@
     "id": "TheBloke/Platypus2-70B-Instruct-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 3,
+    "downloads": 5,
     "tags": [
       "transformers",
       "llama",
@@ -37342,7 +37348,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 5,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -37460,7 +37466,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7324,
+      "downloads": 7513,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -37762,7 +37768,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5011,
+      "downloads": 5198,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -38031,7 +38037,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4515,
+      "downloads": 4699,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -38332,7 +38338,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13794,
+      "downloads": 13123,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -38360,7 +38366,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 109,
+      "likes": 110,
       "model-index": null,
       "config": {
         "architectures": [
@@ -38660,7 +38666,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7169,
+      "downloads": 7349,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -38730,6 +38736,7 @@
         "Sidaddy/Beluga2ScriptGenerator",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "mikeee/stabilityai-llama-2-70b-orca-ggml",
         "Ndethi/stabilityai-StableBeluga2",
         "richydeeee/stabilityai-StableBeluga2",
@@ -38903,7 +38910,7 @@
     "id": "TheBloke/Upstage-Llama-2-70B-instruct-v2-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 10,
+    "downloads": 7,
     "tags": [
       "transformers",
       "llama",
@@ -38943,7 +38950,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10,
+      "downloads": 7,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -39089,7 +39096,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9998,
+      "downloads": 10354,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -39117,7 +39124,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 217,
+      "likes": 218,
       "model-index": null,
       "config": {
         "architectures": [
@@ -39353,7 +39360,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5951,
+      "downloads": 6188,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -39466,7 +39473,7 @@
     "id": "TheBloke/llama2-7b-chat-codeCherryPop-qLoRA-GGUF",
     "likes": 3,
     "private": false,
-    "downloads": 3,
+    "downloads": 4,
     "tags": [
       "transformers",
       "llama",
@@ -39492,7 +39499,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 4,
       "library_name": "transformers",
       "likes": 3,
       "model-index": null,
@@ -39590,7 +39597,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13,
+      "downloads": 12,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -39862,7 +39869,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5158,
+      "downloads": 5355,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -40164,7 +40171,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10095,
+      "downloads": 10593,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -40454,7 +40461,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4735,
+      "downloads": 4942,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -40736,7 +40743,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4770,
+      "downloads": 4955,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -41071,7 +41078,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5414,
+      "downloads": 5621,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -41321,7 +41328,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14243,
+      "downloads": 14826,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -41691,7 +41698,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4844,
+      "downloads": 5041,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -42128,7 +42135,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9218,
+      "downloads": 9594,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -42268,7 +42275,7 @@
   {
     "_id": "64f88e4f67adddcb40bf4dec",
     "id": "TheBloke/Synthia-70B-v1.2-GGUF",
-    "likes": 16,
+    "likes": 17,
     "private": false,
     "downloads": 6,
     "tags": [
@@ -42298,7 +42305,7 @@
       ],
       "downloads": 6,
       "library_name": "transformers",
-      "likes": 16,
+      "likes": 17,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -42404,7 +42411,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4790,
+      "downloads": 4975,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -42680,7 +42687,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4721,
+      "downloads": 4902,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -42708,7 +42715,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 47,
+      "likes": 48,
       "model-index": null,
       "config": {
         "architectures": [
@@ -42974,7 +42981,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4714,
+      "downloads": 4895,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -43264,7 +43271,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 18518,
+      "downloads": 19586,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -43608,7 +43615,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4669,
+      "downloads": 4852,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -43766,7 +43773,7 @@
     "id": "TheBloke/llama2_70b_chat_uncensored-GGUF",
     "likes": 11,
     "private": false,
-    "downloads": 20,
+    "downloads": 14,
     "tags": [
       "transformers",
       "llama",
@@ -43802,7 +43809,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 20,
+      "downloads": 14,
       "library_name": "transformers",
       "likes": 11,
       "model-index": null,
@@ -43922,7 +43929,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5084,
+      "downloads": 5272,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -44546,7 +44553,7 @@
     "id": "TheBloke/Falcon-180B-Chat-GGUF",
     "likes": 107,
     "private": false,
-    "downloads": 140,
+    "downloads": 139,
     "tags": [
       "transformers",
       "falcon",
@@ -44594,7 +44601,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 140,
+      "downloads": 139,
       "library_name": "transformers",
       "likes": 107,
       "model-index": null,
@@ -44987,7 +44994,7 @@
     "id": "TheBloke/YuLan-Chat-2-13B-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 804,
+    "downloads": 805,
     "tags": [
       "transformers",
       "llama",
@@ -45013,7 +45020,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 804,
+      "downloads": 805,
       "library_name": "transformers",
       "likes": 1,
       "model-index": null,
@@ -45113,7 +45120,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4447,
+      "downloads": 4627,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -45362,7 +45369,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4819,
+      "downloads": 5015,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -45582,7 +45589,7 @@
     "id": "TheBloke/Guanaco-7B-Uncensored-GGUF",
     "likes": 8,
     "private": false,
-    "downloads": 20,
+    "downloads": 18,
     "tags": [
       "transformers",
       "llama",
@@ -45616,7 +45623,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 20,
+      "downloads": 18,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -45746,7 +45753,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4793,
+      "downloads": 4990,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -45843,7 +45850,7 @@
     "id": "TheBloke/Guanaco-13B-Uncensored-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 20,
+    "downloads": 21,
     "tags": [
       "transformers",
       "llama",
@@ -45877,7 +45884,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 20,
+      "downloads": 21,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -46006,7 +46013,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4946,
+      "downloads": 5108,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -46335,7 +46342,7 @@
     "id": "TheBloke/Falcon-180B-GGUF",
     "likes": 20,
     "private": false,
-    "downloads": 24,
+    "downloads": 26,
     "tags": [
       "transformers",
       "falcon",
@@ -46383,7 +46390,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 24,
+      "downloads": 26,
       "library_name": "transformers",
       "likes": 20,
       "model-index": null,
@@ -46530,7 +46537,7 @@
     "id": "TheBloke/Chronos-Hermes-13b-v2-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 27,
+    "downloads": 26,
     "tags": [
       "transformers",
       "llama",
@@ -46566,7 +46573,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 27,
+      "downloads": 26,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -46678,7 +46685,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6667,
+      "downloads": 6808,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -46915,7 +46922,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4765,
+      "downloads": 4968,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -47159,7 +47166,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8801,
+      "downloads": 8814,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -47400,7 +47407,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4599,
+      "downloads": 4780,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -47638,7 +47645,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4619,
+      "downloads": 4821,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -47744,7 +47751,7 @@
     "id": "TheBloke/COTHuginn-4.5-19B-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 7,
+    "downloads": 6,
     "tags": [
       "transformers",
       "llama",
@@ -47770,7 +47777,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7,
+      "downloads": 6,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -47992,7 +47999,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4575,
+      "downloads": 4757,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -48242,7 +48249,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5204,
+      "downloads": 5390,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -48528,7 +48535,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4837,
+      "downloads": 5029,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -48909,7 +48916,7 @@
     "id": "TheBloke/Pygmalion-2-13B-SuperCOT-GGUF",
     "likes": 4,
     "private": false,
-    "downloads": 61,
+    "downloads": 62,
     "tags": [
       "transformers",
       "llama",
@@ -48943,7 +48950,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 61,
+      "downloads": 62,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -49080,7 +49087,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4545,
+      "downloads": 4728,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -49331,7 +49338,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5035,
+      "downloads": 5239,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -49435,7 +49442,7 @@
   {
     "_id": "64fe2c8b1ac56bee85de01ab",
     "id": "TheBloke/MLewdBoros-L2-13B-GGUF",
-    "likes": 8,
+    "likes": 9,
     "private": false,
     "downloads": 41,
     "tags": [
@@ -49469,7 +49476,7 @@
       ],
       "downloads": 41,
       "library_name": "transformers",
-      "likes": 8,
+      "likes": 9,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -49572,7 +49579,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5021,
+      "downloads": 5205,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -49804,7 +49811,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4748,
+      "downloads": 4938,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -49907,7 +49914,7 @@
     "id": "TheBloke/Llama-2-13B-Ensemble-v5-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 234,
+    "downloads": 252,
     "tags": [
       "transformers",
       "llama",
@@ -49933,7 +49940,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 234,
+      "downloads": 252,
       "library_name": "transformers",
       "likes": 1,
       "model-index": null,
@@ -50017,7 +50024,7 @@
     "id": "TheBloke/Nous-Hermes-13B-Code-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 0,
+    "downloads": 1,
     "tags": [
       "transformers",
       "llama",
@@ -50043,7 +50050,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 0,
+      "downloads": 1,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -50143,7 +50150,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4961,
+      "downloads": 5155,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -50610,7 +50617,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4669,
+      "downloads": 4854,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -50826,7 +50833,7 @@
   {
     "_id": "64ff691a1e14749e84d2c2d9",
     "id": "TheBloke/Spicyboros-70B-2.2-GGUF",
-    "likes": 14,
+    "likes": 15,
     "private": false,
     "downloads": 1,
     "tags": [
@@ -50860,7 +50867,7 @@
       ],
       "downloads": 1,
       "library_name": "transformers",
-      "likes": 14,
+      "likes": 15,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -51654,7 +51661,7 @@
   {
     "_id": "6500535bb213fc1f1de0c167",
     "id": "TheBloke/Llama-2-13B-Chat-Dutch-GGUF",
-    "likes": 4,
+    "likes": 5,
     "private": false,
     "downloads": 16,
     "tags": [
@@ -51694,7 +51701,7 @@
       ],
       "downloads": 16,
       "library_name": "transformers",
-      "likes": 4,
+      "likes": 5,
       "model-index": [
         {
           "name": "Llama-2-13b-chat-dutch",
@@ -51819,7 +51826,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4773,
+      "downloads": 5046,
       "library_name": "transformers",
       "likes": 12,
       "model-index": [
@@ -52344,7 +52351,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 913118,
+      "downloads": 827049,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -53492,7 +53499,7 @@
     "id": "TheBloke/Llama-2-13B-Ensemble-v6-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 21,
+    "downloads": 19,
     "tags": [
       "transformers",
       "llama",
@@ -53518,7 +53525,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 21,
+      "downloads": 19,
       "library_name": "transformers",
       "likes": 2,
       "model-index": null,
@@ -53999,7 +54006,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7093,
+      "downloads": 7276,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -54125,7 +54132,7 @@
     "id": "TheBloke/Kuchiki-L2-7B-GGUF",
     "likes": 10,
     "private": false,
-    "downloads": 83,
+    "downloads": 72,
     "tags": [
       "transformers",
       "llama",
@@ -54153,7 +54160,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 83,
+      "downloads": 72,
       "library_name": "transformers",
       "likes": 10,
       "model-index": null,
@@ -54256,7 +54263,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6533,
+      "downloads": 6746,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -54352,7 +54359,7 @@
     "id": "TheBloke/Llama2-Chat-AYT-13B-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 14,
+    "downloads": 15,
     "tags": [
       "transformers",
       "llama",
@@ -54380,7 +54387,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14,
+      "downloads": 15,
       "library_name": "transformers",
       "likes": 1,
       "model-index": null,
@@ -54480,7 +54487,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4934,
+      "downloads": 5045,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -54574,7 +54581,7 @@
     "id": "TheBloke/Llama-2-Coder-7B-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 19,
+    "downloads": 14,
     "tags": [
       "transformers",
       "llama",
@@ -54612,7 +54619,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 19,
+      "downloads": 14,
       "library_name": "transformers",
       "likes": 7,
       "model-index": [
@@ -54741,7 +54748,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4767,
+      "downloads": 4941,
       "library_name": "transformers",
       "likes": 37,
       "model-index": [
@@ -54959,7 +54966,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4513,
+      "downloads": 4686,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -55185,7 +55192,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4497,
+      "downloads": 4670,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -55415,7 +55422,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6572,
+      "downloads": 6664,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -55623,7 +55630,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5509,
+      "downloads": 5690,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -56294,7 +56301,7 @@
     "id": "TheBloke/Chinese-Alpaca-2-7B-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 825,
+    "downloads": 828,
     "tags": [
       "transformers",
       "llama",
@@ -56320,7 +56327,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 825,
+      "downloads": 828,
       "library_name": "transformers",
       "likes": 2,
       "model-index": null,
@@ -56419,7 +56426,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6519,
+      "downloads": 6757,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -56506,7 +56513,7 @@
     "id": "TheBloke/Chinese-Llama-2-7B-GGUF",
     "likes": 3,
     "private": false,
-    "downloads": 37,
+    "downloads": 38,
     "tags": [
       "transformers",
       "llama",
@@ -56532,7 +56539,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 37,
+      "downloads": 38,
       "library_name": "transformers",
       "likes": 3,
       "model-index": null,
@@ -56631,7 +56638,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5204,
+      "downloads": 5385,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -56715,7 +56722,7 @@
     "id": "TheBloke/Chinese-Alpaca-2-13B-GGUF",
     "likes": 4,
     "private": false,
-    "downloads": 16,
+    "downloads": 17,
     "tags": [
       "transformers",
       "llama",
@@ -56741,7 +56748,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 16,
+      "downloads": 17,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -56840,7 +56847,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6582,
+      "downloads": 6770,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -56927,7 +56934,7 @@
     "id": "TheBloke/Chinese-Llama-2-13B-GGUF",
     "likes": 4,
     "private": false,
-    "downloads": 11,
+    "downloads": 13,
     "tags": [
       "transformers",
       "llama",
@@ -56953,7 +56960,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 11,
+      "downloads": 13,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -57052,7 +57059,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4814,
+      "downloads": 4966,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -57140,7 +57147,7 @@
   {
     "_id": "65038100d25ce81dfccfbb9f",
     "id": "TheBloke/CodeFuse-CodeLlama-34B-GGUF",
-    "likes": 12,
+    "likes": 13,
     "private": false,
     "downloads": 3,
     "tags": [
@@ -57170,7 +57177,7 @@
       ],
       "downloads": 3,
       "library_name": "transformers",
-      "likes": 12,
+      "likes": 13,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -57271,7 +57278,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 133,
+      "downloads": 139,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -57524,7 +57531,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4886,
+      "downloads": 5064,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -57779,7 +57786,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4591,
+      "downloads": 4772,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -58014,7 +58021,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4184,
+      "downloads": 3967,
       "library_name": "transformers",
       "likes": 17,
       "model-index": null,
@@ -58261,7 +58268,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4790,
+      "downloads": 4979,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -58507,7 +58514,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6545,
+      "downloads": 6739,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -59375,7 +59382,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 275,
+      "downloads": 273,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -59501,7 +59508,7 @@
     "id": "TheBloke/WizardCoder-Python-7B-V1.0-GGUF",
     "likes": 10,
     "private": false,
-    "downloads": 28,
+    "downloads": 30,
     "tags": [
       "transformers",
       "llama",
@@ -59541,7 +59548,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 28,
+      "downloads": 30,
       "library_name": "transformers",
       "likes": 10,
       "model-index": [
@@ -59702,7 +59709,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8462,
+      "downloads": 8795,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -59985,7 +59992,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7066,
+      "downloads": 7240,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -60206,7 +60213,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4607,
+      "downloads": 4789,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -60440,7 +60447,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6875,
+      "downloads": 7088,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -60692,7 +60699,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5781,
+      "downloads": 6006,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -61155,7 +61162,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4763,
+      "downloads": 4976,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -61744,7 +61751,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4829,
+      "downloads": 5027,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -62016,7 +62023,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4543,
+      "downloads": 4741,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -62279,7 +62286,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4661,
+      "downloads": 4860,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -62807,7 +62814,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6398,
+      "downloads": 6612,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -63078,7 +63085,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4925,
+      "downloads": 5129,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -63338,7 +63345,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4578,
+      "downloads": 4773,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -63584,7 +63591,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4753,
+      "downloads": 4950,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -63841,7 +63848,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4737,
+      "downloads": 4945,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -64340,7 +64347,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 4,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -64571,7 +64578,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4535,
+      "downloads": 4731,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -64844,7 +64851,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4562,
+      "downloads": 4758,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -65092,7 +65099,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5251,
+      "downloads": 5424,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -65156,6 +65163,7 @@
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "acetaminophenPT/ehartford-Wizard-Vicuna-13B-Uncensored",
         "m1thrandir/ehartford-Wizard-Vicuna-13B-Uncensored",
         "Tj/ehartford-Wizard-Vicuna-13B-Uncensored",
@@ -65257,7 +65265,7 @@
     "id": "TheBloke/Wizard-Vicuna-30B-Uncensored-GGUF",
     "likes": 13,
     "private": false,
-    "downloads": 119,
+    "downloads": 118,
     "tags": [
       "transformers",
       "llama",
@@ -65289,7 +65297,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 119,
+      "downloads": 118,
       "library_name": "transformers",
       "likes": 13,
       "model-index": null,
@@ -65392,7 +65400,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4955,
+      "downloads": 5164,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -65699,7 +65707,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4879,
+      "downloads": 5073,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -65762,6 +65770,7 @@
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "itsmynti/ehartford-WizardLM-13B-Uncensored",
         "Jacob209/ehartford-WizardLM-13B-Uncensored",
         "TRaw/ehartford-WizardLM-13B-Uncensored",
@@ -65859,7 +65868,7 @@
     "id": "TheBloke/Wizard-Vicuna-7B-Uncensored-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 35,
+    "downloads": 42,
     "tags": [
       "transformers",
       "llama",
@@ -65891,7 +65900,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 35,
+      "downloads": 42,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -65994,7 +66003,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5173,
+      "downloads": 5409,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -66476,7 +66485,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4595,
+      "downloads": 4774,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -66700,7 +66709,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4604,
+      "downloads": 4834,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -66972,7 +66981,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5822,
+      "downloads": 6030,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -67000,7 +67009,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 344,
+      "likes": 345,
       "model-index": null,
       "config": {
         "architectures": [
@@ -67035,6 +67044,7 @@
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "Saucee/ehartford-WizardLM-7B-Uncensored",
         "Yarumo/ehartford-WizardLM-7B-Uncensored",
         "mohammadam/ehartford-WizardLM-7B-Uncensored-my-test",
@@ -67242,7 +67252,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4715,
+      "downloads": 4913,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -67496,7 +67506,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4600,
+      "downloads": 4779,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -67718,7 +67728,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 23,
+      "downloads": 16,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -68124,7 +68134,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4664,
+      "downloads": 4866,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -68402,7 +68412,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4719,
+      "downloads": 4901,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -68951,7 +68961,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6602,
+      "downloads": 6925,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -69252,7 +69262,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6690,
+      "downloads": 7010,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -69560,7 +69570,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4952,
+      "downloads": 5136,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -69822,7 +69832,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4528,
+      "downloads": 4675,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -70045,7 +70055,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5188,
+      "downloads": 5268,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -70285,7 +70295,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7373,
+      "downloads": 7560,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -70559,7 +70569,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4654,
+      "downloads": 4855,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -70696,7 +70706,7 @@
     "id": "TheBloke/wizardLM-7B-GGUF",
     "likes": 0,
     "private": false,
-    "downloads": 7,
+    "downloads": 8,
     "tags": [
       "transformers",
       "llama",
@@ -70728,7 +70738,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7,
+      "downloads": 8,
       "library_name": "transformers",
       "likes": 0,
       "model-index": null,
@@ -70821,7 +70831,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1682,
+      "downloads": 1684,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -71098,7 +71108,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4481,
+      "downloads": 4669,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -71413,7 +71423,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4523,
+      "downloads": 4712,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -71713,7 +71723,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4553,
+      "downloads": 4745,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -71777,6 +71787,7 @@
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "flashvenom/openaccess-ai-collective-wizard-mega-13b",
         "elitecode/h2ogpt-chatbot2",
         "akashkj/H2OGPT",
@@ -71995,7 +72006,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4537,
+      "downloads": 4738,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -72233,7 +72244,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13189,
+      "downloads": 12637,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -72722,7 +72733,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4514,
+      "downloads": 4714,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -72977,7 +72988,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 44,
+      "downloads": 54,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -73253,7 +73264,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4546,
+      "downloads": 4745,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -73497,7 +73508,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4568,
+      "downloads": 4769,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -73728,7 +73739,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4516,
+      "downloads": 4717,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -74173,7 +74184,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 21,
+      "downloads": 24,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -74386,7 +74397,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4722,
+      "downloads": 4928,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -75332,7 +75343,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4879,
+      "downloads": 5094,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -75571,7 +75582,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4656,
+      "downloads": 4869,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -75622,6 +75633,7 @@
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "LordBon/junelee-wizard-vicuna-13b",
         "eliasj36/junelee-wizard-vicuna-13b",
         "AlexLee1235/junelee-wizard-vicuna-13b",
@@ -75819,7 +75831,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4907,
+      "downloads": 5116,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -76078,7 +76090,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4488,
+      "downloads": 4680,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -76882,7 +76894,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 898,
+      "downloads": 835,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -77165,7 +77177,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4700,
+      "downloads": 4892,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -77461,7 +77473,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9068,
+      "downloads": 9454,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -77948,7 +77960,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4700,
+      "downloads": 4903,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -78299,7 +78311,7 @@
         "endpoints_compatible",
         "region:us"
       ],
-      "downloads": 4391,
+      "downloads": 4660,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -78741,7 +78753,7 @@
     "id": "TheBloke/hippogriff-30b-chat-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 0,
+    "downloads": 1,
     "tags": [
       "transformers",
       "llama",
@@ -78791,7 +78803,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 0,
+      "downloads": 1,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -78933,7 +78945,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4546,
+      "downloads": 4734,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -79279,7 +79291,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4701,
+      "downloads": 4861,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -79862,7 +79874,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 27,
+      "downloads": 28,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -79970,7 +79982,7 @@
     "id": "TheBloke/Xwin-LM-13B-V0.1-GGUF",
     "likes": 22,
     "private": false,
-    "downloads": 61,
+    "downloads": 60,
     "tags": [
       "transformers",
       "llama",
@@ -79996,7 +80008,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 61,
+      "downloads": 60,
       "library_name": "transformers",
       "likes": 22,
       "model-index": null,
@@ -80096,7 +80108,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10314,
+      "downloads": 10385,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -80591,7 +80603,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 673,
+      "downloads": 641,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -80927,7 +80939,7 @@
     "id": "TheBloke/Xwin-LM-7B-V0.1-GGUF",
     "likes": 10,
     "private": false,
-    "downloads": 18,
+    "downloads": 19,
     "tags": [
       "transformers",
       "llama",
@@ -80953,7 +80965,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 18,
+      "downloads": 19,
       "library_name": "transformers",
       "likes": 10,
       "model-index": null,
@@ -81053,7 +81065,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 51361,
+      "downloads": 50180,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -81276,7 +81288,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9223,
+      "downloads": 9905,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -81329,7 +81341,8 @@
         "44brabal/Xwin-LM-Xwin-LM-70B-V0.1",
         "kingbubbles/Xwin-LM-Xwin-LM-70B-V0.1",
         "lhlhlh1998/Xwin-LM-Xwin-LM-70B-V0.1",
-        "kol-s/Xwin-LM-Xwin-LM-70B-V0.1"
+        "kol-s/Xwin-LM-Xwin-LM-70B-V0.1",
+        "albert111/Xwin-LM-Xwin-LM-70B-V0.1"
       ],
       "siblings": [
         {
@@ -81585,7 +81598,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6752,
+      "downloads": 7071,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -81726,7 +81739,7 @@
     "id": "TheBloke/MLewd-ReMM-L2-Chat-20B-GGUF",
     "likes": 19,
     "private": false,
-    "downloads": 271,
+    "downloads": 269,
     "tags": [
       "transformers",
       "llama",
@@ -81756,7 +81769,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 271,
+      "downloads": 269,
       "library_name": "transformers",
       "likes": 19,
       "model-index": null,
@@ -81861,7 +81874,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10254,
+      "downloads": 10500,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -82101,7 +82114,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4046,
+      "downloads": 4302,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -82334,7 +82347,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1605,
+      "downloads": 1659,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -82550,7 +82563,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8988,
+      "downloads": 9885,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -82777,7 +82790,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6698,
+      "downloads": 6971,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -83025,7 +83038,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7384,
+      "downloads": 7620,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -83259,7 +83272,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6211,
+      "downloads": 6579,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -83486,7 +83499,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6699,
+      "downloads": 6948,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -83970,7 +83983,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 385,
+      "downloads": 411,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -84433,7 +84446,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6527,
+      "downloads": 6777,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -84531,7 +84544,7 @@
     "id": "TheBloke/MXLewd-L2-20B-GGUF",
     "likes": 5,
     "private": false,
-    "downloads": 81,
+    "downloads": 87,
     "tags": [
       "transformers",
       "llama",
@@ -84557,7 +84570,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 81,
+      "downloads": 87,
       "library_name": "transformers",
       "likes": 5,
       "model-index": null,
@@ -84656,7 +84669,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4579,
+      "downloads": 4833,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -84890,7 +84903,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4817,
+      "downloads": 5026,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -85115,7 +85128,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 114,
+      "downloads": 108,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -85339,7 +85352,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6499,
+      "downloads": 6835,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -85819,7 +85832,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6273,
+      "downloads": 6587,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -86076,7 +86089,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1593,
+      "downloads": 1578,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -86337,7 +86350,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6483,
+      "downloads": 6790,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -86432,7 +86445,7 @@
     "id": "TheBloke/Synthia-7B-v1.2-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 1,
+    "downloads": 5,
     "tags": [
       "transformers",
       "llama",
@@ -86466,7 +86479,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 5,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -86598,7 +86611,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6809,
+      "downloads": 6985,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -86978,7 +86991,7 @@
     "id": "TheBloke/openbuddy-llama2-34b-v11.1-bf16-GGUF",
     "likes": 5,
     "private": false,
-    "downloads": 7,
+    "downloads": 8,
     "tags": [
       "transformers",
       "llama",
@@ -87024,7 +87037,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7,
+      "downloads": 8,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -87158,7 +87171,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 15572,
+      "downloads": 16268,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -87261,9 +87274,9 @@
   {
     "_id": "6511ae8b5b4590211de0a25a",
     "id": "TheBloke/vicuna-33B-GGUF",
-    "likes": 4,
+    "likes": 5,
     "private": false,
-    "downloads": 13,
+    "downloads": 12,
     "tags": [
       "transformers",
       "llama",
@@ -87293,9 +87306,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13,
+      "downloads": 12,
       "library_name": "transformers",
-      "likes": 4,
+      "likes": 5,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -87384,7 +87397,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 16837,
+      "downloads": 17299,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -87435,9 +87448,11 @@
         "gsaivinay/open_llm_leaderboard",
         "Sharathhebbar24/One-stop-for-Open-source-models",
         "zeno-ml/chatbot-report",
+        "toloka/open-llm-leaderboard",
         "gordonchan/h2oo",
         "Docfile/open_llm_leaderboard",
         "felixz/open_llm_leaderboard",
+        "atimughal662/InfoFusion",
         "akashkj/H2OGPT",
         "ariel0330/h2osiri",
         "ccoreilly/aigua-xat",
@@ -87503,7 +87518,7 @@
     "id": "TheBloke/law-LLM-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 4,
+    "downloads": 6,
     "tags": [
       "transformers",
       "llama",
@@ -87531,7 +87546,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4,
+      "downloads": 6,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -87622,7 +87637,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 106,
+      "downloads": 108,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -87960,7 +87975,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7939,
+      "downloads": 8068,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -87988,7 +88003,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 247,
+      "likes": 248,
       "model-index": null,
       "config": {
         "architectures": [
@@ -88074,7 +88089,7 @@
     "id": "TheBloke/U-Amethyst-20B-GGUF",
     "likes": 12,
     "private": false,
-    "downloads": 31,
+    "downloads": 32,
     "tags": [
       "transformers",
       "llama",
@@ -88104,7 +88119,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 31,
+      "downloads": 32,
       "library_name": "transformers",
       "likes": 12,
       "model-index": null,
@@ -88209,7 +88224,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4416,
+      "downloads": 4673,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -88237,7 +88252,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 9,
+      "likes": 11,
       "model-index": null,
       "config": {
         "architectures": [
@@ -88448,7 +88463,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8609,
+      "downloads": 8274,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -88580,9 +88595,9 @@
   {
     "_id": "65145594e31c0e2e3dfabe9a",
     "id": "TheBloke/Mistral-7B-v0.1-GGUF",
-    "likes": 144,
+    "likes": 145,
     "private": false,
-    "downloads": 3163,
+    "downloads": 3164,
     "tags": [
       "transformers",
       "mistral",
@@ -88614,7 +88629,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3163,
+      "downloads": 3164,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -88642,7 +88657,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 144,
+      "likes": 145,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -88738,7 +88753,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 288310,
+      "downloads": 293981,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -88766,7 +88781,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 1573,
+      "likes": 1591,
       "model-index": null,
       "config": {
         "architectures": [
@@ -88798,11 +88813,13 @@
         "Vokturz/can-it-run-llm",
         "Aabbhishekk/MistralQnA",
         "pseudolab/MistralMED_Chat",
+        "pseudolab/GaiaMiniMed",
         "Statical/STC-LLM-CHAT",
         "Tonic/MistralMED_Chat",
-        "pseudolab/GaiaMiniMed",
+        "openskyml/mistral-7b-chat",
         "CosmoAI/BhagwatGeeta",
         "airesai/Mistral-7B-v0.1-Demo",
+        "pseudolab/medical-chatbot",
         "zhuraavl/mistralai-Mistral-7B-v0.1",
         "ridges/mistralai-Mistral-7B-v0.1",
         "jeanbaptdzd/mistralai-Mistral-7B-v0.1",
@@ -88902,10 +88919,11 @@
         "shideqin/mistralai-Mistral-7B-v0.1",
         "jfelipenc/mistralmed-experiment",
         "amizya/mistralai-Mistral-7B-v0.1",
-        "pseudolab/medical-chatbot",
         "ehristoforu/TestDocker",
         "ALIOJ/mistralai-Mistral-7B-v0.1",
-        "shethjenil/educhatbot"
+        "shethjenil/educhatbot",
+        "ButterInABox/mistralai-Mistral-7B-v0.1",
+        "delldogf/mistralai-Mistral-7B-v0.1"
       ],
       "siblings": [
         {
@@ -88949,7 +88967,7 @@
     "id": "TheBloke/Athena-v3-GGUF",
     "likes": 5,
     "private": false,
-    "downloads": 42,
+    "downloads": 41,
     "tags": [
       "transformers",
       "llama",
@@ -88975,7 +88993,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 42,
+      "downloads": 41,
       "library_name": "transformers",
       "likes": 5,
       "model-index": null,
@@ -89074,7 +89092,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6671,
+      "downloads": 7001,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -89162,9 +89180,9 @@
   {
     "_id": "65146b42c75a3d4c44e41667",
     "id": "TheBloke/Mistral-7B-Instruct-v0.1-GGUF",
-    "likes": 231,
+    "likes": 233,
     "private": false,
-    "downloads": 5659,
+    "downloads": 5612,
     "tags": [
       "transformers",
       "mistral",
@@ -89198,7 +89216,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5659,
+      "downloads": 5612,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -89226,7 +89244,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 231,
+      "likes": 233,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -89345,7 +89363,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 243955,
+      "downloads": 251056,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -89373,7 +89391,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 909,
+      "likes": 919,
       "model-index": null,
       "config": {
         "architectures": [
@@ -89410,8 +89428,9 @@
         "SoAp9035/mistral-7b-fast-chat",
         "Tomoniai/Demo_Mistral_Chat",
         "awacke1/MistralCoder",
-        "langvision/mistral-7b-chat",
+        "openskyml/mistral-7b-chat",
         "ahmadawais/Mistral-Chat",
+        "lfoppiano/document-qa",
         "joshuasundance/langchain-streamlit-demo",
         "rishiraj/mistral",
         "FlipTip/ChatBot",
@@ -89423,7 +89442,6 @@
         "AchyuthGamer/OpenGPT-Chat",
         "Abhaykoul/HelpingAI-t2",
         "gojiteji/mistral-7b-fast-chat-with-Japanese-MT",
-        "lfoppiano/document-qa",
         "sunil448832/retrieval-augment-generation",
         "CazC/smallville",
         "thibz/mistralai-Mistral-7B-Instruct-v0.1",
@@ -89480,7 +89498,7 @@
         "bonomg/mistral-super-fast",
         "pooroligarch/mistral-super-fast",
         "mies8888/mistralai-Mistral-7B-Instruct-v0.1",
-        "vivekm/mistralchat-playground",
+        "vivekm/rntbci-chat-playground",
         "deniandriancode/akari-chatbot",
         "KyleIsaacs/mistralai-Mistral-7B-Instruct-v0.1",
         "pyakhurel/test",
@@ -89511,7 +89529,6 @@
         "JSP/demo",
         "hossamdaoud/mistral-B7",
         "JSP/article",
-        "dileepdaji/demo",
         "Looming/mistralai-Mistral-7B-Instruct-v0.1",
         "cybtek/mistralai-Mistral-7B-Instruct-v0.1",
         "ethanrom/tic_tac_toe_with_Mistral-7B",
@@ -89529,7 +89546,8 @@
         "pigeonium/ium-1.5",
         "vikkaird/chat-Vikk",
         "illioran/mistralai-Mistral-7B-Instruct-v0.1",
-        "Dev18/mistral"
+        "Dev18/mistral",
+        "misbah1955/cima-free-chat"
       ],
       "siblings": [
         {
@@ -89754,7 +89772,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7005,
+      "downloads": 7189,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -89980,7 +89998,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8376,
+      "downloads": 8682,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -90243,7 +90261,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13322,
+      "downloads": 13568,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -90857,7 +90875,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2621,
+      "downloads": 2578,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -91147,7 +91165,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7144,
+      "downloads": 7638,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -91464,7 +91482,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6879,
+      "downloads": 7157,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -91767,7 +91785,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10238,
+      "downloads": 10498,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -92056,7 +92074,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7744,
+      "downloads": 8181,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -92304,7 +92322,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 472,
+      "downloads": 264,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -92332,7 +92350,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 56,
+      "likes": 57,
       "model-index": [
         {
           "name": "NexusRaven-13B",
@@ -92430,7 +92448,7 @@
     "id": "TheBloke/Synthia-7B-v1.3-GGUF",
     "likes": 32,
     "private": false,
-    "downloads": 206,
+    "downloads": 219,
     "tags": [
       "transformers",
       "mistral",
@@ -92456,7 +92474,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 206,
+      "downloads": 219,
       "library_name": "transformers",
       "likes": 32,
       "model-index": null,
@@ -92549,7 +92567,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 10926,
+      "downloads": 11097,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -92644,7 +92662,7 @@
     "id": "TheBloke/samantha-mistral-7B-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 45,
+    "downloads": 40,
     "tags": [
       "transformers",
       "mistral",
@@ -92670,7 +92688,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 45,
+      "downloads": 40,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -92761,7 +92779,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5687,
+      "downloads": 5998,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -92874,7 +92892,7 @@
     "id": "TheBloke/samantha-mistral-instruct-7B-GGUF",
     "likes": 10,
     "private": false,
-    "downloads": 43,
+    "downloads": 33,
     "tags": [
       "transformers",
       "mistral",
@@ -92900,7 +92918,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 43,
+      "downloads": 33,
       "library_name": "transformers",
       "likes": 10,
       "model-index": null,
@@ -92991,7 +93009,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5369,
+      "downloads": 5688,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -93102,7 +93120,7 @@
     "id": "TheBloke/Pandalyst-7B-V1.1-GGUF",
     "likes": 5,
     "private": false,
-    "downloads": 70,
+    "downloads": 66,
     "tags": [
       "transformers",
       "llama",
@@ -93134,7 +93152,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 70,
+      "downloads": 66,
       "library_name": "transformers",
       "likes": 5,
       "model-index": [
@@ -93283,7 +93301,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 253,
+      "downloads": 240,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -93589,7 +93607,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 79,
+      "downloads": 77,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -93842,7 +93860,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 115,
+      "downloads": 94,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -94052,7 +94070,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4311,
+      "downloads": 4561,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -94152,7 +94170,7 @@
     "id": "TheBloke/MegaMix-S1-13B-GGUF",
     "likes": 0,
     "private": false,
-    "downloads": 3,
+    "downloads": 0,
     "tags": [
       "transformers",
       "llama",
@@ -94178,7 +94196,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 0,
       "library_name": "transformers",
       "likes": 0,
       "model-index": null,
@@ -94278,7 +94296,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4315,
+      "downloads": 4564,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -94504,7 +94522,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4328,
+      "downloads": 4578,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -94604,7 +94622,7 @@
     "id": "TheBloke/sheep-duck-llama-2-70B-v1.1-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 16,
+    "downloads": 15,
     "tags": [
       "transformers",
       "llama",
@@ -94630,7 +94648,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 16,
+      "downloads": 15,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -94741,7 +94759,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7493,
+      "downloads": 7834,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -95037,7 +95055,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 663,
+      "downloads": 653,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -95558,7 +95576,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5758,
+      "downloads": 6074,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -95811,7 +95829,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 103,
+      "downloads": 102,
       "library_name": "transformers",
       "likes": 5,
       "model-index": null,
@@ -96076,7 +96094,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 260,
+      "downloads": 268,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -96357,7 +96375,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5467,
+      "downloads": 5554,
       "library_name": "transformers",
       "likes": 4,
       "model-index": null,
@@ -96454,7 +96472,7 @@
     "id": "TheBloke/Mistral-7B-OpenOrca-GGUF",
     "likes": 162,
     "private": false,
-    "downloads": 1981,
+    "downloads": 2004,
     "tags": [
       "transformers",
       "mistral",
@@ -96494,7 +96512,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1981,
+      "downloads": 2004,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -96557,7 +96575,7 @@
         "JDWebProgrammer/chatbot",
         "cloudchng/augmented-analytic",
         "marekk/Mistral-7B-OpenOrca-GGUF",
-        "seanpedrickcase/open_text_summariser"
+        "seanpedrickcase/text_summariser"
       ],
       "siblings": [
         {
@@ -96633,7 +96651,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 82238,
+      "downloads": 86758,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -96661,7 +96679,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 411,
+      "likes": 415,
       "model-index": null,
       "config": {
         "architectures": [
@@ -97150,7 +97168,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14599,
+      "downloads": 14954,
       "library_name": "transformers",
       "likes": 17,
       "model-index": null,
@@ -97225,7 +97243,7 @@
     "id": "TheBloke/dolphin-2.0-mistral-7B-GGUF",
     "likes": 20,
     "private": false,
-    "downloads": 65,
+    "downloads": 68,
     "tags": [
       "transformers",
       "mistral",
@@ -97259,7 +97277,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 65,
+      "downloads": 68,
       "library_name": "transformers",
       "likes": 20,
       "model-index": null,
@@ -97362,7 +97380,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6789,
+      "downloads": 7145,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -97390,7 +97408,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 87,
+      "likes": 89,
       "model-index": null,
       "config": {
         "architectures": [
@@ -97422,7 +97440,8 @@
         "Reza2kn/ehartford-dolphin-2.0-mistral-7b",
         "deathoperator/ehartford-dolphin-2.0-mistral-7b",
         "Cbrules3033/ehartford-dolphin-2.0-mistral-7b",
-        "nuser/ehartford-dolphin-2.0-mistral-7b"
+        "nuser/ehartford-dolphin-2.0-mistral-7b",
+        "zugbob/ehartford-dolphin-2.0-mistral-7b"
       ],
       "siblings": [
         {
@@ -97463,7 +97482,7 @@
     "id": "TheBloke/Nous-Hermes-13B-GGUF",
     "likes": 3,
     "private": false,
-    "downloads": 22,
+    "downloads": 24,
     "tags": [
       "transformers",
       "llama",
@@ -97495,7 +97514,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 22,
+      "downloads": 24,
       "library_name": "transformers",
       "likes": 3,
       "model-index": null,
@@ -97597,7 +97616,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5388,
+      "downloads": 5450,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -97726,7 +97745,7 @@
     "id": "TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF",
     "likes": 19,
     "private": false,
-    "downloads": 106,
+    "downloads": 107,
     "tags": [
       "transformers",
       "tinyllama",
@@ -97760,7 +97779,7 @@
         "has_space",
         "region:us"
       ],
-      "downloads": 106,
+      "downloads": 107,
       "library_name": "transformers",
       "likes": 19,
       "model-index": null,
@@ -97866,7 +97885,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 12132,
+      "downloads": 12535,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -97920,7 +97939,6 @@
       },
       "spaces": [
         "dsank/PY007-TinyLlama-1.1B-Chat-v0.3",
-        "Tomoniai/TinyLlama_Chat",
         "limcheekin/TinyLlama-1.1B-Chat-v0.3-GGUF",
         "mattritchey/ChatBot_TinyLlama"
       ],
@@ -98094,7 +98112,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 364,
+      "downloads": 372,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -98329,7 +98347,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1016,
+      "downloads": 1029,
       "library_name": "transformers",
       "likes": 11,
       "model-index": null,
@@ -98546,7 +98564,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 19404,
+      "downloads": 20077,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -98638,7 +98656,7 @@
     "id": "TheBloke/airoboros-mistral2.2-7B-GGUF",
     "likes": 17,
     "private": false,
-    "downloads": 41,
+    "downloads": 46,
     "tags": [
       "transformers",
       "mistral",
@@ -98682,7 +98700,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 41,
+      "downloads": 46,
       "library_name": "transformers",
       "likes": 17,
       "model-index": [
@@ -98808,7 +98826,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 135,
+      "downloads": 136,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -98836,7 +98854,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 23,
+      "likes": 24,
       "model-index": [
         {
           "name": "airoboros2.2-mistral-7b",
@@ -99042,7 +99060,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3733,
+      "downloads": 3993,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -99271,7 +99289,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3819,
+      "downloads": 4079,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -99489,7 +99507,7 @@
         "has_space",
         "region:us"
       ],
-      "downloads": 6459,
+      "downloads": 6853,
       "library_name": "transformers",
       "likes": 19,
       "config": {},
@@ -99546,7 +99564,7 @@
     "id": "TheBloke/Llama-2-7B-vietnamese-20k-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 8,
+    "downloads": 9,
     "tags": [
       "transformers",
       "llama",
@@ -99584,7 +99602,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 8,
+      "downloads": 9,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -99720,7 +99738,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 226,
+      "downloads": 229,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -99950,7 +99968,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7105,
+      "downloads": 7434,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -99978,7 +99996,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 7,
+      "likes": 8,
       "model-index": null,
       "config": {
         "architectures": [
@@ -100042,7 +100060,7 @@
   {
     "_id": "651ee10822aeffca25e5b9f6",
     "id": "TheBloke/CollectiveCognition-v1.1-Mistral-7B-GGUF",
-    "likes": 27,
+    "likes": 28,
     "private": false,
     "downloads": 55,
     "tags": [
@@ -100090,7 +100108,7 @@
       ],
       "downloads": 55,
       "library_name": "transformers",
-      "likes": 27,
+      "likes": 28,
       "model-index": [
         {
           "name": "CollectiveCognition-v1-Mistral-7B",
@@ -100214,7 +100232,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5304,
+      "downloads": 5637,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -100715,7 +100733,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3839,
+      "downloads": 4088,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -101421,7 +101439,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4669,
+      "downloads": 4851,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -101675,7 +101693,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4966,
+      "downloads": 5285,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -101933,7 +101951,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6740,
+      "downloads": 7070,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -102141,7 +102159,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5710,
+      "downloads": 5980,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -102169,7 +102187,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 10,
+      "likes": 11,
       "model-index": null,
       "config": {
         "architectures": [
@@ -102360,7 +102378,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4320,
+      "downloads": 4588,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -102589,7 +102607,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 112,
+      "downloads": 117,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -102693,7 +102711,7 @@
   {
     "_id": "6523d68fab14165941296471",
     "id": "TheBloke/Ziya-Coding-34B-v1.0-GGUF",
-    "likes": 6,
+    "likes": 7,
     "private": false,
     "downloads": 3,
     "tags": [
@@ -102750,7 +102768,7 @@
           "text": "从前，"
         }
       ],
-      "likes": 6,
+      "likes": 7,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -102857,7 +102875,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 123,
+      "downloads": 116,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -102876,7 +102894,7 @@
           "text": "从前，"
         }
       ],
-      "likes": 18,
+      "likes": 20,
       "model-index": null,
       "config": {
         "architectures": [
@@ -103011,7 +103029,7 @@
     "id": "TheBloke/em_german_leo_mistral-GGUF",
     "likes": 11,
     "private": false,
-    "downloads": 33,
+    "downloads": 37,
     "tags": [
       "transformers",
       "mistral",
@@ -103051,7 +103069,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 33,
+      "downloads": 37,
       "library_name": "transformers",
       "likes": 11,
       "model-index": null,
@@ -103157,9 +103175,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9052,
+      "downloads": 9405,
       "library_name": "transformers",
-      "likes": 18,
+      "likes": 19,
       "model-index": null,
       "config": {
         "architectures": [
@@ -103241,7 +103259,7 @@
     "id": "TheBloke/sqlcoder2-GGUF",
     "likes": 13,
     "private": false,
-    "downloads": 50,
+    "downloads": 51,
     "tags": [
       "transformers",
       "starcoder",
@@ -103273,7 +103291,7 @@
         "license:other",
         "region:us"
       ],
-      "downloads": 50,
+      "downloads": 51,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -103399,7 +103417,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 11034,
+      "downloads": 11245,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -103427,7 +103445,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 56,
+      "likes": 57,
       "model-index": null,
       "config": {
         "architectures": [
@@ -103507,7 +103525,7 @@
     "id": "TheBloke/Tinyllama-2-1b-miniguanaco-GGUF",
     "likes": 1,
     "private": false,
-    "downloads": 97,
+    "downloads": 98,
     "tags": [
       "transformers",
       "llama",
@@ -103533,7 +103551,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 97,
+      "downloads": 98,
       "library_name": "transformers",
       "likes": 1,
       "model-index": null,
@@ -103697,9 +103715,9 @@
   {
     "_id": "652615d43177c2a79493a6b9",
     "id": "TheBloke/zephyr-7B-alpha-GGUF",
-    "likes": 118,
+    "likes": 120,
     "private": false,
-    "downloads": 719,
+    "downloads": 748,
     "tags": [
       "transformers",
       "mistral",
@@ -103737,9 +103755,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 719,
+      "downloads": 748,
       "library_name": "transformers",
-      "likes": 118,
+      "likes": 120,
       "model-index": [
         {
           "name": "zephyr-7b-alpha",
@@ -103861,7 +103879,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 71062,
+      "downloads": 73576,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -103889,7 +103907,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 857,
+      "likes": 862,
       "model-index": [
         {
           "name": "zephyr-7b-alpha",
@@ -103928,9 +103946,9 @@
         "processor": "AutoTokenizer"
       },
       "spaces": [
+        "ysharma/Zephyr-Playground",
         "deniandriancode/zephyr-7b-alpha-chatbot",
         "rishiraj/zephyr",
-        "ysharma/Zephyr-Playground",
         "PeepDaSlan9/HuggingFaceH4-zephyr-7b-alpha",
         "msy127/app_rag_llama2_paper",
         "pragneshbarik/ikigai-chat",
@@ -103976,16 +103994,16 @@
         "zzw820626/HuggingFaceH4-zephyr-7b-alpha",
         "Rafaa/Chat",
         "amizya/HuggingFaceH4-zephyr-7b-alpha",
-        "Rafaa/Nyx",
         "ahmedsali/PDF-Chat-Langchain",
         "charanhu/HuggingFaceH4-zephyr-7b-alpha",
         "TensaZangetsu/HuggingFaceH4-zephyr-7b-alpha-finetuned",
         "Arjun098/HuggingFaceH4-zephyr-7b-alpha",
         "toorhamza/HuggingFaceH4-zephyr-7b-alpha",
         "TogetherAI/ZECHAT",
-        "fatihay/zephyrrishiraj",
         "dayanithi/Bot",
-        "gongxiaoyi/HuggingFaceH4-zephyr-7b-alpha"
+        "gongxiaoyi/HuggingFaceH4-zephyr-7b-alpha",
+        "misbah1955/cima-free-chat",
+        "yuvan16/HuggingFaceH4-zephyr-7b-alpha"
       ],
       "safetensors": {
         "parameters": {
@@ -104104,7 +104122,7 @@
     "id": "TheBloke/TinyLlama-1.1B-1T-OpenOrca-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 51,
+    "downloads": 52,
     "tags": [
       "transformers",
       "llama",
@@ -104138,7 +104156,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 51,
+      "downloads": 52,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -104241,7 +104259,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 502,
+      "downloads": 518,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -104595,7 +104613,7 @@
     "id": "TheBloke/dolphin-2.1-mistral-7B-GGUF",
     "likes": 77,
     "private": false,
-    "downloads": 446,
+    "downloads": 453,
     "tags": [
       "transformers",
       "mistral",
@@ -104629,7 +104647,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 446,
+      "downloads": 453,
       "library_name": "transformers",
       "likes": 77,
       "model-index": null,
@@ -104732,7 +104750,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 12949,
+      "downloads": 14297,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -104760,7 +104778,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 165,
+      "likes": 168,
       "model-index": null,
       "config": {
         "architectures": [
@@ -105045,7 +105063,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5034,
+      "downloads": 5347,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -105587,7 +105605,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6189,
+      "downloads": 6590,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -105817,7 +105835,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5620,
+      "downloads": 5979,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -106066,7 +106084,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3591,
+      "downloads": 3846,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -106336,7 +106354,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5732,
+      "downloads": 6065,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -106705,7 +106723,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4742,
+      "downloads": 5051,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -107027,7 +107045,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4594,
+      "downloads": 4906,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -107387,7 +107405,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4703,
+      "downloads": 5013,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -107901,7 +107919,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5114,
+      "downloads": 5423,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -108063,7 +108081,7 @@
   {
     "_id": "652a4a91c59e682042c1b91f",
     "id": "TheBloke/OpenHermes-2-Mistral-7B-GGUF",
-    "likes": 61,
+    "likes": 64,
     "private": false,
     "downloads": 119,
     "tags": [
@@ -108107,7 +108125,7 @@
       ],
       "downloads": 119,
       "library_name": "transformers",
-      "likes": 61,
+      "likes": 64,
       "model-index": [
         {
           "name": "OpenHermes-2-Mistral-7B",
@@ -108226,7 +108244,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14879,
+      "downloads": 15651,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -108254,7 +108272,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 173,
+      "likes": 176,
       "model-index": [
         {
           "name": "OpenHermes-2-Mistral-7B",
@@ -108693,7 +108711,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 31,
+      "downloads": 65,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -108917,7 +108935,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1421,
+      "downloads": 1435,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -109193,7 +109211,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4825,
+      "downloads": 5142,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -109495,7 +109513,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4684,
+      "downloads": 5001,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -109865,7 +109883,7 @@
     "id": "TheBloke/SauerkrautLM-3B-v1-GGUF",
     "likes": 2,
     "private": false,
-    "downloads": 3,
+    "downloads": 4,
     "tags": [
       "transformers",
       "llama",
@@ -109899,7 +109917,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 4,
       "library_name": "transformers",
       "likes": 2,
       "model-index": null,
@@ -110187,7 +110205,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 87,
+      "downloads": 96,
       "library_name": "transformers",
       "likes": 13,
       "model-index": null,
@@ -110435,7 +110453,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4798,
+      "downloads": 5127,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -110723,7 +110741,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4799,
+      "downloads": 5116,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -110959,7 +110977,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3136,
+      "downloads": 3140,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -111247,7 +111265,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4780,
+      "downloads": 5094,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -111543,7 +111561,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4760,
+      "downloads": 5077,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -111663,7 +111681,7 @@
     "id": "TheBloke/Xwin-LM-13B-v0.2-GGUF",
     "likes": 12,
     "private": false,
-    "downloads": 25,
+    "downloads": 26,
     "tags": [
       "transformers",
       "llama",
@@ -111689,7 +111707,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 25,
+      "downloads": 26,
       "library_name": "transformers",
       "likes": 12,
       "model-index": null,
@@ -111789,7 +111807,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 530,
+      "downloads": 575,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -111817,7 +111835,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 24,
+      "likes": 26,
       "model-index": null,
       "config": {
         "architectures": [
@@ -112080,7 +112098,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4857,
+      "downloads": 5171,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -112371,7 +112389,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3916,
+      "downloads": 4186,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -112560,7 +112578,7 @@
     "id": "TheBloke/Xwin-MLewd-13B-v0.2-GGUF",
     "likes": 9,
     "private": false,
-    "downloads": 92,
+    "downloads": 100,
     "tags": [
       "transformers",
       "llama",
@@ -112590,7 +112608,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 92,
+      "downloads": 100,
       "library_name": "transformers",
       "likes": 9,
       "model-index": null,
@@ -112695,7 +112713,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 895,
+      "downloads": 916,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -113044,7 +113062,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 217,
+      "downloads": 284,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -113574,7 +113592,7 @@
     "id": "TheBloke/Mistral-11B-OmniMix-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 26,
+    "downloads": 37,
     "tags": [
       "transformers",
       "mistral",
@@ -113600,7 +113618,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 26,
+      "downloads": 37,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -113690,7 +113708,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 448,
+      "downloads": 458,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -113952,8 +113970,8 @@
       "id": "ValiantLabs/ShiningValiant",
       "modelId": "ValiantLabs/ShiningValiant",
       "author": "ValiantLabs",
-      "sha": "8785cf2d1d401b55e310f37c127142601bdb4811",
-      "lastModified": "2023-10-28T21:25:59.000Z",
+      "sha": "e118c17f4a27577f8c41356734e2a1874f831685",
+      "lastModified": "2023-11-01T14:07:08.000Z",
       "private": false,
       "disabled": false,
       "gated": false,
@@ -113976,7 +113994,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6261,
+      "downloads": 6561,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -114004,7 +114022,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 47,
+      "likes": 48,
       "model-index": null,
       "config": {
         "architectures": [
@@ -114059,7 +114077,9 @@
         "bhandsab/ValiantLabs-ShiningValiant",
         "FiVStR/ValiantLabs-ShiningValiant",
         "toorhamza/ValiantLabs-ShiningValiant",
-        "pminervini/tmp"
+        "pminervini/tmp",
+        "Aaghat/ValiantLabs-ShiningValiant",
+        "ButterInABox/ValiantLabs-ShiningValiant"
       ],
       "safetensors": {
         "parameters": {
@@ -114366,7 +114386,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5187,
+      "downloads": 5518,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -114954,7 +114974,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5128,
+      "downloads": 5488,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -115167,7 +115187,7 @@
   {
     "_id": "652d776b5a4c91c68639299e",
     "id": "TheBloke/Leo-Mistral-Hessianai-7B-Chat-GGUF",
-    "likes": 3,
+    "likes": 4,
     "private": false,
     "downloads": 15,
     "tags": [
@@ -115243,7 +115263,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 3,
+      "likes": 4,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -115354,7 +115374,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 604,
+      "downloads": 619,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -115605,7 +115625,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 13,
+      "likes": 14,
       "model-index": null,
       "config": {
         "architectures": [
@@ -115965,7 +115985,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 110,
+      "downloads": 122,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -116412,7 +116432,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 683,
+      "downloads": 690,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -116440,7 +116460,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 43,
+      "likes": 46,
       "model-index": null,
       "config": {
         "architectures": [
@@ -116657,7 +116677,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2871,
+      "downloads": 4283,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -116917,7 +116937,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5675,
+      "downloads": 5732,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -117196,7 +117216,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 13,
+      "downloads": 16,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -117434,7 +117454,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4526,
+      "downloads": 4853,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -118189,7 +118209,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1808,
+      "downloads": 1864,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -118628,7 +118648,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3907,
+      "downloads": 4173,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -118724,7 +118744,7 @@
     "id": "TheBloke/MistralLite-7B-GGUF",
     "likes": 26,
     "private": false,
-    "downloads": 47,
+    "downloads": 48,
     "tags": [
       "transformers",
       "mistral",
@@ -118752,7 +118772,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 47,
+      "downloads": 48,
       "library_name": "transformers",
       "likes": 26,
       "model-index": null,
@@ -118774,7 +118794,7 @@
       },
       "spaces": [
         "seanpedrickcase/Light-PDF-Web-QA-Chatbot",
-        "seanpedrickcase/open_text_summariser"
+        "seanpedrickcase/text_summariser"
       ],
       "siblings": [
         {
@@ -118844,7 +118864,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4222,
+      "downloads": 4525,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -118872,7 +118892,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 164,
+      "likes": 173,
       "model-index": null,
       "config": {
         "architectures": [
@@ -119113,7 +119133,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5064,
+      "downloads": 5407,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -119223,7 +119243,7 @@
     "id": "TheBloke/Airoboros-M-7B-3.1.2-GGUF",
     "likes": 9,
     "private": false,
-    "downloads": 3,
+    "downloads": 12,
     "tags": [
       "transformers",
       "mistral",
@@ -119251,7 +119271,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 12,
       "library_name": "transformers",
       "likes": 9,
       "model-index": null,
@@ -119328,8 +119348,8 @@
       "id": "jondurbin/airoboros-m-7b-3.1.2",
       "modelId": "jondurbin/airoboros-m-7b-3.1.2",
       "author": "jondurbin",
-      "sha": "9b8e0c78e351ee2570098724182f6ddc35f03287",
-      "lastModified": "2023-10-22T11:44:53.000Z",
+      "sha": "e9a7f0271fa442d65bf6be87feeb3f4de2f5760e",
+      "lastModified": "2023-11-01T08:46:24.000Z",
       "private": false,
       "disabled": false,
       "gated": false,
@@ -119346,7 +119366,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 355,
+      "downloads": 380,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -119585,7 +119605,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 439,
+      "downloads": 465,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -119820,7 +119840,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 247,
+      "downloads": 257,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -120091,7 +120111,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 189,
+      "downloads": 214,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -120187,7 +120207,7 @@
   {
     "_id": "6532ff883e385cfc601254ad",
     "id": "TheBloke/CodeBooga-34B-v0.1-GGUF",
-    "likes": 14,
+    "likes": 15,
     "private": false,
     "downloads": 3,
     "tags": [
@@ -120217,7 +120237,7 @@
       ],
       "downloads": 3,
       "library_name": "transformers",
-      "likes": 14,
+      "likes": 15,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -120314,7 +120334,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 231,
+      "downloads": 247,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -120342,7 +120362,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 61,
+      "likes": 62,
       "model-index": null,
       "config": {
         "architectures": [
@@ -120604,7 +120624,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4740,
+      "downloads": 4941,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -120901,7 +120921,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 367,
+      "downloads": 394,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -121122,7 +121142,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2,
+      "downloads": 6,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -121356,7 +121376,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 424,
+      "downloads": 426,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -121450,7 +121470,7 @@
     "id": "TheBloke/Airoboros-L2-70B-3.1.2-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 1,
+    "downloads": 2,
     "tags": [
       "transformers",
       "llama",
@@ -121478,7 +121498,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 2,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -121615,7 +121635,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 7,
+      "likes": 8,
       "model-index": null,
       "config": {
         "architectures": [
@@ -122081,7 +122101,7 @@
     "id": "TheBloke/LLaMA2-13B-Tiefighter-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 34,
+    "downloads": 45,
     "tags": [
       "transformers",
       "llama",
@@ -122107,7 +122127,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 34,
+      "downloads": 45,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -122206,7 +122226,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 7389,
+      "downloads": 8110,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -122291,9 +122311,9 @@
   {
     "_id": "65354dada2c81a3d29a30494",
     "id": "TheBloke/CausalLM-14B-GGUF",
-    "likes": 58,
+    "likes": 61,
     "private": false,
-    "downloads": 53,
+    "downloads": 64,
     "tags": [
       "transformers",
       "llama",
@@ -122371,7 +122391,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 53,
+      "downloads": 64,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -122399,7 +122419,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 58,
+      "likes": 61,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -122492,7 +122512,7 @@
     "id": "TheBloke/CausalLM-7B-GGUF",
     "likes": 20,
     "private": false,
-    "downloads": 18,
+    "downloads": 23,
     "tags": [
       "transformers",
       "llama",
@@ -122570,7 +122590,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 18,
+      "downloads": 23,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -122712,7 +122732,7 @@
     "id": "TheBloke/SynthIA-7B-v2.0-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 9,
+    "downloads": 14,
     "tags": [
       "transformers",
       "mistral",
@@ -122744,7 +122764,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9,
+      "downloads": 14,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -122867,7 +122887,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 49,
+      "downloads": 55,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -123175,7 +123195,7 @@
     "id": "TheBloke/Mistral-7B-SciPhi-32k-GGUF",
     "likes": 10,
     "private": false,
-    "downloads": 14,
+    "downloads": 16,
     "tags": [
       "transformers",
       "mistral",
@@ -123201,7 +123221,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14,
+      "downloads": 16,
       "library_name": "transformers",
       "likes": 10,
       "model-index": null,
@@ -123291,7 +123311,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 683,
+      "downloads": 690,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -123319,7 +123339,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 43,
+      "likes": 46,
       "model-index": null,
       "config": {
         "architectures": [
@@ -123748,7 +123768,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1120,
+      "downloads": 1141,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -123829,7 +123849,7 @@
   {
     "_id": "6537f942a5ab055cf2be6972",
     "id": "TheBloke/Augmental-13B-GGUF",
-    "likes": 3,
+    "likes": 2,
     "private": false,
     "downloads": 9,
     "tags": [
@@ -123859,7 +123879,7 @@
       ],
       "downloads": 9,
       "library_name": "transformers",
-      "likes": 3,
+      "likes": 2,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -124461,9 +124481,9 @@
   {
     "_id": "653980d40da86d726c8765e9",
     "id": "TheBloke/lzlv_70B-GGUF",
-    "likes": 7,
+    "likes": 8,
     "private": false,
-    "downloads": 3,
+    "downloads": 12,
     "tags": [
       "transformers",
       "llama",
@@ -124489,9 +124509,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 12,
       "library_name": "transformers",
-      "likes": 7,
+      "likes": 8,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -124595,7 +124615,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3671,
+      "downloads": 3943,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -124623,7 +124643,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 18,
+      "likes": 19,
       "model-index": null,
       "config": {
         "architectures": [
@@ -124850,7 +124870,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 103,
+      "downloads": 111,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -124878,7 +124898,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 10,
+      "likes": 11,
       "model-index": null,
       "config": {
         "architectures": [
@@ -124947,9 +124967,9 @@
   {
     "_id": "653bb81b7f5fc9ccb1617aa3",
     "id": "TheBloke/zephyr-7B-beta-GGUF",
-    "likes": 73,
+    "likes": 80,
     "private": false,
-    "downloads": 180,
+    "downloads": 254,
     "tags": [
       "transformers",
       "mistral",
@@ -124989,9 +125009,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 180,
+      "downloads": 254,
       "library_name": "transformers",
-      "likes": 73,
+      "likes": 80,
       "model-index": [
         {
           "name": "zephyr-7b-beta",
@@ -125112,7 +125132,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 14916,
+      "downloads": 20675,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -125140,7 +125160,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 394,
+      "likes": 439,
       "model-index": [
         {
           "name": "zephyr-7b-beta",
@@ -125188,6 +125208,7 @@
         "manjunathshiva/BibleGPT",
         "ubermenchh/zephyr_chatbot",
         "gstaff/KiteWind",
+        "dileepdaji/demo",
         "yami007/HuggingFaceH4-zephyr-7b-beta",
         "madhanrajan357/HuggingFaceH4-zephyr-7b-beta",
         "terryli/llm-app",
@@ -125198,7 +125219,11 @@
         "tulipbrain/chat",
         "eonsule/HuggingFaceH4-zephyr-7b-beta",
         "Felbdogg/HuggingFaceH4-zephyr-7b-beta",
-        "z3lly/HuggingFaceH4-zephyr-7b-beta"
+        "z3lly/HuggingFaceH4-zephyr-7b-beta",
+        "Aaghat/HuggingFaceH4-zephyr-7b-beta",
+        "farpha/HuggingFaceH4-zephyr-7b-beta",
+        "omar07ib/HuggingFaceH4-zephyr-7b-beta",
+        "JSP/ar"
       ],
       "safetensors": {
         "parameters": {
@@ -125419,7 +125444,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 86,
+      "downloads": 100,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -125641,7 +125666,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 130,
+      "downloads": 137,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -125771,9 +125796,9 @@
   {
     "_id": "653c289eaa1f487614a2785c",
     "id": "TheBloke/med42-70B-GGUF",
-    "likes": 9,
+    "likes": 11,
     "private": false,
-    "downloads": 5,
+    "downloads": 6,
     "tags": [
       "transformers",
       "llama",
@@ -125813,7 +125838,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5,
+      "downloads": 6,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -125841,7 +125866,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 9,
+      "likes": 11,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -125938,7 +125963,7 @@
   {
     "_id": "653c29eeec992c5c203da236",
     "id": "TheBloke/MistRP-Airoboros-7B-GGUF",
-    "likes": 0,
+    "likes": 1,
     "private": false,
     "downloads": 0,
     "tags": [
@@ -125972,7 +125997,7 @@
       ],
       "downloads": 0,
       "library_name": "transformers",
-      "likes": 0,
+      "likes": 1,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -126277,8 +126302,8 @@
       "id": "Undi95/Lewd-Sydney-20B",
       "modelId": "Undi95/Lewd-Sydney-20B",
       "author": "Undi95",
-      "sha": "9ad76f17a24749fb248549f1f2b509101c6e5b36",
-      "lastModified": "2023-10-27T22:08:25.000Z",
+      "sha": "ed76e0a9c81d2974240a67a550892d6aebf35b18",
+      "lastModified": "2023-11-01T03:17:24.000Z",
       "private": false,
       "disabled": false,
       "gated": false,
@@ -126295,7 +126320,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 9,
+      "downloads": 14,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -126323,7 +126348,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 6,
+      "likes": 8,
       "model-index": null,
       "config": {
         "architectures": [
@@ -126510,7 +126535,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 29,
+      "downloads": 30,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -126585,9 +126610,9 @@
   {
     "_id": "653cbbf3ceb0a0f6ce02fc67",
     "id": "TheBloke/openbuddy-mistral-7B-v13.1-GGUF",
-    "likes": 2,
+    "likes": 3,
     "private": false,
-    "downloads": 1,
+    "downloads": 2,
     "tags": [
       "transformers",
       "mistral",
@@ -126633,7 +126658,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1,
+      "downloads": 2,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -126652,7 +126677,7 @@
           "text": "从前，"
         }
       ],
-      "likes": 2,
+      "likes": 3,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -126759,7 +126784,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4923,
+      "downloads": 5270,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -127290,9 +127315,9 @@
   {
     "_id": "653ccce8b424289c5f3b3a35",
     "id": "TheBloke/Mistral-7B-codealpaca-lora-GGUF",
-    "likes": 4,
+    "likes": 5,
     "private": false,
-    "downloads": 3,
+    "downloads": 4,
     "tags": [
       "transformers",
       "mistral",
@@ -127320,9 +127345,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 4,
       "library_name": "transformers",
-      "likes": 4,
+      "likes": 5,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -127416,7 +127441,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 149,
+      "downloads": 150,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -127444,7 +127469,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 8,
+      "likes": 9,
       "model-index": null,
       "config": {
         "architectures": [
@@ -127672,7 +127697,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2,
+      "downloads": 4,
       "library_name": "transformers",
       "likes": 9,
       "model-index": null,
@@ -127905,8 +127930,8 @@
       "id": "NeverSleep/Echidna-13b-v0.3",
       "modelId": "NeverSleep/Echidna-13b-v0.3",
       "author": "NeverSleep",
-      "sha": "9201337d9ee183684e3c0489b51f9b02de6b5e3f",
-      "lastModified": "2023-10-28T13:34:10.000Z",
+      "sha": "25fc402f449e79bdb150e97dd5eb4fd056130b42",
+      "lastModified": "2023-11-01T03:21:25.000Z",
       "private": false,
       "disabled": false,
       "gated": false,
@@ -127918,10 +127943,11 @@
         "text-generation",
         "license:cc-by-nc-4.0",
         "endpoints_compatible",
+        "has_space",
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 682,
+      "downloads": 892,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -127949,7 +127975,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 11,
+      "likes": 12,
       "model-index": null,
       "config": {
         "architectures": [
@@ -128164,9 +128190,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 1846,
+      "downloads": 2023,
       "library_name": "transformers",
-      "likes": 28,
+      "likes": 29,
       "model-index": null,
       "config": {
         "architectures": [
@@ -128248,7 +128274,7 @@
     "id": "TheBloke/Mistral-7B-Claude-Chat-GGUF",
     "likes": 6,
     "private": false,
-    "downloads": 16,
+    "downloads": 19,
     "tags": [
       "transformers",
       "mistral",
@@ -128276,7 +128302,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 16,
+      "downloads": 19,
       "library_name": "transformers",
       "likes": 6,
       "model-index": null,
@@ -128370,7 +128396,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 355,
+      "downloads": 365,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -129035,7 +129061,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4,
+      "downloads": 13,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -129506,9 +129532,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 11,
+      "downloads": 20,
       "library_name": "transformers",
-      "likes": 8,
+      "likes": 9,
       "model-index": null,
       "config": {
         "architectures": [
@@ -129582,7 +129608,7 @@
   {
     "_id": "653e8e84ca6e5875c4db8045",
     "id": "TheBloke/AquilaChat2-34B-16K-GGUF",
-    "likes": 6,
+    "likes": 8,
     "private": false,
     "downloads": 0,
     "tags": [
@@ -129610,7 +129636,7 @@
       ],
       "downloads": 0,
       "library_name": "transformers",
-      "likes": 6,
+      "likes": 8,
       "model-index": null,
       "config": {
         "model_type": "aquila"
@@ -129697,7 +129723,7 @@
         "license:other",
         "region:us"
       ],
-      "downloads": 176,
+      "downloads": 179,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -129943,7 +129969,7 @@
         "license:other",
         "region:us"
       ],
-      "downloads": 664,
+      "downloads": 667,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -129971,7 +129997,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 38,
+      "likes": 39,
       "model-index": null,
       "config": {
         "architectures": [
@@ -130199,7 +130225,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4574,
+      "downloads": 4774,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -130457,7 +130483,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 12,
+      "likes": 15,
       "model-index": null,
       "config": {
         "architectures": [
@@ -130534,7 +130560,7 @@
     "id": "TheBloke/SciPhi-Mistral-7B-32k-GGUF",
     "likes": 7,
     "private": false,
-    "downloads": 6,
+    "downloads": 7,
     "tags": [
       "transformers",
       "mistral",
@@ -130558,7 +130584,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6,
+      "downloads": 7,
       "library_name": "transformers",
       "likes": 7,
       "model-index": null,
@@ -130647,7 +130673,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 683,
+      "downloads": 690,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -130675,7 +130701,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 43,
+      "likes": 46,
       "model-index": null,
       "config": {
         "architectures": [
@@ -130870,7 +130896,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 2,
+      "downloads": 11,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -131084,7 +131110,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 33,
+      "downloads": 37,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -131112,7 +131138,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 3,
+      "likes": 4,
       "model-index": null,
       "config": {
         "architectures": [
@@ -131305,7 +131331,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 5,
+      "downloads": 9,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -131333,7 +131359,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 2,
+      "likes": 3,
       "model-index": null,
       "config": {
         "architectures": [
@@ -131756,7 +131782,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 3,
+      "downloads": 4,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -131986,7 +132012,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 4,
+      "downloads": 5,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -132208,7 +132234,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 15,
+      "downloads": 175,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -132236,7 +132262,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 15,
+      "likes": 18,
       "model-index": null,
       "config": {
         "architectures": [
@@ -132316,7 +132342,7 @@
   {
     "_id": "65411a8c3a60baceec7b6139",
     "id": "TheBloke/Nethena-MLewd-Xwin-23B-GGUF",
-    "likes": 2,
+    "likes": 3,
     "private": false,
     "downloads": 0,
     "tags": [
@@ -132350,7 +132376,7 @@
       ],
       "downloads": 0,
       "library_name": "transformers",
-      "likes": 2,
+      "likes": 3,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -132453,7 +132479,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 6,
+      "downloads": 7,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -132554,9 +132580,9 @@
   {
     "_id": "65411a9aa369c0007508ce7b",
     "id": "TheBloke/MetaMath-Mistral-7B-GGUF",
-    "likes": 4,
+    "likes": 5,
     "private": false,
-    "downloads": 0,
+    "downloads": 1,
     "tags": [
       "transformers",
       "mistral",
@@ -132586,9 +132612,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 0,
+      "downloads": 1,
       "library_name": "transformers",
-      "likes": 4,
+      "likes": 5,
       "model-index": null,
       "config": {
         "model_type": "mistral"
@@ -132681,7 +132707,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 171,
+      "downloads": 397,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -132709,7 +132735,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 14,
+      "likes": 16,
       "model-index": null,
       "config": {
         "architectures": [
@@ -132769,9 +132795,9 @@
   {
     "_id": "65411b1797949fd2306ebe89",
     "id": "TheBloke/Xwin-MLewd-7B-V0.2-GGUF",
-    "likes": 0,
+    "likes": 2,
     "private": false,
-    "downloads": 0,
+    "downloads": 14,
     "tags": [
       "transformers",
       "llama",
@@ -132801,9 +132827,9 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 0,
+      "downloads": 14,
       "library_name": "transformers",
-      "likes": 0,
+      "likes": 2,
       "model-index": null,
       "config": {
         "model_type": "llama"
@@ -132906,7 +132932,7 @@
         "text-generation-inference",
         "region:us"
       ],
-      "downloads": 116,
+      "downloads": 125,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -132934,7 +132960,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 5,
+      "likes": 6,
       "model-index": null,
       "config": {
         "architectures": [
@@ -133001,7 +133027,7 @@
   {
     "_id": "65417c962274785dbbcb559b",
     "id": "TheBloke/Skywork-13B-base-GGUF",
-    "likes": 1,
+    "likes": 5,
     "private": false,
     "downloads": 0,
     "tags": [
@@ -133033,7 +133059,7 @@
       ],
       "downloads": 0,
       "library_name": "transformers",
-      "likes": 1,
+      "likes": 5,
       "model-index": null,
       "config": {
         "model_type": "skywork"
@@ -133124,7 +133150,7 @@
         "license:other",
         "region:us"
       ],
-      "downloads": 165,
+      "downloads": 228,
       "library_name": "transformers",
       "widgetData": [
         {
@@ -133152,7 +133178,7 @@
           "text": "Once upon a time,"
         }
       ],
-      "likes": 17,
+      "likes": 20,
       "model-index": null,
       "config": {
         "architectures": [
@@ -133403,6 +133429,603 @@
         },
         {
           "rfilename": "tokenization_skywork.py"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6542419f4556096591088490",
+    "id": "TheBloke/Amethyst-13B-GGUF",
+    "likes": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "llama",
+      "not-for-all-audiences",
+      "nsfw",
+      "license:cc-by-nc-4.0",
+      "text-generation-inference",
+      "region:us"
+    ],
+    "modelId": "TheBloke/Amethyst-13B-GGUF",
+    "model": {
+      "_id": "6542419f4556096591088490",
+      "id": "TheBloke/Amethyst-13B-GGUF",
+      "modelId": "TheBloke/Amethyst-13B-GGUF",
+      "author": "TheBloke",
+      "sha": "97822c63d2adf8cbf077955ac599f3cf430024eb",
+      "lastModified": "2023-11-01T12:24:50.000Z",
+      "private": false,
+      "disabled": false,
+      "gated": false,
+      "tags": [
+        "transformers",
+        "llama",
+        "not-for-all-audiences",
+        "nsfw",
+        "license:cc-by-nc-4.0",
+        "text-generation-inference",
+        "region:us"
+      ],
+      "downloads": 0,
+      "library_name": "transformers",
+      "likes": 0,
+      "model-index": null,
+      "config": {
+        "model_type": "llama"
+      },
+      "cardData": {
+        "base_model": "Undi95/Amethyst-13B",
+        "inference": false,
+        "license": "cc-by-nc-4.0",
+        "model_creator": "Undi",
+        "model_name": "Amethyst 13B",
+        "model_type": "llama",
+        "prompt_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{prompt}\n\n### Response:\n",
+        "quantized_by": "TheBloke",
+        "tags": [
+          "not-for-all-audiences",
+          "nsfw"
+        ]
+      },
+      "transformersInfo": {
+        "auto_model": "AutoModel"
+      },
+      "spaces": [],
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "LICENSE.txt"
+        },
+        {
+          "rfilename": "Notice"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "USE_POLICY.md"
+        },
+        {
+          "rfilename": "amethyst-13b.Q2_K.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q4_0.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q5_0.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q6_K.gguf"
+        },
+        {
+          "rfilename": "amethyst-13b.Q8_0.gguf"
+        },
+        {
+          "rfilename": "config.json"
+        }
+      ]
+    },
+    "baseModel": {
+      "_id": "65106756c22803e6a0b7f184",
+      "id": "Undi95/Amethyst-13B",
+      "modelId": "Undi95/Amethyst-13B",
+      "author": "Undi95",
+      "sha": "d4a85b1006f0b9439e64f0e7400533a7b867c24d",
+      "lastModified": "2023-09-25T13:19:48.000Z",
+      "private": false,
+      "disabled": false,
+      "gated": false,
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "transformers",
+        "pytorch",
+        "llama",
+        "text-generation",
+        "not-for-all-audiences",
+        "nsfw",
+        "license:cc-by-nc-4.0",
+        "endpoints_compatible",
+        "text-generation-inference",
+        "region:us"
+      ],
+      "downloads": 6874,
+      "library_name": "transformers",
+      "widgetData": [
+        {
+          "text": "My name is Julien and I like to"
+        },
+        {
+          "text": "My name is Thomas and my main"
+        },
+        {
+          "text": "My name is Mariama, my favorite"
+        },
+        {
+          "text": "My name is Clara and I am"
+        },
+        {
+          "text": "My name is Lewis and I like to"
+        },
+        {
+          "text": "My name is Merve and my favorite"
+        },
+        {
+          "text": "My name is Teven and I am"
+        },
+        {
+          "text": "Once upon a time,"
+        }
+      ],
+      "likes": 4,
+      "model-index": null,
+      "config": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "model_type": "llama"
+      },
+      "cardData": {
+        "license": "cc-by-nc-4.0",
+        "tags": [
+          "not-for-all-audiences",
+          "nsfw"
+        ]
+      },
+      "transformersInfo": {
+        "auto_model": "AutoModelForCausalLM",
+        "pipeline_tag": "text-generation",
+        "processor": "AutoTokenizer"
+      },
+      "spaces": [],
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "pytorch_model-00001-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00002-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00003-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00004-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00005-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00006-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00007-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00008-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00009-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00010-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00011-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00012-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00013-of-00013.bin"
+        },
+        {
+          "rfilename": "pytorch_model.bin.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "654282a6ad865d6231bb156a",
+    "id": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+    "likes": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "llama",
+      "vi",
+      "en",
+      "dataset:vietgpt/wikipedia_vi",
+      "dataset:wikipedia",
+      "dataset:pg19",
+      "dataset:mc4",
+      "license:other",
+      "text-generation-inference",
+      "region:us"
+    ],
+    "modelId": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+    "model": {
+      "_id": "654282a6ad865d6231bb156a",
+      "id": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+      "modelId": "TheBloke/vietnamese-llama2-7B-40GB-GGUF",
+      "author": "TheBloke",
+      "sha": "efd9cb5ff3b736000c6e4b11fb313a8138bb8d11",
+      "lastModified": "2023-11-01T16:58:03.000Z",
+      "private": false,
+      "disabled": false,
+      "gated": false,
+      "tags": [
+        "transformers",
+        "llama",
+        "vi",
+        "en",
+        "dataset:vietgpt/wikipedia_vi",
+        "dataset:wikipedia",
+        "dataset:pg19",
+        "dataset:mc4",
+        "license:other",
+        "text-generation-inference",
+        "region:us"
+      ],
+      "downloads": 0,
+      "library_name": "transformers",
+      "likes": 0,
+      "model-index": null,
+      "config": {
+        "model_type": "llama"
+      },
+      "cardData": {
+        "base_model": "bkai-foundation-models/vietnamese-llama2-7b-40GB",
+        "datasets": [
+          "vietgpt/wikipedia_vi",
+          "wikipedia",
+          "pg19",
+          "mc4"
+        ],
+        "inference": false,
+        "language": [
+          "vi",
+          "en"
+        ],
+        "license": "other",
+        "model_creator": "BKAI-HUST Foundation Models Lab",
+        "model_name": "Vietnamese Llama2 7B 40GB",
+        "model_type": "llama",
+        "prompt_template": "{prompt}\n",
+        "quantized_by": "TheBloke"
+      },
+      "transformersInfo": {
+        "auto_model": "AutoModel"
+      },
+      "spaces": [],
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "LICENSE.txt"
+        },
+        {
+          "rfilename": "Notice"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "USE_POLICY.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q2_K.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q4_0.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q5_0.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q6_K.gguf"
+        },
+        {
+          "rfilename": "vietnamese-llama2-7b-40gb.Q8_0.gguf"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "6542b27c8caf77017826c032",
+    "id": "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF",
+    "likes": 0,
+    "private": false,
+    "downloads": 0,
+    "tags": [
+      "transformers",
+      "mistral",
+      "license:mit",
+      "text-generation-inference",
+      "region:us"
+    ],
+    "modelId": "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF",
+    "model": {
+      "_id": "6542b27c8caf77017826c032",
+      "id": "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF",
+      "modelId": "TheBloke/SciPhi-Self-RAG-Mistral-7B-32k-GGUF",
+      "author": "TheBloke",
+      "sha": "e8e56d601bab43de7bc8c46ade17b747c7bff124",
+      "lastModified": "2023-11-01T20:23:16.000Z",
+      "private": false,
+      "disabled": false,
+      "gated": false,
+      "tags": [
+        "transformers",
+        "mistral",
+        "license:mit",
+        "text-generation-inference",
+        "region:us"
+      ],
+      "downloads": 0,
+      "library_name": "transformers",
+      "likes": 0,
+      "model-index": null,
+      "config": {
+        "model_type": "mistral"
+      },
+      "cardData": {
+        "base_model": "SciPhi/SciPhi-Self-RAG-Mistral-7B-32k",
+        "inference": false,
+        "license": "mit",
+        "model_creator": "SciPhi-AI",
+        "model_name": "SciPhi Self RAG Mistral 7B 32K",
+        "model_type": "mistral",
+        "prompt_template": "### System:\n{system_message}\n\n### Instruction:\n{prompt}\n\n### Response:\n",
+        "quantized_by": "TheBloke"
+      },
+      "transformersInfo": {
+        "auto_model": "AutoModel"
+      },
+      "spaces": [],
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q2_K.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q4_0.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q5_0.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q6_K.gguf"
+        },
+        {
+          "rfilename": "sciphi-self-rag-mistral-7b-32k.Q8_0.gguf"
+        }
+      ]
+    },
+    "baseModel": {
+      "_id": "653bb8bbd7fc2d77a28159b7",
+      "id": "SciPhi/SciPhi-Self-RAG-Mistral-7B-32k",
+      "modelId": "SciPhi/SciPhi-Self-RAG-Mistral-7B-32k",
+      "author": "SciPhi",
+      "sha": "640192e2ba5898f87c407a9f771fc270f7628dee",
+      "lastModified": "2023-11-01T12:25:44.000Z",
+      "private": false,
+      "disabled": false,
+      "gated": false,
+      "pipeline_tag": "text-generation",
+      "tags": [
+        "transformers",
+        "pytorch",
+        "mistral",
+        "text-generation",
+        "license:mit",
+        "endpoints_compatible",
+        "text-generation-inference",
+        "region:us"
+      ],
+      "downloads": 390,
+      "library_name": "transformers",
+      "widgetData": [
+        {
+          "text": "My name is Julien and I like to"
+        },
+        {
+          "text": "My name is Thomas and my main"
+        },
+        {
+          "text": "My name is Mariama, my favorite"
+        },
+        {
+          "text": "My name is Clara and I am"
+        },
+        {
+          "text": "My name is Lewis and I like to"
+        },
+        {
+          "text": "My name is Merve and my favorite"
+        },
+        {
+          "text": "My name is Teven and I am"
+        },
+        {
+          "text": "Once upon a time,"
+        }
+      ],
+      "likes": 17,
+      "model-index": null,
+      "config": {
+        "architectures": [
+          "MistralForCausalLM"
+        ],
+        "model_type": "mistral"
+      },
+      "cardData": {
+        "license": "mit"
+      },
+      "transformersInfo": {
+        "auto_model": "AutoModelForCausalLM",
+        "pipeline_tag": "text-generation",
+        "processor": "AutoTokenizer"
+      },
+      "spaces": [],
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "pytorch_model-00001-of-00003.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00002-of-00003.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00003-of-00003.bin"
+        },
+        {
+          "rfilename": "pytorch_model.bin.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
         },
         {
           "rfilename": "tokenizer.model"

@@ -1,11 +1,17 @@
 import prisma from "../../lib/prisma";
 import catalog from "../data/catalog.json";
 
-// These are duplicates of other models, so we ignore them
 const IGNORED_MODELS = [
-  "TheBloke/Mistral-7B-Phibrarian-32K-GGUF",
-  "TheBloke/Mistral-7B-SciPhi-32k-GGUF",
+  "TheBloke/Mistral-7B-Phibrarian-32K-GGUF", // duplicate
+  "TheBloke/Mistral-7B-SciPhi-32k-GGUF", // duplicate
+  "TheBloke/minotaur-13B-GGUF", // no real data
+  "TheBloke/tinyllama-1.1b-chat-v0.3_platypus-GGUF", // no real data
+  "TheBloke/LLaMA-13b-GGUF", // no base model
+  "TheBloke/LLaMA-30b-GGUF", // no base model
+  "TheBloke/LLaMA-7b-GGUF", // no base model
+  "TheBloke/LLaMA-65B-GGUF", // no base model
 ];
+
 export function parseModelInfo(modelInfo: any) {
   if (IGNORED_MODELS.includes(modelInfo.id)) {
     return;
@@ -112,11 +118,22 @@ export function parseModelInfo(modelInfo: any) {
 }
 
 export async function loadCatalog() {
-  const originalCount = await prisma.model.count();
+  const [originalCount, existingIds] = await prisma.$transaction([
+    prisma.model.count(),
+    prisma.model.findMany({
+      select: { remoteId: true },
+    }),
+  ]);
+
   let count = 0;
+  const existingIdsFlat = existingIds.map((model) => model.remoteId);
+
   for (const modelInfo of catalog) {
     const parsedInfo = parseModelInfo(modelInfo);
     if (!parsedInfo) {
+      continue;
+    }
+    if (existingIdsFlat.includes(parsedInfo.remoteId)) {
       continue;
     }
 
@@ -150,6 +167,6 @@ export async function loadCatalog() {
     }
   }
   console.log(
-    `Added ${count - originalCount} new models, updated ${count} total`
+    `Added ${count} new models, ${count + originalCount} models total`
   );
 }
