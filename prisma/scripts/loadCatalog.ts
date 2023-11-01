@@ -16,24 +16,28 @@ function parseModelInfo(modelInfo: any) {
       baseModel?.modelId.split("/")[0];
     const authorSlug = authorParam.toLowerCase().replaceAll(" ", "-");
 
+    const ggufId = model.id;
+    const remoteId = baseModel?.modelId || model.cardData?.base_model;
+
+    const modelSlug = remoteId.split("/")[1].toLowerCase();
     const modelName =
-      model.cardData?.model_name ||
-      baseModel?.modelId.split("/")[1].replaceAll("_", " ");
-    const modelSlug = modelName.toLowerCase().replaceAll(" ", "-");
-    const baseModelParam = model.cardData?.base_model;
-    const modelParam = model.id;
+      model.cardData?.model_name || remoteId.split("/")[1].replaceAll("_", " ");
+
     const license =
       baseModel?.cardData?.license?.[0] || model?.cardData?.license?.[0];
     const arch = model.cardData?.model_type || "other";
     const lastModified = baseModel?.lastModified || model?.lastModified;
 
+    // Parse Parameters
     const safetensors =
       model.safetensors?.total || baseModel?.safetensors?.total;
     let numParameters;
     if (safetensors) {
       numParameters = Math.round(safetensors / 1000000000) + "B";
     } else {
-      numParameters = modelName.match(/\d+[Bb]/)?.[0].toUpperCase();
+      numParameters =
+        modelSlug.match(/\d+[Bb]/)?.[0].toUpperCase() ||
+        modelName.match(/\d+[Bb]/)?.[0].toUpperCase();
     }
 
     const files: { name: string; format: string; quantization: string }[] =
@@ -53,8 +57,8 @@ function parseModelInfo(modelInfo: any) {
     return {
       name: modelName,
       slug: modelSlug,
-      remoteId: baseModelParam,
-      ggufId: modelParam,
+      remoteId,
+      ggufId,
       lastModified,
       license,
       numParameters,
