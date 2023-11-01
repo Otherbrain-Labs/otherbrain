@@ -1,43 +1,63 @@
 import prisma from "../../lib/prisma";
 import catalog from "../data/catalog.json";
 
+// These are duplicates of other models, so we ignore them
 const IGNORED_MODELS = [
-  "TheBloke/minotaur-13B-GGUF",
-  "TheBloke/tinyllama-1.1b-chat-v0.3_platypus-GGUF",
+  "TheBloke/Mistral-7B-Phibrarian-32K-GGUF",
+  "TheBloke/Mistral-7B-SciPhi-32k-GGUF",
 ];
+export function parseModelInfo(modelInfo: any) {
+  if (IGNORED_MODELS.includes(modelInfo.id)) {
+    return;
+  }
 
-function parseModelInfo(modelInfo: any) {
   try {
     const { model, baseModel } = modelInfo;
 
-    const authorName = model.cardData?.model_creator;
-    const authorParam =
+    const authorRemoteId =
       model.cardData?.base_model.split("/")[0] ||
       baseModel?.modelId.split("/")[0];
-    const authorSlug = authorParam.toLowerCase().replaceAll(" ", "-");
 
-    const ggufId = model.id;
+    if (!authorRemoteId) {
+      console.error(
+        `Error parsing model info: ${modelInfo.id}.`,
+        "Missing author.remoteId:",
+        {
+          cardData: model.cardData,
+          baseModel: baseModel?.modelId,
+        }
+      );
+      return;
+    }
+
     const remoteId = baseModel?.modelId || model.cardData?.base_model;
-
-    const modelSlug = remoteId.split("/")[1].toLowerCase();
-    const modelName =
+    const ggufId = model.id;
+    const slug = remoteId.split("/")[1].toLowerCase();
+    const name =
       model.cardData?.model_name || remoteId.split("/")[1].replaceAll("_", " ");
-
-    const license =
-      baseModel?.cardData?.license?.[0] || model?.cardData?.license?.[0];
     const arch = model.cardData?.model_type || "other";
-    const lastModified = baseModel?.lastModified || model?.lastModified;
+    const lastModifiedDate = baseModel?.lastModified || model?.lastModified;
+
+    // License
+    const maybeLicense =
+      baseModel?.cardData?.license || model?.cardData?.license || [];
+    const license = Array.isArray(maybeLicense)
+      ? maybeLicense[0]
+      : maybeLicense;
 
     // Parse Parameters
     const safetensors =
       model.safetensors?.total || baseModel?.safetensors?.total;
     let numParameters;
     if (safetensors) {
-      numParameters = Math.round(safetensors / 1000000000) + "B";
+      numParameters = Math.round(safetensors / 1000000000);
     } else {
-      numParameters =
-        modelSlug.match(/\d+[Bb]/)?.[0].toUpperCase() ||
-        modelName.match(/\d+[Bb]/)?.[0].toUpperCase();
+      const numParametersStr =
+        slug.match(/\d+[Bb]/)?.[0].toUpperCase() ||
+        name.match(/\d+[Bb]/)?.[0].toUpperCase();
+      if (numParametersStr) {
+        numParameters = parseInt(numParametersStr, 10);
+      }
     }
 
     const files: { name: string; format: string; quantization: string }[] =
@@ -54,115 +74,82 @@ function parseModelInfo(modelInfo: any) {
           };
         });
 
-    return {
-      name: modelName,
-      slug: modelSlug,
+    const author = {
+      name: model.cardData?.model_creator,
+      remoteId: authorRemoteId,
+      slug: authorRemoteId.toLowerCase().replaceAll(" ", "-"),
+    };
+
+    const result = {
       remoteId,
       ggufId,
-      lastModified,
+      name,
+      slug,
+      lastModifiedDate,
       license,
       numParameters,
       arch,
-      author: {
-        name: authorName,
-        remoteId: authorParam,
-        slug: authorSlug,
-      },
+      author,
       files,
     };
+
+    if (!result.slug) {
+      console.error(
+        `Error parsing model info: ${modelInfo.id}.`,
+        "Missing slug:",
+        {
+          remoteId,
+        }
+      );
+      return;
+    }
+
+    return result;
   } catch (error) {
-    console.error("Error parsing model info:", modelInfo.id);
+    console.error(`Error parsing model info: ${modelInfo.id}.`);
     console.error(error);
   }
 }
 
 export async function loadCatalog() {
-  // for each model in the catalog array, create a new Model in the database and if necessary create an Author
+  const originalCount = await prisma.model.count();
+  let count = 0;
   for (const modelInfo of catalog) {
-    if (IGNORED_MODELS.includes(modelInfo.model.id)) {
-      console.info("Skipping ignored model", modelInfo.model.id);
-      continue;
-    }
     const parsedInfo = parseModelInfo(modelInfo);
     if (!parsedInfo) {
-      console.info("Skipping unparsed model", modelInfo.model.id);
       continue;
     }
+
     try {
-      var author = await prisma.author.findFirst({
+      await prisma.model.upsert({
         where: {
-          slug: parsedInfo.author.slug,
-        },
-      });
-
-      if (!author) {
-        author = await prisma.author.create({
-          data: {
-            name: parsedInfo.author.name,
-            slug: parsedInfo.author.slug,
-            remoteId: parsedInfo.author.remoteId,
-          },
-        });
-      }
-
-      var dbModel = await prisma.model.findFirst({
-        where: { authorId: author.id, slug: parsedInfo.slug },
-      });
-
-      if (dbModel) {
-        console.log("skipping", parsedInfo.name);
-        continue;
-      } else {
-        console.log("adding", parsedInfo.name);
-      }
-
-      if (
-        ![
-          "llama",
-          "starcoder",
-          "mistral",
-          "falcon",
-          "tinyllama",
-          "aquila",
-        ].includes(parsedInfo.arch)
-      ) {
-        throw new Error(
-          "trainedFor must be one of 'llama', 'starcoder', or 'mpt'"
-        );
-      }
-
-      dbModel = await prisma.model.create({
-        data: {
-          authorId: author.id,
-          name: parsedInfo.name,
-          slug: parsedInfo.slug,
-          numParameters: parsedInfo.numParameters,
-          arch: parsedInfo.arch,
-          license: parsedInfo.license,
           remoteId: parsedInfo.remoteId,
-          ggufId: parsedInfo.ggufId,
-          lastModifiedDate: new Date(parsedInfo.lastModified),
+        },
+        update: {},
+        create: {
+          ...parsedInfo,
+          lastModifiedDate: new Date(parsedInfo.lastModifiedDate),
+          files: {
+            createMany: {
+              data: parsedInfo.files,
+            },
+          },
+          author: {
+            connectOrCreate: {
+              where: {
+                slug: parsedInfo.author.slug,
+              },
+              create: parsedInfo.author,
+            },
+          },
         },
       });
-
-      // for each file in the model, create a new File in the database
-      parsedInfo.files.forEach(async (file) => {
-        try {
-          await prisma.file.create({
-            data: {
-              name: file.name,
-              quantization: file.quantization,
-              format: file.format,
-              modelId: dbModel!.id,
-            },
-          });
-        } catch (error) {
-          console.log(error);
-        }
-      });
+      count++;
     } catch (error) {
-      console.log(parsedInfo);
-      throw error;
+      console.error(`Error adding model ${parsedInfo.remoteId}`, error);
     }
   }
+  console.log(
+    `Added ${count - originalCount} new models, updated ${count} total`
+  );
 }

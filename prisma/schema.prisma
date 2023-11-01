@@ -27,13 +27,13 @@ model Author {
 
 model Model {
   id               String   @id @default(cuid())
+  remoteId         String   @unique
   slug             String
   name             String
   lastModifiedDate DateTime
-  numParameters    String?
-  arch             Arch
+  numParameters    Int?
+  arch             String
   license          String?
-  remoteId         String
   ggufId           String
   authorId         String
 
@@ -47,8 +47,6 @@ model Model {
   files   File[]
   reviews Review[]
   author  Author   @relation(fields: [authorId], references: [id])
-
-  @@unique([authorId, slug])
 }
 
 model File {
@@ -71,14 +69,4 @@ model Review {
 
   model Model @relation(fields: [modelId], references: [id])
   user  User  @relation(fields: [userId], references: [id])
-}
-
-enum Arch {
-  llama
-  starcoder
-  mistral
-  falcon
-  tinyllama
-  aquila
-  other
 }
