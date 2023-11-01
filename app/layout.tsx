@@ -43,7 +43,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="mx-auto px-4">
               <MainNav />
               <Toaster />
               {children}

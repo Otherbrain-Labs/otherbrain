@@ -147,14 +147,18 @@ export async function loadCatalog() {
 
       // for each file in the model, create a new File in the database
       parsedInfo.files.forEach(async (file) => {
-        await prisma.file.create({
-          data: {
-            name: file.name,
-            quantization: file.quantization,
-            format: file.format,
-            modelId: dbModel!.id,
-          },
-        });
+        try {
+          await prisma.file.create({
+            data: {
+              name: file.name,
+              quantization: file.quantization,
+              format: file.format,
+              modelId: dbModel!.id,
+            },
+          });
+        } catch (error) {
+          console.log(error);
+        }
       });
     } catch (error) {
       console.log(parsedInfo);
