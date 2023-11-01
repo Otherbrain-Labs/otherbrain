@@ -5,14 +5,7 @@ import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
 
 import { Cell, Column, ColumnDef, Row } from "@tanstack/react-table";
 import { Button } from "../ui/button";
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
 
@@ -126,25 +119,30 @@ export const columns: ColumnDef<Model>[] = [
     accessorKey: "average",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
+    invertSorting: true,
   },
   {
     accessorKey: "arc",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
+    invertSorting: true,
   },
   {
     accessorKey: "hellaswag",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
+    invertSorting: true,
   },
   {
     accessorKey: "mmlu",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
+    invertSorting: true,
   },
   {
     accessorKey: "truthfulqa",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
+    invertSorting: true,
   },
 ];
