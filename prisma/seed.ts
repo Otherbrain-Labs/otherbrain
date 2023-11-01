@@ -1,5 +1,5 @@
-import { loadCatalog } from "./scripts/loadCatalog";
-import { loadScores } from "./scripts/loadScores";
+import { load as loadCatalog } from "./scripts/models";
+import { load as loadScores } from "./scripts/scores";
 
 async function main() {
   try {

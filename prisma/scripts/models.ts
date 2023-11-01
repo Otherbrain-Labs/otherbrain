@@ -1,5 +1,6 @@
+import fs from "fs";
 import prisma from "../../lib/prisma";
-import catalog from "../data/catalog.json";
+import savedModels from "./data/models.json";
 
 const IGNORED_MODELS = [
   "TheBloke/Mistral-7B-Phibrarian-32K-GGUF", // duplicate
@@ -12,7 +13,7 @@ const IGNORED_MODELS = [
   "TheBloke/LLaMA-65B-GGUF", // no base model
 ];
 
-export function parseModelInfo(modelInfo: any) {
+function parse(modelInfo: any) {
   if (IGNORED_MODELS.includes(modelInfo.id)) {
     return;
   }
@@ -117,53 +118,104 @@ export function parseModelInfo(modelInfo: any) {
   }
 }
 
-export async function loadCatalog() {
+export async function scrape(save: boolean = false) {
+  console.log("Fetching latest models from HuggingFace...");
+
+  const res = await fetch(
+    "https://huggingface.co/api/models?author=TheBloke&search=gguf"
+  );
+  const data = await res.json();
+
+  await Promise.all(
+    data.map(async (model: any) => {
+      const modelRes = await fetch(
+        `https://huggingface.co/api/models/${model.modelId}`
+      );
+      if (!modelRes.ok) {
+        console.error(
+          `Error fetching model ${model.modelId}: ${modelRes.statusText}`
+        );
+        return;
+      }
+      const modelData = await modelRes.json();
+      model.model = modelData;
+
+      const baseModel = modelData?.cardData?.base_model;
+      if (baseModel) {
+        const baseModelRes = await fetch(
+          `https://huggingface.co/api/models/${baseModel}`
+        );
+        if (!baseModelRes.ok) {
+          console.error(
+            `Error fetching model ${model.modelId}: ${modelRes.statusText}`
+          );
+          return;
+        }
+        const baseModelData = await baseModelRes.json();
+        model.baseModel = baseModelData;
+      }
+    })
+  );
+
+  if (save) {
+    const jsonString = JSON.stringify(data, null, 2);
+
+    fs.writeFile(`${__dirname}/./data/models.json`, jsonString, (err) => {
+      if (err) {
+        console.error("Error writing JSON to file:", err);
+      } else {
+        console.log("Saved score data to file!");
+      }
+    });
+  }
+
+  return data;
+}
+
+export async function load(useSaved: boolean = true, saveData: boolean = true) {
   const [originalCount, existingIds] = await prisma.$transaction([
     prisma.model.count(),
     prisma.model.findMany({
       select: { remoteId: true },
     }),
   ]);
+  const existingIdsFlat = existingIds.map((model) => model.remoteId);
+  const models = useSaved ? savedModels : await scrape(saveData);
 
   let count = 0;
-  const existingIdsFlat = existingIds.map((model) => model.remoteId);
-
-  for (const modelInfo of catalog) {
-    const parsedInfo = parseModelInfo(modelInfo);
-    if (!parsedInfo) {
-      continue;
-    }
-    if (existingIdsFlat.includes(parsedInfo.remoteId)) {
+  for (const model of models) {
+    const parsedModel = parse(model);
+    if (!parsedModel || existingIdsFlat.includes(parsedModel.remoteId)) {
       continue;
     }
 
     try {
       await prisma.model.upsert({
         where: {
-          remoteId: parsedInfo.remoteId,
+          remoteId: parsedModel.remoteId,
         },
         update: {},
         create: {
-          ...parsedInfo,
-          lastModifiedDate: new Date(parsedInfo.lastModifiedDate),
+          ...parsedModel,
+          lastModifiedDate: new Date(parsedModel.lastModifiedDate),
           files: {
             createMany: {
-              data: parsedInfo.files,
+              data: parsedModel.files,
             },
           },
           author: {
             connectOrCreate: {
               where: {
-                slug: parsedInfo.author.slug,
+                slug: parsedModel.author.slug,
               },
-              create: parsedInfo.author,
+              create: parsedModel.author,
             },
           },
         },
       });
       count++;
     } catch (error) {
-      console.error(`Error adding model ${parsedInfo.remoteId}`, error);
+      console.error(`Error adding model ${parsedModel.remoteId}`, error);
     }
   }
   console.log(
