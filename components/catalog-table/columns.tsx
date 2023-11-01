@@ -48,11 +48,11 @@ function SortHeader({ column }: { column: Column<Model> }) {
 
         {column.getIsSorted() === "desc" && (
           // <ArrowDown className="ml-2 h-3 w-3" />
-          <ChevronDown className="ml-1 h-3.5 w-3.5" />
+          <ChevronUp className="ml-1 h-3.5 w-3.5" />
         )}
         {column.getIsSorted() === "asc" && (
           // <ArrowUp className="ml-2 h-3 w-3" />
-          <ChevronUp className="ml-1 h-3.5 w-3.5" />
+          <ChevronDown className="ml-1 h-3.5 w-3.5" />
         )}
       </span>
     </Button>
