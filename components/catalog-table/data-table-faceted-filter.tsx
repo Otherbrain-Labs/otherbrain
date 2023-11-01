@@ -24,18 +24,17 @@ import { Separator } from "@/components/ui/separator";
 interface DataTableFacetedFilterProps<TData, TValue> {
   column: Column<TData, TValue>;
   title: string;
+  compareFn?: (a: string, b: string) => number;
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
+  compareFn,
 }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets: Map<string, number> = column.getFacetedUniqueValues();
-  const uniqueFacets = Array.from(facets.keys()).sort();
+  const uniqueFacets = Array.from(facets.keys()).sort(compareFn);
   const selectedValues = new Set(column?.getFilterValue() as string[]);
-
-  console.log("facets", facets);
-  console.log("selectedValues", selectedValues);
 
   return (
     <Popover>
