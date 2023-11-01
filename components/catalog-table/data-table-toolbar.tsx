@@ -11,11 +11,9 @@ interface DataTableToolbarProps<TData> {
   table: Table<TData>;
 }
 
-function compareParams(a: string | null, b: string | null) {
+function compareParams(a: number | null, b: number | null) {
   if (a === null || b === null) return -1000;
-  const aNum = parseFloat(a.slice(0, -1));
-  const bNum = parseFloat(b.slice(0, -1));
-  return aNum - bNum;
+  return a - b;
 }
 
 export function DataTableToolbar<TData>({
