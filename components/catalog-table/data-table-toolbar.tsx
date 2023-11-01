@@ -6,21 +6,6 @@ import { SearchIcon } from "lucide-react";
 import { Table } from "@tanstack/react-table";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 
-export const paramCounts = [
-  {
-    value: "7B",
-    label: "7B",
-  },
-  {
-    value: "13B",
-    label: "13B",
-  },
-  {
-    value: "70B",
-    label: "70B",
-  },
-];
-
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
 }
@@ -44,11 +29,7 @@ export function DataTableToolbar<TData>({
           className="max-w-sm text-xs"
         />
         {paramColumn && (
-          <DataTableFacetedFilter
-            column={paramColumn}
-            title="Parameters"
-            options={paramCounts}
-          />
+          <DataTableFacetedFilter column={paramColumn} title="Parameters" />
         )}
       </div>
 

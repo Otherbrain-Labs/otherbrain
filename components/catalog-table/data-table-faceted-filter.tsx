@@ -24,19 +24,14 @@ import { Separator } from "@/components/ui/separator";
 interface DataTableFacetedFilterProps<TData, TValue> {
   column: Column<TData, TValue>;
   title: string;
-  options: {
-    label: string;
-    value: string;
-    icon?: React.ComponentType<{ className?: string }>;
-  }[];
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
-  options,
 }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets: Map<string, number> = column.getFacetedUniqueValues();
+  const uniqueFacets = Array.from(facets.keys()).sort();
   const selectedValues = new Set(column?.getFilterValue() as string[]);
 
   console.log("facets", facets);
@@ -66,15 +61,15 @@ export function DataTableFacetedFilter<TData, TValue>({
                     {selectedValues.size} selected
                   </Badge>
                 ) : (
-                  options
-                    .filter((option) => selectedValues.has(option.value))
+                  uniqueFacets
+                    .filter((option) => selectedValues.has(option))
                     .map((option) => (
                       <Badge
                         variant="secondary"
-                        key={option.value}
+                        key={option}
                         className="rounded-sm px-1 font-normal"
                       >
-                        {option.label}
+                        {option}
                       </Badge>
                     ))
                 )}
@@ -89,42 +84,40 @@ export function DataTableFacetedFilter<TData, TValue>({
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              {Array.from(facets.keys())
-                .sort()
-                .map((option) => {
-                  const isSelected = selectedValues.has(option);
-                  return (
-                    <CommandItem
-                      key={option}
-                      onSelect={() => {
-                        if (isSelected) {
-                          selectedValues.delete(option);
-                        } else {
-                          selectedValues.add(option);
-                        }
-                        const filterValues = Array.from(selectedValues);
-                        column?.setFilterValue(
-                          filterValues.length ? filterValues : undefined
-                        );
-                      }}
+              {uniqueFacets.map((option) => {
+                const isSelected = selectedValues.has(option);
+                return (
+                  <CommandItem
+                    key={option}
+                    onSelect={() => {
+                      if (isSelected) {
+                        selectedValues.delete(option);
+                      } else {
+                        selectedValues.add(option);
+                      }
+                      const filterValues = Array.from(selectedValues);
+                      column?.setFilterValue(
+                        filterValues.length ? filterValues : undefined
+                      );
+                    }}
+                  >
+                    <div
+                      className={cn(
+                        "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
+                        isSelected
+                          ? "bg-primary text-primary-foreground"
+                          : "opacity-50 [&_svg]:invisible"
+                      )}
                     >
-                      <div
-                        className={cn(
-                          "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
-                          isSelected
-                            ? "bg-primary text-primary-foreground"
-                            : "opacity-50 [&_svg]:invisible"
-                        )}
-                      >
-                        <CheckIcon className={cn("h-4 w-4")} />
-                      </div>
-                      <span>{option}</span>
-                      <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
-                        {facets.get(option)}
-                      </span>
-                    </CommandItem>
-                  );
-                })}
+                      <CheckIcon className={cn("h-4 w-4")} />
+                    </div>
+                    <span>{option}</span>
+                    <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
+                      {facets.get(option)}
+                    </span>
+                  </CommandItem>
+                );
+              })}
             </CommandGroup>
             {selectedValues.size > 0 && (
               <>
