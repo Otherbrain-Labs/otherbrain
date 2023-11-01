@@ -77,8 +77,9 @@ export const columns: ColumnDef<Model>[] = [
       const href = `/${model.author.slug}/${model.slug}`;
       return (
         <Link
-          className="hover:underline max-w-[200px] inline-block truncate"
+          className="hover:underline max-w-[180px] inline-block truncate"
           href={href}
+          title={`${model.name} by ${model.author.name}`}
         >
           {model.name}
         </Link>
