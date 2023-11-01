@@ -25,7 +25,7 @@ export function DataTableToolbar<TData>({
 
   return (
     <div className="flex items-center pb-2">
-      <div className="flex space-x-3">
+      <div className="flex space-x-3 items-center">
         <Input
           icon={<SearchIcon className="h-4 w-4 text-muted-foreground" />}
           iconPosition="left"
@@ -43,6 +43,9 @@ export function DataTableToolbar<TData>({
             compareFn={compareParams}
           />
         )}
+        <span className="text-xs text-muted-foreground">
+          {table.getGlobalFacetedRowModel().rows.length} models
+        </span>
       </div>
 
       <DataTableViewOptions table={table} />
