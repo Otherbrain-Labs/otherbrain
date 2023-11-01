@@ -24,7 +24,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 export const idToTitle: Record<string, string> = {
   name: "Name",
   stars: "Rating",
-  lastDateModified: "Updated",
+  lastModifiedDate: "Updated",
   numParameters: "Parameters",
   average: "Average",
   arc: "ARC",
@@ -101,7 +101,7 @@ export const columns: ColumnDef<Model>[] = [
     invertSorting: true,
   },
   {
-    accessorKey: "lastDateModified",
+    accessorKey: "lastModifiedDate",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
@@ -114,6 +114,7 @@ export const columns: ColumnDef<Model>[] = [
   {
     accessorKey: "numParameters",
     header: ({ column }) => <SortHeader column={column} />,
+    invertSorting: true,
   },
   {
     accessorKey: "average",

@@ -22,7 +22,9 @@ export default async function Home() {
         <h1 className="text-5xl pt-16 font-semibold">Model Catalog</h1>
         <h2 className="text-sm pt-4 pb-0 max-w-lg">
           Browse reviews and benchmarks of the latest large language models to
-          find the perfect one for your use case. When LLM's compete, you win.
+          find the perfect one for your use case. Quantitative metrics have
+          trouble capturing the "feel" of the model. Review LLMs to share your
+          qualitative experience.
         </h2>
         <Catalog models={models} />
       </div>
