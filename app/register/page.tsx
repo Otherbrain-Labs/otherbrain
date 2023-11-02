@@ -12,7 +12,7 @@ export default function Login() {
               src="/logo.png"
               priority
               alt="Logo"
-              className="h-10 w-10 rounded-full dark:invert"
+              className="h-20 w-20 rounded-full dark:invert p-3 border-dashed border"
               width={40}
               height={40}
             />
