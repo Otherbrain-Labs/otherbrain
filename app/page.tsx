@@ -19,13 +19,13 @@ export default async function Home() {
   return (
     <div className="flex h-full">
       <div className="w-screen h-full flex flex-col justify-center">
-        <h1 className="text-5xl pt-16 font-semibold">Model Catalog</h1>
-        <h2 className="text-sm pt-4 pb-0 max-w-lg">
-          Browse reviews and benchmarks of the latest large language models to
-          find the perfect one for your use case. Quantitative metrics have
-          trouble capturing the &ldquo;feel&rdquo; of the model. Review LLMs to
-          share your qualitative experience.
-        </h2>
+        <h1 className="text-6xl pt-16 font-semibold">LLM Catalog</h1>
+        <p className="text-sm pt-4 pb-0 max-w-lg">
+          Browse reviews and benchmarks to find the best model for your use
+          case. Write reviews and share your experiences. Data graciously (open)
+          sourced from the Open LLM Leaderboard, Hugging Face, Simon Willison,
+          TheBloke.
+        </p>
         <Catalog models={models} />
       </div>
     </div>

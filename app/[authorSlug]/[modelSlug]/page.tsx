@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/tooltip";
 import ReviewsForm from "@/components/reviews/form";
 import StarRater from "@/components/ui/star-rater";
+import { Button } from "@/components/ui/button";
+import { PlusCircle } from "lucide-react";
 
 export default async function Home({
   params,
@@ -111,7 +113,13 @@ export default async function Home({
         </div>
       )}
 
-      <h2 className="text-xl font-semibold mt-4 mb-2">Reviews</h2>
+      <div className="flex justify-between items-center space-x-3 max-w-lg mt-4 mb-2">
+        <h2 className="text-3xl font-semibold">Reviews</h2>
+        <Button variant="outline">
+          <PlusCircle className="mr-2 h-4 w-4" />
+          Add review
+        </Button>
+      </div>
       {session && <ReviewsForm modelId={model.id} />}
       {model.reviews.length === 0 ? (
         <div>No reviews yet</div>

@@ -22,7 +22,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export const idToTitle: Record<string, string> = {
-  name: "Name",
+  name: "Model",
   stars: "Rating",
   lastModifiedDate: "Updated",
   numParameters: "Parameters",
@@ -92,11 +92,13 @@ export const columns: ColumnDef<Model>[] = [
     header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
-      return (
+      return row.index % 6 === 0 ? (
         <div className="flex items-center">
           <Star filled />
-          <span className="relative left-1 top-0.5">{4.96}</span>
+          <span className="relative left-1 top-0.5">4.96 (4)</span>
         </div>
+      ) : (
+        <div className="flex items-center">--</div>
       );
     },
     invertSorting: true,
