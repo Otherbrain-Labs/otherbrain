@@ -104,6 +104,39 @@ export default async function Home({
         </div>
       )}
 
+      {model.ggufId && (
+        <div className="max-w-lg mt-10">
+          <h2 className="text-3xl font-semibold">Try it</h2>
+          <div className="mt-4">
+            To try this model locally,{" "}
+            <Link
+              href={`https://huggingface.co/${model.ggufId}`}
+              className="hover:underline font-bold"
+              rel="noopener noreferrer"
+            >
+              download a GGUF
+            </Link>{" "}
+            from Hugging Face and use it with a client like{" "}
+            <Link
+              href="https://www.freechat.run/"
+              className="hover:underline font-bold"
+              rel="noopener noreferrer"
+            >
+              FreeChat
+            </Link>{" "}
+            (macOS) or{" "}
+            <Link
+              href="https://lmstudio.ai"
+              className="hover:underline font-bold"
+              rel="noopener noreferrer"
+            >
+              LM Studio
+            </Link>
+            .
+          </div>
+        </div>
+      )}
+
       {model.average && (
         <div>
           <h2 className="text-xl font-semibold mt-4 mb-2">Benchmarks</h2>
@@ -135,7 +168,7 @@ export default async function Home({
         </div>
       )}
 
-      <div className="flex justify-between items-center space-x-3 max-w-lg mt-4 mb-2">
+      <div className="flex justify-between items-center space-x-3 max-w-lg mt-10 mb-2">
         <h2 className="text-3xl font-semibold">Reviews</h2>
         <Button variant="outline">
           <PlusCircle className="mr-2 h-4 w-4" />
