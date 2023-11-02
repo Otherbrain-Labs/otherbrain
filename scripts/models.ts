@@ -1,5 +1,5 @@
 import fs from "fs";
-import prisma from "../../lib/prisma";
+import prisma from "../lib/prisma";
 import savedModels from "./data/models.json";
 
 const IGNORED_MODELS = [
@@ -213,6 +213,7 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
           },
         },
       });
+      console.log(`Added model ${parsedModel.remoteId}`);
       count++;
     } catch (error) {
       console.error(`Error adding model ${parsedModel.remoteId}`, error);
