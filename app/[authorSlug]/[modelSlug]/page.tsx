@@ -56,7 +56,7 @@ export default async function Home({
             </h1>
             <Tooltip>
               <TooltipTrigger>
-                <Badge className="mr-2">{model.numParameters}</Badge>
+                <Badge className="mr-2">{model.numParameters}B</Badge>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Parameter count</p>
@@ -68,7 +68,7 @@ export default async function Home({
                 <Badge>{model.arch}</Badge>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Architecture</p>
+                <p>Model type</p>
               </TooltipContent>
             </Tooltip>
           </div>
