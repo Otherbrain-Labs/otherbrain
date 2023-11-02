@@ -24,19 +24,20 @@ import { Separator } from "@/components/ui/separator";
 interface DataTableFacetedFilterProps<TData, TValue> {
   column: Column<TData, TValue>;
   title: string;
-  compareFn?: (a: string, b: string) => number;
-  format: (value: string) => string;
+  compare?: (a: TValue, b: TValue) => number;
+  format: (value: TValue) => string;
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
-  compareFn,
+  compare,
   format,
 }: DataTableFacetedFilterProps<TData, TValue>) {
-  const facets: Map<string, number> = column.getFacetedUniqueValues();
-  const uniqueFacets = Array.from(facets.keys()).sort(compareFn);
-  const selectedValues = new Set(column?.getFilterValue() as string[]);
+  const facets: Map<TValue, number> = column.getFacetedUniqueValues();
+  const uniqueFacets = Array.from(facets.keys()).sort(compare);
+  console.log("Array.from(facets.keys())", Array.from(facets.keys()));
+  const selectedValues = new Set(column?.getFilterValue() as TValue[]);
 
   return (
     <Popover>
@@ -67,7 +68,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                     .map((option) => (
                       <Badge
                         variant="secondary"
-                        key={option}
+                        key={`${option}`}
                         className="rounded-sm px-1 font-normal"
                       >
                         {format(option)}
@@ -89,7 +90,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                 const isSelected = selectedValues.has(option);
                 return (
                   <CommandItem
-                    key={option}
+                    key={`${option}`}
                     onSelect={() => {
                       if (isSelected) {
                         selectedValues.delete(option);

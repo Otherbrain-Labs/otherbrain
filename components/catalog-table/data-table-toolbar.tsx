@@ -3,7 +3,7 @@
 import { Input } from "@/components/ui/input";
 import { DataTableViewOptions } from "./data-table-view-options";
 import { SearchIcon } from "lucide-react";
-import { Table } from "@tanstack/react-table";
+import { Column, Table } from "@tanstack/react-table";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 
 interface DataTableToolbarProps<TData> {
@@ -11,18 +11,19 @@ interface DataTableToolbarProps<TData> {
 }
 
 function compareParams(a: number | null, b: number | null) {
-  if (a === null || b === null) return -1000;
+  if (a === null) return 1;
+  if (b === null) return -1;
   return a - b;
 }
 
-function formatParams(value: string) {
+function formatParams(value: number) {
   return value ? `${value}B` : "?";
 }
 
 export function DataTableToolbar<TData>({
   table,
 }: DataTableToolbarProps<TData>) {
-  const paramColumn = table.getColumn("numParameters");
+  const paramColumn = table.getColumn("numParameters") as Column<TData, number>;
 
   return (
     <div className="flex items-center pb-2">
@@ -38,9 +39,10 @@ export function DataTableToolbar<TData>({
           className="max-w-sm text-xs"
         />
         {paramColumn && (
-          <DataTableFacetedFilter
+          <DataTableFacetedFilter<TData, number>
             column={paramColumn}
             title="Parameters"
+            compare={compareParams}
             format={formatParams}
           />
         )}
