@@ -1,5 +1,5 @@
 import fs from "fs";
-import prisma from "../../lib/prisma";
+import prisma from "../lib/prisma";
 import savedModels from "./data/models.json";
 
 const IGNORED_MODELS = [
@@ -39,7 +39,7 @@ function parse(modelInfo: any) {
 
     const remoteId = baseModel?.modelId || model.cardData?.base_model;
     const ggufId = model.id;
-    const slug = remoteId.split("/")[1].toLowerCase();
+    const slug = remoteId.split("/")[1].toLowerCase().replaceAll("_", "_");
     const name =
       model.cardData?.model_name || remoteId.split("/")[1].replaceAll("_", " ");
     const arch = model.cardData?.model_type || "other";
@@ -213,6 +213,7 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
           },
         },
       });
+      console.log(`Added model ${parsedModel.remoteId}`);
       count++;
     } catch (error) {
       console.error(`Error adding model ${parsedModel.remoteId}`, error);

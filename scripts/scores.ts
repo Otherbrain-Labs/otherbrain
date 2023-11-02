@@ -1,5 +1,5 @@
 import fs from "fs";
-import prisma from "../../lib/prisma";
+import prisma from "../lib/prisma";
 import savedScores from "./data/scores.json";
 
 const ROOT_URL =
@@ -117,6 +117,8 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
           truthfulqa: parseFloat(score.truthfulqa!),
         },
       });
+      console.log(`Added score for model ${score.model}`);
+
       count++;
     } catch (error) {
       console.error(error, score.model);
