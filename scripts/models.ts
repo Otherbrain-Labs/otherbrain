@@ -39,7 +39,7 @@ function parse(modelInfo: any) {
 
     const remoteId = baseModel?.modelId || model.cardData?.base_model;
     const ggufId = model.id;
-    const slug = remoteId.split("/")[1].toLowerCase();
+    const slug = remoteId.split("/")[1].toLowerCase().replaceAll("_", "_");
     const name =
       model.cardData?.model_name || remoteId.split("/")[1].replaceAll("_", " ");
     const arch = model.cardData?.model_type || "other";
