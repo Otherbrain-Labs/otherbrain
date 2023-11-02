@@ -122,6 +122,10 @@ export const columns: ColumnDef<Model>[] = [
     filterFn: (row, id, value) => {
       return value.includes(row.getValue(id));
     },
+    cell: ({ row }) => {
+      const model = row.original;
+      return <span>{model.numParameters}B</span>;
+    },
   },
   {
     accessorKey: "average",

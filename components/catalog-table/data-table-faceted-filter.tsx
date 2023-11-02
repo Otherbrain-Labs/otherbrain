@@ -25,12 +25,14 @@ interface DataTableFacetedFilterProps<TData, TValue> {
   column: Column<TData, TValue>;
   title: string;
   compareFn?: (a: string, b: string) => number;
+  format: (value: string) => string;
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
   compareFn,
+  format,
 }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets: Map<string, number> = column.getFacetedUniqueValues();
   const uniqueFacets = Array.from(facets.keys()).sort(compareFn);
@@ -68,7 +70,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                         key={option}
                         className="rounded-sm px-1 font-normal"
                       >
-                        {option || "?"}
+                        {format(option)}
                       </Badge>
                     ))
                 )}
@@ -110,7 +112,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                     >
                       <CheckIcon className={cn("h-4 w-4")} />
                     </div>
-                    <span>{option || "?"}</span>
+                    <span>{format(option)}</span>
                     <span className="ml-auto flex h-4 w-4 items-center justify-center font-mono text-xs">
                       {facets.get(option)}
                     </span>

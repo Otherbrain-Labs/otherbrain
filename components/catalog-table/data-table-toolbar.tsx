@@ -5,7 +5,6 @@ import { DataTableViewOptions } from "./data-table-view-options";
 import { SearchIcon } from "lucide-react";
 import { Table } from "@tanstack/react-table";
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
-import { useCallback } from "react";
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -14,6 +13,10 @@ interface DataTableToolbarProps<TData> {
 function compareParams(a: number | null, b: number | null) {
   if (a === null || b === null) return -1000;
   return a - b;
+}
+
+function formatParams(value: string) {
+  return value ? `${value}B` : "?";
 }
 
 export function DataTableToolbar<TData>({
@@ -38,7 +41,7 @@ export function DataTableToolbar<TData>({
           <DataTableFacetedFilter
             column={paramColumn}
             title="Parameters"
-            compareFn={compareParams}
+            format={formatParams}
           />
         )}
         <span className="text-xs text-muted-foreground">
