@@ -56,7 +56,9 @@ export default async function Home({
             </h1>
             <Tooltip>
               <TooltipTrigger>
-                <Badge className="mr-2">{model.numParameters}B</Badge>
+                <Badge className="mr-2" variant="secondary">
+                  {model.numParameters}B
+                </Badge>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Parameter count</p>
@@ -65,7 +67,7 @@ export default async function Home({
 
             <Tooltip>
               <TooltipTrigger>
-                <Badge>{model.arch}</Badge>
+                <Badge variant="secondary">{model.arch}</Badge>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Model type</p>
@@ -82,9 +84,9 @@ export default async function Home({
         </div>
       </div>
 
-      {model.remoteId && (
-        <div className="mt-4">
-          <Button asChild>
+      <div className="mt-4 flex space-x-4">
+        {model.remoteId && (
+          <Button variant="outline" asChild>
             <Link
               href={`https://huggingface.co/${model.remoteId}`}
               className="hover:underline"
@@ -98,11 +100,14 @@ export default async function Home({
                 className="mr-2"
               />
               View on Hugging Face
-              <ArrowUpRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
-      )}
+        )}
+        <Button>
+          <PlusCircle className="mr-2 h-4 w-4" />
+          Review
+        </Button>
+      </div>
 
       {model.ggufId && (
         <div className="max-w-lg mt-10">
@@ -170,10 +175,7 @@ export default async function Home({
 
       <div className="flex justify-between items-center space-x-3 max-w-lg mt-10 mb-2">
         <h2 className="text-3xl font-semibold">Reviews</h2>
-        <Button variant="outline">
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Add review
-        </Button>
+        <Button variant="outline">Login to review</Button>
       </div>
       {session && <ReviewsForm modelId={model.id} />}
       {model.reviews.length === 0 ? (
