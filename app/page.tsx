@@ -1,8 +1,7 @@
 import prisma from "@/lib/prisma";
 import Catalog from "@/components/catalog";
 import Link from "next/link";
-import { Arrow } from "@radix-ui/react-dropdown-menu";
-import { ArrowUpRight, ArrowUpRightSquare } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export async function loadModels() {
   const models = await prisma.model.findMany({

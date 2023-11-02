@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getServerSession } from "next-auth/next";
 import { Badge } from "@/components/ui/badge";
@@ -9,9 +10,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import ReviewsForm from "@/components/reviews/form";
-import StarRater from "@/components/ui/star-rater";
 import { Button } from "@/components/ui/button";
-import { PlusCircle } from "lucide-react";
+import { ArrowUpRight, PlusCircle } from "lucide-react";
 
 export default async function Home({
   params,
@@ -81,6 +81,28 @@ export default async function Home({
           , {dateFormatted}
         </div>
       </div>
+
+      {model.remoteId && (
+        <div className="mt-4">
+          <Button asChild>
+            <Link
+              href={`https://huggingface.co/${model.remoteId}`}
+              className="hover:underline"
+              rel="noopener noreferrer"
+            >
+              <Image
+                height={18}
+                width={18}
+                alt=""
+                src="/huggingface.svg"
+                className="mr-2"
+              />
+              View on Hugging Face
+              <ArrowUpRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      )}
 
       {model.average && (
         <div>
