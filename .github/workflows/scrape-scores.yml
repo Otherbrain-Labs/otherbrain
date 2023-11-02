@@ -1,8 +1,8 @@
 name: scrape-scores
 on:
   push:
-    - branches:
-        - "ci/*"
+    branches:
+      - "ci/*"
   schedule:
     - cron: "17 17 * * *"
 jobs:

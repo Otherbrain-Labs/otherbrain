@@ -1,8 +1,8 @@
 name: scrape-models
 on:
   push:
-    - branches:
-        - "ci/*"
+    branches:
+      - "ci/*"
   schedule:
     - cron: "17 * * * *"
 jobs:
