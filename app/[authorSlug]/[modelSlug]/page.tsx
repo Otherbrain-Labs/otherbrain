@@ -12,6 +12,24 @@ import {
 import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, PlusCircle } from "lucide-react";
+import Scores from "./scores";
+
+export async function loadModel(modelSlug: string, authorSlug: string) {
+  return await prisma.model.findFirst({
+    where: {
+      slug: modelSlug,
+      author: {
+        slug: authorSlug,
+      },
+    },
+    include: {
+      reviews: true,
+      author: true,
+    },
+  });
+}
+
+export type Model = NonNullable<Awaited<ReturnType<typeof loadModel>>>;
 
 export default async function Home({
   params,
@@ -20,18 +38,7 @@ export default async function Home({
 }) {
   const session = await getServerSession();
 
-  const model = await prisma.model.findFirst({
-    where: {
-      slug: params.modelSlug,
-      author: {
-        slug: params.authorSlug,
-      },
-    },
-    include: {
-      reviews: true,
-      author: true,
-    },
-  });
+  const model = await loadModel(params.modelSlug, params.authorSlug);
 
   if (!model || !model.author) {
     notFound();
@@ -47,67 +54,68 @@ export default async function Home({
   }).format(date);
 
   return (
-    <div className="mt-16">
-      <div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <h1 className="text-2xl md:text-4xl font-semibold mr-2">
-              {model.name}
-            </h1>
-            <Tooltip>
-              <TooltipTrigger>
-                <Badge className="mr-2" variant="secondary">
-                  {model.numParameters}B
-                </Badge>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Parameter count</p>
-              </TooltipContent>
-            </Tooltip>
+    <div className="mt-16 max-w-4xl m-auto">
+      <div className="md:flex justify-between">
+        <div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <h1 className="text-2xl md:text-4xl font-semibold mr-2">
+                {model.name}
+              </h1>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Badge className="mr-2" variant="secondary">
+                    {model.numParameters}B
+                  </Badge>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Parameter count</p>
+                </TooltipContent>
+              </Tooltip>
 
-            <Tooltip>
-              <TooltipTrigger>
-                <Badge variant="secondary">{model.arch}</Badge>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Model type</p>
-              </TooltipContent>
-            </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Badge variant="secondary">{model.arch}</Badge>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Model type</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
+          </div>
+          <div className="text-muted-foreground">
+            by{" "}
+            <Link href={"/" + author.slug} className="hover:underline">
+              {author.name}
+            </Link>
+            , {dateFormatted}
           </div>
         </div>
-        <div className="text-muted-foreground">
-          by{" "}
-          <Link href={"/" + author.slug} className="hover:underline">
-            {author.name}
-          </Link>
-          , {dateFormatted}
+        <div className="mt-4 flex space-x-4">
+          {model.remoteId && (
+            <Button variant="outline" asChild>
+              <Link
+                href={`https://huggingface.co/${model.remoteId}`}
+                className="hover:underline"
+                rel="noopener noreferrer"
+              >
+                Model Details
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          )}
+          <Button>
+            <PlusCircle className="mr-2 h-4 w-4" />
+            Review
+          </Button>
         </div>
       </div>
 
-      <div className="mt-4 flex space-x-4">
-        {model.remoteId && (
-          <Button variant="outline" asChild>
-            <Link
-              href={`https://huggingface.co/${model.remoteId}`}
-              className="hover:underline"
-              rel="noopener noreferrer"
-            >
-              <Image
-                height={18}
-                width={18}
-                alt=""
-                src="/huggingface.svg"
-                className="mr-2"
-              />
-              View on Hugging Face
-            </Link>
-          </Button>
-        )}
-        <Button>
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Review
-        </Button>
-      </div>
+      {model.average && (
+        <div className="mt-4">
+          <Scores model={model} />
+        </div>
+      )}
 
       {model.ggufId && (
         <div className="max-w-lg mt-10">
@@ -139,37 +147,6 @@ export default async function Home({
             </Link>
             .
           </div>
-        </div>
-      )}
-
-      {model.average && (
-        <div>
-          <h2 className="text-xl font-semibold mt-4 mb-2">Benchmarks</h2>
-          {!!model.average && (
-            <div>
-              <strong>Average:</strong> {model.average}
-            </div>
-          )}
-          {!!model.arc && (
-            <div>
-              <strong>ARC (25-shot):</strong> {model.arc}
-            </div>
-          )}
-          {!!model.hellaswag && (
-            <div>
-              <strong>HellaSwag (10-shot):</strong> {model.hellaswag}
-            </div>
-          )}
-          {!!model.mmlu && (
-            <div>
-              <strong>MMLU (5-shot):</strong> {model.mmlu}
-            </div>
-          )}
-          {!!model.truthfulqa && (
-            <div>
-              <strong>TruthfulQA (0-shot):</strong> {model.truthfulqa}
-            </div>
-          )}
         </div>
       )}
 

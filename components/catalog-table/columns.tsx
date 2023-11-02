@@ -3,11 +3,12 @@
 import { loadModels } from "@/app/page";
 import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
 
-import { Cell, Column, ColumnDef, Row } from "@tanstack/react-table";
+import { Cell, Column, ColumnDef } from "@tanstack/react-table";
 import { Button } from "../ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
+import { ScoreKey, ScoreTooltip } from "../scores";
 
 type Models =
   | Awaited<ReturnType<typeof loadModels>>
@@ -54,6 +55,14 @@ function SortHeader({ column }: { column: Column<Model> }) {
         )}
       </span>
     </Button>
+  );
+}
+
+function ScoreTooltipSortHeader({ column }: { column: Column<Model> }) {
+  return (
+    <ScoreTooltip score={column.id as ScoreKey}>
+      <SortHeader column={column} />
+    </ScoreTooltip>
   );
 }
 
@@ -129,31 +138,31 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "average",
-    header: ({ column }) => <SortHeader column={column} />,
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "arc",
-    header: ({ column }) => <SortHeader column={column} />,
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "hellaswag",
-    header: ({ column }) => <SortHeader column={column} />,
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "mmlu",
-    header: ({ column }) => <SortHeader column={column} />,
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "truthfulqa",
-    header: ({ column }) => <SortHeader column={column} />,
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
