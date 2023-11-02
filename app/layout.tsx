@@ -10,6 +10,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const title = "Otherbrain";
 const description = "AI Model Reviews";
 
+export const revalidate = 60 * 5; // 5 minutes
+
 export const metadata: Metadata = {
   title,
   description,
