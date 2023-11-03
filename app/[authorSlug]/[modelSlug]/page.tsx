@@ -13,6 +13,7 @@ import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, PlusCircle } from "lucide-react";
 import Scores from "./scores";
+import { headers } from "next/headers";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   return await prisma.model.findFirst({
@@ -36,6 +37,10 @@ export default async function Home({
 }: {
   params: { authorSlug: string; modelSlug: string };
 }) {
+  const headersList = headers();
+  const fullUrl = headersList.get("referer") || "";
+  const pathname = new URL(fullUrl).pathname;
+
   const session = await getServerSession();
 
   const model = await loadModel(params.modelSlug, params.authorSlug);
@@ -152,7 +157,14 @@ export default async function Home({
 
       <div className="flex justify-between items-center space-x-3 max-w-lg mt-10 mb-2">
         <h2 className="text-3xl font-semibold">Reviews</h2>
-        <Button variant="outline">Login to review</Button>
+        <Button variant="outline" asChild>
+          <Link
+            href={`/login?redirect-to=${pathname}}`}
+            className="hover:underline"
+          >
+            Login to review
+          </Link>
+        </Button>
       </div>
       {session && <ReviewsForm modelId={model.id} />}
       {model.reviews.length === 0 ? (

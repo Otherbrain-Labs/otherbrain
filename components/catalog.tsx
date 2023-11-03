@@ -13,7 +13,7 @@ export default async function Catalog({ models }: { models: Models }) {
   }
 
   return (
-    <div className="my-6">
+    <div className="my-6 w-full overflow-hidden">
       <DataTable columns={columns} data={models} />
     </div>
   );

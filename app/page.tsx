@@ -19,9 +19,11 @@ export default async function Home() {
   const models = await loadModels();
 
   return (
-    <div className="flex h-full">
-      <div className="w-screen h-full flex flex-col justify-center">
-        <h1 className="text-6xl pt-16 font-semibold">LLM Catalog</h1>
+    <div className="flex h-full w-full">
+      <div className="h-full w-full flex flex-col justify-center">
+        <h1 className="text-4xl sm:text-6xl pt-16 font-semibold">
+          LLM Catalog
+        </h1>
         <p className="text-sm pt-4 pb-0 max-w-lg">
           Browse reviews and benchmarks to find the best model for your use
           case. Write reviews and share your experiences. Data graciously (open)
