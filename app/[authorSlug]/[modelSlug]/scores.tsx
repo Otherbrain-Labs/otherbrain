@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import type { Model } from "./page";
 import { ScoreKey, scoreText, scoreDescription } from "@/components/scores";
 
