@@ -60,7 +60,7 @@ export default async function Home({
 
   return (
     <div className="mt-16 max-w-4xl m-auto">
-      <div className="md:flex justify-between">
+      <div className="md:flex justify-between items-start">
         <div>
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -96,7 +96,7 @@ export default async function Home({
             , {dateFormatted}
           </div>
         </div>
-        <div className="mt-4 flex space-x-4">
+        <div className="mt-4 md:mt-0 flex space-x-4">
           {model.remoteId && (
             <Button variant="outline" asChild>
               <Link

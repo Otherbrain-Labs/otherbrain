@@ -49,7 +49,7 @@ export default async function Home() {
           </Link>
           ,{" "}
           <Link
-            href="https://github.com/simonw/scrape-huggingface-models/blob/main/TheBloke.json"
+            href="https://github.com/simonw"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline group"
