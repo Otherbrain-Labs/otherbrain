@@ -36,7 +36,6 @@ export function DataTableFacetedFilter<TData, TValue>({
 }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets: Map<TValue, number> = column.getFacetedUniqueValues();
   const uniqueFacets = Array.from(facets.keys()).sort(compare);
-  console.log("Array.from(facets.keys())", Array.from(facets.keys()));
   const selectedValues = new Set(column?.getFilterValue() as TValue[]);
 
   return (
