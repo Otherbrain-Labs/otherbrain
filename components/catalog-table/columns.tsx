@@ -22,6 +22,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   day: "2-digit",
 });
 
+const avgStarsFormatter = new Intl.NumberFormat("en-US", {
+  maximumFractionDigits: 2,
+});
+
 export const idToTitle: Record<string, string> = {
   name: "Model",
   stars: "Rating",
@@ -101,10 +105,12 @@ export const columns: ColumnDef<Model>[] = [
     header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
-      return row.index % 6 === 0 ? (
+      return model.avgStars && model.numReviews ? (
         <div className="flex items-center">
           <Star filled />
-          <span className="relative left-1 top-0.5">4.96 (4)</span>
+          <span className="relative left-1 top-0.5">
+            {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
+          </span>
         </div>
       ) : (
         <div className="flex items-center">--</div>

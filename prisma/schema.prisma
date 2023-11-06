@@ -44,6 +44,10 @@ model Model {
   mmlu       Float?
   truthfulqa Float?
 
+  // Aggregate review info
+  avgStars   Float?
+  numReviews Int?
+
   files   File[]
   reviews Review[]
   author  Author   @relation(fields: [authorId], references: [id])

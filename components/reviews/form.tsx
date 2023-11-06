@@ -32,6 +32,29 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
       },
     });
 
+    const avgStarsAndCount = await prisma.review.aggregate({
+      where: {
+        modelId: modelId,
+      },
+      _avg: {
+        stars: true,
+      },
+      _count: {
+        stars: true,
+      },
+    });
+
+    // update the model with the new average stars and count
+    await prisma.model.update({
+      where: {
+        id: modelId,
+      },
+      data: {
+        avgStars: avgStarsAndCount._avg.stars,
+        numReviews: avgStarsAndCount._count.stars,
+      },
+    });
+
     revalidatePath("/");
     return result;
   }
