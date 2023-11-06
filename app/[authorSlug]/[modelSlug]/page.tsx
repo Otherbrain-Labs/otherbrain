@@ -174,7 +174,12 @@ export default async function Home({
         ) : (
           model.reviews.map((review) => (
             <div key={review.id} className="border p-3">
-              <StarRating rating={review.stars} />
+              <div className="flex justify-between">
+                <StarRating rating={review.stars} />
+                <div className="text-muted-foreground">
+                  {new Date(review.createdAt).toLocaleDateString()}
+                </div>
+              </div>
               <div className="text-sm mt-1">{review.text}</div>
             </div>
           ))

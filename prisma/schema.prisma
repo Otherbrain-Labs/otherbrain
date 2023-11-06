@@ -64,7 +64,8 @@ model File {
 }
 
 model Review {
-  id          String  @id @default(cuid())
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
   stars       Int
   text        String
   externalUrl String?
