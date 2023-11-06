@@ -60,10 +60,7 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
   }
 
   return (
-    <form
-      action={create}
-      className="flex flex-col bg-muted space-y-4 px-4 py-8 sm:px-16"
-    >
+    <form action={create} className="flex flex-col bg-muted px-2 py-4 sm:px-4">
       <div>
         <label
           htmlFor="stars"
@@ -74,7 +71,7 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
         <StarRater rating={2} />
       </div>
 
-      <div>
+      <div className="mt-4">
         <label
           htmlFor="text"
           className="block text-xs text-muted-foreground uppercase"
@@ -92,7 +89,7 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
 
       <button
         type="submit"
-        className={`${"border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground"} flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
+        className="border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground flex h-10 px-8 max-w-xs self-end items-center justify-center rounded-md border text-sm transition-all focus:outline-none mt-4"
       >
         Submit
       </button>

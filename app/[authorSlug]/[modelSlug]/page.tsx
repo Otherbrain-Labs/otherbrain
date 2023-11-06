@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, PlusCircle } from "lucide-react";
 import Scores from "./scores";
 import { headers } from "next/headers";
+import StarRating from "@/components/ui/star-rating";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   return await prisma.model.findFirst({
@@ -155,32 +156,30 @@ export default async function Home({
         </div>
       )}
 
-      <div className="flex justify-between items-center space-x-3 max-w-lg mt-10 mb-2">
-        <h2 className="text-3xl font-semibold">Reviews</h2>
-        <Button variant="outline" asChild>
-          <Link
-            href={`/login?redirect-to=${pathname}}`}
-            className="hover:underline"
-          >
-            Login to review
-          </Link>
-        </Button>
-      </div>
-      {session && <ReviewsForm modelId={model.id} />}
-      {model.reviews.length === 0 ? (
-        <div>No reviews yet</div>
-      ) : (
-        <div className="w-full inline-grid grid-cols-4 gap-3">
-          {model.reviews.map((review) => (
-            <div
-              key={review.id}
-              className="border rounded shadow p-3 inline-block hover:bg-accent"
+      <div className="max-w-xl space-y-3">
+        <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
+          <h2 className="text-3xl font-semibold">Reviews</h2>
+          <Button variant="outline" asChild>
+            <Link
+              href={`/login?redirect-to=${pathname}}`}
+              className="hover:underline"
             >
-              <span className="text-sm ml-2">{review.text}</span>
-            </div>
-          ))}
+              Login to review
+            </Link>
+          </Button>
         </div>
-      )}
+        {session && <ReviewsForm modelId={model.id} />}
+        {model.reviews.length === 0 ? (
+          <div>No reviews yet</div>
+        ) : (
+          model.reviews.map((review) => (
+            <div key={review.id} className="border p-3">
+              <StarRating rating={review.stars} />
+              <div className="text-sm mt-1">{review.text}</div>
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 }
