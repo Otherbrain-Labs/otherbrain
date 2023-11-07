@@ -22,4 +22,8 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Scrape models
-        run: npx ts-node -T scripts/ci/scrape-models.ts
+        run: |
+          set +e
+          npx ts-node -T scripts/ci/scrape-models.ts
+          exitcode="$?"
+          exit "$exitcode"
