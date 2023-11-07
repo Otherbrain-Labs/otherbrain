@@ -27,6 +27,13 @@ export const scoreDescription: Record<ScoreKey, string> = {
   truthfulqa: "evaluates tendency to propagate prevalent online falsehoods",
 };
 
+export const scoreHref: Partial<Record<ScoreKey, string>> = {
+  arc: "https://arxiv.org/abs/1803.05457",
+  hellaswag: "https://arxiv.org/abs/1905.07830",
+  mmlu: "https://arxiv.org/abs/2009.03300",
+  truthfulqa: "https://arxiv.org/abs/2109.07958",
+};
+
 export function ScoreTooltip({
   score,
   children,

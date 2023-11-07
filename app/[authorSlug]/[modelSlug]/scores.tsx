@@ -1,11 +1,17 @@
 import type { Model } from "./page";
-import { ScoreKey, scoreText, scoreDescription } from "@/components/scores";
+import {
+  ScoreKey,
+  scoreText,
+  scoreDescription,
+  scoreHref,
+} from "@/components/scores";
 
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Link from "next/link";
 
 export default function Scores({ model }: { model: Model }) {
   const filtered = Object.keys(scoreText).filter(
@@ -27,9 +33,19 @@ export default function Scores({ model }: { model: Model }) {
       <TooltipContent className="space-y-2 w-100 max-w-md flex flex-col">
         {filtered.map((key) => (
           <div className="text-xs" key={key}>
-            <span className="font-medium underline">
-              {scoreText[key as ScoreKey]}
-            </span>
+            {scoreHref[key as ScoreKey] ? (
+              <Link
+                href={scoreHref[key as ScoreKey]!}
+                rel="noopener noreferrer"
+                className="font-medium underline"
+              >
+                {scoreText[key as ScoreKey]}
+              </Link>
+            ) : (
+              <span className="font-medium underline">
+                {scoreText[key as ScoreKey]}
+              </span>
+            )}
             :{" "}
             <span className="text-left">
               {scoreDescription[key as ScoreKey]}

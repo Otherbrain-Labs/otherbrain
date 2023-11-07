@@ -99,7 +99,7 @@ export default async function Home({
             , {dateFormatted}
           </div>
         </div>
-        <div className="mt-4 md:mt-0 flex space-x-4">
+        <div className="mt-4 md:ml-8 md:mt-0 flex space-x-4">
           {model.remoteId && (
             <Button variant="outline" asChild>
               <Link
