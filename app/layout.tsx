@@ -4,9 +4,8 @@ import { Metadata, Viewport } from "next";
 import { GeistSans, GeistMono } from "geist/font";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
-import { ThemeProvider } from "@/components/theme-provider";
 import { MainNav } from "@/components/main-nav";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Providers } from "./providers";
 
 const title = "Otherbrain";
 const description = "AI Model Reviews";
@@ -39,20 +38,13 @@ export default async function RootLayout({
       suppressHydrationWarning // next-themes needs this to apply .light/.dark
     >
       <body>
-        <TooltipProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="mx-auto px-4 sm:px-8">
-              <MainNav />
-              <Toaster />
-              {children}
-            </div>
-          </ThemeProvider>
-        </TooltipProvider>
+        <Providers>
+          <div className="mx-auto px-4 sm:px-8">
+            <MainNav />
+            <Toaster />
+            {children}
+          </div>
+        </Providers>
         <Analytics />
       </body>
     </html>
