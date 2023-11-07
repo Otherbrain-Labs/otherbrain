@@ -1,33 +1,32 @@
 import NextAuth, { type NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import GithubProvider from "next-auth/providers/github";
 import prisma from "@/lib/prisma";
-import { compare } from "bcrypt";
+
+const VERCEL_DEPLOYMENT = !!process.env.VERCEL_URL;
 
 export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
   providers: [
-    CredentialsProvider({
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" }
-      },
-      async authorize(credentials) {
-        const { email, password } = credentials ?? {}
-        if (!email || !password) {
-          throw new Error("Missing username or password");
-        }
-        const user = await prisma.user.findUnique({
-          where: {
-            email,
-          },
-        });
-        // if user doesn't exist or password doesn't match
-        if (!user || !(await compare(password, user.password))) {
-          throw new Error("Invalid username or password");
-        }
-        return user;
-      },
+    GithubProvider({
+      clientId: process.env.GITHUB_ID!,
+      clientSecret: process.env.GITHUB_SECRET!,
     }),
   ],
+  session: { strategy: "jwt" },
+  cookies: {
+    sessionToken: {
+      name: `${VERCEL_DEPLOYMENT ? "__Secure-" : ""}next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        // When working on localhost, the cookie domain must be omitted entirely (https://stackoverflow.com/a/1188145)
+        domain: VERCEL_DEPLOYMENT ? ".otherbrain.world" : undefined,
+        secure: VERCEL_DEPLOYMENT,
+      },
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
