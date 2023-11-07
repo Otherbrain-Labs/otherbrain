@@ -9,22 +9,13 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
 import { ScoreKey, ScoreTooltip } from "../scores";
+import { avgStarsFormatter, dateFormatter } from "@/lib/utils";
 
 type Models =
   | Awaited<ReturnType<typeof loadModels>>
   | Awaited<ReturnType<typeof loadAuthorModels>>;
 
 type Model = Models[number];
-
-const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-});
-
-const avgStarsFormatter = new Intl.NumberFormat("en-US", {
-  maximumFractionDigits: 2,
-});
 
 export const idToTitle: Record<string, string> = {
   name: "Model",

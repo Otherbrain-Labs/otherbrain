@@ -15,9 +15,11 @@ import { ArrowUpRight, PlusCircle } from "lucide-react";
 import Scores from "./scores";
 import { headers } from "next/headers";
 import StarRating from "@/components/ui/star-rating";
+import Star from "@/components/ui/star";
+import { avgStarsFormatter } from "@/lib/utils";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
-  return await prisma.model.findFirst({
+  const model = await prisma.model.findFirst({
     where: {
       slug: modelSlug,
       author: {
@@ -29,6 +31,10 @@ export async function loadModel(modelSlug: string, authorSlug: string) {
       author: true,
     },
   });
+  model?.reviews.sort(
+    (a, b) => b.createdAt?.getTime() || 0 - a.createdAt?.getTime() || 0
+  );
+  return model;
 }
 
 export type Model = NonNullable<Awaited<ReturnType<typeof loadModel>>>;
@@ -156,7 +162,7 @@ export default async function Home({
         </div>
       )}
 
-      <div className="max-w-xl space-y-3">
+      <div className="max-w-xl space-y-3 mb-20">
         <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
           <h2 className="text-3xl font-semibold">Reviews</h2>
           <Button variant="outline" asChild>
@@ -168,6 +174,14 @@ export default async function Home({
             </Link>
           </Button>
         </div>
+        {model.avgStars && model.numReviews && (
+          <div className="flex items-center mb-2">
+            <span className="mr-2">Average</span> <Star filled />
+            <span className="relative left-1 top-0.5">
+              {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
+            </span>
+          </div>
+        )}
         {session && <ReviewsForm modelId={model.id} />}
         {model.reviews.length === 0 ? (
           <div>No reviews yet</div>
