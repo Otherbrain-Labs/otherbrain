@@ -1,15 +1,9 @@
-"use client";
-
-import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "@/components/mode-toggle";
-import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+import AuthNavItem from "@/components/auth/auth-nav-item";
 
 export function MainNav() {
-  const pathname = usePathname();
-
   return (
     <div className="flex my-4 justify-between">
       <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -23,11 +17,7 @@ export function MainNav() {
       </Link>
 
       <div className="flex">
-        {pathname !== "/login" && (
-          <Button variant="ghost" asChild className="mr-2">
-            <Link href="/login">Sign in</Link>
-          </Button>
-        )}
+        <AuthNavItem />
         <ModeToggle />
       </div>
     </div>
