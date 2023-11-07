@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Form from "@/components/auth/form";
+import Form from "@/components/auth/auth-form";
 import Link from "next/link";
 
 export default function Login() {
@@ -18,10 +18,9 @@ export default function Login() {
             />
           </Link>
           <h3 className="text-xl font-semibold">Sign In</h3>
-          <p className="text-sm text-muted-foreground">
-            Use your email and password to sign in
-          </p>
+          <p className="text-sm text-muted-foreground">Expand your mind</p>
         </div>
+
         <Form type="login" />
       </div>
     </div>
