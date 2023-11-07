@@ -5,12 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "@/components/mode-toggle";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 export function MainNav() {
   const pathname = usePathname();
+
   return (
-    <div className="flex flex-row-reverse my-4 justify-between">
-      <ModeToggle />
+    <div className="flex my-4 justify-between">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Image
           src="/otherbrain-lockup@2x.png"
@@ -20,6 +21,15 @@ export function MainNav() {
           className="dark:invert"
         />
       </Link>
+
+      <div className="flex">
+        {pathname !== "/login" && (
+          <Button variant="ghost" asChild className="mr-2">
+            <Link href="/login">Sign in</Link>
+          </Button>
+        )}
+        <ModeToggle />
+      </div>
     </div>
   );
 }
