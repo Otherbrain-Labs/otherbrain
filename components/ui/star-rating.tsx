@@ -6,7 +6,7 @@ export type StarRatingProps = {
 
 export default function StarRating({ rating }: StarRatingProps) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center" title={`${rating} stars`}>
       {[...Array(rating)].map((_, i) => (
         <Star key={i} filled className="w-4 h-4 mr-1" />
       ))}
