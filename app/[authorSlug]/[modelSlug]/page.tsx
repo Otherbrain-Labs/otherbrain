@@ -44,10 +44,6 @@ export default async function Home({
 }: {
   params: { authorSlug: string; modelSlug: string };
 }) {
-  const headersList = headers();
-  const fullUrl = headersList.get("referer") || "";
-  const pathname = new URL(fullUrl).pathname;
-
   const session = await getServerSession();
 
   const model = await loadModel(params.modelSlug, params.authorSlug);
@@ -166,19 +162,17 @@ export default async function Home({
         <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
           <h2 className="text-3xl font-semibold">Reviews</h2>
           <Button variant="outline" asChild>
-            <Link
-              href={`/login?redirect-to=${pathname}}`}
-              className="hover:underline"
-            >
+            <Link href="/login" className="hover:underline">
               Login to review
             </Link>
           </Button>
         </div>
         {model.avgStars && model.numReviews && (
-          <div className="flex items-center mb-2">
-            <span className="mr-2">Average</span> <Star filled />
+          <div className="flex items-center mb-3 text-2xl">
+            <Star className="h-8 w-8" filled />
             <span className="relative left-1 top-0.5">
-              {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
+              {avgStarsFormatter.format(model.avgStars)} average over{" "}
+              {model.numReviews} reviews
             </span>
           </div>
         )}
