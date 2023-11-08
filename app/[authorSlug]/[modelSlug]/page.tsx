@@ -11,7 +11,6 @@ import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, PlusCircle } from "lucide-react";
 import Scores from "./scores";
-import StarRating from "@/components/ui/star-rating";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
 import { getServerSession } from "@/lib/auth";
@@ -107,15 +106,12 @@ export default async function Home({
                 className="hover:underline"
                 rel="noopener noreferrer"
               >
-                Model Details
+                Model Info
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           )}
-          <Button>
-            <PlusCircle className="mr-2 h-4 w-4" />
-            Review
-          </Button>
+          <Button>Review</Button>
         </div>
       </div>
 
@@ -164,7 +160,7 @@ export default async function Home({
           {!session && (
             <Button variant="outline" asChild>
               <Link href="/login" className="hover:underline">
-                Login to review
+                Sign in to review
               </Link>
             </Button>
           )}
