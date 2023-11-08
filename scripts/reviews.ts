@@ -48,6 +48,31 @@ export async function load() {
         },
       });
 
+      // Update model with new review count and average stars
+      const avgStarsAndCount = await prisma.review.aggregate({
+        where: {
+          model: {
+            remoteId: review.remoteId,
+          },
+        },
+        _avg: {
+          stars: true,
+        },
+        _count: {
+          stars: true,
+        },
+      });
+
+      await prisma.model.update({
+        where: {
+          remoteId: review.remoteId,
+        },
+        data: {
+          avgStars: avgStarsAndCount._avg.stars,
+          numReviews: avgStarsAndCount._count.stars,
+        },
+      });
+
       console.log(`Added review`, review.remoteId);
       count++;
     } catch (error) {

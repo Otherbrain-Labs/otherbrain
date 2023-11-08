@@ -19,7 +19,7 @@ type Model = Models[number];
 
 export const idToTitle: Record<string, string> = {
   name: "Model",
-  stars: "Rating",
+  avgStars: "Rating",
   lastModifiedDate: "Updated",
   numParameters: "Parameters",
   average: "Average",
@@ -92,7 +92,7 @@ export const columns: ColumnDef<Model>[] = [
     sortingFn: "alphanumeric",
   },
   {
-    accessorKey: "stars",
+    accessorKey: "avgStars",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
