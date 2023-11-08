@@ -37,6 +37,7 @@ export async function loadModel(modelSlug: string, authorSlug: string) {
 }
 
 export type Model = NonNullable<Awaited<ReturnType<typeof loadModel>>>;
+export type Review = NonNullable<Model["reviews"]>[number];
 
 export default async function Home({
   params,

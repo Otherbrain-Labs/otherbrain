@@ -1,19 +1,20 @@
-import { getServerSession } from "next-auth/next";
+"use server";
+
+import { getServerSession } from "@/lib/auth";
 import prisma from "@/lib/prisma";
+import { revalidatePath } from "next/cache";
 
 export async function deleteReview(id: string) {
   const session = await getServerSession();
+  const userId = session?.user?.id;
 
-  if (!session?.user?.email) {
+  if (!userId) {
     return { message: "Session is required, please sign in." };
   }
 
-  const deleted = await prisma.review.delete({
-    where: {
-      id,
-      user: {
-        id: session.user.id,
-      },
-    },
+  await prisma.review.delete({
+    where: { id, userId },
   });
+
+  revalidatePath("/");
 }

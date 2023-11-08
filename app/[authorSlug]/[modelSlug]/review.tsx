@@ -1,7 +1,8 @@
 import StarRating from "@/components/ui/star-rating";
 import type { Review } from "./page";
-import { getServerSession } from "next-auth/next";
 import { deleteReview } from "./actions";
+import { getServerSession } from "@/lib/auth";
+import { Trash } from "lucide-react";
 
 type ReviewProps = {
   review: Review;
@@ -9,8 +10,7 @@ type ReviewProps = {
 
 export default async function Review({ review }: ReviewProps) {
   const session = await getServerSession();
-
-  console.log("xxx", session?.user, review.userId);
+  const deleteReviewWithId = deleteReview.bind(null, review.id);
 
   return (
     <div key={review.id} className="border p-3">
@@ -22,12 +22,15 @@ export default async function Review({ review }: ReviewProps) {
       </div>
       <div className="text-sm mt-1">{review.text}</div>
       {session?.user?.id === review.userId && (
-        <button
-          onClick={() => deleteReview(review.id)}
-          className="text-sm text-red-500 hover:underline focus:outline-none"
-        >
-          Delete
-        </button>
+        <form action={deleteReviewWithId} className="flex justify-end">
+          <button
+            type="submit"
+            title="delete"
+            className="text-sm hover:underline focus:outline-none text-muted-foreground"
+          >
+            <Trash size={16} />
+          </button>
+        </form>
       )}
     </div>
   );
