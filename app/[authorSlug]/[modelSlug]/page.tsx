@@ -64,37 +64,37 @@ export default async function Home({
       <div className="md:flex justify-between items-start">
         <div>
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <h1 className="text-2xl md:text-4xl font-semibold mr-2">
-                {model.name}
-              </h1>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Badge className="mr-2" variant="secondary">
-                    {model.numParameters}B
-                  </Badge>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Parameter count</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <Tooltip>
-                <TooltipTrigger>
-                  <Badge variant="secondary">{model.arch}</Badge>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Model type</p>
-                </TooltipContent>
-              </Tooltip>
-            </div>
+            <h1 className="text-2xl md:text-4xl font-semibold mr-2">
+              {model.name}
+            </h1>
           </div>
-          <div className="text-muted-foreground">
-            by{" "}
-            <Link href={"/" + author.slug} className="hover:underline">
-              {author.name}
-            </Link>
-            , {dateFormatted}
+          <div className="flex items-center">
+            <div className="text-muted-foreground pt-1">
+              by{" "}
+              <Link href={"/" + author.slug} className="hover:underline">
+                {author.name}
+              </Link>
+              , {dateFormatted}
+            </div>
+            <Tooltip>
+              <TooltipTrigger>
+                <Badge className="mx-2" variant="secondary">
+                  {model.numParameters}B
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Parameter count</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger>
+                <Badge variant="secondary">{model.arch}</Badge>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Model type</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
         </div>
         <div className="mt-4 md:ml-8 md:mt-0 flex space-x-4">
