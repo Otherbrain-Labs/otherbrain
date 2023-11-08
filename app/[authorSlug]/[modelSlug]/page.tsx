@@ -15,6 +15,7 @@ import StarRating from "@/components/ui/star-rating";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
 import { getServerSession } from "@/lib/auth";
+import Review from "./review";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
@@ -179,15 +180,7 @@ export default async function Home({
           <div>No reviews yet</div>
         ) : (
           model.reviews.map((review) => (
-            <div key={review.id} className="border p-3">
-              <div className="flex justify-between">
-                <StarRating rating={review.stars} />
-                <div className="text-muted-foreground">
-                  {new Date(review.createdAt).toLocaleDateString()}
-                </div>
-              </div>
-              <div className="text-sm mt-1">{review.text}</div>
-            </div>
+            <Review key={review.id} review={review} />
           ))
         )}
       </div>
