@@ -10,7 +10,7 @@ import { Providers } from "./providers";
 const title = "Otherbrain";
 const description = "AI Model Reviews";
 
-export const revalidate = 60 * 5; // 5 minutes
+export const revalidate = 300; // 5 minutes
 
 export const metadata: Metadata = {
   title,
