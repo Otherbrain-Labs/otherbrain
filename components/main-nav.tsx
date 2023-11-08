@@ -11,7 +11,7 @@ export function MainNav() {
           src="/otherbrain-lockup@2x.png"
           width={Math.floor(238 * 0.75)}
           height={Math.floor(34 * 0.75)}
-          alt="Otherbrain"
+          alt="Otherbrain Logo"
           className="dark:invert"
         />
       </Link>
