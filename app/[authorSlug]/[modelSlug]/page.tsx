@@ -1,8 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getServerSession } from "next-auth/next";
 import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
@@ -13,10 +11,10 @@ import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, PlusCircle } from "lucide-react";
 import Scores from "./scores";
-import { headers } from "next/headers";
 import StarRating from "@/components/ui/star-rating";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
+import { getServerSession } from "@/lib/auth";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
