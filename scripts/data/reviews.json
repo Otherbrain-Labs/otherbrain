@@ -1,0 +1,230 @@
+[
+  {
+    "remoteId": "HuggingFaceH4/zephyr-7b-beta",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17ioeoa/zephyr_7b_beta_is_awesome_examples/",
+    "text": "This guy is amazing!\n\nExcluding the larger models, which I can't test due to VRAM limitations, I haven't seen another model as good as this one. And it's very lightweight. It may not have been 100% accurate with everything, but it at least got the main point of each question."
+  },
+  {
+    "remoteId": "ehartford/samantha-mistral-instruct-7b",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17iw46g/samantha_mistral_instruct_7b/",
+    "text": "Maybe it's just preference, and we all have our own workflow and use cases, but why am I not seeing more support for this model??\nPerforms well, consistent RAM usage, super small, Mistral Instruct is Mistral Instruct, it's a good model.\nWhat really makes it work so well (for me at least) is how it can switch from right brain to left brain thinking as fast as I do. Benchmarks are decent, but this model really shines in actual practice. The combination of the two datasets is just so performant for scatter-brains."
+  },
+  {
+    "remoteId": "ehartford/samantha-mistral-instruct-7b",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17inqs2/comment/k6wyk04/",
+    "text": "Samantha-Mistral-Instruct has been absolutely fantastic.\nSamantha is trained on psychology, philosophy, and a ton of classic lit. It's supposed to be a pseudo-therapeutic assistant who is coded to not engage in relationship or sexual roleplay. Excellent to talk to.\nThe Mistral data gives it a lot of working know-how in just about any subject (although I still think it's a good idea to keep a dedicated coder in the roster, this model is good for general code questions and especially good at project management and spitballing ideas).\nAlso, it's been the most stable on my RAM. I'm CPU only, so that may or may not be relevant or everyone's experience, but other models can jump wildly between 5-12gb when it's working on something. The 7B I use stays consistent at 5-5.7gb while running. Definitely makes it easy to have both that and a CodeLlama running at the same time without my computer melting through the table."
+  },
+  {
+    "remoteId": "CausalLM/14B",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17h5bsm/casuallm_14b_seems_to_be_quite_good/",
+    "text": "Testing CasualLM 14b right now, and it seems to actually be quite good. In logic tests so far, it's done better than pretty much all the other 7b-13b models I've tested. However this is pretty anecdotal evidence, my testing is pretty.. casual. I just picked tests I've seen others try in this sub and compare it to their results. For example, I went through some questions from here https://docs.google.com/spreadsheets/d/1NgHDxbVWJFolq8bLvLkuPWKC7i_R6I6W/edit#gid=2011456595 that a lot of other 13b models seem to be getting wrong, and this one answered pretty much all the ones I tried without an issue. I did only test around 10 questions before getting lazy though."
+  },
+  {
+    "remoteId": "HuggingFaceH4/zephyr-7b-beta",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 14/18\n➕ Often, but not always, acknowledged data input with \"OK\".\n➕ Followed instructions to answer with just a single letter or more than just a single letter in most cases.\n❗ (Side note: Using ChatML format instead of the official one, it gave correct answers to only 14/18 multiple choice questions.)"
+  },
+  {
+    "remoteId": "teknium/OpenHermes-2-Mistral-7B",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 12/18\n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "jondurbin/airoboros-m-7b-3.1.2",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 8/18\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "jphme/em_german_leo_mistral",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 8/1\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter. \n❌ When giving just the questions for the tie-break, needed additional prompting in the final test."
+  },
+  {
+    "remoteId": "ehartford/dolphin-2.1-mistral-7b",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➖ Gave correct answers to 15/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 12/18\n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter.\n❌ Repeated scenario and persona information, got distracted from the exam."
+  },
+  {
+    "remoteId": "migtissera/SynthIA-7B-v1.3",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➖ Gave correct answers to 15/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 8/18\n ✅ Consistently acknowledged all data input with \"OK\".\n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "mistralai/Mistral-7B-Instruct-v0.1",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "➖ Gave correct answers to 15/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 7/18\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "migtissera/SynthIA-7B-v2.0",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 14/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 10/18\n✅ Consistently acknowledged all data input with \"OK\".\n✅ Consistently acknowledged all data input with \"OK\"."
+  },
+  {
+    "remoteId": "teknium/CollectiveCognition-v1.1-Mistral-7B",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 14/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 9/18\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Open-Orca/Mistral-7B-OpenOrca",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 13/18 multiple choice questions!\n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter. \n❌ After answering a question, would ask a question instead of acknowledging information."
+  },
+  {
+    "remoteId": "HuggingFaceH4/zephyr-7b-alpha",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 12/18 multiple choice questions!\n❗ Ironically, using ChatML format instead of the official one, it gave correct answers to 14/18 multiple choice questions and consistently acknowledged all data input with \"OK\"!"
+  },
+  {
+    "remoteId": "Undi95/Xwin-MLewd-7B-V0.2",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 12/18 multiple choice questions!\n➕ Often, but not always, acknowledged data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Severian/ANIMA-Phi-Neptune-Mistral-7B",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 10/18 multiple choice questions!\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "NousResearch/Nous-Capybara-7B-V1",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 10/18 multiple choice questions!\n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter.\n❌ Sometimes didn't answer at all."
+  },
+  {
+    "remoteId": "Xwin-LM/Xwin-LM-7B-V0.2",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "❌ Gave correct answers to only 10/18 multiple choice questions!\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter. \n❌ In the last test, would always give the same answer, so it got some right by chance and the others wrong! \n❗ Ironically, using Alpaca format instead of the official one, it gave correct answers to 11/18 multiple choice questions!"
+  },
+  {
+    "remoteId": "Undi95/Xwin-MLewd-13B-V0.2",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n➕ Gave correct answers to 17/18 multiple choice questions! (Just the questions, no previous information, gave correct answers: 15/18) \n✅ Consistently acknowledged all data input with \"OK\".\n➕ Followed instructions to answer with just a single letter or more than just a single letter in most cases."
+  },
+  {
+    "remoteId": "Xwin-LM/Xwin-LM-13B-V0.2",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 9/18\n✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "PygmalionAI/mythalion-13b",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format: \n➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 6/18\n ✅ Consistently acknowledged all data input with \"OK\". \n➖ Did NOT follow instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "uukuguy/speechless-llama2-hermes-orca-platypus-wizardlm-13b",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n❌ Gave correct answers to only 15/18 multiple choice questions! \n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Undi95/MythoMax-L2-Kimiko-v2-13b",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n❌ Gave correct answers to only 14/18 multiple choice questions! \n✅ Consistently acknowledged all data input with \"OK\". \n❌ In one of the four tests, would only say \"OK\" to the questions instead of giving the answer, and needed to be prompted to answer - otherwise its score would only be 10/18!"
+  },
+  {
+    "remoteId": "Undi95/MXLewd-L2-20B",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 11/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Undi95/MLewd-ReMM-L2-Chat-20B",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 9/18\n✅ Consistently acknowledged all data input with \"OK\".\n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Undi95/PsyMedRP-v1-20B",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with Alpaca format:\n➕ Gave correct answers to 16/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 9/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Undi95/U-Amethyst-20B",
+    "stars": 2,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q8_0 with official Alpaca format:\n❌ Gave correct answers to only 13/18 multiple choice questions! \n❌ In one of the four tests, would only say \"OK\" to a question instead of giving the answer, and needed to be prompted to answer - otherwise its score would only be 12/18! \n❌ In the last test, would always give the same answer, so it got some right by chance and the others wrong!"
+  },
+  {
+    "remoteId": "lizpreciatior/lzlv_70b_fp16_hf",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Vicuna format: \n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 17/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "migtissera/SynthIA-70B-v1.5",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official SynthIA format:\n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 16/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "migtissera/Synthia-70B-v1.2b",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official SynthIA format:\n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 16/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "elinas/chronos007-70b",
+    "stars": 5,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Alpaca format: \n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 16/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "sequelbox/StellarBright",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with Vicuna format:\n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 14/18\n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "Sao10K/Euryale-1.3-L2-70B",
+    "stars": 4,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Alpaca format:\n✅ Gave correct answers to all 18/18 multiple choice questions! Tie-Break: Just the questions, no previous information, gave correct answers: 14/18\n✅ Consistently acknowledged all data input with \"OK\".\n➖ Did NOT follow instructions to answer with more than just a single letter consistently."
+  },
+  {
+    "remoteId": "Xwin-LM/Xwin-LM-70B-V0.1",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Vicuna format:\n❌ Gave correct answers to only 17/18 multiple choice questions! \n✅ Consistently acknowledged all data input with \"OK\". \n✅ Followed instructions to answer with just a single letter or more than just a single letter."
+  },
+  {
+    "remoteId": "WizardLM/WizardLM-70B-V1.0",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Vicuna format:\n❌ Gave correct answers to only 17/18 multiple choice questions! \n✅ Consistently acknowledged all data input with \"OK\".\n➕ Followed instructions to answer with just a single letter or more than just a single letter in most cases. \n❌ In two of the four tests, would only say \"OK\" to the questions instead of giving the answer, and needed to be prompted to answer - otherwise its score would only be 12/18!"
+  },
+  {
+    "remoteId": "meta-llama/Llama-2-70b-chat-hf",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Vicuna format: \n❌ Gave correct answers to only 15/18 multiple choice questions! \n➕ Often, but not always, acknowledged data input with \"OK\". \n➕ Followed instructions to answer with just a single letter or more than just a single letter in most cases. \n➖ Occasionally used words of other languages in its responses as context filled up."
+  },
+  {
+    "remoteId": "NousResearch/Nous-Hermes-Llama2-70b",
+    "stars": 3,
+    "externalUrl": "https://www.reddit.com/r/LocalLLaMA/comments/17fhp9k/huge_llm_comparisontest_39_models_tested_7b70b/",
+    "text": "Q4_0 with official Vicuna format: \n❌ Gave correct answers to only 8/18 multiple choice questions! \n✅ Consistently acknowledged all data input with \"OK\". \n❌ In two of the four tests, would only say \"OK\" to the questions instead of giving the answer, and couldn't even be prompted to answer!"
+  }
+]
