@@ -161,11 +161,13 @@ export default async function Home({
       <div className="max-w-xl space-y-3 mb-20">
         <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
           <h2 className="text-3xl font-semibold">Reviews</h2>
-          <Button variant="outline" asChild>
-            <Link href="/login" className="hover:underline">
-              Login to review
-            </Link>
-          </Button>
+          {!session && (
+            <Button variant="outline" asChild>
+              <Link href="/login" className="hover:underline">
+                Login to review
+              </Link>
+            </Button>
+          )}
         </div>
         {model.avgStars && model.numReviews && (
           <div className="flex items-center mb-3 text-2xl">
