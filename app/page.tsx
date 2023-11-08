@@ -2,6 +2,7 @@ import prisma from "@/lib/prisma";
 import Catalog from "@/components/catalog";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export async function loadModels() {
   const models = await prisma.model.findMany({
@@ -26,7 +27,7 @@ export default async function Home() {
         </h1>
         <p className="text-sm pt-4 pb-0 max-w-lg">
           Browse reviews and benchmarks to find the best model for your use
-          case. Write reviews and share your experiences. Data graciously (open)
+          case. Write a review and share your experience. Data graciously (open)
           sourced from the{" "}
           <Link
             href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard"
@@ -35,7 +36,6 @@ export default async function Home() {
             className="hover:underline group"
           >
             Open LLM Leaderboard
-            <ArrowUpRight className="hidden h-3 w-3 group-hover:inline-block" />
           </Link>
           ,{" "}
           <Link
@@ -45,7 +45,6 @@ export default async function Home() {
             className="hover:underline group"
           >
             Hugging Face
-            <ArrowUpRight className="hidden h-3 w-3 group-hover:inline-block" />
           </Link>
           ,{" "}
           <Link
@@ -55,7 +54,6 @@ export default async function Home() {
             className="hover:underline group"
           >
             Simon Willison
-            <ArrowUpRight className="hidden h-3 w-3 group-hover:inline-block" />
           </Link>
           ,{" "}
           <Link
@@ -65,7 +63,6 @@ export default async function Home() {
             className="hover:underline group"
           >
             TheBloke
-            <ArrowUpRight className="hidden h-3 w-3 group-hover:inline-block" />
           </Link>
           .
         </p>

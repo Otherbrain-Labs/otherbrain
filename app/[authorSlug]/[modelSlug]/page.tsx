@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, PlusCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Scores from "./scores";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
@@ -106,12 +106,12 @@ export default async function Home({
                 className="hover:underline"
                 rel="noopener noreferrer"
               >
-                Model Info
+                Model info
                 <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           )}
-          <Button>Review</Button>
+          <Button>Write a review</Button>
         </div>
       </div>
 
