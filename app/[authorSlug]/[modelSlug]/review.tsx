@@ -13,7 +13,7 @@ export default async function Review({ review }: ReviewProps) {
   const deleteReviewWithId = deleteReview.bind(null, review.id);
 
   return (
-    <div key={review.id} className="border p-3">
+    <div key={review.id} className="border rounded p-3">
       <div className="flex justify-between">
         <StarRating rating={review.stars} />
         <div className="text-muted-foreground">
