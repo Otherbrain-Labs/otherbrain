@@ -3,7 +3,8 @@ import { exec } from "child_process";
 import savedScores from "./data/llm-scores.json";
 import prisma from "../lib/prisma";
 
-const RESULTS_TMP_DIR = "/tmp/llm-leaderboard-scores";
+const tmpdir = process.env.CI ? "./" : "/tmp/";
+const RESULTS_TMP_DIR = `${tmpdir}llm-leaderboard-scores`;
 
 const cloneResults = async () => {
   if (fs.existsSync(RESULTS_TMP_DIR)) {
