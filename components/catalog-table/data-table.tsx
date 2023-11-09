@@ -42,7 +42,7 @@ export function DataTable<TData, TValue>({
   const [sorting, setSorting] = useState<SortingState>([
     {
       id: searchParams.get("sortingId") || "lastModifiedDate",
-      desc: !!searchParams.get("sortingDesc"),
+      desc: searchParams.get("sortingDesc") === "true",
     },
   ]);
 
@@ -85,8 +85,7 @@ export function DataTable<TData, TValue>({
     const params = new URLSearchParams(searchParams);
     if (
       sorting.length > 0 &&
-      sorting[0].id !== "lastModifiedDate" &&
-      !sorting[0].desc
+      !(sorting[0].id === "lastModifiedDate" && !sorting[0].desc)
     ) {
       params.set("sortingId", sorting[0].id);
       params.set("sortingDesc", sorting[0].desc ? "true" : "false");
@@ -105,13 +104,16 @@ export function DataTable<TData, TValue>({
       params.delete("pageIndex");
     }
 
+    skipPageResetRef.current = true;
+    router.replace(`?${params.toString()}`, { scroll: false });
+
     if (params.toString() === searchParams.toString()) {
       skipPageResetRef.current = false;
     } else {
       skipPageResetRef.current = true;
       router.replace(`?${params.toString()}`, { scroll: false });
     }
-  }, [pagination, columnFilters, sorting, searchParams, router.replace]);
+  }, [pagination, columnFilters, sorting, searchParams, router]);
 
   return (
     <div>
