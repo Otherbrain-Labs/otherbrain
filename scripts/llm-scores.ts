@@ -77,12 +77,6 @@ const parseResults = (data: any) => {
 };
 
 async function scrape(save: boolean = false, reclone: boolean = false) {
-  console.log(
-    "SCRAPE",
-    RESULTS_TMP_DIR,
-    !fs.existsSync(RESULTS_TMP_DIR),
-    reclone
-  );
   if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
     console.log("Cloning results...");
     await cloneResults();
