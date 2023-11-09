@@ -138,7 +138,6 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
   const existingIdsFlat = existingIds.map((model) => model.remoteId);
   const scores = useSaved ? savedScores : await scrape(saveData);
 
-  let count = 0;
   for (const key in scores) {
     if (!scores.hasOwnProperty(key)) {
       continue;
