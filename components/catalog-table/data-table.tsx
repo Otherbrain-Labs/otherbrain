@@ -53,6 +53,10 @@ export function DataTable<TData, TValue>({
 
   const pageIndex = parseInt(searchParams.get("pageIndex") || "0", 10);
   const skipPageResetRef = useRef(false);
+  const [pagination, setPagination] = useState({
+    pageIndex,
+    pageSize: 30,
+  });
 
   const table = useReactTable({
     data,
@@ -65,30 +69,19 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
+    onPaginationChange: setPagination,
     autoResetPageIndex: !skipPageResetRef.current,
-    initialState: {
-      pagination: {
-        pageIndex,
-        pageSize: 30,
-      },
-    },
   });
 
   const [tableState, setTableState] = useState(table.initialState);
 
   table.setOptions((prev) => ({
     ...prev,
-    state: { ...tableState, sorting, columnFilters },
+    state: { ...tableState, sorting, columnFilters, pagination },
     onStateChange: setTableState,
   }));
 
   useEffect(() => {
-    skipPageResetRef.current = false;
-  });
-
-  useEffect(() => {
-    skipPageResetRef.current = true;
-
     const params = new URLSearchParams(searchParams);
     if (
       sorting.length > 0 &&
@@ -106,14 +99,19 @@ export function DataTable<TData, TValue>({
     } else {
       params.delete("columnFilters");
     }
-    if (tableState.pagination.pageIndex) {
-      params.set("pageIndex", tableState.pagination.pageIndex.toString());
+    if (pagination.pageIndex) {
+      params.set("pageIndex", pagination.pageIndex.toString());
     } else {
       params.delete("pageIndex");
     }
 
-    router.replace(`?${params.toString()}`, { scroll: false });
-  }, [tableState, sorting, searchParams, router.replace]);
+    if (params.toString() === searchParams.toString()) {
+      skipPageResetRef.current = false;
+    } else {
+      skipPageResetRef.current = true;
+      router.replace(`?${params.toString()}`, { scroll: false });
+    }
+  }, [pagination, columnFilters, sorting, searchParams, router.replace]);
 
   return (
     <div>
