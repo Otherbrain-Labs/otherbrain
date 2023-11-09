@@ -194,9 +194,11 @@ export default async function Home({
         {model.reviews.length === 0 ? (
           <div>No reviews yet</div>
         ) : (
-          model.reviews.map((review) => (
-            <Review key={review.id} review={review} />
-          ))
+          <div className="space-y-2">
+            {model.reviews.map((review) => (
+              <Review key={review.id} review={review} />
+            ))}
+          </div>
         )}
       </div>
     </div>
