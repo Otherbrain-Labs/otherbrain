@@ -83,6 +83,9 @@ model Model {
   hellaswag  Float?
   mmlu       Float?
   truthfulqa Float?
+  drop       Float?
+  gsm8k      Float?
+  winogrande Float?
 
   // Aggregate review info
   avgStars   Float?
