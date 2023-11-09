@@ -1,5 +1,5 @@
 import fs from "fs";
-import { exec } from "child_process";
+import { execSync } from "child_process";
 import savedScores from "./data/llm-scores.json";
 import prisma from "../lib/prisma";
 
@@ -11,8 +11,8 @@ const cloneResults = async () => {
   if (fs.existsSync(RESULTS_TMP_DIR)) {
     await fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
   }
-  await exec(
-    `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR}`
+  await execSync(
+    `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR} && echo "cloned"`
   );
 };
 
@@ -77,9 +77,17 @@ const parseResults = (data: any) => {
 };
 
 async function scrape(save: boolean = false, reclone: boolean = false) {
+  console.log(
+    "SCRAPE",
+    RESULTS_TMP_DIR,
+    !fs.existsSync(RESULTS_TMP_DIR),
+    reclone
+  );
   if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
+    console.log("Cloning results...");
     await cloneResults();
   }
+
   const results: { [key: string]: any } = {};
   const directories = await getDirectories(RESULTS_TMP_DIR);
   for (const directory of directories) {
