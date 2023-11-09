@@ -1,16 +1,18 @@
 import fs from "fs";
-import { exec } from "child_process";
+import { execSync } from "child_process";
 import savedScores from "./data/llm-scores.json";
 import prisma from "../lib/prisma";
 
-const RESULTS_TMP_DIR = "/tmp/llm-leaderboard-scores";
+const RESULTS_TMP_DIR = process.env.GITHUB_WORKSPACE
+  ? `${process.env.GITHUB_WORKSPACE}/llm-leaderboard-scores`
+  : `/tmp/llm-leaderboard-scores`;
 
 const cloneResults = async () => {
   if (fs.existsSync(RESULTS_TMP_DIR)) {
     await fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
   }
-  await exec(
-    `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR}`
+  await execSync(
+    `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR} && echo "cloned"`
   );
 };
 
@@ -76,8 +78,10 @@ const parseResults = (data: any) => {
 
 async function scrape(save: boolean = false, reclone: boolean = false) {
   if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
+    console.log("Cloning results...");
     await cloneResults();
   }
+
   const results: { [key: string]: any } = {};
   const directories = await getDirectories(RESULTS_TMP_DIR);
   for (const directory of directories) {
@@ -138,7 +142,6 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
   const existingIdsFlat = existingIds.map((model) => model.remoteId);
   const scores = useSaved ? savedScores : await scrape(saveData);
 
-  let count = 0;
   for (const key in scores) {
     if (!scores.hasOwnProperty(key)) {
       continue;

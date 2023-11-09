@@ -21,5 +21,6 @@ jobs:
           cache: "yarn"
       - name: Install dependencies
         run: yarn
+      - run: echo "TEMP_DIR=$(mktemp -d)" >> $GITHUB_ENV
       - name: Scrape models
         run: npx ts-node -T scripts/ci/scrape-models.ts
