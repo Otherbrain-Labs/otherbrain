@@ -7,7 +7,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
 import Scores from "./scores";
 import Star from "@/components/ui/star";
@@ -79,14 +78,16 @@ export default async function Home({
               {dateFormatted}
             </div>
 
-            <div className="ml-3 inline text-sm">
-              <Star
-                className="inline h-3.5 w-3.5 relative -top-px mr-1"
-                filled
-              />
-              <span>5/5</span>
-              <span className="ml-3">3 ratings</span>
-            </div>
+            {model.avgStars && model.numReviews && (
+              <div className="ml-3 inline text-sm">
+                <Star
+                  className="inline h-3.5 w-3.5 relative -top-px mr-1"
+                  filled
+                />
+                <span>{avgStarsFormatter.format(model.avgStars)}/5</span>
+                <span className="ml-3">{model.numReviews} ratings</span>
+              </div>
+            )}
           </div>
           <div className="mt-1.5">
             <Tooltip>
