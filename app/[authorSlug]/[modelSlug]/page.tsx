@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/tooltip";
 import ReviewsForm from "@/components/reviews/form";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
 import Scores from "./scores";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
 import { getServerSession } from "@/lib/auth";
 import Review from "./review";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import ReviewDialog from "@/components/review-dialog";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
@@ -107,11 +108,17 @@ export default async function Home({
                 rel="noopener noreferrer"
               >
                 Model info
-                <ArrowUpRight className="ml-2 h-4 w-4" />
+                <ExternalLinkIcon className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           )}
-          <Button>Write a review</Button>
+          {!model.reviews.find(
+            (review) => review.userId === session?.user?.id
+          ) && (
+            <ReviewDialog model={model}>
+              <Button>Write a review</Button>
+            </ReviewDialog>
+          )}
         </div>
       </div>
 
@@ -174,7 +181,6 @@ export default async function Home({
             </span>
           </div>
         )}
-        {session && <ReviewsForm modelId={model.id} />}
         {model.reviews.length === 0 ? (
           <div>No reviews yet</div>
         ) : (

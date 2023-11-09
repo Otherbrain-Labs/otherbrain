@@ -18,3 +18,56 @@ export async function deleteReview(id: string) {
 
   revalidatePath("/");
 }
+
+export async function createReview(modelId: string, formData: FormData) {
+  const session = await getServerSession();
+
+  if (!session || !session.user?.email) {
+    return { message: "Session is required, please sign in." };
+  }
+
+  const user = await prisma.user.findUnique({
+    where: {
+      email: session.user.email,
+    },
+  });
+
+  if (!user) {
+    return { message: "No user found" };
+  }
+
+  const result = await prisma.review.create({
+    data: {
+      modelId: modelId,
+      userId: user.id,
+      text: formData.get("text") as string,
+      stars: parseInt(formData.get("stars") as string, 10),
+    },
+  });
+
+  const avgStarsAndCount = await prisma.review.aggregate({
+    where: {
+      modelId: modelId,
+    },
+    _avg: {
+      stars: true,
+    },
+    _count: {
+      stars: true,
+    },
+  });
+
+  // update the model with the new average stars and count
+  await prisma.model.update({
+    where: {
+      id: modelId,
+    },
+    data: {
+      avgStars: avgStarsAndCount._avg.stars,
+      numReviews: avgStarsAndCount._count.stars,
+    },
+  });
+
+  revalidatePath("/");
+  return result;
+}

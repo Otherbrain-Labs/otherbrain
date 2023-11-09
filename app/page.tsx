@@ -1,8 +1,6 @@
 import prisma from "@/lib/prisma";
 import Catalog from "@/components/catalog";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export async function loadModels() {
   const models = await prisma.model.findMany({
