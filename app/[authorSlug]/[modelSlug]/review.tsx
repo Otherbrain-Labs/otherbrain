@@ -20,7 +20,11 @@ export default async function Review({ review }: ReviewProps) {
           {new Date(review.createdAt).toLocaleDateString()}
         </div>
       </div>
-      <div className="text-sm mt-1">{review.text}</div>
+      <div className="text-sm mt-1">
+        {review.text.split("\n").map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
+      </div>
       {session?.user?.id === review.userId && (
         <form action={deleteReviewWithId} className="flex justify-end">
           <button
