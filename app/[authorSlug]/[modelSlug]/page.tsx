@@ -56,7 +56,7 @@ export default async function Home({
 
   const date = new Date(model.lastModifiedDate);
   const dateFormatted = new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
+    year: "2-digit",
     month: "2-digit",
     day: "2-digit",
   }).format(date);
@@ -64,23 +64,34 @@ export default async function Home({
   return (
     <div className="mt-16 max-w-4xl m-auto">
       <div className="md:flex justify-between items-start">
-        <div>
+        <div className="mb-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl md:text-4xl font-semibold mr-2">
+            <h1 className="text-2xl md:text-5xl mr-2 font-semibold">
               {model.name}
             </h1>
           </div>
-          <div className="flex items-center">
-            <div className="text-muted-foreground pt-1">
+          <div className="flex items-center mt-1.5">
+            <div className="text-sm">
               by{" "}
-              <Link href={"/" + author.slug} className="hover:underline">
+              <Link href={"/" + author.slug} className="hover:underline mr-3">
                 {author.name}
               </Link>
-              , {dateFormatted}
+              {dateFormatted}
             </div>
+
+            <div className="ml-3 inline text-sm">
+              <Star
+                className="inline h-3.5 w-3.5 relative -top-px mr-1"
+                filled
+              />
+              <span>5/5</span>
+              <span className="ml-3">3 ratings</span>
+            </div>
+          </div>
+          <div className="mt-1.5">
             <Tooltip>
               <TooltipTrigger>
-                <Badge className="mx-2" variant="secondary">
+                <Badge className="-ml-1 mr-2" variant="secondary">
                   {model.numParameters}B
                 </Badge>
               </TooltipTrigger>
@@ -101,7 +112,7 @@ export default async function Home({
         </div>
         <div className="mt-4 md:ml-8 md:mt-0 flex space-x-4">
           {model.remoteId && (
-            <Button variant="outline" asChild>
+            <Button variant="outline" asChild className="hover:bg-white">
               <Link
                 href={`https://huggingface.co/${model.remoteId}`}
                 className="hover:underline"
@@ -116,7 +127,9 @@ export default async function Home({
             (review) => review.userId === session?.user?.id
           ) && (
             <ReviewDialog model={model}>
-              <Button>Write a review</Button>
+              <Button className="hover:underline hover:bg-primary">
+                Write a review
+              </Button>
             </ReviewDialog>
           )}
         </div>
@@ -124,46 +137,50 @@ export default async function Home({
 
       {model.average && (
         <div className="mt-4">
+          <h2 className="text-xl mb-3">Benchmarks</h2>
           <Scores model={model} />
         </div>
       )}
 
       {model.ggufId && (
         <div className="max-w-lg mt-10">
-          <h2 className="text-3xl font-semibold">Try it</h2>
-          <div className="mt-4">
+          <h2 className="text-xl">Try it</h2>
+          <div className="mt-2">
             To try this model locally,{" "}
             <Link
               href={`https://huggingface.co/${model.ggufId}`}
-              className="hover:underline font-bold"
+              className="hover:border-solid border-dotted border-b border-secondary-foreground"
               rel="noopener noreferrer"
             >
-              download a GGUF
-            </Link>{" "}
-            from Hugging Face and use it with a client like{" "}
+              download the GGUF from Hugging Face
+            </Link>
+            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
+            and use it with a client like{" "}
             <Link
               href="https://www.freechat.run/"
-              className="hover:underline font-bold"
+              className="hover:border-solid border-dotted border-b border-secondary-foreground"
               rel="noopener noreferrer"
             >
               FreeChat
-            </Link>{" "}
-            (macOS) or{" "}
+            </Link>
+            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
+            or{" "}
             <Link
               href="https://lmstudio.ai"
-              className="hover:underline font-bold"
+              className="hover:border-solid border-dotted border-b border-secondary-foreground"
               rel="noopener noreferrer"
             >
               LM Studio
             </Link>
+            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />
             .
           </div>
         </div>
       )}
 
-      <div className="max-w-xl space-y-3 mb-20">
+      <div className="max-w-xl mb-20">
         <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
-          <h2 className="text-3xl font-semibold">Reviews</h2>
+          <h2 className="text-xl">Reviews</h2>
           {!session && (
             <Button variant="outline" asChild>
               <Link href="/login" className="hover:underline">
@@ -172,15 +189,7 @@ export default async function Home({
             </Button>
           )}
         </div>
-        {model.avgStars && model.numReviews && (
-          <div className="flex items-center mb-3 text-2xl">
-            <Star className="h-8 w-8" filled />
-            <span className="relative left-1 top-0.5">
-              {avgStarsFormatter.format(model.avgStars)} average over{" "}
-              {model.numReviews} reviews
-            </span>
-          </div>
-        )}
+
         {model.reviews.length === 0 ? (
           <div>No reviews yet</div>
         ) : (

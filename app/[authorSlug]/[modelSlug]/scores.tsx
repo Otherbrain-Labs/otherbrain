@@ -20,29 +20,31 @@ export default function Scores({ model }: { model: Model }) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <div className="max-w-xl flex space-x-5">
+        <div className="max-w-xl flex space-x-6">
           {filtered.map((key) => (
             <div className="max-w-[200px]" key={key}>
-              <div className="text-sm font-medium">{key}</div>
-              <div className="text-left text-xl">{model[key as ScoreKey]}</div>
+              <div className="text-left text-2xl text-primary">
+                {model[key as ScoreKey]}
+              </div>
+              <div className="text-xs leading-none">{key}</div>
             </div>
           ))}
         </div>
       </TooltipTrigger>
 
-      <TooltipContent className="space-y-2 w-100 max-w-md flex flex-col">
+      <TooltipContent className="py-3 w-100 max-w-md flex flex-col">
         {filtered.map((key) => (
-          <div className="text-xs" key={key}>
+          <div className="text-xs py-0.5" key={key}>
             {scoreHref[key as ScoreKey] ? (
               <Link
                 href={scoreHref[key as ScoreKey]!}
                 rel="noopener noreferrer"
-                className="font-medium underline"
+                className="font-semibold"
               >
                 {scoreText[key as ScoreKey]}
               </Link>
             ) : (
-              <span className="font-medium underline">
+              <span className="font-semibold">
                 {scoreText[key as ScoreKey]}
               </span>
             )}
