@@ -22,9 +22,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -35,10 +36,23 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
   const [sorting, setSorting] = useState<SortingState>([
-    { id: "lastModifiedDate", desc: false },
+    {
+      id: searchParams.get("sortingId") || "lastModifiedDate",
+      desc: !!searchParams.get("sortingDesc"),
+    },
   ]);
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+
+  const columnFiltersParam = searchParams.get("columnFilters");
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>(
+    columnFiltersParam ? JSON.parse(columnFiltersParam) : []
+  );
+
+  const pageIndex = parseInt(searchParams.get("pageIndex") || "0", 10);
+  const skipPageResetRef = useRef(false);
 
   const table = useReactTable({
     data,
@@ -51,16 +65,55 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
-    state: {
-      sorting,
-      columnFilters,
-    },
+    autoResetPageIndex: !skipPageResetRef.current,
     initialState: {
       pagination: {
+        pageIndex,
         pageSize: 30,
       },
     },
   });
+
+  const [tableState, setTableState] = useState(table.initialState);
+
+  table.setOptions((prev) => ({
+    ...prev,
+    state: { ...tableState, sorting, columnFilters },
+    onStateChange: setTableState,
+  }));
+
+  useEffect(() => {
+    skipPageResetRef.current = false;
+  });
+
+  useEffect(() => {
+    skipPageResetRef.current = true;
+
+    const params = new URLSearchParams(searchParams);
+    if (
+      sorting.length > 0 &&
+      sorting[0].id !== "lastModifiedDate" &&
+      !sorting[0].desc
+    ) {
+      params.set("sortingId", sorting[0].id);
+      params.set("sortingDesc", sorting[0].desc ? "true" : "false");
+    } else {
+      params.delete("sortingId");
+      params.delete("sortingDesc");
+    }
+    if (columnFilters.length > 0) {
+      params.set("columnFilters", JSON.stringify(columnFilters));
+    } else {
+      params.delete("columnFilters");
+    }
+    if (tableState.pagination.pageIndex) {
+      params.set("pageIndex", tableState.pagination.pageIndex.toString());
+    } else {
+      params.delete("pageIndex");
+    }
+
+    router.replace(`?${params.toString()}`, { scroll: false });
+  }, [tableState, sorting, searchParams, router.replace]);
 
   return (
     <div>

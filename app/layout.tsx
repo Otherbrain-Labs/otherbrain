@@ -13,6 +13,7 @@ const description = "AI Model Reviews";
 export const revalidate = 300; // 5 minutes
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.otherbrain.world"),
   title,
   description,
   twitter: {
