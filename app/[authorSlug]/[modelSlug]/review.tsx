@@ -22,7 +22,9 @@ export default async function Review({ review }: ReviewProps) {
       </div>
       <div className="text-sm mt-1">
         {review.text.split("\n").map((line, index) => (
-          <p key={index}>{line}</p>
+          <p key={index} className={line ? "" : "h-4"}>
+            {line}
+          </p>
         ))}
       </div>
       {session?.user?.id === review.userId && (
