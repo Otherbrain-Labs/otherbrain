@@ -104,13 +104,14 @@ model File {
 }
 
 model Review {
-  id          String   @id @default(cuid())
-  createdAt   DateTime @default(now())
-  stars       Int
-  text        String
-  externalUrl String?
-  userId      String
-  modelId     String
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  stars        Int
+  text         String
+  externalName String?
+  externalUrl  String?
+  userId       String
+  modelId      String
 
   model Model @relation(fields: [modelId], references: [id])
   user  User  @relation(fields: [userId], references: [id])
