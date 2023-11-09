@@ -15,6 +15,10 @@ jobs:
       POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: https://huggingface.co/datasets/open-llm-leaderboard/results
+          path: ./llm-leaderboard-scores
       - uses: actions/setup-node@v3
         with:
           node-version: 18

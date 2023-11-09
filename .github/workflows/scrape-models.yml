@@ -1,26 +1,26 @@
-name: scrape-models
-on:
-  push:
-    branches:
-      - "ci/*"
-  schedule:
-    - cron: "2,17,32,47 * * * *"
-jobs:
-  scrape:
-    environment: Production
-    runs-on: ubuntu-latest
-    env:
-      POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
-      POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
-      POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "yarn"
-      - name: Install dependencies
-        run: yarn
-      - run: echo "TEMP_DIR=$(mktemp -d)" >> $GITHUB_ENV
-      - name: Scrape models
-        run: npx ts-node -T scripts/ci/scrape-models.ts
+# name: scrape-models
+# on:
+#   push:
+#     branches:
+#       - "ci/*"
+#   schedule:
+#     - cron: "2,17,32,47 * * * *"
+# jobs:
+#   scrape:
+#     environment: Production
+#     runs-on: ubuntu-latest
+#     env:
+#       POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+#       POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+#       POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#           cache: "yarn"
+#       - name: Install dependencies
+#         run: yarn
+#       - run: echo "TEMP_DIR=$(mktemp -d)" >> $GITHUB_ENV
+#       - name: Scrape models
+#         run: npx ts-node -T scripts/ci/scrape-models.ts
