@@ -1,9 +1,4 @@
-import * as React from "react";
-import {
-  CheckIcon,
-  MixerHorizontalIcon,
-  PlusCircledIcon,
-} from "@radix-ui/react-icons";
+import { CheckIcon, MixerHorizontalIcon } from "@radix-ui/react-icons";
 import { Column } from "@tanstack/react-table";
 
 import { cn } from "@/lib/utils";
@@ -24,6 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
+import { useParams } from "next/navigation";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column: Column<TData, TValue>;
@@ -40,7 +36,9 @@ export function DataTableFacetedFilter<TData, TValue>({
 }: DataTableFacetedFilterProps<TData, TValue>) {
   const facets: Map<TValue, number> = column.getFacetedUniqueValues();
   const uniqueFacets = Array.from(facets.keys()).sort(compare);
-  const selectedValues = new Set(column?.getFilterValue() as TValue[]);
+  const selectedValues = new Set(column.getFilterValue() as TValue[]);
+
+  const params = useParams();
 
   return (
     <Popover>

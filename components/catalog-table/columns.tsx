@@ -27,6 +27,9 @@ export const idToTitle: Record<string, string> = {
   hellaswag: "HellaSwag",
   mmlu: "MMLU",
   truthfulqa: "TruthfulQA",
+  winogrande: "Winogrande",
+  gsm8k: "GSM8K",
+  drop: "DROP",
 };
 
 function SortHeader({ column }: { column: Column<Model> }) {
@@ -130,7 +133,9 @@ export const columns: ColumnDef<Model>[] = [
     },
     cell: ({ row }) => {
       const model = row.original;
-      return <span>{model.numParameters}B</span>;
+      return (
+        <span>{model.numParameters ? `${model.numParameters}B` : "--"}</span>
+      );
     },
   },
   {
@@ -159,6 +164,24 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "truthfulqa",
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    cell: ScoreCell,
+    invertSorting: true,
+  },
+  {
+    accessorKey: "winogrande",
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    cell: ScoreCell,
+    invertSorting: true,
+  },
+  {
+    accessorKey: "gsm8k",
+    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    cell: ScoreCell,
+    invertSorting: true,
+  },
+  {
+    accessorKey: "drop",
     header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,

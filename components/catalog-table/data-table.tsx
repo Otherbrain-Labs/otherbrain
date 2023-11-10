@@ -22,9 +22,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -35,10 +36,27 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
   const [sorting, setSorting] = useState<SortingState>([
-    { id: "lastModifiedDate", desc: false },
+    {
+      id: searchParams.get("sortingId") || "lastModifiedDate",
+      desc: searchParams.get("sortingDesc") === "true",
+    },
   ]);
-  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+
+  const columnFiltersParam = searchParams.get("columnFilters");
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>(
+    columnFiltersParam ? JSON.parse(columnFiltersParam) : []
+  );
+
+  const pageIndex = parseInt(searchParams.get("pageIndex") || "0", 10);
+  const skipPageResetRef = useRef(false);
+  const [pagination, setPagination] = useState({
+    pageIndex,
+    pageSize: 30,
+  });
 
   const table = useReactTable({
     data,
@@ -51,16 +69,51 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
-    state: {
-      sorting,
-      columnFilters,
-    },
-    initialState: {
-      pagination: {
-        pageSize: 30,
-      },
-    },
+    onPaginationChange: setPagination,
+    autoResetPageIndex: !skipPageResetRef.current,
   });
+
+  const [tableState, setTableState] = useState(table.initialState);
+
+  table.setOptions((prev) => ({
+    ...prev,
+    state: { ...tableState, sorting, columnFilters, pagination },
+    onStateChange: setTableState,
+  }));
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    if (
+      sorting.length > 0 &&
+      !(sorting[0].id === "lastModifiedDate" && !sorting[0].desc)
+    ) {
+      params.set("sortingId", sorting[0].id);
+      params.set("sortingDesc", sorting[0].desc ? "true" : "false");
+    } else {
+      params.delete("sortingId");
+      params.delete("sortingDesc");
+    }
+    if (columnFilters.length > 0) {
+      params.set("columnFilters", JSON.stringify(columnFilters));
+    } else {
+      params.delete("columnFilters");
+    }
+    if (pagination.pageIndex) {
+      params.set("pageIndex", pagination.pageIndex.toString());
+    } else {
+      params.delete("pageIndex");
+    }
+
+    skipPageResetRef.current = true;
+    router.replace(`?${params.toString()}`, { scroll: false });
+
+    if (params.toString() === searchParams.toString()) {
+      skipPageResetRef.current = false;
+    } else {
+      skipPageResetRef.current = true;
+      router.replace(`?${params.toString()}`, { scroll: false });
+    }
+  }, [pagination, columnFilters, sorting, searchParams, router]);
 
   return (
     <div>
