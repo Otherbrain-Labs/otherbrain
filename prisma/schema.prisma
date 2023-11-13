@@ -91,9 +91,10 @@ model Model {
   avgStars   Float?
   numReviews Int?
 
-  files   File[]
-  reviews Review[]
-  author  Author   @relation(fields: [authorId], references: [id])
+  files         File[]
+  reviews       Review[]
+  author        Author          @relation(fields: [authorId], references: [id])
+  HumanFeedback HumanFeedback[]
 }
 
 model File {
@@ -120,33 +121,23 @@ model Review {
   user  User  @relation(fields: [userId], references: [id])
 }
 
-// swift structs
-// struct HumanFeedback: Codable {
-//     var messages: [HumanFeedbackMessage]
-//     var modelName: String
-//     var promptTemplate: String
-//     var lastSystemPrompt: String?
-//     var client = "freechat"
-//   }
-
-//   struct HumanFeedbackMessage: Codable {
-//     let fromUser: Bool
-//     let text: String
-//   }
-
 model HumanFeedback {
   id               String                 @id @default(cuid())
   createdAt        DateTime               @default(now())
   modelName        String
   promptTemplate   String
-  lastSystemPrompt String?
+  lastSystemPrompt String
   client           String
   messages         HumanFeedbackMessage[]
+
+  // we connect with a model if we find one via the modelName
+  modelId String?
+  model   Model?  @relation(fields: [modelId], references: [id])
 }
 
 model HumanFeedbackMessage {
   id              String        @id @default(cuid())
-  createdAt       DateTime      @default(now())
+  index           Int
   fromUser        Boolean
   text            String
   humanFeedbackId String

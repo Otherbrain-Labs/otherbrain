@@ -10,7 +10,7 @@ const HumanFeedback = z.object({
   ),
   modelName: z.string(),
   promptTemplate: z.string(),
-  lastSystemPrompt: z.string().optional(),
+  lastSystemPrompt: z.string(),
   client: z.string(),
 });
 
@@ -26,7 +26,8 @@ export async function POST(request: Request) {
       lastSystemPrompt: result.lastSystemPrompt,
       client: result.client,
       messages: {
-        create: result.messages.map((message) => ({
+        create: result.messages.map((message, i) => ({
+          index: i,
           fromUser: message.fromUser,
           text: message.text,
         })),
