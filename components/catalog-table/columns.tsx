@@ -68,7 +68,7 @@ function ScoreCell({ cell }: { cell: Cell<Model, unknown> }) {
   const v = cell.getValue();
   return (
     <div className="flex items-center">
-      <span className="relative left-1 top-0.5">
+      <span className="relative left-1">
         {typeof v === "number" ? `${v}` : "--"}
       </span>
     </div>
@@ -84,7 +84,7 @@ export const columns: ColumnDef<Model>[] = [
       const href = `/${model.author.slug}/${model.slug}`;
       return (
         <Link
-          className="hover:underline max-w-[180px] inline-block truncate"
+          className="hover:underline max-w-[180px] inline-block truncate align-text-bottom"
           href={href}
           title={`${model.name} by ${model.author.name}`}
         >
@@ -102,7 +102,7 @@ export const columns: ColumnDef<Model>[] = [
       return model.avgStars && model.numReviews ? (
         <div className="flex items-center">
           <Star filled />
-          <span className="relative left-1 top-0.5">
+          <span className="relative left-1">
             {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
           </span>
         </div>

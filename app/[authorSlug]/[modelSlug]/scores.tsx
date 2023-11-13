@@ -23,10 +23,12 @@ export default function Scores({ model }: { model: Model }) {
         <div className="max-w-xl flex space-x-6">
           {filtered.map((key) => (
             <div className="max-w-[200px]" key={key}>
-              <div className="text-left text-2xl text-primary">
+              <div className="text-left text-xl text-primary">
                 {model[key as ScoreKey]}
               </div>
-              <div className="text-xs leading-none">{key}</div>
+              <div className="text-sm text-muted-foreground leading-none">
+                {key}
+              </div>
             </div>
           ))}
         </div>

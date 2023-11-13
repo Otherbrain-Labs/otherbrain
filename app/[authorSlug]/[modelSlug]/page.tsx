@@ -61,21 +61,42 @@ export default async function Home({
   }).format(date);
 
   return (
-    <div className="mt-16 max-w-4xl m-auto">
-      <div className="md:flex justify-between items-start">
-        <div className="mb-6">
+    <div className="mt-16 max-w-5xl m-auto">
+      <div className="sm:flex justify-between items-top border-b pb-5 md:pb-0">
+        <div className="mb-3 md:mb-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl md:text-5xl mr-2 font-semibold">
+            <h1 className="text-3xl md:text-5xl mr-2 font-semibold">
               {model.name}
             </h1>
           </div>
           <div className="flex items-center mt-1.5">
-            <div className="text-sm">
+            <div className="text-sm text-muted-foreground">
               by{" "}
               <Link href={"/" + author.slug} className="hover:underline mr-3">
                 {author.name}
               </Link>
               {dateFormatted}
+              <div className="inline-block relative -top-px">
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Badge className="ml-3.5 mr-1" variant="secondary">
+                      {model.numParameters}B
+                    </Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Parameter count</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Badge variant="secondary">{model.arch}</Badge>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Model type</p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
             </div>
 
             {model.avgStars && model.numReviews && (
@@ -89,31 +110,10 @@ export default async function Home({
               </div>
             )}
           </div>
-          <div className="mt-1.5">
-            <Tooltip>
-              <TooltipTrigger>
-                <Badge className="-ml-1 mr-2" variant="secondary">
-                  {model.numParameters}B
-                </Badge>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Parameter count</p>
-              </TooltipContent>
-            </Tooltip>
-
-            <Tooltip>
-              <TooltipTrigger>
-                <Badge variant="secondary">{model.arch}</Badge>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Model type</p>
-              </TooltipContent>
-            </Tooltip>
-          </div>
         </div>
-        <div className="mt-4 md:ml-8 md:mt-0 flex space-x-4">
+        <div className="md:ml-8 md:mt-2 flex space-x-4">
           {model.remoteId && (
-            <Button variant="outline" asChild className="hover:bg-white">
+            <Button variant="outline" asChild className="hover:bg-transparent">
               <Link
                 href={`https://huggingface.co/${model.remoteId}`}
                 className="hover:underline"
@@ -137,64 +137,59 @@ export default async function Home({
       </div>
 
       {model.average && (
-        <div className="mt-4">
+        <div className="mt-10">
           <h2 className="text-xl mb-3">Benchmarks</h2>
           <Scores model={model} />
         </div>
       )}
 
       {model.ggufId && (
-        <div className="max-w-lg mt-10">
-          <h2 className="text-xl">Try it</h2>
-          <div className="mt-2">
-            To try this model locally,{" "}
-            <Link
-              href={`https://huggingface.co/${model.ggufId}`}
-              className="hover:border-solid border-dotted border-b border-secondary-foreground"
-              rel="noopener noreferrer"
-            >
-              download the GGUF from Hugging Face
-            </Link>
-            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
-            and use it with a client like{" "}
-            <Link
-              href="https://www.freechat.run/"
-              className="hover:border-solid border-dotted border-b border-secondary-foreground"
-              rel="noopener noreferrer"
-            >
-              FreeChat
-            </Link>
-            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
-            or{" "}
-            <Link
-              href="https://lmstudio.ai"
-              className="hover:border-solid border-dotted border-b border-secondary-foreground"
-              rel="noopener noreferrer"
-            >
-              LM Studio
-            </Link>
-            <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />
-            .
+        <div className="max-w-2xl mt-10">
+          <h2 className="text-xl">Try this model locally</h2>
+          <div className="mt-2 text-sm">
+            <ul className="list-disc ml-4">
+              <li>
+                {" "}
+                <Link
+                  href={`https://huggingface.co/${model.ggufId}`}
+                  className="hover:border-solid border-dotted border-b border-secondary-foreground"
+                  rel="noopener noreferrer"
+                >
+                  Download the GGUF from Hugging Face
+                </Link>
+                <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
+              </li>
+              <li>
+                Use the GGUF with a client like{" "}
+                <Link
+                  href="https://www.freechat.run/"
+                  className="hover:border-solid border-dotted border-b border-secondary-foreground"
+                  rel="noopener noreferrer"
+                >
+                  FreeChat
+                </Link>
+                <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />{" "}
+                or{" "}
+                <Link
+                  href="https://lmstudio.ai"
+                  className="hover:border-solid border-dotted border-b border-secondary-foreground"
+                  rel="noopener noreferrer"
+                >
+                  LM Studio
+                </Link>
+                <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />
+              </li>
+            </ul>
           </div>
         </div>
       )}
 
       <div className="max-w-xl mb-20">
-        <div className="flex justify-between items-center space-x-3 mt-10 mb-2">
-          <h2 className="text-xl">Reviews</h2>
-          {!session && (
-            <Button variant="outline" asChild>
-              <Link href="/login" className="hover:underline">
-                Sign in to review
-              </Link>
-            </Button>
-          )}
-        </div>
-
+        <h2 className="text-xl mt-10 mb-2">Reviews</h2>
         {model.reviews.length === 0 ? (
-          <div>No reviews yet</div>
+          <div className="text-sm text-muted-foreground">No reviews yet</div>
         ) : (
-          <div className="space-y-2">
+          <div className="space-y-3 mt-4">
             {model.reviews.map((review) => (
               <Review key={review.id} review={review} />
             ))}
