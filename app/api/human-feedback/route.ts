@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   const result = HumanFeedback.parse(body);
 
   // try to find model to link to feedback by iteratively removing extensions from modelName
-  const parts = result.modelName.split(".");
+  const parts = result.modelName.toLowerCase().split(".");
   var model = null;
   while (parts.length > 0 && model == null) {
     model = await prisma.model.findFirst({
