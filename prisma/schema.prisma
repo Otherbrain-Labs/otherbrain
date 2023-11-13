@@ -119,3 +119,36 @@ model Review {
   model Model @relation(fields: [modelId], references: [id])
   user  User  @relation(fields: [userId], references: [id])
 }
+
+// swift structs
+// struct HumanFeedback: Codable {
+//     var messages: [HumanFeedbackMessage]
+//     var modelName: String
+//     var promptTemplate: String
+//     var lastSystemPrompt: String?
+//     var client = "freechat"
+//   }
+
+//   struct HumanFeedbackMessage: Codable {
+//     let fromUser: Bool
+//     let text: String
+//   }
+
+model HumanFeedback {
+  id               String                 @id @default(cuid())
+  createdAt        DateTime               @default(now())
+  modelName        String
+  promptTemplate   String
+  lastSystemPrompt String?
+  client           String
+  messages         HumanFeedbackMessage[]
+}
+
+model HumanFeedbackMessage {
+  id              String        @id @default(cuid())
+  createdAt       DateTime      @default(now())
+  fromUser        Boolean
+  text            String
+  humanFeedbackId String
+  humanFeedback   HumanFeedback @relation(fields: [humanFeedbackId], references: [id])
+}
