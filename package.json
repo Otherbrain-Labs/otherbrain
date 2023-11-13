@@ -35,11 +35,14 @@
     "react": "^18.2",
     "react-dom": "^18.2",
     "react-hot-toast": "^2.4",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/bcrypt": "^5.0",
     "@types/node": "^20.8",
     "@types/react": "^18.2",
