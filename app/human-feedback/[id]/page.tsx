@@ -48,7 +48,7 @@ export default async function Home({ params }: { params: { id: string } }) {
 
       <div className="mt-4 border border-dashed rounded p-4 space-y-2 text-xs">
         <div className="font-bold">System prompt</div>
-        <Markdown className="prose" remarkPlugins={[remarkGfm]}>
+        <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
           {humanFeedback.lastSystemPrompt}
         </Markdown>
       </div>
@@ -58,7 +58,7 @@ export default async function Home({ params }: { params: { id: string } }) {
             <div className="font-bold">
               {message.fromUser ? "Human" : "Bot"}
             </div>
-            <Markdown className="prose" remarkPlugins={[remarkGfm]}>
+            <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
               {message.text}
             </Markdown>
           </div>
