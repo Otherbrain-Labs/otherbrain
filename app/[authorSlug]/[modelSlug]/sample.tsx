@@ -35,7 +35,7 @@ export default async function Sample({ humanFeedback }: SampleProps) {
       {humanFeedback.messages
         .sort((a, b) => a.index - b.index)
         .map((message) => (
-          <div key={message.id} className="space-y-2">
+          <div key={message.id}>
             <div className="font-bold">
               {message.fromUser ? "Human" : "Bot"}
             </div>
