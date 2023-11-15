@@ -18,10 +18,20 @@ export default async function Sample({ humanFeedback }: SampleProps) {
       key={humanFeedback.id}
       className="mt-4 border rounded p-4 space-y-2 text-xs"
     >
-      <div className="font-bold">System prompt</div>
-      <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-        {humanFeedback.lastSystemPrompt}
-      </Markdown>
+      <div className="flex items-center justify-between flex-row-reverse">
+        <Link
+          className="hover:underline"
+          href={`/human-feedback/${humanFeedback.id}`}
+        >
+          {humanFeedback.createdAt.toDateString()}
+        </Link>
+      </div>
+      <span className="italic">
+        <div className="font-bold italic">System Prompt</div>
+        <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
+          {humanFeedback.lastSystemPrompt}
+        </Markdown>
+      </span>
       {humanFeedback.messages
         .sort((a, b) => a.index - b.index)
         .map((message) => (

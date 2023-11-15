@@ -1,9 +1,21 @@
 import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import prisma from "@/lib/prisma";
-import Reviews from "./reviews";
 import { Suspense } from "react";
 import Sample from "./sample";
+import Review from "./review";
+
+export function Reviews({ model }: { model: Model }) {
+  return model.reviews.length === 0 ? (
+    <div className="text-sm text-muted-foreground ml-2">No reviews yet</div>
+  ) : (
+    <div className="space-y-3 mt-4">
+      {model.reviews.map((review) => (
+        <Review key={review.id} review={review} />
+      ))}
+    </div>
+  );
+}
 
 async function loadHumanFeedback(modelId: string) {
   return prisma.humanFeedback.findMany({

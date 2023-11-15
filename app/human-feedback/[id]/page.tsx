@@ -49,11 +49,13 @@ export default async function Home({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <div className="mt-4 border border-dashed rounded p-4 space-y-2 text-xs">
-        <div className="font-bold">System prompt</div>
-        <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-          {humanFeedback.lastSystemPrompt}
-        </Markdown>
+      <div className="mt-4 border rounded p-4 space-y-2 text-xs">
+        <span className="italic text-muted-foreground">
+          <div className="font-bold">System prompt</div>
+          <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
+            {humanFeedback.lastSystemPrompt}
+          </Markdown>
+        </span>
         {messages.map((message) => (
           <div key={message.id} className="space-y-2">
             <div className="font-bold">
