@@ -55,68 +55,27 @@ export default async function Home({
 
   const date = new Date(model.lastModifiedDate);
   const dateFormatted = new Intl.DateTimeFormat("en-US", {
-    year: "2-digit",
-    month: "2-digit",
-    day: "2-digit",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   }).format(date);
 
   return (
-    <div className="mt-16 max-w-5xl m-auto">
-      <div className="sm:flex justify-between items-top border-b pb-5 md:pb-0">
-        <div className="mb-3 md:mb-6">
-          <div className="flex items-center justify-between">
-            <h1 className="text-3xl md:text-5xl mr-2 font-semibold">
-              {model.name}
-            </h1>
-          </div>
-          <div className="flex items-center mt-1.5">
-            <div className="text-sm text-muted-foreground">
-              by{" "}
-              <Link href={"/" + author.slug} className="hover:underline mr-3">
-                {author.name}
-              </Link>
-              {dateFormatted}
-              <div className="inline-block relative -top-px">
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Badge className="ml-3.5 mr-1" variant="secondary">
-                      {model.numParameters}B
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Parameter count</p>
-                  </TooltipContent>
-                </Tooltip>
-
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Badge variant="secondary">{model.arch}</Badge>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Model type</p>
-                  </TooltipContent>
-                </Tooltip>
-              </div>
-            </div>
-
-            {model.avgStars && model.numReviews && (
-              <div className="ml-3 inline text-sm">
-                <Star
-                  className="inline h-3.5 w-3.5 relative -top-px mr-1"
-                  filled
-                />
-                <span>{avgStarsFormatter.format(model.avgStars)}/5</span>
-                <span className="ml-3">{model.numReviews} ratings</span>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="md:ml-8 md:mt-2 flex space-x-4">
+    <div className="mt-16 max-w-2xl m-auto mb-3 md:mb-6">
+      {/* <div className="sm:flex justify-between items-center">
+        <h1 className="text-3xl md:text-5xl mr-2 font-semibold">
+          {model.name}
+        </h1>
+        <div className="flex">
           {model.remoteId && (
-            <Button variant="outline" asChild className="hover:bg-transparent">
+            <Button
+              variant="outline"
+              asChild
+              className="hover:bg-transparent py-6"
+            >
               <Link
                 href={`https://huggingface.co/${model.remoteId}`}
-                className="hover:underline"
+                className="hover:underline mr-3"
                 rel="noopener noreferrer"
               >
                 Model info
@@ -128,11 +87,80 @@ export default async function Home({
             (review) => review.userId === session?.user?.id
           ) && (
             <ReviewDialog model={model}>
-              <Button className="hover:underline hover:bg-primary">
+              <Button className="hover:underline hover:bg-primary py-6">
                 Write a review
               </Button>
             </ReviewDialog>
           )}
+        </div>
+      </div> */}
+
+      <h1 className="text-3xl md:text-6xl mr-2 font-semibold">{model.name}</h1>
+      <div className="mt-4">
+        {model.remoteId && (
+          <Button
+            variant="outline"
+            asChild
+            className="hover:bg-transparent py-6 px-12"
+          >
+            <Link
+              href={`https://huggingface.co/${model.remoteId}`}
+              className="hover:underline mr-3"
+              rel="noopener noreferrer"
+            >
+              Model info
+              <ExternalLinkIcon className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        )}
+        {!model.reviews.find(
+          (review) => review.userId === session?.user?.id
+        ) && (
+          <ReviewDialog model={model}>
+            <Button className="hover:underline hover:bg-primary py-6 px-12">
+              Write a review
+            </Button>
+          </ReviewDialog>
+        )}
+      </div>
+
+      <div className="mt-12">
+        {model.avgStars && model.numReviews && (
+          <div className="text-lg">
+            <Star className="inline h-5 w-5 relative -top-0.5 mr-1" filled />
+            <span>{avgStarsFormatter.format(model.avgStars)}/5</span>
+            <span className="mx-3">{model.numReviews} ratings</span>
+            <div className="inline-block relative -top-0.5">
+              <Tooltip>
+                <TooltipTrigger>
+                  <Badge className="mr-1" variant="secondary">
+                    {model.numParameters}B
+                  </Badge>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Parameter count</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger>
+                  <Badge variant="secondary">{model.arch}</Badge>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Model type</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
+          </div>
+        )}
+        <div className="text-lg mt-1 leading-snug text-muted-foreground">
+          by{" "}
+          <Link href={"/" + author.slug} className="hover:underline">
+            {author.name}
+          </Link>
+        </div>
+        <div className="text-lg text-muted-foreground italic leading-tight">
+          Updated {dateFormatted}
         </div>
       </div>
 
@@ -142,11 +170,10 @@ export default async function Home({
           <Scores model={model} />
         </div>
       )}
-
       {model.ggufId && (
-        <div className="max-w-2xl mt-10">
+        <div className="mt-10">
           <h2 className="text-xl">Try this model locally</h2>
-          <div className="mt-2 text-sm">
+          <div className="mt-2 leading-relaxed">
             <ul className="list-disc ml-4">
               <li>
                 {" "}
@@ -184,7 +211,7 @@ export default async function Home({
         </div>
       )}
 
-      <div className="max-w-xl mb-20">
+      <div className="mb-20">
         <ReviewsAndSamples model={model} />
       </div>
     </div>

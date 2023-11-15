@@ -54,8 +54,8 @@ async function Samples({ model }: { model: Model }) {
 
 export default function ReviewsAndSamples({ model }: { model: Model }) {
   return (
-    <Tabs defaultValue="reviews" className="mt-10">
-      <TabsList className="mb-2">
+    <Tabs defaultValue="reviews" className="mt-12">
+      <TabsList>
         <TabsTrigger value="reviews">Reviews</TabsTrigger>
         <TabsTrigger value="samples">Samples</TabsTrigger>
       </TabsList>

@@ -14,11 +14,11 @@ export default async function Review({ review }: ReviewProps) {
   const deleteReviewWithId = deleteReview.bind(null, review.id);
 
   return (
-    <div key={review.id} className="border rounded px-3 pt-4 pb-3">
-      <div className="flex justify-between mb-4">
+    <div key={review.id} className="border rounded px-7 pt-7 pb-5 mb-4">
+      <div className="flex justify-between mb-5">
         <StarRating rating={review.stars} />
       </div>
-      <div className="text-sm leading-tight mt-1 mb-2">
+      <div className="leading-tight mt-1 mb-4">
         {review.text.split("\n").map((line, index) => (
           <p key={index} className={line ? "" : "h-4"}>
             {line}
@@ -38,7 +38,7 @@ export default async function Review({ review }: ReviewProps) {
       )}
       {review.externalUrl && (
         <>
-          <div className="text-xs text-muted-foreground inline">
+          <div className="text-sm text-muted-foreground inline">
             <Link href={review.externalUrl} rel="noopener noreferrer">
               {review.externalName || review.externalUrl}
             </Link>
@@ -46,7 +46,7 @@ export default async function Review({ review }: ReviewProps) {
           </div>
         </>
       )}{" "}
-      <div className="text-xs text-muted-foreground inline">
+      <div className="text-sm text-muted-foreground inline">
         {review.createdAt.toLocaleDateString()}
       </div>
     </div>
