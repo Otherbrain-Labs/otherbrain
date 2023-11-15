@@ -27,9 +27,6 @@ export async function loadModel(modelSlug: string, authorSlug: string) {
     include: {
       reviews: true,
       author: true,
-      humanFeedback: {
-        include: { messages: true },
-      },
     },
   });
   model?.reviews.sort(
