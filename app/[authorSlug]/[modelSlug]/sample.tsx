@@ -16,9 +16,9 @@ export default async function Sample({ humanFeedback }: SampleProps) {
   return (
     <div
       key={humanFeedback.id}
-      className="mt-4 border rounded p-4 space-y-2 text-xs"
+      className="mt-4 border rounded p-4 space-y-1 text-xs"
     >
-      <div className="flex items-center justify-between flex-row-reverse">
+      <div className="flex items-center justify-between flex-row-reverse mb-3">
         <Link
           className="hover:underline"
           href={`/human-feedback/${humanFeedback.id}`}
@@ -26,21 +26,16 @@ export default async function Sample({ humanFeedback }: SampleProps) {
           {humanFeedback.createdAt.toDateString()}
         </Link>
       </div>
-      <span className="italic">
-        <div className="font-bold italic">System Prompt</div>
-        <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-          {humanFeedback.lastSystemPrompt}
-        </Markdown>
-      </span>
+      <Markdown className="prose prose-sm italic" remarkPlugins={[remarkGfm]}>
+        {humanFeedback.lastSystemPrompt}
+      </Markdown>
       {humanFeedback.messages
         .sort((a, b) => a.index - b.index)
         .map((message) => (
           <div key={message.id}>
-            <div className="font-bold">
-              {message.fromUser ? "Human" : "Bot"}
-            </div>
+            <div className="font-bold"></div>
             <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-              {message.text}
+              {`**${message.fromUser ? "Human" : "Bot"}**: ${message.text}`}
             </Markdown>
           </div>
         ))}

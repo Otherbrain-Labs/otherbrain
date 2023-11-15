@@ -50,22 +50,19 @@ export default async function Home({ params }: { params: { id: string } }) {
       </div>
 
       <div className="mt-4 border rounded p-4 space-y-2 text-xs">
-        <span className="italic text-muted-foreground">
-          <div className="font-bold">System prompt</div>
-          <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-            {humanFeedback.lastSystemPrompt}
-          </Markdown>
-        </span>
-        {messages.map((message) => (
-          <div key={message.id} className="space-y-2">
-            <div className="font-bold">
-              {message.fromUser ? "Human" : "Bot"}
+        <Markdown className="prose prose-sm italic" remarkPlugins={[remarkGfm]}>
+          {humanFeedback.lastSystemPrompt}
+        </Markdown>
+        {humanFeedback.messages
+          .sort((a, b) => a.index - b.index)
+          .map((message) => (
+            <div key={message.id}>
+              <div className="font-bold"></div>
+              <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
+                {`**${message.fromUser ? "Human" : "Bot"}**: ${message.text}`}
+              </Markdown>
             </div>
-            <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-              {message.text}
-            </Markdown>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
