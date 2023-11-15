@@ -8,7 +8,6 @@ import { Button } from "../ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
-import { ScoreKey, ScoreTooltip } from "../scores";
 import { avgStarsFormatter, dateFormatter } from "@/lib/utils";
 
 type Models =
