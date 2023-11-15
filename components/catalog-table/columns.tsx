@@ -56,14 +56,6 @@ function SortHeader({ column }: { column: Column<Model> }) {
   );
 }
 
-function ScoreTooltipSortHeader({ column }: { column: Column<Model> }) {
-  return (
-    <ScoreTooltip score={column.id as ScoreKey}>
-      <SortHeader column={column} />
-    </ScoreTooltip>
-  );
-}
-
 function ScoreCell({ cell }: { cell: Cell<Model, unknown> }) {
   const v = cell.getValue();
   return (
@@ -140,49 +132,49 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "average",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "arc",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "hellaswag",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "mmlu",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "truthfulqa",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "winogrande",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "gsm8k",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "drop",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
