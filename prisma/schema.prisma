@@ -87,9 +87,10 @@ model Model {
   gsm8k      Float?
   winogrande Float?
 
-  // Aggregate review info
-  avgStars   Float?
-  numReviews Int?
+  // Aggregate info
+  avgStars         Float?
+  numReviews       Int?
+  numHumanFeedback Int?
 
   files         File[]
   reviews       Review[]

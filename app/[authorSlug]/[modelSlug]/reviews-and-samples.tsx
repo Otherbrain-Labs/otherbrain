@@ -54,23 +54,22 @@ async function Samples({ model }: { model: Model }) {
 
 type ReviewsAndSamplesProps = {
   model: Model;
-  reviewCount: number;
-  sampleCount: number;
 };
 
-export default function ReviewsAndSamples({
-  model,
-  reviewCount,
-  sampleCount,
-}: ReviewsAndSamplesProps) {
+export default function ReviewsAndSamples({ model }: ReviewsAndSamplesProps) {
+  const { numHumanFeedback, numReviews } = model;
   return (
     <Tabs defaultValue="reviews" className="mt-10">
       <TabsList className="mb-2">
         <TabsTrigger value="reviews">
-          Reviews{reviewCount > 0 ? ` (${reviewCount})` : ""}
+          Reviews
+          {numReviews && numReviews > 0 ? ` (${numReviews})` : ""}
         </TabsTrigger>
         <TabsTrigger value="samples">
-          Samples{sampleCount > 0 ? ` (${sampleCount})` : ""}
+          Samples
+          {numHumanFeedback && numHumanFeedback > 0
+            ? ` (${numHumanFeedback})`
+            : ""}
         </TabsTrigger>
       </TabsList>
       <TabsContent value="reviews">

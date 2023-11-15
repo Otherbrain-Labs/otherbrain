@@ -45,23 +45,7 @@ export default async function Home({
 }) {
   const session = await getServerSession();
 
-  const [model, reviewCount, feedbackCount] = await Promise.all([
-    loadModel(params.modelSlug, params.authorSlug),
-    prisma.review.count({
-      where: {
-        model: {
-          slug: params.modelSlug,
-        },
-      },
-    }),
-    prisma.humanFeedback.count({
-      where: {
-        model: {
-          slug: params.modelSlug,
-        },
-      },
-    }),
-  ]);
+  const model = await loadModel(params.modelSlug, params.authorSlug);
 
   if (!model || !model.author) {
     notFound();
@@ -201,11 +185,7 @@ export default async function Home({
       )}
 
       <div className="max-w-xl mb-20">
-        <ReviewsAndSamples
-          model={model}
-          reviewCount={reviewCount}
-          sampleCount={feedbackCount}
-        />
+        <ReviewsAndSamples model={model} />
       </div>
     </div>
   );
