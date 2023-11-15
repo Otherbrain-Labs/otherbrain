@@ -95,7 +95,7 @@ export default async function Home({
         </div>
       </div> */}
 
-      <h1 className="text-3xl md:text-6xl mr-2 font-semibold">{model.name}</h1>
+      <h1 className="text-3xl md:text-7xl mr-2 font-semibold">{model.name}</h1>
       <div className="mt-4">
         {model.remoteId && (
           <Button
@@ -174,7 +174,7 @@ export default async function Home({
         <div className="mt-10">
           <h2 className="text-xl">Try this model locally</h2>
           <div className="mt-2 leading-relaxed">
-            <ul className="list-disc ml-4">
+            <ol className="list-decimal ml-5">
               <li>
                 {" "}
                 <Link
@@ -206,7 +206,7 @@ export default async function Home({
                 </Link>
                 <ExternalLinkIcon className="inline mx-1 h-3 w-3 relative -top-0.5" />
               </li>
-            </ul>
+            </ol>
           </div>
         </div>
       )}
