@@ -94,7 +94,7 @@ model Model {
   files         File[]
   reviews       Review[]
   author        Author          @relation(fields: [authorId], references: [id])
-  HumanFeedback HumanFeedback[]
+  humanFeedback HumanFeedback[]
 }
 
 model File {

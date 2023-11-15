@@ -12,9 +12,9 @@ import Scores from "./scores";
 import Star from "@/components/ui/star";
 import { avgStarsFormatter } from "@/lib/utils";
 import { getServerSession } from "@/lib/auth";
-import Review from "./review";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import ReviewDialog from "@/components/review-dialog";
+import ReviewsAndSamples from "@/app/[authorSlug]/[modelSlug]/reviews-and-samples";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
@@ -27,6 +27,9 @@ export async function loadModel(modelSlug: string, authorSlug: string) {
     include: {
       reviews: true,
       author: true,
+      humanFeedback: {
+        include: { messages: true },
+      },
     },
   });
   model?.reviews.sort(
@@ -185,16 +188,7 @@ export default async function Home({
       )}
 
       <div className="max-w-xl mb-20">
-        <h2 className="text-xl mt-10 mb-2">Reviews</h2>
-        {model.reviews.length === 0 ? (
-          <div className="text-sm text-muted-foreground">No reviews yet</div>
-        ) : (
-          <div className="space-y-3 mt-4">
-            {model.reviews.map((review) => (
-              <Review key={review.id} review={review} />
-            ))}
-          </div>
-        )}
+        <ReviewsAndSamples model={model} />
       </div>
     </div>
   );

@@ -102,7 +102,7 @@ export const columns: ColumnDef<Model>[] = [
       return model.avgStars && model.numReviews ? (
         <div className="flex items-center">
           <Star filled />
-          <span className="relative left-1">
+          <span className="relative left-1 truncate">
             {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
           </span>
         </div>

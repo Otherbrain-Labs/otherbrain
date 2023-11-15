@@ -5,15 +5,18 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 export default async function Home({ params }: { params: { id: string } }) {
-  const humanFeedback = await prisma.humanFeedback.findUnique({
-    where: { id: params.id },
-    include: {
-      messages: true,
-      model: {
-        include: { author: true },
+  const [humanFeedback, count] = await Promise.all([
+    prisma.humanFeedback.findUnique({
+      where: { id: params.id },
+      include: {
+        messages: true,
+        model: {
+          include: { author: true },
+        },
       },
-    },
-  });
+    }),
+    prisma.humanFeedback.count(),
+  ]);
 
   if (!humanFeedback) {
     notFound();
@@ -51,8 +54,6 @@ export default async function Home({ params }: { params: { id: string } }) {
         <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
           {humanFeedback.lastSystemPrompt}
         </Markdown>
-      </div>
-      <div className="mt-4 border border-dashed rounded p-4 space-y-4 text-xs">
         {messages.map((message) => (
           <div key={message.id} className="space-y-2">
             <div className="font-bold">
