@@ -35,27 +35,22 @@ export default function ReviewsAndSamples({
       defaultValue="reviews"
       className="mt-10"
       value={searchParams.get("tab") || "reviews"}
+      onValueChange={(value) => {
+        const params = new URLSearchParams(searchParams);
+        if (value === "reviews") {
+          params.delete("tab");
+        } else {
+          params.set("tab", value);
+        }
+        router.replace(`?${params.toString()}`, { scroll: false });
+      }}
     >
       <TabsList className="mb-2">
-        <TabsTrigger
-          value="reviews"
-          onClick={() => {
-            const params = new URLSearchParams(searchParams);
-            params.delete("tab");
-            router.replace(`?${params.toString()}`, { scroll: false });
-          }}
-        >
+        <TabsTrigger value="reviews">
           Reviews
           {numReviews && numReviews > 0 ? ` (${numReviews})` : ""}
         </TabsTrigger>
-        <TabsTrigger
-          value="samples"
-          onClick={() => {
-            const params = new URLSearchParams(searchParams);
-            params.set("tab", "samples");
-            router.replace(`?${params.toString()}`, { scroll: false });
-          }}
-        >
+        <TabsTrigger value="samples">
           Samples
           {numHumanFeedback && numHumanFeedback > 0
             ? ` (${numHumanFeedback})`
