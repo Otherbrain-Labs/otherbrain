@@ -104,9 +104,6 @@ export function DataTable<TData, TValue>({
       params.delete("pageIndex");
     }
 
-    skipPageResetRef.current = true;
-    router.replace(`?${params.toString()}`, { scroll: false });
-
     if (params.toString() === searchParams.toString()) {
       skipPageResetRef.current = false;
     } else {
