@@ -2,7 +2,7 @@
 
 import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Suspense } from "react";
+import { useEffect } from "react";
 import Review from "./review";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -30,6 +30,12 @@ export default function ReviewsAndSamples({
   const { numHumanFeedback, numReviews } = model;
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (!numReviews && numHumanFeedback)
+      router.replace(`?tab=samples`, { scroll: false });
+  }, [router]);
+
   return (
     <Tabs
       defaultValue="reviews"
