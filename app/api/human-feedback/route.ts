@@ -35,24 +35,6 @@ export async function POST(request: Request) {
     parts.pop();
   }
 
-  if (model) {
-    const counts = await prisma.humanFeedback.aggregate({
-      where: {
-        model: {
-          id: model.id,
-        },
-      },
-      _count: true,
-    });
-
-    await prisma.model.update({
-      where: { id: model.id },
-      data: {
-        numHumanFeedback: counts._count,
-      },
-    });
-  }
-
   // save with prisma
   const humanFeedback = await prisma.humanFeedback.create({
     data: {
@@ -70,6 +52,24 @@ export async function POST(request: Request) {
       },
     },
   });
+
+  if (model) {
+    const counts = await prisma.humanFeedback.aggregate({
+      where: {
+        model: {
+          id: model.id,
+        },
+      },
+      _count: true,
+    });
+
+    await prisma.model.update({
+      where: { id: model.id },
+      data: {
+        numHumanFeedback: counts._count,
+      },
+    });
+  }
 
   return new Response(JSON.stringify({ id: humanFeedback.id }), {
     headers: { "content-type": "application/json" },

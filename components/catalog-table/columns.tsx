@@ -29,6 +29,7 @@ export const idToTitle: Record<string, string> = {
   winogrande: "Winogrande",
   gsm8k: "GSM8K",
   drop: "DROP",
+  numHumanFeedback: "Samples",
 };
 
 function SortHeader({ column }: { column: Column<Model> }) {
@@ -96,6 +97,21 @@ export const columns: ColumnDef<Model>[] = [
           <span className="relative left-1 truncate">
             {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
           </span>
+        </div>
+      ) : (
+        <div className="flex items-center">--</div>
+      );
+    },
+    invertSorting: true,
+  },
+  {
+    accessorKey: "numHumanFeedback",
+    header: ({ column }) => <SortHeader column={column} />,
+    cell: ({ row }) => {
+      const model = row.original;
+      return model.numHumanFeedback ? (
+        <div className="flex items-center">
+          {avgStarsFormatter.format(model.numHumanFeedback)}
         </div>
       ) : (
         <div className="flex items-center">--</div>

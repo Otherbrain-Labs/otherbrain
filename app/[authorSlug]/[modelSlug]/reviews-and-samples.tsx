@@ -35,6 +35,7 @@ export default function ReviewsAndSamples({
       defaultValue="reviews"
       className="mt-10"
       value={searchParams.get("tab") || "reviews"}
+      activationMode="manual"
       onValueChange={(value) => {
         const params = new URLSearchParams(searchParams);
         if (value === "reviews") {
