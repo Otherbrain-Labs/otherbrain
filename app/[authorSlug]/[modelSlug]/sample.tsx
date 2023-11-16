@@ -40,7 +40,7 @@ export default async function Sample({ humanFeedback }: SampleProps) {
                 </td>
                 <td align="left" valign="top">
                   <Markdown
-                    className="prose prose-sm leading-tight text-xs ml-2 mb-2"
+                    className="prose prose-sm leading-tight text-xs ml-2 mb-3"
                     remarkPlugins={[remarkGfm]}
                   >
                     {message.text}
