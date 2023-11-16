@@ -27,24 +27,25 @@ export default async function Home({ params }: { params: { id: string } }) {
   const { model } = humanFeedback;
 
   return (
-    <div className="mt-6 max-w-xl mb-20">
+    <div className="mt-6 max-w-xl mb-20 mx-auto">
       <div className="mb-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl md:text-5xl mr-2 font-semibold truncate">
             {humanFeedback.createdAt.toLocaleString()}
           </h1>
         </div>
-        <div className="flex items-center mt-1.5">
+        <div className="flex items-center mt-1.5 text-muted-foreground">
           <div className="text-sm">
             {model && (
               <>
-                <Link href={`/${model.author.slug}/${model.slug}`}>
-                  {model.name}
+                <Link
+                  className="hover:underline mr-3"
+                  href={`/${model.author.slug}/${model.slug}`}
+                >
+                  {model.name} ({humanFeedback.modelName.replace(".gguf", "")})
                 </Link>
-                ,{" "}
               </>
             )}
-            {humanFeedback.modelName}
           </div>
         </div>
       </div>
