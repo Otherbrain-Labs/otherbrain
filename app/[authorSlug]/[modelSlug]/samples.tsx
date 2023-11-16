@@ -29,10 +29,9 @@ export async function Samples({ model }: { model: Model }) {
     </div>
   ) : (
     <div>
-      {humanFeedback &&
-        humanFeedback.map((humanFeedback) => (
-          <Sample key={humanFeedback.id} humanFeedback={humanFeedback} />
-        ))}
+      {humanFeedback.map((humanFeedback) => (
+        <Sample key={humanFeedback.id} humanFeedback={humanFeedback} />
+      ))}
     </div>
   );
 }

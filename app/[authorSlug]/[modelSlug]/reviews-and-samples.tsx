@@ -61,9 +61,7 @@ export default function ReviewsAndSamples({
       <TabsContent value="reviews">
         <Reviews model={model} />
       </TabsContent>
-      <TabsContent value="samples">
-        <Suspense>{samples}</Suspense>
-      </TabsContent>
+      <TabsContent value="samples">{samples}</TabsContent>
     </Tabs>
   );
 }

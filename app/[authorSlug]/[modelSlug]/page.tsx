@@ -16,6 +16,7 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import ReviewDialog from "@/components/review-dialog";
 import ReviewsAndSamples from "./reviews-and-samples";
 import { Samples } from "./samples";
+import { Suspense } from "react";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
@@ -186,7 +187,14 @@ export default async function Home({
       )}
 
       <div className="max-w-xl mb-20">
-        <ReviewsAndSamples model={model} samples={<Samples model={model} />} />
+        <ReviewsAndSamples
+          model={model}
+          samples={
+            <Suspense>
+              <Samples model={model} />
+            </Suspense>
+          }
+        />
       </div>
     </div>
   );
