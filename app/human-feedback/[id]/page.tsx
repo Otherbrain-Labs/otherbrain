@@ -1,3 +1,4 @@
+import Sample from "@/app/[authorSlug]/[modelSlug]/sample";
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -48,21 +49,7 @@ export default async function Home({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <div className="mt-4 border rounded p-4 space-y-2 text-xs">
-        <Markdown className="prose prose-sm italic" remarkPlugins={[remarkGfm]}>
-          {humanFeedback.lastSystemPrompt}
-        </Markdown>
-        {humanFeedback.messages
-          .sort((a, b) => a.index - b.index)
-          .map((message) => (
-            <div key={message.id}>
-              <div className="font-bold"></div>
-              <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
-                {`**${message.fromUser ? "Human" : "Bot"}**: ${message.text}`}
-              </Markdown>
-            </div>
-          ))}
-      </div>
+      <Sample humanFeedback={humanFeedback} hideDate />
     </div>
   );
 }
