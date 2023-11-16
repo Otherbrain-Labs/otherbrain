@@ -17,6 +17,7 @@ import ReviewDialog from "@/components/review-dialog";
 import ReviewsAndSamples from "./reviews-and-samples";
 import { Samples } from "./samples";
 import { Suspense } from "react";
+import Reviews from "./reviews";
 
 export async function loadModel(modelSlug: string, authorSlug: string) {
   const model = await prisma.model.findFirst({
@@ -189,11 +190,8 @@ export default async function Home({
       <div className="max-w-xl mb-20">
         <ReviewsAndSamples
           model={model}
-          samples={
-            <Suspense>
-              <Samples model={model} />
-            </Suspense>
-          }
+          samples={<Samples model={model} />}
+          reviews={<Reviews model={model} />}
         />
       </div>
     </div>

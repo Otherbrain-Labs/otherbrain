@@ -3,28 +3,17 @@
 import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect } from "react";
-import Review from "./review";
 import { useRouter, useSearchParams } from "next/navigation";
-
-export function Reviews({ model }: { model: Model }) {
-  return model.reviews.length === 0 ? (
-    <div className="text-sm text-muted-foreground ml-2">No reviews yet</div>
-  ) : (
-    <div className="space-y-3 mt-4">
-      {model.reviews.map((review) => (
-        <Review key={review.id} review={review} />
-      ))}
-    </div>
-  );
-}
 
 type ReviewsAndSamplesProps = {
   model: Model;
+  reviews: React.ReactNode;
   samples: React.ReactNode;
 };
 
 export default function ReviewsAndSamples({
   model,
+  reviews,
   samples,
 }: ReviewsAndSamplesProps) {
   const { numHumanFeedback, numReviews } = model;
@@ -64,9 +53,7 @@ export default function ReviewsAndSamples({
             : ""}
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="reviews">
-        <Reviews model={model} />
-      </TabsContent>
+      <TabsContent value="reviews">{reviews}</TabsContent>
       <TabsContent value="samples">{samples}</TabsContent>
     </Tabs>
   );

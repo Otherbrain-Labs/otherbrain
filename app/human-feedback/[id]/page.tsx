@@ -34,6 +34,7 @@ export default async function Home({ params }: { params: { id: string } }) {
             {humanFeedback.createdAt.toLocaleString()}
           </h1>
         </div>
+
         <div className="flex items-center mt-1.5 text-muted-foreground">
           <div className="text-sm">
             {model && (
@@ -48,6 +49,13 @@ export default async function Home({ params }: { params: { id: string } }) {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="bg-gray-500/10 text-xs p-3">
+        Thanks for adding this sample to Otherbrain Open Feedback, a free data
+        set of interactions with open models. It is small but growing with
+        contributions like yours. Our hope is to accelerate open model training
+        with high quality, user-curated training data.
       </div>
 
       <Sample humanFeedback={humanFeedback} hideDate />
