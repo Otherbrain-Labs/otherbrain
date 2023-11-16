@@ -39,9 +39,11 @@ export default function ReviewsAndSamples({
       <TabsList className="mb-2">
         <TabsTrigger
           value="reviews"
-          onClick={() =>
-            new URLSearchParams(searchParams.toString()).delete("tab")
-          }
+          onClick={() => {
+            const params = new URLSearchParams(searchParams);
+            params.delete("tab");
+            router.replace(`?${params.toString()}`, { scroll: false });
+          }}
         >
           Reviews
           {numReviews && numReviews > 0 ? ` (${numReviews})` : ""}
