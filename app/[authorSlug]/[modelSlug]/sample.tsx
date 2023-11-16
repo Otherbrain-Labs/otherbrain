@@ -4,7 +4,7 @@ import { deleteReview } from "./actions";
 import { getServerSession } from "@/lib/auth";
 import { Trash } from "lucide-react";
 import Link from "next/link";
-import { HumanFeedback } from "./reviews-and-samples";
+import { HumanFeedback } from "./samples";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -26,7 +26,10 @@ export default async function Sample({ humanFeedback }: SampleProps) {
           {humanFeedback.createdAt.toDateString()}
         </Link>
       </div>
-      <Markdown className="prose prose-sm italic" remarkPlugins={[remarkGfm]}>
+      <Markdown
+        className="prose prose-sm italic leading-tight text-xs pb-2"
+        remarkPlugins={[remarkGfm]}
+      >
         {humanFeedback.lastSystemPrompt}
       </Markdown>
       {humanFeedback.messages
@@ -34,7 +37,10 @@ export default async function Sample({ humanFeedback }: SampleProps) {
         .map((message) => (
           <div key={message.id}>
             <div className="font-bold"></div>
-            <Markdown className="prose prose-sm" remarkPlugins={[remarkGfm]}>
+            <Markdown
+              className="prose prose-sm leading-tight"
+              remarkPlugins={[remarkGfm]}
+            >
               {`**${message.fromUser ? "Human" : "Bot"}**: ${message.text}`}
             </Markdown>
           </div>

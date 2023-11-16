@@ -1,9 +1,10 @@
+"use client";
+
 import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import prisma from "@/lib/prisma";
 import { Suspense } from "react";
-import Sample from "./sample";
 import Review from "./review";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export function Reviews({ model }: { model: Model }) {
   return model.reviews.length === 0 ? (
@@ -17,55 +18,42 @@ export function Reviews({ model }: { model: Model }) {
   );
 }
 
-async function loadHumanFeedback(modelId: string) {
-  return prisma.humanFeedback.findMany({
-    where: {
-      modelId,
-    },
-    include: {
-      messages: true,
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-}
-
-export type HumanFeedback = NonNullable<
-  Awaited<ReturnType<typeof loadHumanFeedback>>
->[number];
-
-async function Samples({ model }: { model: Model }) {
-  const humanFeedback = await loadHumanFeedback(model.id);
-
-  return humanFeedback.length === 0 ? (
-    <div className="text-sm text-muted-foreground ml-2">
-      No samples have been shared yet
-    </div>
-  ) : (
-    <div>
-      {humanFeedback &&
-        humanFeedback.map((humanFeedback) => (
-          <Sample key={humanFeedback.id} humanFeedback={humanFeedback} />
-        ))}
-    </div>
-  );
-}
-
 type ReviewsAndSamplesProps = {
   model: Model;
+  samples: React.ReactNode;
 };
 
-export default function ReviewsAndSamples({ model }: ReviewsAndSamplesProps) {
+export default function ReviewsAndSamples({
+  model,
+  samples,
+}: ReviewsAndSamplesProps) {
   const { numHumanFeedback, numReviews } = model;
+  const router = useRouter();
+  const searchParams = useSearchParams();
   return (
-    <Tabs defaultValue="reviews" className="mt-10">
+    <Tabs
+      defaultValue="reviews"
+      className="mt-10"
+      value={searchParams.get("tab") || "reviews"}
+    >
       <TabsList className="mb-2">
-        <TabsTrigger value="reviews">
+        <TabsTrigger
+          value="reviews"
+          onClick={() =>
+            new URLSearchParams(searchParams.toString()).delete("tab")
+          }
+        >
           Reviews
           {numReviews && numReviews > 0 ? ` (${numReviews})` : ""}
         </TabsTrigger>
-        <TabsTrigger value="samples">
+        <TabsTrigger
+          value="samples"
+          onClick={() => {
+            const params = new URLSearchParams(searchParams);
+            params.set("tab", "samples");
+            router.replace(`?${params.toString()}`, { scroll: false });
+          }}
+        >
           Samples
           {numHumanFeedback && numHumanFeedback > 0
             ? ` (${numHumanFeedback})`
@@ -76,9 +64,7 @@ export default function ReviewsAndSamples({ model }: ReviewsAndSamplesProps) {
         <Reviews model={model} />
       </TabsContent>
       <TabsContent value="samples">
-        <Suspense>
-          <Samples model={model} />
-        </Suspense>
+        <Suspense>{samples}</Suspense>
       </TabsContent>
     </Tabs>
   );

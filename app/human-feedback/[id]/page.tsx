@@ -29,13 +29,12 @@ export default async function Home({ params }: { params: { id: string } }) {
     <div className="mt-6 max-w-xl mb-20">
       <div className="mb-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl md:text-5xl mr-2 font-semibold">
-            Human Feedback 👍
+          <h1 className="text-2xl md:text-5xl mr-2 font-semibold truncate">
+            {humanFeedback.createdAt.toLocaleString()}
           </h1>
         </div>
         <div className="flex items-center mt-1.5">
           <div className="text-sm">
-            {humanFeedback.createdAt.toDateString()},{" "}
             {model && (
               <>
                 <Link href={`/${model.author.slug}/${model.slug}`}>
