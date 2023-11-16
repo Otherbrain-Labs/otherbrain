@@ -1,9 +1,13 @@
 import Sample from "@/app/[authorSlug]/[modelSlug]/sample";
+import { DropdownMenu } from "@/components/ui/dropdown-menu";
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Checkbox } from "@/components/ui/checkbox";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Button } from "@/components/ui/button";
 
 export default async function Home({ params }: { params: { id: string } }) {
   const [humanFeedback, count] = await Promise.all([
@@ -23,7 +27,6 @@ export default async function Home({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  const messages = humanFeedback.messages.sort((a, b) => a.index - b.index);
   const { model } = humanFeedback;
 
   return (
@@ -51,11 +54,41 @@ export default async function Home({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <div className="bg-gray-500/10 text-xs p-3">
-        Thanks for adding this sample to Otherbrain Open Feedback, a free data
-        set of interactions with open models. It is small but growing with
-        contributions like yours. Our hope is to accelerate open model training
-        with high quality, user-curated training data.
+      <div className="text-xs p-3 border rounded">
+        Thanks for adding this sample to Otherbrain Open Feedback (OOF), a free
+        dataset of interactions with open models. It is small, but growing every
+        day with great contributions like yours. Our hope is to accelerate open
+        model training with user-curated training data and accelerate open model
+        adoption with exciting samples.
+        <label className="block py-3">
+          Enhance your sample by selecting one or more categories:
+        </label>
+        <ToggleGroup type="multiple" className="justify-between block md:flex">
+          <ToggleGroupItem value="a" className="text-xs">
+            Roleplay
+          </ToggleGroupItem>
+          <ToggleGroupItem value="b" className="text-xs">
+            Facts
+          </ToggleGroupItem>
+          <ToggleGroupItem value="c" className="text-xs">
+            History
+          </ToggleGroupItem>
+          <ToggleGroupItem value="d" className="text-xs">
+            Coding
+          </ToggleGroupItem>
+          <ToggleGroupItem value="e" className="text-xs">
+            Philosophy
+          </ToggleGroupItem>
+          <ToggleGroupItem value="f" className="text-xs">
+            Romance
+          </ToggleGroupItem>
+          <ToggleGroupItem value="g" className="text-xs">
+            NSFW
+          </ToggleGroupItem>
+        </ToggleGroup>
+        <div className="flex flex-row-reverse">
+          <Button className="mt-2">Submit</Button>
+        </div>
       </div>
 
       <Sample humanFeedback={humanFeedback} hideDate />

@@ -10,6 +10,8 @@ type SampleProps = {
 };
 
 export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
+  const messages = humanFeedback.messages.sort((a, b) => a.index - b.index);
+
   return (
     <div
       key={humanFeedback.id}
@@ -26,14 +28,14 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
         </div>
       )}
       <Markdown
-        className="prose prose-sm italic leading-tight text-xs"
+        className="prose prose-sm dark:prose-invert italic leading-tight text-xs"
         remarkPlugins={[remarkGfm]}
       >
         {humanFeedback.lastSystemPrompt}
       </Markdown>
       <table className="table-auto border-separate">
         <tbody>
-          {humanFeedback.messages
+          {messages
             .sort((a, b) => a.index - b.index)
             .map((message, i) => (
               <tr key={message.id}>
@@ -44,9 +46,12 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
                 </td>
                 <td align="left" valign="top">
                   <Markdown
-                    className={cn("prose prose-sm leading-tight text-xs ml-2", {
-                      "mb-3": i !== humanFeedback.messages.length - 1,
-                    })}
+                    className={cn(
+                      "prose prose-sm dark:prose-invert leading-tight text-xs ml-2",
+                      {
+                        "mb-3": i !== humanFeedback.messages.length - 1,
+                      }
+                    )}
                     remarkPlugins={[remarkGfm]}
                   >
                     {message.text}
