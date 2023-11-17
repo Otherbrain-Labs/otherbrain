@@ -63,7 +63,7 @@ export default async function Home({ params }: { params: { id: string } }) {
         <label className="block py-3">
           Enhance your sample by selecting one or more categories:
         </label>
-        <ToggleGroup type="multiple" className="justify-between block md:flex">
+        <ToggleGroup type="multiple" className="justify-between block sm:flex">
           <ToggleGroupItem value="a" className="text-xs">
             Roleplay
           </ToggleGroupItem>
