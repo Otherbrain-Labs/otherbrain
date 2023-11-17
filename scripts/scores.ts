@@ -1,80 +1,122 @@
 import fs from "fs";
-import prisma from "../lib/prisma";
+import { execSync } from "child_process";
 import savedScores from "./data/scores.json";
+import prisma from "../lib/prisma";
 
-const ROOT_URL =
-  "https://github.com/dsdanielpark/open-llm-leaderboard-report/tree/main/assets";
-const RAW_URL =
-  "https://raw.githubusercontent.com/dsdanielpark/open-llm-leaderboard-report/main/assets";
+const RESULTS_TMP_DIR = process.env.GITHUB_WORKSPACE
+  ? `${process.env.GITHUB_WORKSPACE}/llm-leaderboard-scores`
+  : `/tmp/llm-leaderboard-scores`;
 
-type Score = {
-  date: string;
-  model: string;
-  average: string;
-  arc: string;
-  hellaswag: string;
-  mmlu: string;
-  truthfulqa: string;
-  parameters: string;
-  url: string;
+const cloneResults = async () => {
+  if (fs.existsSync(RESULTS_TMP_DIR)) {
+    await fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
+  }
+  await execSync(
+    `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR} && echo "cloned"`
+  );
 };
 
-function csvToJson(csv: any, date: string) {
-  const lines = csv.split("\n");
-  const result = [];
+const getDirectories = async (source: string) => {
+  const directories = await fs.readdirSync(source, { withFileTypes: true });
+  return directories
+    .filter((dirent) => dirent.isDirectory() && dirent.name !== ".git")
+    .map((dirent) => dirent.name);
+};
 
-  const headers = lines[0].split(",").map((header: string) => {
-    return header.split("(")[0].toLowerCase();
-  });
+const getFiles = async (source: string) => {
+  const files = await fs.readdirSync(source, { withFileTypes: true });
+  return files.filter((dirent) => dirent.isFile()).map((dirent) => dirent.name);
+};
 
-  for (var i = 1; i < lines.length; i++) {
-    var obj: { [key: string]: any } = {
-      date: date,
-    };
-    var currentline = lines[i].split(",");
-    if (currentline.length !== headers.length) {
+function roundFloat(number: number) {
+  return Math.round(number * 100) / 100;
+}
+const parseResults = (data: any) => {
+  if (!data.results) {
+    return {};
+  }
+  const res: { [key: string]: any } = {};
+  for (const key in data.results) {
+    if (!data.results.hasOwnProperty(key)) {
       continue;
     }
 
-    for (var j = 0; j < headers.length; j++) {
-      obj[headers[j]] = currentline[j];
+    switch (key) {
+      case "harness|arc:challenge|25":
+        res["arc"] = roundFloat(data.results[key].acc_norm * 100);
+        break;
+      case "harness|hellaswag|10":
+        res["hellaswag"] = roundFloat(data.results[key].acc_norm * 100);
+        break;
+      case "harness|truthfulqa:mc|0":
+        res["truthfulqa"] = roundFloat(data.results[key].mc2 * 100);
+        break;
+      case "harness|drop|3":
+        res["drop"] = roundFloat(data.results[key].f1 * 100);
+        break;
+      case "harness|gsm8k|5":
+        res["gsm8k"] = roundFloat(data.results[key].acc * 100);
+        break;
+      case "harness|winogrande|5":
+        res["winogrande"] = roundFloat(data.results[key].acc * 100);
+        break;
     }
-
-    result.push(obj);
   }
 
-  return result;
-}
+  const mmluValues = Object.keys(data.results)
+    .filter((key) => key.match("hendrycksTest"))
+    .map((key) => data.results[key].acc_norm * 100);
 
-export async function scrape(saveData: boolean = false) {
-  console.log("Fetching latest scores from dsdanielpark...");
+  if (mmluValues.length > 0) {
+    res.mmlu = roundFloat(
+      mmluValues.reduce((a, b) => a + b) / mmluValues.length
+    );
+  }
 
-  const res = await fetch(ROOT_URL);
-  const resJson = await res.json();
-  const items = resJson.payload.tree.items;
+  return res;
+};
 
-  const scoreMap: { [key: string]: Score[] } = {};
-  await Promise.all(
-    items.map(async (item: any) => {
-      const res = await fetch(RAW_URL + `/${item.name}/${item.name}.csv`);
-      const resJson = csvToJson(await res.text(), item.name) as Score[];
-      resJson.forEach((score) => {
-        if (!scoreMap[score.model]) {
-          scoreMap[score.model] = [];
+async function scrape(save: boolean = false, reclone: boolean = false) {
+  if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
+    console.log("Cloning results...");
+    await cloneResults();
+  }
+
+  const results: { [key: string]: any } = {};
+  const directories = await getDirectories(RESULTS_TMP_DIR);
+  for (const directory of directories) {
+    const subDirectories = await getDirectories(
+      `${RESULTS_TMP_DIR}/${directory}`
+    );
+    for (const subDirectory of subDirectories) {
+      const name = `${directory}/${subDirectory}`;
+      const files = await getFiles(`${RESULTS_TMP_DIR}/${name}`);
+      let scores: { [key: string]: any } = {};
+      for (const file of files) {
+        try {
+          const data = JSON.parse(
+            await fs.readFileSync(`${RESULTS_TMP_DIR}/${name}/${file}`, "utf8")
+          );
+
+          scores = { ...scores, ...parseResults(data) };
+        } catch (error) {
+          console.error(error);
         }
-        scoreMap[score.model].push(score);
-      });
-    })
-  );
+      }
 
-  const data = Object.values(scoreMap).map((scores) => {
-    return scores.sort((a, b) => {
-      return parseInt(b.date, 10) - parseInt(a.date, 10);
-    })[0];
-  });
+      const allValues = Object.values(scores);
+      if (allValues.length > 0) {
+        scores.average = roundFloat(
+          allValues.reduce((a, b) => a + b) / allValues.length
+        );
+      }
 
-  if (saveData) {
-    const jsonString = JSON.stringify(data, null, 2);
+      results[name] = scores;
+    }
+  }
+
+  if (save) {
+    const jsonString = JSON.stringify(results, null, 2);
 
     fs.writeFile(`${__dirname}/./data/scores.json`, jsonString, (err) => {
       if (err) {
@@ -85,7 +127,7 @@ export async function scrape(saveData: boolean = false) {
     });
   }
 
-  return data;
+  return results;
 }
 
 export async function load(useSaved: boolean = true, saveData: boolean = true) {
@@ -94,37 +136,40 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
       where: { average: { not: null } },
     }),
     prisma.model.findMany({
-      where: { average: null },
       select: { remoteId: true },
     }),
   ]);
   const existingIdsFlat = existingIds.map((model) => model.remoteId);
   const scores = useSaved ? savedScores : await scrape(saveData);
 
-  let count = 0;
-  for (const score of scores) {
-    if (!existingIdsFlat.includes(score.model)) {
+  for (const key in scores) {
+    if (!scores.hasOwnProperty(key)) {
       continue;
     }
-    try {
-      await prisma.model.updateMany({
-        where: { remoteId: score.model },
-        data: {
-          average: parseFloat(score.average),
-          arc: parseFloat(score.arc!),
-          hellaswag: parseFloat(score.hellaswag!),
-          mmlu: parseFloat(score.mmlu!),
-          truthfulqa: parseFloat(score.truthfulqa!),
-        },
-      });
-      console.log(`Added score for model ${score.model}`);
 
-      count++;
+    if (!existingIdsFlat.includes(key)) {
+      continue;
+    }
+
+    const score = scores[key as keyof typeof scores];
+    try {
+      const value = await prisma.model.updateMany({
+        where: { remoteId: key },
+        data: score,
+      });
+      if (value.count > 0) {
+        console.log(`Updated scores for model ${key}`);
+      }
     } catch (error) {
-      console.error(error, score.model);
+      console.error(error, key);
     }
   }
+
+  const finalCount = await prisma.model.count({
+    where: { average: { not: null } },
+  });
+
   console.log(
-    `Added ${count} new scores, ${count + originalCount} scores total`
+    `Added ${finalCount - originalCount} new scores, ${finalCount} scores total`
   );
 }
