@@ -1,5 +1,5 @@
 import StarRater from "@/components/ui/star-rater";
-import { createReview } from "@/app/[authorSlug]/[modelSlug]/actions";
+import { createReview } from "@/app/[authorRemoteId]/[modelRemoteId]/actions";
 import { Button } from "../ui/button";
 
 export default function ReviewsForm({ modelId }: { modelId: string }) {

@@ -1,4 +1,4 @@
-import type { Model } from "@/app/[authorSlug]/[modelSlug]/page";
+import type { Model } from "@/app/[authorRemoteId]/[modelRemoteId]/page";
 import Review from "./review";
 
 export default function Reviews({ model }: { model: Model }) {

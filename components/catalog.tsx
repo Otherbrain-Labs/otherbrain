@@ -1,5 +1,5 @@
 import { loadModels } from "@/app/page";
-import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
+import { loadModels as loadAuthorModels } from "@/app/[authorRemoteId]/page";
 import { DataTable } from "./catalog-table/data-table";
 import { columns } from "./catalog-table/columns";
 

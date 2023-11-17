@@ -1,4 +1,4 @@
-import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
+import { Model } from "@/app/[authorRemoteId]/[modelRemoteId]/page";
 import {
   Tooltip,
   TooltipContent,

@@ -1,7 +1,7 @@
 "use client";
 
 import { loadModels } from "@/app/page";
-import { loadModels as loadAuthorModels } from "@/app/[authorSlug]/page";
+import { loadModels as loadAuthorModels } from "@/app/[authorRemoteId]/page";
 
 import { Cell, Column, ColumnDef } from "@tanstack/react-table";
 import { Button } from "../ui/button";

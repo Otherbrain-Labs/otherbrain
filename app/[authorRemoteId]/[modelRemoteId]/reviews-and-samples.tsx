@@ -1,6 +1,6 @@
 "use client";
 
-import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
+import { Model } from "@/app/[authorRemoteId]/[modelRemoteId]/page";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";

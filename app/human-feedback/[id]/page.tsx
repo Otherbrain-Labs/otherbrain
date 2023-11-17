@@ -1,4 +1,4 @@
-import Sample from "@/app/[authorSlug]/[modelSlug]/sample";
+import Sample from "@/app/[authorRemoteId]/[modelRemoteId]/sample";
 import { DropdownMenu } from "@/components/ui/dropdown-menu";
 import prisma from "@/lib/prisma";
 import Link from "next/link";

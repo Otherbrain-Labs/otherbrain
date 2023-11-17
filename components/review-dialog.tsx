@@ -1,6 +1,6 @@
 "use client";
 
-import { Model } from "@/app/[authorSlug]/[modelSlug]/page";
+import { Model } from "@/app/[authorRemoteId]/[modelRemoteId]/page";
 import ReviewsForm from "./reviews/form";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 
