@@ -3,9 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL")
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model User {
@@ -38,6 +38,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -46,6 +47,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model VerificationToken {
@@ -96,6 +99,8 @@ model Model {
   reviews       Review[]
   author        Author          @relation(fields: [authorId], references: [id])
   humanFeedback HumanFeedback[]
+
+  @@index([authorId])
 }
 
 model File {
@@ -106,13 +111,15 @@ model File {
 
   modelId String
   model   Model  @relation(fields: [modelId], references: [id])
+
+  @@index([modelId])
 }
 
 model Review {
   id           String   @id @default(cuid())
   createdAt    DateTime @default(now())
   stars        Int
-  text         String
+  text         String   @db.LongText
   externalName String?
   externalUrl  String?
   userId       String
@@ -120,6 +127,9 @@ model Review {
 
   model Model @relation(fields: [modelId], references: [id])
   user  User  @relation(fields: [userId], references: [id])
+
+  @@index([modelId])
+  @@index([userId])
 }
 
 model HumanFeedback {
@@ -134,13 +144,17 @@ model HumanFeedback {
   // we connect with a model if we find one via the modelName
   modelId String?
   model   Model?  @relation(fields: [modelId], references: [id])
+
+  @@index([modelId])
 }
 
 model HumanFeedbackMessage {
   id              String        @id @default(cuid())
   index           Int
   fromUser        Boolean
-  text            String
+  text            String        @db.LongText
   humanFeedbackId String
   humanFeedback   HumanFeedback @relation(fields: [humanFeedbackId], references: [id])
+
+  @@index([humanFeedbackId])
 }
