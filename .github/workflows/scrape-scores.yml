@@ -10,7 +10,7 @@ jobs:
     environment: Production
     runs-on: ubuntu-latest
     env:
-      DATABSE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
