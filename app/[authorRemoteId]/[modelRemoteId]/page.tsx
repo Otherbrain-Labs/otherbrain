@@ -44,11 +44,11 @@ export type Review = NonNullable<Model["reviews"]>[number];
 export default async function Home({
   params,
 }: {
-  params: { authorSlug: string; modelSlug: string };
+  params: { authorRemoteId: string; modelRemoteId: string };
 }) {
   const session = await getServerSession();
 
-  const model = await loadModel(params.modelSlug, params.authorSlug);
+  const model = await loadModel(params.modelRemoteId, params.authorRemoteId);
 
   if (!model || !model.author) {
     notFound();

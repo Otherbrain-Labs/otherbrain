@@ -20,11 +20,11 @@ export async function loadModels(authorId: string) {
 export default async function Home({
   params,
 }: {
-  params: { authorSlug: string; modelSlug: string };
+  params: { authorRemoteId: string };
 }) {
   const author = await prisma.author.findUnique({
     where: {
-      remoteId: params.authorSlug,
+      remoteId: params.authorRemoteId,
     },
   });
 
