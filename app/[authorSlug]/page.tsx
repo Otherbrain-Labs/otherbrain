@@ -24,7 +24,7 @@ export default async function Home({
 }) {
   const author = await prisma.author.findUnique({
     where: {
-      slug: params.authorSlug,
+      remoteId: params.authorSlug,
     },
   });
 

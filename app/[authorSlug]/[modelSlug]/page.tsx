@@ -19,12 +19,12 @@ import { Samples } from "./samples";
 import { Suspense } from "react";
 import Reviews from "./reviews";
 
-export async function loadModel(modelSlug: string, authorSlug: string) {
+export async function loadModel(modelRemoteId: string, authorRemoteId: string) {
   const model = await prisma.model.findFirst({
     where: {
-      slug: modelSlug,
+      remoteId: authorRemoteId + "/" + modelRemoteId,
       author: {
-        slug: authorSlug,
+        remoteId: authorRemoteId,
       },
     },
     include: {
@@ -75,7 +75,10 @@ export default async function Home({
           <div className="flex items-center mt-1.5">
             <div className="text-sm text-muted-foreground">
               by{" "}
-              <Link href={"/" + author.slug} className="hover:underline mr-3">
+              <Link
+                href={"/" + author.remoteId}
+                className="hover:underline mr-3"
+              >
                 {author.name}
               </Link>
               {dateFormatted}

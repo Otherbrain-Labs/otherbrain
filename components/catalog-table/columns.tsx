@@ -73,7 +73,7 @@ export const columns: ColumnDef<Model>[] = [
     header: ({ column }) => <SortHeader column={column} />,
     cell: ({ row }) => {
       const model = row.original;
-      const href = `/${model.author.slug}/${model.slug}`;
+      const href = `/${model.remoteId}`;
       return (
         <Link
           className="hover:underline max-w-[180px] inline-block truncate align-text-bottom"

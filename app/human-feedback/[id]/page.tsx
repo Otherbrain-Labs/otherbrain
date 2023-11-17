@@ -44,7 +44,7 @@ export default async function Home({ params }: { params: { id: string } }) {
               <>
                 <Link
                   className="hover:underline mr-3"
-                  href={`/${model.author.slug}/${model.slug}`}
+                  href={`${model.remoteId}`}
                 >
                   {model.name} ({humanFeedback.modelName.replace(".gguf", "")})
                 </Link>
