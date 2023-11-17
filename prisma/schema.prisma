@@ -87,13 +87,15 @@ model Model {
   gsm8k      Float?
   winogrande Float?
 
-  // Aggregate review info
-  avgStars   Float?
-  numReviews Int?
+  // Aggregate info
+  avgStars         Float?
+  numReviews       Int?
+  numHumanFeedback Int?
 
-  files   File[]
-  reviews Review[]
-  author  Author   @relation(fields: [authorId], references: [id])
+  files         File[]
+  reviews       Review[]
+  author        Author          @relation(fields: [authorId], references: [id])
+  humanFeedback HumanFeedback[]
 }
 
 model File {
@@ -118,4 +120,27 @@ model Review {
 
   model Model @relation(fields: [modelId], references: [id])
   user  User  @relation(fields: [userId], references: [id])
+}
+
+model HumanFeedback {
+  id               String                 @id @default(cuid())
+  createdAt        DateTime               @default(now())
+  modelName        String
+  promptTemplate   String
+  lastSystemPrompt String
+  client           String
+  messages         HumanFeedbackMessage[]
+
+  // we connect with a model if we find one via the modelName
+  modelId String?
+  model   Model?  @relation(fields: [modelId], references: [id])
+}
+
+model HumanFeedbackMessage {
+  id              String        @id @default(cuid())
+  index           Int
+  fromUser        Boolean
+  text            String
+  humanFeedbackId String
+  humanFeedback   HumanFeedback @relation(fields: [humanFeedbackId], references: [id])
 }

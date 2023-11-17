@@ -8,7 +8,6 @@ import { Button } from "../ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
-import { ScoreKey, ScoreTooltip } from "../scores";
 import { avgStarsFormatter, dateFormatter } from "@/lib/utils";
 
 type Models =
@@ -30,6 +29,7 @@ export const idToTitle: Record<string, string> = {
   winogrande: "Winogrande",
   gsm8k: "GSM8K",
   drop: "DROP",
+  numHumanFeedback: "Samples",
 };
 
 function SortHeader({ column }: { column: Column<Model> }) {
@@ -53,14 +53,6 @@ function SortHeader({ column }: { column: Column<Model> }) {
         )}
       </span>
     </Button>
-  );
-}
-
-function ScoreTooltipSortHeader({ column }: { column: Column<Model> }) {
-  return (
-    <ScoreTooltip score={column.id as ScoreKey}>
-      <SortHeader column={column} />
-    </ScoreTooltip>
   );
 }
 
@@ -102,9 +94,24 @@ export const columns: ColumnDef<Model>[] = [
       return model.avgStars && model.numReviews ? (
         <div className="flex items-center">
           <Star filled />
-          <span className="relative left-1">
+          <span className="relative left-1 truncate">
             {avgStarsFormatter.format(model.avgStars)} ({model.numReviews})
           </span>
+        </div>
+      ) : (
+        <div className="flex items-center">--</div>
+      );
+    },
+    invertSorting: true,
+  },
+  {
+    accessorKey: "numHumanFeedback",
+    header: ({ column }) => <SortHeader column={column} />,
+    cell: ({ row }) => {
+      const model = row.original;
+      return model.numHumanFeedback ? (
+        <div className="flex items-center">
+          {avgStarsFormatter.format(model.numHumanFeedback)}
         </div>
       ) : (
         <div className="flex items-center">--</div>
@@ -140,49 +147,49 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "average",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "arc",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "hellaswag",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "mmlu",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "truthfulqa",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "winogrande",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "gsm8k",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },
   {
     accessorKey: "drop",
-    header: ({ column }) => <ScoreTooltipSortHeader column={column} />,
+    header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,
   },

@@ -47,7 +47,7 @@ export default async function Review({ review }: ReviewProps) {
         </>
       )}{" "}
       <div className="text-xs text-muted-foreground inline">
-        {new Date(review.createdAt).toLocaleDateString()}
+        {review.createdAt.toLocaleDateString()}
       </div>
     </div>
   );
