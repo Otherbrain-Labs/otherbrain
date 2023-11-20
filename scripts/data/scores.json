@@ -63,43 +63,107 @@
     "arc": 56.14,
     "hellaswag": 79.78,
     "truthfulqa": 47.02,
-    "mmlu": 60.01,
-    "average": 60.74
+    "mmlu": 60.01
   },
   "AA051610/T1C": {
     "arc": 50.17,
     "hellaswag": 72.21,
     "truthfulqa": 42.52,
-    "mmlu": 56.34,
-    "average": 55.31
+    "mmlu": 56.34
   },
   "AA051610/T2A": {
     "arc": 51.45,
     "hellaswag": 73.99,
     "truthfulqa": 47.01,
-    "mmlu": 62.08,
-    "average": 58.63
+    "mmlu": 62.08
   },
   "AA051610/VA": {
     "arc": 41.38,
     "hellaswag": 62.52,
     "truthfulqa": 44.93,
-    "mmlu": 49.96,
-    "average": 49.7
+    "mmlu": 49.96
   },
   "AGI-inc/lora_moe_7b": {
     "arc": 50.94,
     "hellaswag": 77.8,
     "truthfulqa": 34.34,
-    "mmlu": 35.67,
-    "average": 49.69
+    "mmlu": 35.67
   },
   "AGI-inc/lora_moe_7b_baseline": {
     "arc": 50.94,
     "hellaswag": 77.8,
     "truthfulqa": 34.34,
-    "mmlu": 35.67,
-    "average": 49.69
+    "mmlu": 35.67
+  },
+  "AI-Sweden-Models/gpt-sw3-1.3b": {
+    "arc": 30.38,
+    "hellaswag": 50.4,
+    "truthfulqa": 39.97,
+    "winogrande": 58.88,
+    "drop": 4.08,
+    "gsm8k": 0.08,
+    "mmlu": 26.14,
+    "average": 29.99
+  },
+  "AI-Sweden-Models/gpt-sw3-1.3b-instruct": {
+    "arc": 30.97,
+    "hellaswag": 51.42,
+    "truthfulqa": 40.31,
+    "winogrande": 56.75,
+    "drop": 4.64,
+    "gsm8k": 1.59,
+    "mmlu": 26.17,
+    "average": 30.26
+  },
+  "AI-Sweden-Models/gpt-sw3-20b": {
+    "arc": 41.81,
+    "hellaswag": 68.75,
+    "truthfulqa": 37.1,
+    "winogrande": 67.17,
+    "drop": 6.52,
+    "gsm8k": 0.99,
+    "mmlu": 28.47,
+    "average": 35.83
+  },
+  "AI-Sweden-Models/gpt-sw3-20b-instruct": {
+    "arc": 43.17,
+    "hellaswag": 71.09,
+    "truthfulqa": 41.02,
+    "winogrande": 66.77,
+    "drop": 5.15,
+    "gsm8k": 8.79,
+    "mmlu": 31.32,
+    "average": 38.19
+  },
+  "AI-Sweden-Models/gpt-sw3-6.7b": {
+    "arc": 36.35,
+    "hellaswag": 60.75,
+    "truthfulqa": 39.04,
+    "winogrande": 60.69,
+    "drop": 8.92,
+    "gsm8k": 0.53,
+    "mmlu": 26,
+    "average": 33.18
+  },
+  "AI-Sweden-Models/gpt-sw3-6.7b-v2": {
+    "arc": 39.42,
+    "hellaswag": 66.39,
+    "truthfulqa": 35.6,
+    "winogrande": 64.25,
+    "drop": 6.22,
+    "gsm8k": 1.21,
+    "mmlu": 30.09,
+    "average": 34.74
+  },
+  "AI-Sweden-Models/gpt-sw3-6.7b-v2-instruct": {
+    "arc": 40.78,
+    "hellaswag": 67.77,
+    "truthfulqa": 40.32,
+    "winogrande": 63.54,
+    "drop": 26.67,
+    "gsm8k": 6.37,
+    "mmlu": 31.57,
+    "average": 39.57
   },
   "AIDC-ai-business/Marcoroni-70B-v1": {
     "arc": 73.55,
@@ -224,8 +288,7 @@
   "Andron00e/YetAnother_Open-Llama-3B-LoRA": {
     "drop": 0.05,
     "gsm8k": 0,
-    "winogrande": 51.38,
-    "average": 17.14
+    "winogrande": 51.38
   },
   "Andron00e/YetAnother_Open-Llama-3B-LoRA-OpenOrca": {
     "arc": 38.91,
@@ -401,8 +464,7 @@
     "arc": 53.16,
     "hellaswag": 76.73,
     "truthfulqa": 40.27,
-    "mmlu": 45.31,
-    "average": 53.87
+    "mmlu": 45.31
   },
   "Austism/chronos-hermes-13b-v2": {
     "arc": 60.32,
@@ -453,6 +515,26 @@
     "gsm8k": 0.23,
     "winogrande": 54.46,
     "average": 29.15
+  },
+  "BEE-spoke-data/smol_llama-101M-GQA": {
+    "arc": 23.46,
+    "hellaswag": 28.73,
+    "truthfulqa": 45.8,
+    "winogrande": 50.67,
+    "drop": 3.42,
+    "gsm8k": 0.76,
+    "mmlu": 24.35,
+    "average": 25.31
+  },
+  "BEE-spoke-data/smol_llama-81M-tied": {
+    "arc": 22.18,
+    "hellaswag": 29.33,
+    "truthfulqa": 43.97,
+    "winogrande": 49.25,
+    "drop": 2.64,
+    "gsm8k": 0.23,
+    "mmlu": 24.06,
+    "average": 24.52
   },
   "BEE-spoke-data/verysmol_llama-v11-KIx2": {
     "arc": 22.7,
@@ -507,8 +589,7 @@
   "BreadAi/MuseCan": {
     "drop": 0.03,
     "gsm8k": 0,
-    "winogrande": 49.09,
-    "average": 16.37
+    "winogrande": 49.09
   },
   "BreadAi/MusePy-1-2": {
     "arc": 25.77,
@@ -1024,8 +1105,7 @@
     "arc": 60.07,
     "hellaswag": 81.29,
     "truthfulqa": 36.94,
-    "mmlu": 55.59,
-    "average": 58.47
+    "mmlu": 55.59
   },
   "CHIH-HUNG/llama-2-13b-dolphin_20w": {
     "arc": 59.56,
@@ -1050,45 +1130,38 @@
   "CHIH-HUNG/llama-2-13b-huangyt_FINETUNE2_3w": {
     "drop": 24.05,
     "gsm8k": 11.98,
-    "winogrande": 76.8,
-    "average": 37.61
+    "winogrande": 76.8
   },
   "CHIH-HUNG/llama-2-13b-huangyt_FINETUNE2_3w-gate_up_down_proj": {
     "drop": 13.32,
     "gsm8k": 12.05,
-    "winogrande": 77.03,
-    "average": 34.13
+    "winogrande": 77.03
   },
   "CHIH-HUNG/llama-2-13b-huangyt_FINETUNE2_3w-q_k_v_o_proj": {
     "drop": 40.85,
     "gsm8k": 12.81,
-    "winogrande": 76.8,
-    "average": 43.49
+    "winogrande": 76.8
   },
   "CHIH-HUNG/llama-2-13b-huangyt_Fintune_1_17w": {
     "drop": 40.25,
     "gsm8k": 13.27,
-    "winogrande": 77.27,
-    "average": 43.6
+    "winogrande": 77.27
   },
   "CHIH-HUNG/llama-2-13b-huangyt_Fintune_1_17w-gate_up_down_proj": {
     "drop": 15.27,
     "gsm8k": 12.89,
-    "winogrande": 76.56,
-    "average": 34.91
+    "winogrande": 76.56
   },
   "CHIH-HUNG/llama-2-13b-huangyt_Fintune_1_17w-q_k_v_o_proj": {
     "drop": 39.9,
     "gsm8k": 14.03,
-    "winogrande": 78.14,
-    "average": 44.02
+    "winogrande": 78.14
   },
   "CHIH-HUNG/llama-2-7b-dolphin_10w-test": {
     "arc": 51.71,
     "hellaswag": 74.5,
     "truthfulqa": 42.08,
-    "mmlu": 43.9,
-    "average": 53.05
+    "mmlu": 43.9
   },
   "CalderaAI/13B-BlueMethod": {
     "arc": 59.64,
@@ -1149,6 +1222,26 @@
     "gsm8k": 7.73,
     "winogrande": 78.37,
     "average": 53.33
+  },
+  "CausalLM/7B": {
+    "arc": 50,
+    "hellaswag": 74.58,
+    "truthfulqa": 50.13,
+    "winogrande": 69.69,
+    "drop": 41.15,
+    "gsm8k": 22.97,
+    "mmlu": 61.79,
+    "average": 52.9
+  },
+  "CausalLM/7B-DPO-alpha": {
+    "arc": 50.85,
+    "hellaswag": 73,
+    "truthfulqa": 57.58,
+    "winogrande": 67.56,
+    "drop": 31.19,
+    "gsm8k": 22.67,
+    "mmlu": 63.39,
+    "average": 52.32
   },
   "Charlie911/vicuna-7b-v1.5-lora-mctaco": {
     "arc": 45.65,
@@ -1254,8 +1347,7 @@
     "arc": 42.15,
     "hellaswag": 71.5,
     "truthfulqa": 36.74,
-    "mmlu": 27.1,
-    "average": 44.37
+    "mmlu": 27.1
   },
   "CobraMamba/mamba-gpt-3b-v3": {
     "arc": 41.72,
@@ -1311,15 +1403,13 @@
     "arc": 56.14,
     "hellaswag": 80.36,
     "truthfulqa": 43.35,
-    "mmlu": 56.89,
-    "average": 59.19
+    "mmlu": 56.89
   },
   "CoolWP/llama-2-13b-guanaco-fp16": {
     "arc": 59.56,
     "hellaswag": 82.39,
     "truthfulqa": 43.4,
-    "mmlu": 55.47,
-    "average": 60.21
+    "mmlu": 55.47
   },
   "Corianas/1.3b": {
     "arc": 27.3,
@@ -1414,8 +1504,7 @@
   "Dampish/Dante-2.8B": {
     "drop": 0.17,
     "gsm8k": 0,
-    "winogrande": 51.07,
-    "average": 17.08
+    "winogrande": 51.07
   },
   "Dampish/StellarX-4B-V0": {
     "arc": 36.95,
@@ -1467,6 +1556,16 @@
     "winogrande": 76.32,
     "average": 48.94
   },
+  "Danielbrdz/Barcenas-3b": {
+    "arc": 43.17,
+    "hellaswag": 67.82,
+    "truthfulqa": 41.56,
+    "winogrande": 66.22,
+    "drop": 4.69,
+    "gsm8k": 2.5,
+    "mmlu": 29.16,
+    "average": 36.45
+  },
   "Danielbrdz/Barcenas-7b": {
     "arc": 55.12,
     "hellaswag": 77.4,
@@ -1491,8 +1590,7 @@
     "arc": 27.65,
     "hellaswag": 32.96,
     "truthfulqa": 48.73,
-    "mmlu": 23.12,
-    "average": 33.12
+    "mmlu": 23.12
   },
   "Deci/DeciCoder-1b": {
     "arc": 21.16,
@@ -1518,8 +1616,7 @@
     "arc": 60.92,
     "hellaswag": 82.1,
     "truthfulqa": 57.18,
-    "mmlu": 58.91,
-    "average": 64.78
+    "mmlu": 58.91
   },
   "DevaMalla/llama-base-7b": {
     "arc": 50.94,
@@ -1585,8 +1682,7 @@
     "arc": 38.14,
     "hellaswag": 66.19,
     "truthfulqa": 36.87,
-    "mmlu": 28.63,
-    "average": 42.46
+    "mmlu": 28.63
   },
   "Devio/test-22B": {
     "arc": 39.42,
@@ -1612,22 +1708,19 @@
     "arc": 40.87,
     "hellaswag": 69.45,
     "truthfulqa": 39.15,
-    "mmlu": 29.47,
-    "average": 44.74
+    "mmlu": 29.47
   },
   "Devio/test100": {
     "arc": 37.37,
     "hellaswag": 58.54,
     "truthfulqa": 34.01,
-    "mmlu": 27.29,
-    "average": 39.3
+    "mmlu": 27.29
   },
   "Devio/testC": {
     "arc": 39.59,
     "hellaswag": 62.88,
     "truthfulqa": 35.67,
-    "mmlu": 27.76,
-    "average": 41.47
+    "mmlu": 27.76
   },
   "Doctor-Shotgun/CalliopeDS-L2-13B": {
     "arc": 60.49,
@@ -2012,8 +2105,7 @@
   "FabbriSimo01/Facebook_opt_1.3b_Quantized": {
     "drop": 5.11,
     "gsm8k": 0.15,
-    "winogrande": 59.67,
-    "average": 21.64
+    "winogrande": 59.67
   },
   "FabbriSimo01/GPT_Large_Quantized": {
     "arc": 27.05,
@@ -2049,8 +2141,7 @@
     "arc": 64.51,
     "hellaswag": 85.87,
     "truthfulqa": 52.8,
-    "mmlu": 63.88,
-    "average": 66.77
+    "mmlu": 63.88
   },
   "FelixChao/CodeLlama13B-Finetune-v1": {
     "arc": 45.82,
@@ -2387,8 +2478,7 @@
     "arc": 48.81,
     "hellaswag": 74.48,
     "truthfulqa": 42.33,
-    "mmlu": 39.27,
-    "average": 51.22
+    "mmlu": 39.27
   },
   "Harshvir/LaMini-Neo-1.3B-Mental-Health_lora": {
     "arc": 25.77,
@@ -2469,6 +2559,16 @@
     "gsm8k": 14.03,
     "winogrande": 78.61,
     "average": 52.4
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+    "arc": 62.03,
+    "hellaswag": 84.36,
+    "truthfulqa": 57.45,
+    "winogrande": 77.74,
+    "drop": 9.66,
+    "gsm8k": 12.74,
+    "mmlu": 61.07,
+    "average": 52.15
   },
   "HyperbeeAI/Tulpar-7b-v0": {
     "arc": 56.31,
@@ -2554,8 +2654,7 @@
     "arc": 59.22,
     "hellaswag": 82.13,
     "truthfulqa": 55.37,
-    "mmlu": 58.87,
-    "average": 63.9
+    "mmlu": 58.87
   },
   "IkariDev/Athena-v1": {
     "arc": 60.07,
@@ -2596,6 +2695,16 @@
     "gsm8k": 1.21,
     "mmlu": 62.26,
     "average": 57.31
+  },
+  "Intel/neural-chat-7b-v3-1": {
+    "arc": 66.3,
+    "hellaswag": 83.6,
+    "truthfulqa": 59.54,
+    "winogrande": 77.98,
+    "drop": 44,
+    "gsm8k": 19.41,
+    "mmlu": 62.44,
+    "average": 59.04
   },
   "JosephusCheung/Guanaco": {
     "arc": 50.17,
@@ -2681,36 +2790,31 @@
     "arc": 53.5,
     "hellaswag": 75.8,
     "truthfulqa": 48.41,
-    "mmlu": 51.21,
-    "average": 57.23
+    "mmlu": 51.21
   },
   "Kiddyz/testlm-1": {
     "arc": 53.5,
     "hellaswag": 75.8,
     "truthfulqa": 48.41,
-    "mmlu": 51.21,
-    "average": 57.23
+    "mmlu": 51.21
   },
   "Kiddyz/testlm-1-1": {
     "arc": 53.5,
     "hellaswag": 75.8,
     "truthfulqa": 48.41,
-    "mmlu": 51.21,
-    "average": 57.23
+    "mmlu": 51.21
   },
   "Kiddyz/testlm-3": {
     "arc": 53.58,
     "hellaswag": 78.48,
     "truthfulqa": 46.42,
-    "mmlu": 51.77,
-    "average": 57.56
+    "mmlu": 51.77
   },
   "Kiddyz/testlm2": {
     "arc": 52.99,
     "hellaswag": 75.64,
     "truthfulqa": 48.68,
-    "mmlu": 51.53,
-    "average": 57.21
+    "mmlu": 51.53
   },
   "KnutJaegersberg/LLongMA-3b-LIMA": {
     "arc": 39.08,
@@ -2721,6 +2825,16 @@
     "gsm8k": 0.3,
     "winogrande": 63.38,
     "average": 33.66
+  },
+  "KnutJaegersberg/MistralInstructLongish": {
+    "arc": 60.75,
+    "hellaswag": 81.86,
+    "truthfulqa": 40.55,
+    "winogrande": 76.56,
+    "drop": 21.22,
+    "gsm8k": 1.52,
+    "mmlu": 60.49,
+    "average": 48.99
   },
   "KnutJaegersberg/RWKV-4-PilePlus-169M-20230520-done-ctx4096": {
     "arc": 23.98,
@@ -2756,8 +2870,7 @@
     "arc": 31.83,
     "hellaswag": 55.51,
     "truthfulqa": 35.21,
-    "mmlu": 25.13,
-    "average": 36.92
+    "mmlu": 25.13
   },
   "KnutJaegersberg/black_goo_recipe_a": {
     "arc": 38.14,
@@ -2823,8 +2936,7 @@
     "arc": 30.89,
     "hellaswag": 36.02,
     "truthfulqa": 41.27,
-    "mmlu": 25.94,
-    "average": 33.53
+    "mmlu": 25.94
   },
   "KnutJaegersberg/gpt-2-xl-EvolInstruct": {
     "arc": 27.39,
@@ -2865,6 +2977,16 @@
     "gsm8k": 0.91,
     "winogrande": 67.01,
     "average": 35.26
+  },
+  "KnutJaegersberg/webMistral-7B": {
+    "arc": 59.04,
+    "hellaswag": 80.89,
+    "truthfulqa": 39.71,
+    "winogrande": 76.32,
+    "drop": 5.75,
+    "gsm8k": 8.87,
+    "mmlu": 59,
+    "average": 47.08
   },
   "KoboldAI/GPT-J-6B-Adventure": {
     "arc": 37.12,
@@ -3140,8 +3262,7 @@
     "arc": 26.79,
     "hellaswag": 38.76,
     "truthfulqa": 42.41,
-    "mmlu": 26.55,
-    "average": 33.63
+    "mmlu": 26.55
   },
   "Kunhao/pile-7b-250b-tokens": {
     "arc": 29.27,
@@ -3217,15 +3338,13 @@
     "arc": 48.81,
     "hellaswag": 74.48,
     "truthfulqa": 42.33,
-    "mmlu": 39.27,
-    "average": 51.22
+    "mmlu": 39.27
   },
   "LMFlow/Robin-v2": {
     "arc": 48.81,
     "hellaswag": 74.48,
     "truthfulqa": 42.33,
-    "mmlu": 39.27,
-    "average": 51.22
+    "mmlu": 39.27
   },
   "LTC-AI-Labs/Guanaco-Vicuna-7B-L2": {
     "arc": 53.24,
@@ -3351,8 +3470,7 @@
     "arc": 42.41,
     "hellaswag": 68.4,
     "truthfulqa": 34.59,
-    "mmlu": 28.28,
-    "average": 43.42
+    "mmlu": 28.28
   },
   "Lazycuber/L2-7b-Base-Guanaco-Uncensored": {
     "arc": 52.22,
@@ -3368,8 +3486,7 @@
     "arc": 50.6,
     "hellaswag": 77.21,
     "truthfulqa": 42.33,
-    "mmlu": 47.66,
-    "average": 54.45
+    "mmlu": 47.66
   },
   "Lazycuber/L2-7b-Guanaco-Uncensored": {
     "arc": 50.6,
@@ -3455,8 +3572,7 @@
     "arc": 33.62,
     "hellaswag": 39.59,
     "truthfulqa": 45.71,
-    "mmlu": 33.97,
-    "average": 38.22
+    "mmlu": 33.97
   },
   "Linly-AI/Chinese-LLaMA-2-7B-hf": {
     "arc": 48.04,
@@ -3467,6 +3583,16 @@
     "gsm8k": 6.22,
     "winogrande": 70.17,
     "average": 42.44
+  },
+  "Locutusque/TinyMistral-248m": {
+    "arc": 20.82,
+    "hellaswag": 26.98,
+    "truthfulqa": 46.89,
+    "winogrande": 50.75,
+    "drop": 0.74,
+    "gsm8k": 0,
+    "mmlu": 23.11,
+    "average": 24.18
   },
   "Locutusque/gpt2-conversational-or-qa": {
     "arc": 21.42,
@@ -3642,15 +3768,13 @@
     "arc": 29.01,
     "hellaswag": 26.49,
     "truthfulqa": 48.84,
-    "mmlu": 24.9,
-    "average": 32.31
+    "mmlu": 24.9
   },
   "MayaPH/GodziLLa-30B-plus": {
     "arc": 29.18,
     "hellaswag": 25.35,
     "truthfulqa": 48.56,
-    "mmlu": 24.23,
-    "average": 31.83
+    "mmlu": 24.23
   },
   "MayaPH/GodziLLa2-70B": {
     "arc": 71.42,
@@ -3816,8 +3940,7 @@
     "arc": 36.86,
     "hellaswag": 57.46,
     "truthfulqa": 38,
-    "mmlu": 27.53,
-    "average": 39.96
+    "mmlu": 27.53
   },
   "Neko-Institute-of-Science/metharme-7b": {
     "arc": 53.67,
@@ -3923,22 +4046,19 @@
     "arc": 36.69,
     "hellaswag": 62.56,
     "truthfulqa": 40.96,
-    "mmlu": 25.72,
-    "average": 41.48
+    "mmlu": 25.72
   },
   "NoIdeaLand/test-3k-mx": {
     "arc": 38.05,
     "hellaswag": 66.43,
     "truthfulqa": 40.93,
-    "mmlu": 25.39,
-    "average": 42.7
+    "mmlu": 25.39
   },
   "NoIdeaLand/test-4k-fn": {
     "arc": 39.93,
     "hellaswag": 68.13,
     "truthfulqa": 38.86,
-    "mmlu": 27.44,
-    "average": 43.59
+    "mmlu": 27.44
   },
   "NobodyExistsOnTheInternet/GiftedConvo13bLoraNoEcons": {
     "arc": 59.39,
@@ -4084,8 +4204,7 @@
     "arc": 67.58,
     "hellaswag": 86.81,
     "truthfulqa": 55.04,
-    "mmlu": 69.72,
-    "average": 69.79
+    "mmlu": 69.72
   },
   "NousResearch/Nous-Hermes-llama-2-7b": {
     "arc": 55.12,
@@ -4116,6 +4235,16 @@
     "gsm8k": 11.22,
     "winogrande": 76.48,
     "average": 47.78
+  },
+  "NucleusAI/nucleus-22B-token-500B": {
+    "arc": 40.7,
+    "hellaswag": 69.39,
+    "truthfulqa": 39.16,
+    "winogrande": 67.64,
+    "drop": 4.19,
+    "gsm8k": 0.99,
+    "mmlu": 30.11,
+    "average": 36.03
   },
   "Open-Orca/LlongOrca-13B-16k": {
     "arc": 62.46,
@@ -4231,8 +4360,7 @@
     "arc": 56.48,
     "hellaswag": 80.27,
     "truthfulqa": 46.76,
-    "mmlu": 55.42,
-    "average": 59.73
+    "mmlu": 55.42
   },
   "OpenAssistant/llama2-70b-oasst-sft-v10": {
     "arc": 67.06,
@@ -4508,22 +4636,19 @@
     "arc": 56.57,
     "hellaswag": 80.35,
     "truthfulqa": 50.54,
-    "mmlu": 48.39,
-    "average": 58.96
+    "mmlu": 48.39
   },
   "OptimalScale/robin-65b-v2-delta": {
     "arc": 28.5,
     "hellaswag": 25.97,
     "truthfulqa": 48.61,
-    "mmlu": 23.12,
-    "average": 31.55
+    "mmlu": 23.12
   },
   "OptimalScale/robin-7b-v2-delta": {
     "arc": 49.15,
     "hellaswag": 74.43,
     "truthfulqa": 42.27,
-    "mmlu": 38.96,
-    "average": 51.2
+    "mmlu": 38.96
   },
   "PSanni/Deer-3b": {
     "arc": 38.48,
@@ -4619,8 +4744,7 @@
     "arc": 54.18,
     "hellaswag": 80.38,
     "truthfulqa": 44.68,
-    "mmlu": 45.97,
-    "average": 56.3
+    "mmlu": 45.97
   },
   "PeanutJar/LLaMa-2-PeanutButter_v18_A-7B": {
     "arc": 53.16,
@@ -4646,22 +4770,19 @@
     "arc": 53.33,
     "hellaswag": 78.72,
     "truthfulqa": 39.61,
-    "mmlu": 46.48,
-    "average": 54.54
+    "mmlu": 46.48
   },
   "PeanutJar/LLaMa-2-PeanutButter_v37_SFT-R1-DPO-R2-7B": {
     "arc": 54.1,
     "hellaswag": 79.1,
     "truthfulqa": 42,
-    "mmlu": 47.32,
-    "average": 55.63
+    "mmlu": 47.32
   },
   "PeanutJar/LLaMa-2-PeanutButter_v4-7B": {
     "arc": 54.86,
     "hellaswag": 80.78,
     "truthfulqa": 42.31,
-    "mmlu": 47.24,
-    "average": 56.3
+    "mmlu": 47.24
   },
   "PeanutJar/Mistral-v0.1-PeanutButter-v0.0.0-7B": {
     "arc": 62.2,
@@ -4682,6 +4803,26 @@
     "gsm8k": 17.44,
     "mmlu": 64.38,
     "average": 51.22
+  },
+  "PeanutJar/Mistral-v0.1-PeanutButter-v0.0.5-DPO-7B-QLoRA": {
+    "arc": 61.26,
+    "hellaswag": 84.52,
+    "truthfulqa": 45.75,
+    "winogrande": 78.61,
+    "drop": 6.51,
+    "gsm8k": 18.12,
+    "mmlu": 63.63,
+    "average": 51.2
+  },
+  "PeanutJar/Mistral-v0.1-PeanutButter-v0.0.5-SFT-7B-QLoRA": {
+    "arc": 60.75,
+    "hellaswag": 84.24,
+    "truthfulqa": 44.94,
+    "winogrande": 78.69,
+    "drop": 6.51,
+    "gsm8k": 17.13,
+    "mmlu": 63.66,
+    "average": 50.85
   },
   "Phind/Phind-CodeLlama-34B-Python-v1": {
     "arc": 24.66,
@@ -5156,15 +5297,13 @@
   "Rardilit/Panther_v1": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "Riiid/sheep-duck-llama-2": {
     "arc": 72.27,
     "hellaswag": 87.78,
     "truthfulqa": 63.8,
-    "mmlu": 70.81,
-    "average": 73.67
+    "mmlu": 70.81
   },
   "Riiid/sheep-duck-llama-2-13b": {
     "arc": 63.14,
@@ -5180,8 +5319,7 @@
     "arc": 73.04,
     "hellaswag": 87.81,
     "truthfulqa": 64.58,
-    "mmlu": 70.84,
-    "average": 74.07
+    "mmlu": 70.84
   },
   "RobbeD/OpenLlama-Platypus-3B": {
     "arc": 41.21,
@@ -5197,8 +5335,7 @@
     "arc": 43.09,
     "hellaswag": 65.33,
     "truthfulqa": 41.93,
-    "mmlu": 26.75,
-    "average": 44.28
+    "mmlu": 26.75
   },
   "RoversX/llama-2-7b-hf-small-shards-Samantha-V1-SFT": {
     "arc": 53.16,
@@ -5214,8 +5351,7 @@
     "arc": 60.92,
     "hellaswag": 84,
     "truthfulqa": 44.87,
-    "mmlu": 55.72,
-    "average": 61.38
+    "mmlu": 55.72
   },
   "Salesforce/codegen-16B-nl": {
     "arc": 46.76,
@@ -5281,8 +5417,7 @@
     "arc": 58.45,
     "hellaswag": 80.96,
     "truthfulqa": 43.31,
-    "mmlu": 54.8,
-    "average": 59.38
+    "mmlu": 54.8
   },
   "Sao10K/Euryale-1.3-L2-70B": {
     "arc": 70.82,
@@ -5454,6 +5589,16 @@
     "winogrande": 50.12,
     "average": 25.02
   },
+  "SciPhi/SciPhi-Self-RAG-Mistral-7B-32k": {
+    "arc": 57.34,
+    "hellaswag": 80.44,
+    "truthfulqa": 45.63,
+    "winogrande": 74.82,
+    "drop": 31.08,
+    "gsm8k": 19.71,
+    "mmlu": 60.81,
+    "average": 52.83
+  },
   "SebastianSchramm/Cerebras-GPT-111M-instruction": {
     "arc": 24.4,
     "hellaswag": 26.05,
@@ -5498,15 +5643,13 @@
     "arc": 52.9,
     "hellaswag": 74.68,
     "truthfulqa": 59.36,
-    "mmlu": 52.18,
-    "average": 59.78
+    "mmlu": 52.18
   },
   "Severian/ANIMA-Phi-Neptune-Mistral-7B-v3": {
     "arc": 56.83,
     "hellaswag": 78.82,
     "truthfulqa": 59.4,
-    "mmlu": 53.84,
-    "average": 62.22
+    "mmlu": 53.84
   },
   "Severian/ANIMA-Phi-Neptune-Mistral-7B-v4": {
     "arc": 55.46,
@@ -5522,8 +5665,7 @@
     "arc": 53.07,
     "hellaswag": 74.66,
     "truthfulqa": 59.38,
-    "mmlu": 52.13,
-    "average": 59.81
+    "mmlu": 52.13
   },
   "SkunkworksAI/Mistralic-7B-1": {
     "arc": 60.84,
@@ -5849,15 +5991,13 @@
     "arc": 38.82,
     "hellaswag": 59.02,
     "truthfulqa": 48.08,
-    "mmlu": 46.66,
-    "average": 48.15
+    "mmlu": 46.66
   },
   "Taekyoon/llama2-ko-7b-test": {
     "arc": 37.8,
     "hellaswag": 63.04,
     "truthfulqa": 36,
-    "mmlu": 29.55,
-    "average": 41.6
+    "mmlu": 29.55
   },
   "Tap-M/Luna-AI-Llama2-Uncensored": {
     "arc": 54.35,
@@ -6213,15 +6353,13 @@
     "arc": 25.85,
     "hellaswag": 31.57,
     "truthfulqa": 48.13,
-    "mmlu": 23.69,
-    "average": 32.31
+    "mmlu": 23.69
   },
   "TheBloke/Chinese-Alpaca-33B-SuperHOT-8K-fp16": {
     "arc": 26.79,
     "hellaswag": 29.56,
     "truthfulqa": 47.75,
-    "mmlu": 24.07,
-    "average": 32.04
+    "mmlu": 24.07
   },
   "TheBloke/CodeLlama-13B-Instruct-fp16": {
     "arc": 44.62,
@@ -6277,15 +6415,13 @@
     "arc": 28.33,
     "hellaswag": 33.48,
     "truthfulqa": 46.27,
-    "mmlu": 24.92,
-    "average": 33.25
+    "mmlu": 24.92
   },
   "TheBloke/Genz-70b-GPTQ": {
     "arc": 71.08,
     "hellaswag": 87.64,
     "truthfulqa": 62.28,
-    "mmlu": 70.26,
-    "average": 72.82
+    "mmlu": 70.26
   },
   "TheBloke/Guanaco-3B-Uncensored-v2-GPTQ": {
     "arc": 41.64,
@@ -6321,8 +6457,7 @@
     "arc": 65.27,
     "hellaswag": 84.41,
     "truthfulqa": 57.11,
-    "mmlu": 64.75,
-    "average": 67.89
+    "mmlu": 64.75
   },
   "TheBloke/Llama-2-13B-GPTQ": {
     "arc": 59.13,
@@ -6388,8 +6523,7 @@
     "arc": 28.33,
     "hellaswag": 26.12,
     "truthfulqa": 48.27,
-    "mmlu": 25.56,
-    "average": 32.07
+    "mmlu": 25.56
   },
   "TheBloke/Manticore-13B-Chat-Pyg-Guanaco-SuperHOT-8K-GPTQ": {
     "arc": 52.82,
@@ -6455,22 +6589,19 @@
     "arc": 25.68,
     "hellaswag": 30.82,
     "truthfulqa": 47.13,
-    "mmlu": 23.61,
-    "average": 31.81
+    "mmlu": 23.61
   },
   "TheBloke/Platypus2-70B-Instruct-GPTQ": {
     "arc": 71.25,
     "hellaswag": 87.55,
     "truthfulqa": 62.54,
-    "mmlu": 69.89,
-    "average": 72.81
+    "mmlu": 69.89
   },
   "TheBloke/Project-Baize-v2-13B-GPTQ": {
     "arc": 27.56,
     "hellaswag": 26.42,
     "truthfulqa": 48.22,
-    "mmlu": 25.91,
-    "average": 32.03
+    "mmlu": 25.91
   },
   "TheBloke/Project-Baize-v2-7B-GPTQ": {
     "arc": 45.99,
@@ -6526,8 +6657,7 @@
     "arc": 25.43,
     "hellaswag": 34.61,
     "truthfulqa": 46.93,
-    "mmlu": 23.62,
-    "average": 32.65
+    "mmlu": 23.62
   },
   "TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ": {
     "arc": 29.61,
@@ -6553,8 +6683,7 @@
     "arc": 26.19,
     "hellaswag": 32.96,
     "truthfulqa": 47.48,
-    "mmlu": 23.46,
-    "average": 32.52
+    "mmlu": 23.46
   },
   "TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ": {
     "arc": 61.09,
@@ -6700,8 +6829,7 @@
     "arc": 26.02,
     "hellaswag": 30.65,
     "truthfulqa": 47.92,
-    "mmlu": 23.57,
-    "average": 32.04
+    "mmlu": 23.57
   },
   "TheBloke/airoboros-7b-gpt4-fp16": {
     "arc": 53.07,
@@ -6787,8 +6915,7 @@
     "arc": 53.41,
     "hellaswag": 80.12,
     "truthfulqa": 53.58,
-    "mmlu": 51.22,
-    "average": 59.58
+    "mmlu": 51.22
   },
   "TheBloke/guanaco-13B-HF": {
     "arc": 57.85,
@@ -6834,8 +6961,7 @@
     "arc": 57.34,
     "hellaswag": 81.37,
     "truthfulqa": 45.46,
-    "mmlu": 48.09,
-    "average": 58.07
+    "mmlu": 48.09
   },
   "TheBloke/koala-13B-HF": {
     "arc": 52.99,
@@ -6881,8 +7007,7 @@
     "arc": 25.85,
     "hellaswag": 30.53,
     "truthfulqa": 47.04,
-    "mmlu": 23.5,
-    "average": 31.73
+    "mmlu": 23.5
   },
   "TheBloke/manticore-13b-chat-pyg-GPTQ": {
     "arc": 57.85,
@@ -6928,15 +7053,13 @@
     "arc": 30.12,
     "hellaswag": 25.99,
     "truthfulqa": 48.44,
-    "mmlu": 24.31,
-    "average": 32.21
+    "mmlu": 24.31
   },
   "TheBloke/robin-13B-v2-fp16": {
     "arc": 56.48,
     "hellaswag": 80.37,
     "truthfulqa": 50.63,
-    "mmlu": 48.79,
-    "average": 59.07
+    "mmlu": 48.79
   },
   "TheBloke/robin-33B-v2-GPTQ": {
     "arc": 27.73,
@@ -6952,8 +7075,7 @@
     "arc": 62.37,
     "hellaswag": 83.63,
     "truthfulqa": 53.88,
-    "mmlu": 54.71,
-    "average": 63.65
+    "mmlu": 54.71
   },
   "TheBloke/robin-65b-v2-fp16": {
     "arc": 61.95,
@@ -7069,8 +7191,7 @@
     "arc": 50.34,
     "hellaswag": 75.27,
     "truthfulqa": 45.58,
-    "mmlu": 38.07,
-    "average": 52.32
+    "mmlu": 38.07
   },
   "TheTravellingEngineer/bloom-1b1-RLHF": {
     "arc": 27.99,
@@ -7085,8 +7206,7 @@
   "TheTravellingEngineer/bloom-1b1-RLHF-v2": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "TheTravellingEngineer/bloom-560m-RLHF": {
     "arc": 24.4,
@@ -7252,15 +7372,13 @@
     "arc": 53.58,
     "hellaswag": 78.78,
     "truthfulqa": 39.48,
-    "mmlu": 46.11,
-    "average": 54.49
+    "mmlu": 46.11
   },
   "TinyPixel/llama2-7b-oa": {
     "arc": 53.41,
     "hellaswag": 78.72,
     "truthfulqa": 41.06,
-    "mmlu": 46.68,
-    "average": 54.97
+    "mmlu": 46.68
   },
   "TinyPixel/testmodel-3": {
     "arc": 53.24,
@@ -7496,8 +7614,7 @@
     "arc": 64.25,
     "hellaswag": 84.24,
     "truthfulqa": 55.57,
-    "mmlu": 63.9,
-    "average": 66.99
+    "mmlu": 63.9
   },
   "Undi95/Mistral-11B-TestBench11": {
     "arc": 64.42,
@@ -7513,15 +7630,13 @@
     "arc": 62.03,
     "hellaswag": 83.92,
     "truthfulqa": 53.66,
-    "mmlu": 63.11,
-    "average": 65.68
+    "mmlu": 63.11
   },
   "Undi95/Mistral-11B-TestBench7": {
     "arc": 63.31,
     "hellaswag": 82.86,
     "truthfulqa": 46.91,
-    "mmlu": 64.09,
-    "average": 64.29
+    "mmlu": 64.09
   },
   "Undi95/Mistral-11B-TestBench9": {
     "arc": 64.08,
@@ -7707,8 +7822,7 @@
     "arc": 72.95,
     "hellaswag": 87.88,
     "truthfulqa": 64.88,
-    "mmlu": 70.97,
-    "average": 74.17
+    "mmlu": 70.97
   },
   "ValiantLabs/ShiningValiantXS": {
     "arc": 63.48,
@@ -7834,8 +7948,7 @@
     "arc": 58.7,
     "hellaswag": 81.84,
     "truthfulqa": 53.18,
-    "mmlu": 57.77,
-    "average": 62.87
+    "mmlu": 57.77
   },
   "Weyaxi/Samantha-Nebula-7B": {
     "arc": 57,
@@ -8191,8 +8304,7 @@
     "arc": 51.19,
     "hellaswag": 73.32,
     "truthfulqa": 46.78,
-    "mmlu": 45.47,
-    "average": 54.19
+    "mmlu": 45.47
   },
   "YeungNLP/firefly-llama2-7b-pretrain": {
     "arc": 48.63,
@@ -8338,8 +8450,7 @@
     "arc": 52.22,
     "hellaswag": 76.92,
     "truthfulqa": 32.88,
-    "mmlu": 37.6,
-    "average": 49.9
+    "mmlu": 37.6
   },
   "abhishek/llama2guanacotest": {
     "arc": 51.62,
@@ -8425,15 +8536,13 @@
     "arc": 42.75,
     "hellaswag": 71.14,
     "truthfulqa": 37.85,
-    "mmlu": 43.63,
-    "average": 48.84
+    "mmlu": 43.63
   },
   "adept/persimmon-8b-chat": {
     "arc": 44.97,
     "hellaswag": 73.3,
     "truthfulqa": 35.93,
-    "mmlu": 44.98,
-    "average": 49.79
+    "mmlu": 44.98
   },
   "adonlee/LLaMA_2_13B_SFT_v0": {
     "arc": 62.03,
@@ -8449,14 +8558,12 @@
     "arc": 72.7,
     "hellaswag": 87.55,
     "truthfulqa": 64.52,
-    "mmlu": 70.84,
-    "average": 73.9
+    "mmlu": 70.84
   },
   "ahnyeonchan/OpenOrca-AYT-13B": {
     "drop": 0.01,
     "gsm8k": 0,
-    "winogrande": 49.72,
-    "average": 16.58
+    "winogrande": 49.72
   },
   "ahxt/llama2_xs_460M_experimental": {
     "arc": 24.91,
@@ -8492,8 +8599,7 @@
     "arc": 52.9,
     "hellaswag": 81.19,
     "truthfulqa": 44.95,
-    "mmlu": 53.47,
-    "average": 58.13
+    "mmlu": 53.47
   },
   "aiplanet/effi-7b": {
     "arc": 55.12,
@@ -8508,8 +8614,7 @@
   "aiplanet/panda-coder-13B": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "aisquared/chopt-1_3b": {
     "arc": 31.48,
@@ -8611,6 +8716,16 @@
     "winogrande": 53.99,
     "average": 29.01
   },
+  "ajibawa-2023/Python-Code-13B": {
+    "arc": 58.79,
+    "hellaswag": 81.66,
+    "truthfulqa": 42.83,
+    "winogrande": 74.03,
+    "drop": 8.5,
+    "gsm8k": 9.55,
+    "mmlu": 54.78,
+    "average": 47.16
+  },
   "ajibawa-2023/Uncensored-Frank-13B": {
     "arc": 61.6,
     "hellaswag": 82.62,
@@ -8640,6 +8755,26 @@
     "gsm8k": 5,
     "winogrande": 70.24,
     "average": 43.6
+  },
+  "ajibawa-2023/Uncensored-Jordan-13B": {
+    "arc": 57.42,
+    "hellaswag": 82.7,
+    "truthfulqa": 50.51,
+    "winogrande": 76.16,
+    "drop": 16.47,
+    "gsm8k": 15.09,
+    "mmlu": 55.75,
+    "average": 50.59
+  },
+  "ajibawa-2023/Uncensored-Jordan-7B": {
+    "arc": 51.28,
+    "hellaswag": 77.37,
+    "truthfulqa": 47.5,
+    "winogrande": 71.11,
+    "drop": 28.46,
+    "gsm8k": 6.75,
+    "mmlu": 45.69,
+    "average": 46.88
   },
   "ajibawa-2023/carl-33b": {
     "arc": 64.59,
@@ -8775,15 +8910,13 @@
     "arc": 41.64,
     "hellaswag": 67.11,
     "truthfulqa": 49.38,
-    "mmlu": 32.72,
-    "average": 47.71
+    "mmlu": 32.72
   },
   "aqweteddy/llama_chat-tv_en_luban-tv_stable_platypus2": {
     "arc": 44.54,
     "hellaswag": 61.02,
     "truthfulqa": 51.88,
-    "mmlu": 49.6,
-    "average": 51.76
+    "mmlu": 49.6
   },
   "ariellee/SuperPlatty-30B": {
     "arc": 65.78,
@@ -9129,8 +9262,7 @@
     "arc": 30.29,
     "hellaswag": 47.97,
     "truthfulqa": 41.28,
-    "mmlu": 30,
-    "average": 37.39
+    "mmlu": 30
   },
   "bigcode/starcoderplus": {
     "arc": 48.72,
@@ -9157,7 +9289,10 @@
     "hellaswag": 76.41,
     "truthfulqa": 39.76,
     "mmlu": 30.85,
-    "average": 49.36
+    "drop": 4.66,
+    "gsm8k": 6.9,
+    "winogrande": 72.06,
+    "average": 40.15
   },
   "bigscience/bloom-1b1": {
     "arc": 28.33,
@@ -9353,15 +9488,13 @@
     "arc": 53.07,
     "hellaswag": 78.57,
     "truthfulqa": 38.75,
-    "mmlu": 46.86,
-    "average": 54.31
+    "mmlu": 46.86
   },
   "bongchoi/test-llama2-70b": {
     "arc": 67.32,
     "hellaswag": 87.33,
     "truthfulqa": 44.92,
-    "mmlu": 69.83,
-    "average": 67.35
+    "mmlu": 69.83
   },
   "bongchoi/test-llama2-7b": {
     "arc": 53.07,
@@ -9587,8 +9720,7 @@
     "arc": 54.27,
     "hellaswag": 78.53,
     "truthfulqa": 40.54,
-    "mmlu": 46.4,
-    "average": 54.94
+    "mmlu": 46.4
   },
   "chargoddard/Chronorctypus-Limarobormes-13b": {
     "arc": 59.9,
@@ -9664,8 +9796,7 @@
     "arc": 55.03,
     "hellaswag": 79.9,
     "truthfulqa": 40.48,
-    "mmlu": 53.73,
-    "average": 57.29
+    "mmlu": 53.73
   },
   "chargoddard/llama-2-34b-uncode": {
     "arc": 39.51,
@@ -9810,8 +9941,7 @@
   "clibrain/Llama-2-ft-instruct-es": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "cmarkea/bloomz-3b-sft-chat": {
     "arc": 36.86,
@@ -9977,8 +10107,7 @@
     "arc": 49.74,
     "hellaswag": 72.88,
     "truthfulqa": 38.84,
-    "mmlu": 28.51,
-    "average": 47.49
+    "mmlu": 28.51
   },
   "conceptofmind/LLongMA-2-13b-16k": {
     "arc": 54.27,
@@ -9994,15 +10123,13 @@
     "arc": 52.22,
     "hellaswag": 76.21,
     "truthfulqa": 39.06,
-    "mmlu": 38.46,
-    "average": 51.49
+    "mmlu": 38.46
   },
   "conceptofmind/Open-LLongMA-3b": {
     "arc": 39.76,
     "hellaswag": 65.46,
     "truthfulqa": 34.51,
-    "mmlu": 24.95,
-    "average": 41.17
+    "mmlu": 24.95
   },
   "crumb/gpt2023": {
     "arc": 21.93,
@@ -10118,15 +10245,13 @@
     "arc": 64.85,
     "hellaswag": 85.25,
     "truthfulqa": 56.18,
-    "mmlu": 66.89,
-    "average": 68.29
+    "mmlu": 66.89
   },
   "deepnight-research/zsc-text": {
     "arc": 26.71,
     "hellaswag": 25.76,
     "truthfulqa": 48.35,
-    "mmlu": 23.12,
-    "average": 30.99
+    "mmlu": 23.12
   },
   "deepse/CodeUp-Llama-2-13b-chat-hf": {
     "arc": 59.04,
@@ -10137,6 +10262,16 @@
     "gsm8k": 15.24,
     "winogrande": 74.51,
     "average": 50.48
+  },
+  "dfurman/Llama-2-13B-Instruct-v0.2": {
+    "arc": 60.58,
+    "hellaswag": 81.96,
+    "truthfulqa": 45.71,
+    "winogrande": 77.82,
+    "drop": 7.22,
+    "gsm8k": 9.33,
+    "mmlu": 55.46,
+    "average": 48.3
   },
   "dfurman/falcon-40b-openassistant-peft": {
     "arc": 62.63,
@@ -10151,15 +10286,13 @@
   "dfurman/llama-2-13b-dolphin-peft": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "dfurman/llama-2-13b-guanaco-peft": {
     "arc": 59.98,
     "hellaswag": 82.43,
     "truthfulqa": 42.59,
-    "mmlu": 55.76,
-    "average": 60.19
+    "mmlu": 55.76
   },
   "dfurman/llama-2-70b-dolphin-peft": {
     "arc": 69.62,
@@ -10665,8 +10798,7 @@
     "arc": 53.75,
     "hellaswag": 79.24,
     "truthfulqa": 49.28,
-    "mmlu": 47.08,
-    "average": 57.34
+    "mmlu": 47.08
   },
   "edor/Platypus2-mini-7B": {
     "arc": 53.33,
@@ -10682,15 +10814,13 @@
     "arc": 54.86,
     "hellaswag": 78.95,
     "truthfulqa": 51.06,
-    "mmlu": 51.78,
-    "average": 59.16
+    "mmlu": 51.78
   },
   "ehartford/CodeLlama-34b-Instruct-hf": {
     "arc": 40.78,
     "hellaswag": 35.68,
     "truthfulqa": 44.29,
-    "mmlu": 39.75,
-    "average": 40.13
+    "mmlu": 39.75
   },
   "ehartford/CodeLlama-34b-Python-hf": {
     "arc": 38.05,
@@ -10871,6 +11001,16 @@
     "gsm8k": 20.77,
     "winogrande": 77.74,
     "average": 53.47
+  },
+  "ehartford/dolphin-2.2.1-mistral-7b": {
+    "arc": 63.48,
+    "hellaswag": 83.86,
+    "truthfulqa": 53.17,
+    "winogrande": 78.37,
+    "drop": 8.19,
+    "gsm8k": 21.08,
+    "mmlu": 63.28,
+    "average": 53.06
   },
   "ehartford/dolphin-llama-13b": {
     "arc": 55.55,
@@ -11072,6 +11212,16 @@
     "winogrande": 49.72,
     "average": 24.89
   },
+  "euclaise/Ferret-7B": {
+    "arc": 62.2,
+    "hellaswag": 81.75,
+    "truthfulqa": 40.94,
+    "winogrande": 77.35,
+    "drop": 5.87,
+    "gsm8k": 5.76,
+    "mmlu": 60.82,
+    "average": 47.81
+  },
   "euclaise/falcon_1b_stage1": {
     "arc": 35.15,
     "hellaswag": 62.4,
@@ -11136,15 +11286,13 @@
     "arc": 34.13,
     "hellaswag": 40.91,
     "truthfulqa": 41.4,
-    "mmlu": 27.09,
-    "average": 35.88
+    "mmlu": 27.09
   },
   "facebook/galactica-30b": {
     "arc": 47.35,
     "hellaswag": 61.21,
     "truthfulqa": 38.01,
-    "mmlu": 47.56,
-    "average": 48.53
+    "mmlu": 47.56
   },
   "facebook/opt-1.3b": {
     "arc": 29.52,
@@ -11540,8 +11688,7 @@
     "arc": 48.38,
     "hellaswag": 71.78,
     "truthfulqa": 44.73,
-    "mmlu": 44.5,
-    "average": 52.35
+    "mmlu": 44.5
   },
   "golaxy/gogpt2-7b": {
     "arc": 46.76,
@@ -11607,43 +11754,37 @@
     "arc": 24.74,
     "hellaswag": 27.84,
     "truthfulqa": 48.26,
-    "mmlu": 23.12,
-    "average": 30.99
+    "mmlu": 23.12
   },
   "grimpep/L2-MythoMax22b-instruct-Falseblock": {
     "arc": 60.49,
     "hellaswag": 82.06,
     "truthfulqa": 55.77,
-    "mmlu": 52.9,
-    "average": 62.81
+    "mmlu": 52.9
   },
   "grimpep/MythoMax-L2-33b": {
     "arc": 57.25,
     "hellaswag": 79.12,
     "truthfulqa": 52.48,
-    "mmlu": 50.85,
-    "average": 59.93
+    "mmlu": 50.85
   },
   "grimpep/llama2-22B-GPLATTY": {
     "arc": 58.96,
     "hellaswag": 82.01,
     "truthfulqa": 46.93,
-    "mmlu": 54.55,
-    "average": 60.61
+    "mmlu": 54.55
   },
   "grimpep/llama2-22b-wizard_vicuna": {
     "arc": 58.96,
     "hellaswag": 82.01,
     "truthfulqa": 46.93,
-    "mmlu": 54.55,
-    "average": 60.61
+    "mmlu": 54.55
   },
   "grimpep/llama2-28B-Airo03": {
     "arc": 58.45,
     "hellaswag": 81.39,
     "truthfulqa": 47.09,
-    "mmlu": 53.31,
-    "average": 60.06
+    "mmlu": 53.31
   },
   "guardrail/llama-2-7b-guanaco-instruct-sharded": {
     "arc": 53.75,
@@ -11659,8 +11800,7 @@
     "arc": 59.81,
     "hellaswag": 75.72,
     "truthfulqa": 45.72,
-    "mmlu": 54.18,
-    "average": 58.86
+    "mmlu": 54.18
   },
   "gywy/llama2-13b-chinese-v2": {
     "arc": 53.92,
@@ -11776,15 +11916,13 @@
     "arc": 64.76,
     "hellaswag": 85.94,
     "truthfulqa": 48.85,
-    "mmlu": 63.57,
-    "average": 65.78
+    "mmlu": 63.57
   },
   "h2oai/h2ogpt-research-oig-oasst1-512-30b": {
     "arc": 58.96,
     "hellaswag": 82.61,
     "truthfulqa": 48.47,
-    "mmlu": 50.74,
-    "average": 60.2
+    "mmlu": 50.74
   },
   "hakurei/instruct-12b": {
     "arc": 42.58,
@@ -11800,8 +11938,7 @@
     "arc": 30.72,
     "hellaswag": 52.71,
     "truthfulqa": 40.12,
-    "mmlu": 24.55,
-    "average": 37.03
+    "mmlu": 24.55
   },
   "haonan-li/bactrian-x-llama-13b-merged": {
     "arc": 56.4,
@@ -12247,8 +12384,7 @@
     "arc": 28.5,
     "hellaswag": 25.5,
     "truthfulqa": 48.14,
-    "mmlu": 24.89,
-    "average": 31.76
+    "mmlu": 24.89
   },
   "jb723/llama2-ko-7B-model": {
     "arc": 56.31,
@@ -12853,8 +12989,7 @@
   "jslin09/bloom-560m-finetuned-fraud": {
     "drop": 0.33,
     "gsm8k": 0,
-    "winogrande": 48.38,
-    "average": 16.24
+    "winogrande": 48.38
   },
   "julianweng/Llama-2-7b-chat-orcah": {
     "arc": 45.39,
@@ -12900,15 +13035,13 @@
     "arc": 59.13,
     "hellaswag": 81.78,
     "truthfulqa": 48.61,
-    "mmlu": 54.42,
-    "average": 60.99
+    "mmlu": 54.42
   },
   "kajdun/viwaai-30b_v4": {
     "arc": 63.48,
     "hellaswag": 84.19,
     "truthfulqa": 53.25,
-    "mmlu": 57.47,
-    "average": 64.6
+    "mmlu": 57.47
   },
   "kashif/stack-llama-2": {
     "arc": 53.07,
@@ -12954,8 +13087,7 @@
     "arc": 58.62,
     "hellaswag": 81.87,
     "truthfulqa": 48.28,
-    "mmlu": 54.96,
-    "average": 60.93
+    "mmlu": 54.96
   },
   "kingbri/airolima-chronos-grad-l2-13B": {
     "arc": 59.56,
@@ -12991,22 +13123,19 @@
     "arc": 36.52,
     "hellaswag": 60.86,
     "truthfulqa": 35.03,
-    "mmlu": 26.78,
-    "average": 39.8
+    "mmlu": 26.78
   },
   "klosax/open_llama_7b_400bt_preview": {
     "arc": 39.51,
     "hellaswag": 65.88,
     "truthfulqa": 36.04,
-    "mmlu": 27.64,
-    "average": 42.27
+    "mmlu": 27.64
   },
   "klosax/openllama-3b-350bt": {
     "arc": 36.52,
     "hellaswag": 60.86,
     "truthfulqa": 35.03,
-    "mmlu": 26.78,
-    "average": 39.8
+    "mmlu": 26.78
   },
   "klosax/pythia-160m-deduped-step92k-193bt": {
     "arc": 24.23,
@@ -13032,15 +13161,13 @@
     "arc": 56.74,
     "hellaswag": 81.57,
     "truthfulqa": 38,
-    "mmlu": 51.2,
-    "average": 56.88
+    "mmlu": 51.2
   },
   "krevas/LDCC-Instruct-Llama-2-ko-13B-v2": {
     "arc": 56.4,
     "hellaswag": 81.82,
     "truthfulqa": 39.78,
-    "mmlu": 45.57,
-    "average": 55.89
+    "mmlu": 45.57
   },
   "l3utterfly/llama2-7b-layla": {
     "arc": 54.18,
@@ -13051,6 +13178,26 @@
     "gsm8k": 8.49,
     "winogrande": 74.11,
     "average": 45.56
+  },
+  "l3utterfly/mistral-7b-v0.1-layla-v1": {
+    "arc": 60.15,
+    "hellaswag": 83.25,
+    "truthfulqa": 48.9,
+    "winogrande": 75.93,
+    "drop": 40.01,
+    "gsm8k": 16.83,
+    "mmlu": 60.31,
+    "average": 55.05
+  },
+  "l3utterfly/mistral-7b-v0.1-layla-v2": {
+    "arc": 27.05,
+    "hellaswag": 25.87,
+    "truthfulqa": 49.04,
+    "winogrande": 48.93,
+    "drop": 0,
+    "gsm8k": 0,
+    "mmlu": 25.38,
+    "average": 25.18
   },
   "l3utterfly/open-llama-3b-v2-layla": {
     "arc": 38.23,
@@ -13191,6 +13338,16 @@
     "gsm8k": 16.38,
     "winogrande": 78.14,
     "average": 50.74
+  },
+  "lgaalves/mistral-7b_open_platypus": {
+    "arc": 55.8,
+    "hellaswag": 82.13,
+    "truthfulqa": 48.87,
+    "winogrande": 78.61,
+    "drop": 6.59,
+    "gsm8k": 12.59,
+    "mmlu": 59.76,
+    "average": 49.19
   },
   "lgaalves/tinyllama-1.1b-chat-v0.3_platypus": {
     "arc": 30.29,
@@ -13336,29 +13493,25 @@
     "arc": 69.62,
     "hellaswag": 86.95,
     "truthfulqa": 58.2,
-    "mmlu": 69.17,
-    "average": 70.99
+    "mmlu": 69.17
   },
   "lloorree/kssht-castor-70b": {
     "arc": 69.54,
     "hellaswag": 87.53,
     "truthfulqa": 56.31,
-    "mmlu": 70.38,
-    "average": 70.94
+    "mmlu": 70.38
   },
   "lloorree/kssht-dahj-70b": {
     "arc": 70.82,
     "hellaswag": 87.3,
     "truthfulqa": 58.92,
-    "mmlu": 70.43,
-    "average": 71.87
+    "mmlu": 70.43
   },
   "lloorree/kssht-euripedes-70b": {
     "arc": 69.8,
     "hellaswag": 87.59,
     "truthfulqa": 55.51,
-    "mmlu": 70.43,
-    "average": 70.83
+    "mmlu": 70.43
   },
   "lmsys/longchat-13b-16k": {
     "arc": 53.58,
@@ -13610,16 +13763,6 @@
     "winogrande": 74.19,
     "average": 49.49
   },
-  "lvkaokao/mistral-7b-finetuned-orca-dpo-v2": {
-    "arc": 66.21,
-    "hellaswag": 83.64,
-    "truthfulqa": 59.65,
-    "winogrande": 78.14,
-    "drop": 43.84,
-    "gsm8k": 19.56,
-    "mmlu": 62.37,
-    "average": 59.06
-  },
   "lxe/Cerebras-GPT-2.7B-Alpaca-SP": {
     "arc": 30.8,
     "hellaswag": 48.88,
@@ -13644,8 +13787,7 @@
     "arc": 29.01,
     "hellaswag": 25.95,
     "truthfulqa": 49.56,
-    "mmlu": 23.53,
-    "average": 32.01
+    "mmlu": 23.53
   },
   "marcchew/LaMini-40k-Platypus2-7B": {
     "arc": 28.5,
@@ -13737,6 +13879,26 @@
     "mmlu": 55.56,
     "average": 49.26
   },
+  "maywell/Synatra-7B-v0.3-RP": {
+    "arc": 62.2,
+    "hellaswag": 82.29,
+    "truthfulqa": 52.64,
+    "winogrande": 76.48,
+    "drop": 46.06,
+    "gsm8k": 21.15,
+    "mmlu": 60.8,
+    "average": 57.37
+  },
+  "maywell/Synatra-7B-v0.3-dpo": {
+    "arc": 62.8,
+    "hellaswag": 82.58,
+    "truthfulqa": 56.46,
+    "winogrande": 76.24,
+    "drop": 8.68,
+    "gsm8k": 23.73,
+    "mmlu": 61.46,
+    "average": 53.14
+  },
   "maywell/Synatra-V0.1-7B": {
     "arc": 55.29,
     "hellaswag": 76.63,
@@ -13756,6 +13918,16 @@
     "gsm8k": 19.41,
     "winogrande": 72.77,
     "average": 53.54
+  },
+  "maywell/koOpenChat-sft": {
+    "arc": 59.81,
+    "hellaswag": 78.73,
+    "truthfulqa": 51.24,
+    "winogrande": 76.4,
+    "drop": 7.82,
+    "gsm8k": 24.18,
+    "mmlu": 61.32,
+    "average": 51.36
   },
   "medalpaca/medalpaca-7b": {
     "arc": 54.1,
@@ -13941,8 +14113,7 @@
     "arc": 54.86,
     "hellaswag": 74.33,
     "truthfulqa": 44.67,
-    "mmlu": 53.2,
-    "average": 56.77
+    "mmlu": 53.2
   },
   "migtissera/Synthia-70B": {
     "arc": 69.45,
@@ -14003,6 +14174,16 @@
     "gsm8k": 10.84,
     "winogrande": 73.56,
     "average": 47.5
+  },
+  "migtissera/Tess-XS-v1.0": {
+    "arc": 61.43,
+    "hellaswag": 83.82,
+    "truthfulqa": 47.12,
+    "winogrande": 78.93,
+    "drop": 6.18,
+    "gsm8k": 18.27,
+    "mmlu": 64.1,
+    "average": 51.41
   },
   "minlik/chinese-alpaca-33b-merged": {
     "arc": 59.3,
@@ -14098,8 +14279,7 @@
     "arc": 55.89,
     "hellaswag": 82.41,
     "truthfulqa": 38.38,
-    "mmlu": 47.93,
-    "average": 56.15
+    "mmlu": 47.93
   },
   "mosaicml/mpt-30b-chat": {
     "arc": 58.36,
@@ -14195,29 +14375,25 @@
     "arc": 50.68,
     "hellaswag": 76.41,
     "truthfulqa": 35.47,
-    "mmlu": 28.73,
-    "average": 47.82
+    "mmlu": 28.73
   },
   "nathan0/mpt_delta_tuned_model_v3": {
     "arc": 50.6,
     "hellaswag": 76.4,
     "truthfulqa": 35.46,
-    "mmlu": 27.29,
-    "average": 47.44
+    "mmlu": 27.29
   },
   "nicholasKluge/Aira-124M": {
     "arc": 24.57,
     "hellaswag": 31.29,
     "truthfulqa": 41.02,
-    "mmlu": 25.29,
-    "average": 30.54
+    "mmlu": 25.29
   },
   "nicholasKluge/Aira-1B5": {
     "arc": 28.92,
     "hellaswag": 43.11,
     "truthfulqa": 41.16,
-    "mmlu": 27.29,
-    "average": 35.12
+    "mmlu": 27.29
   },
   "nicholasKluge/Aira-2-1B1": {
     "arc": 23.21,
@@ -14268,6 +14444,16 @@
     "gsm8k": 3.79,
     "winogrande": 73.48,
     "average": 45.31
+  },
+  "nnpy/Nape-0": {
+    "arc": 32.68,
+    "hellaswag": 58.68,
+    "truthfulqa": 38.99,
+    "winogrande": 57.3,
+    "drop": 3.89,
+    "gsm8k": 0.08,
+    "mmlu": 24.88,
+    "average": 30.93
   },
   "nomic-ai/gpt4all-j": {
     "arc": 41.98,
@@ -14333,8 +14519,7 @@
     "arc": 71.84,
     "hellaswag": 86.78,
     "truthfulqa": 64.8,
-    "mmlu": 69.4,
-    "average": 73.21
+    "mmlu": 69.4
   },
   "oh-yeontaek/llama-2-70B-LoRA-assemble-v2": {
     "arc": 71.84,
@@ -14486,6 +14671,16 @@
     "winogrande": 49.33,
     "average": 25.36
   },
+  "openchat/openchat_3.5": {
+    "arc": 62.46,
+    "hellaswag": 83.96,
+    "truthfulqa": 45.43,
+    "winogrande": 81.06,
+    "drop": 6.93,
+    "gsm8k": 25.78,
+    "mmlu": 62.89,
+    "average": 52.64
+  },
   "openchat/openchat_8192": {
     "arc": 59.56,
     "hellaswag": 81.44,
@@ -14600,8 +14795,7 @@
     "arc": 35.07,
     "hellaswag": 61.79,
     "truthfulqa": 37.77,
-    "mmlu": 25.45,
-    "average": 40.02
+    "mmlu": 25.45
   },
   "openlm-research/open_llama_7b_v2": {
     "arc": 43.69,
@@ -14637,15 +14831,13 @@
     "arc": 24.32,
     "hellaswag": 25.08,
     "truthfulqa": 50.85,
-    "mmlu": 23.19,
-    "average": 30.86
+    "mmlu": 23.19
   },
   "pankajmathur/model_007": {
     "arc": 71.08,
     "hellaswag": 87.65,
     "truthfulqa": 63.12,
-    "mmlu": 69.04,
-    "average": 72.72
+    "mmlu": 69.04
   },
   "pankajmathur/orca_mini_v3_13b": {
     "arc": 63.14,
@@ -14661,8 +14853,7 @@
     "arc": 71.25,
     "hellaswag": 87.85,
     "truthfulqa": 61.27,
-    "mmlu": 70.18,
-    "average": 72.64
+    "mmlu": 70.18
   },
   "pankajmathur/orca_mini_v3_7b": {
     "arc": 56.91,
@@ -14814,6 +15005,26 @@
     "mmlu": 27.35,
     "average": 26.65
   },
+  "postbot/gpt2-medium-emailgen": {
+    "arc": 26.45,
+    "hellaswag": 34.31,
+    "truthfulqa": 43.96,
+    "winogrande": 50.43,
+    "drop": 2.53,
+    "gsm8k": 0,
+    "mmlu": 24.1,
+    "average": 25.97
+  },
+  "postbot/pythia-160m-hq-emails": {
+    "arc": 23.12,
+    "hellaswag": 30.05,
+    "truthfulqa": 45.51,
+    "winogrande": 50.28,
+    "drop": 0.31,
+    "gsm8k": 0,
+    "mmlu": 26.58,
+    "average": 25.12
+  },
   "princeton-nlp/Sheared-LLaMA-1.3B": {
     "arc": 32.85,
     "hellaswag": 60.91,
@@ -14833,6 +15044,16 @@
     "gsm8k": 1.06,
     "winogrande": 67.01,
     "average": 35.66
+  },
+  "prithivida/Asimov-7B-v1": {
+    "arc": 59.04,
+    "hellaswag": 80.04,
+    "truthfulqa": 51.15,
+    "winogrande": 73.95,
+    "drop": 6.69,
+    "gsm8k": 9.33,
+    "mmlu": 56.35,
+    "average": 48.08
   },
   "project-baize/baize-healthcare-lora-7B": {
     "arc": 54.1,
@@ -15079,8 +15300,7 @@
     "arc": 49.74,
     "hellaswag": 78.45,
     "truthfulqa": 42.92,
-    "mmlu": 40.41,
-    "average": 52.88
+    "mmlu": 40.41
   },
   "pszemraj/pythia-31m-KI_v1-2048-scratch": {
     "arc": 23.12,
@@ -15216,22 +15436,19 @@
     "arc": 70.56,
     "hellaswag": 86.39,
     "truthfulqa": 56.08,
-    "mmlu": 69.41,
-    "average": 70.61
+    "mmlu": 69.41
   },
   "quantumaikr/llama-2-70B-chat": {
     "arc": 67.58,
     "hellaswag": 86.94,
     "truthfulqa": 57.31,
-    "mmlu": 69.18,
-    "average": 70.25
+    "mmlu": 69.18
   },
   "quantumaikr/llama-2-70b-fb16-guanaco-1k": {
     "arc": 70.48,
     "hellaswag": 87.33,
     "truthfulqa": 57.56,
-    "mmlu": 70.25,
-    "average": 71.41
+    "mmlu": 70.25
   },
   "quantumaikr/llama-2-70b-fb16-korean": {
     "arc": 67.15,
@@ -15267,22 +15484,19 @@
     "arc": 26.45,
     "hellaswag": 26.95,
     "truthfulqa": 49.54,
-    "mmlu": 26.54,
-    "average": 32.37
+    "mmlu": 26.54
   },
   "quantumaikr/quantumairk-llama-2-70B-instruct": {
     "arc": 70.31,
     "hellaswag": 87.05,
     "truthfulqa": 54.42,
-    "mmlu": 70.46,
-    "average": 70.56
+    "mmlu": 70.46
   },
   "radm/Philosophy-Platypus2-13b": {
     "arc": 58.62,
     "hellaswag": 78.52,
     "truthfulqa": 37.34,
-    "mmlu": 54.3,
-    "average": 57.19
+    "mmlu": 54.3
   },
   "rameshm/llama-2-13b-mathgpt-v4": {
     "arc": 50.94,
@@ -15324,12 +15538,21 @@
     "winogrande": 47.99,
     "average": 27.67
   },
+  "rinna/bilingual-gpt-neox-4b-instruction-sft": {
+    "arc": 28.07,
+    "hellaswag": 47.5,
+    "truthfulqa": 43.76,
+    "winogrande": 52.33,
+    "drop": 0.44,
+    "gsm8k": 0,
+    "mmlu": 23.12,
+    "average": 27.89
+  },
   "rishiraj/bloom-560m-guanaco": {
     "arc": 27.9,
     "hellaswag": 26.11,
     "truthfulqa": 49.37,
-    "mmlu": 24.46,
-    "average": 31.96
+    "mmlu": 24.46
   },
   "robowaifudev/megatron-gpt2-345m": {
     "arc": 24.23,
@@ -15435,8 +15658,7 @@
     "arc": 30.63,
     "hellaswag": 48.09,
     "truthfulqa": 41.77,
-    "mmlu": 30.4,
-    "average": 37.72
+    "mmlu": 30.4
   },
   "sartmis1/starcoder-finetune-selfinstruct": {
     "arc": 31.23,
@@ -15592,8 +15814,7 @@
     "arc": 65.44,
     "hellaswag": 84.41,
     "truthfulqa": 54.81,
-    "mmlu": 64.05,
-    "average": 67.18
+    "mmlu": 64.05
   },
   "speechlessai/speechless-codellama-34b-v1.0": {
     "arc": 52.47,
@@ -15735,6 +15956,26 @@
     "winogrande": 53.12,
     "average": 29.98
   },
+  "starmpcc/Asclepius-Llama2-13B": {
+    "arc": 55.89,
+    "hellaswag": 79.66,
+    "truthfulqa": 40.76,
+    "winogrande": 72.69,
+    "drop": 12.42,
+    "gsm8k": 0.15,
+    "mmlu": 52.38,
+    "average": 44.85
+  },
+  "starmpcc/Asclepius-Llama2-7B": {
+    "arc": 50.85,
+    "hellaswag": 76.53,
+    "truthfulqa": 43.31,
+    "winogrande": 68.27,
+    "drop": 13.8,
+    "gsm8k": 0.3,
+    "mmlu": 43.61,
+    "average": 42.38
+  },
   "synapsoft/Llama-2-7b-chat-hf-flan2022-1.2M": {
     "arc": 49.57,
     "hellaswag": 76.25,
@@ -15758,8 +15999,7 @@
   "team-lucid/mptk-1b": {
     "drop": 0.17,
     "gsm8k": 0,
-    "winogrande": 49.72,
-    "average": 16.63
+    "winogrande": 49.72
   },
   "teknium/CollectiveCognition-v1-Mistral-7B": {
     "arc": 62.37,
@@ -15805,18 +16045,17 @@
     "arc": 63.05,
     "hellaswag": 83.81,
     "truthfulqa": 50.24,
-    "mmlu": 63.46,
-    "average": 65.14
+    "mmlu": 63.46
   },
   "teknium/OpenHermes-2.5-Mistral-7B": {
     "arc": 64.93,
-    "hellaswag": 84.3,
-    "truthfulqa": 52.31,
-    "winogrande": 77.9,
-    "drop": 35.99,
-    "gsm8k": 25.47,
-    "mmlu": 63.82,
-    "average": 57.82
+    "hellaswag": 84.18,
+    "truthfulqa": 52.24,
+    "winogrande": 78.06,
+    "drop": 35.79,
+    "gsm8k": 26.08,
+    "mmlu": 63.64,
+    "average": 57.85
   },
   "teknium/OpenHermes-7B": {
     "arc": 56.14,
@@ -15832,8 +16071,7 @@
     "arc": 53.92,
     "hellaswag": 77.83,
     "truthfulqa": 45.24,
-    "mmlu": 45.5,
-    "average": 55.62
+    "mmlu": 45.5
   },
   "tiiuae/falcon-180B": {
     "arc": 69.2,
@@ -15849,8 +16087,7 @@
     "arc": 64.42,
     "hellaswag": 88.04,
     "truthfulqa": 53.69,
-    "mmlu": 68.03,
-    "average": 68.55
+    "mmlu": 68.03
   },
   "tiiuae/falcon-40b": {
     "drop": 6.41,
@@ -15906,15 +16143,13 @@
     "arc": 62.46,
     "hellaswag": 84.48,
     "truthfulqa": 51.22,
-    "mmlu": 53.78,
-    "average": 62.99
+    "mmlu": 53.78
   },
   "timdettmers/guanaco-65b-merged": {
     "arc": 27.47,
     "hellaswag": 26.6,
     "truthfulqa": 48.41,
-    "mmlu": 25.17,
-    "average": 31.91
+    "mmlu": 25.17
   },
   "titan087/OpenLlama13B-Guanaco": {
     "arc": 51.19,
@@ -16150,15 +16385,13 @@
     "arc": 50.94,
     "hellaswag": 78.14,
     "truthfulqa": 41.65,
-    "mmlu": 37.99,
-    "average": 52.18
+    "mmlu": 37.99
   },
   "uberkie/metharme-1.3b-finetuned": {
     "arc": 20.56,
     "hellaswag": 28.02,
     "truthfulqa": 44.8,
-    "mmlu": 25.26,
-    "average": 29.66
+    "mmlu": 25.26
   },
   "unaidedelf87777/wizard-mistral-v0.1": {
     "arc": 61.77,
@@ -16193,8 +16426,7 @@
   "upstage/Llama-2-70b-instruct-1024": {
     "drop": 58.42,
     "gsm8k": 32.22,
-    "winogrande": 82.87,
-    "average": 57.84
+    "winogrande": 82.87
   },
   "upstage/SOLAR-0-70b-16bit": {
     "arc": 71.08,
@@ -16536,6 +16768,26 @@
     "winogrande": 49.41,
     "average": 25.09
   },
+  "vihangd/shearedplats-1.3b-v1": {
+    "arc": 35.41,
+    "hellaswag": 62.75,
+    "truthfulqa": 33.93,
+    "winogrande": 58.48,
+    "drop": 5.55,
+    "gsm8k": 0.53,
+    "mmlu": 24.75,
+    "average": 31.63
+  },
+  "vihangd/shearedplats-2.7b-v2": {
+    "arc": 42.41,
+    "hellaswag": 72.58,
+    "truthfulqa": 39.76,
+    "winogrande": 65.9,
+    "drop": 7.34,
+    "gsm8k": 1.52,
+    "mmlu": 27.52,
+    "average": 36.72
+  },
   "vihangd/smartyplats-3b-v1": {
     "arc": 40.53,
     "hellaswag": 70.85,
@@ -16630,8 +16882,7 @@
     "arc": 51.28,
     "hellaswag": 77.46,
     "truthfulqa": 43.28,
-    "mmlu": 33.18,
-    "average": 51.3
+    "mmlu": 33.18
   },
   "wei123602/FINETUNE3_TEST4": {
     "arc": 55.63,
@@ -16747,8 +16998,7 @@
     "arc": 60.67,
     "hellaswag": 83.93,
     "truthfulqa": 47.63,
-    "mmlu": 64.42,
-    "average": 64.16
+    "mmlu": 64.42
   },
   "wenge-research/yayi-7b": {
     "arc": 46.33,
@@ -16823,22 +17073,19 @@
   "wtang06/mpt-125m-c4": {
     "drop": 0,
     "gsm8k": 0,
-    "winogrande": 49.57,
-    "average": 16.52
+    "winogrande": 49.57
   },
   "xDAN-AI/xDAN-L1-Thinking": {
     "arc": 63.74,
     "hellaswag": 84.53,
     "truthfulqa": 52.13,
-    "mmlu": 62.9,
-    "average": 65.83
+    "mmlu": 62.9
   },
   "xDAN-AI/xDAN_13b_l2_lora": {
     "arc": 61.01,
     "hellaswag": 82.64,
     "truthfulqa": 44.75,
-    "mmlu": 56.03,
-    "average": 61.11
+    "mmlu": 56.03
   },
   "xhyi/PT_GPTNEO350_ATG": {
     "arc": 25.43,
@@ -16854,15 +17101,13 @@
     "arc": 45.73,
     "hellaswag": 71.48,
     "truthfulqa": 37.3,
-    "mmlu": 33.47,
-    "average": 47
+    "mmlu": 33.47
   },
   "xxyyy123/10k_v1_lora_qkvo_rank14_v3": {
     "arc": 55.97,
     "hellaswag": 79.22,
     "truthfulqa": 53.44,
-    "mmlu": 50.71,
-    "average": 59.84
+    "mmlu": 50.71
   },
   "xxyyy123/10k_v1_lora_qkvo_rank28_v2": {
     "arc": 55.38,
@@ -16878,8 +17123,7 @@
     "arc": 55.38,
     "hellaswag": 79.1,
     "truthfulqa": 51.58,
-    "mmlu": 50.65,
-    "average": 59.18
+    "mmlu": 50.65
   },
   "xxyyy123/mc_data_30k_from_platpus_orca_7b_10k_v1_lora_qkvo_rank14_v2": {
     "arc": 57.17,
@@ -16895,15 +17139,13 @@
     "arc": 62.46,
     "hellaswag": 82.37,
     "truthfulqa": 56.18,
-    "mmlu": 58.05,
-    "average": 64.77
+    "mmlu": 58.05
   },
   "xxyyy123/test_qkvo_adptor": {
     "arc": 55.38,
     "hellaswag": 78.99,
     "truthfulqa": 53.53,
-    "mmlu": 51.64,
-    "average": 59.89
+    "mmlu": 51.64
   },
   "xzuyn/Alpacino-SuperCOT-13B": {
     "arc": 58.36,
@@ -16979,8 +17221,7 @@
     "arc": 59.47,
     "hellaswag": 82.41,
     "truthfulqa": 41.92,
-    "mmlu": 57.15,
-    "average": 60.24
+    "mmlu": 57.15
   },
   "yeontaek/Platypus2-13B-QLoRa": {
     "arc": 57.51,
@@ -17006,15 +17247,13 @@
     "arc": 62.12,
     "hellaswag": 82.28,
     "truthfulqa": 47.46,
-    "mmlu": 59.07,
-    "average": 62.73
+    "mmlu": 59.07
   },
   "yeontaek/Platypus2xOpenOrca-13B-IA3-v2": {
     "arc": 62.29,
     "hellaswag": 82.09,
     "truthfulqa": 47.03,
-    "mmlu": 57.91,
-    "average": 62.33
+    "mmlu": 57.91
   },
   "yeontaek/Platypus2xOpenOrca-13B-IA3-v2.1": {
     "arc": 62.29,
@@ -17070,8 +17309,7 @@
     "arc": 61.26,
     "hellaswag": 80.52,
     "truthfulqa": 41.82,
-    "mmlu": 57.84,
-    "average": 60.36
+    "mmlu": 57.84
   },
   "yeontaek/WizardCoder-Python-13B-LoRa": {
     "arc": 47.78,
@@ -17097,36 +17335,31 @@
     "arc": 62.29,
     "hellaswag": 82.36,
     "truthfulqa": 50.16,
-    "mmlu": 57.59,
-    "average": 63.1
+    "mmlu": 57.59
   },
   "yeontaek/llama-2-13B-ensemble-v3": {
     "arc": 62.37,
     "hellaswag": 82.29,
     "truthfulqa": 49.78,
-    "mmlu": 57.67,
-    "average": 63.03
+    "mmlu": 57.67
   },
   "yeontaek/llama-2-13B-ensemble-v4": {
     "arc": 62.97,
     "hellaswag": 82.38,
     "truthfulqa": 51.82,
-    "mmlu": 56.48,
-    "average": 63.41
+    "mmlu": 56.48
   },
   "yeontaek/llama-2-13B-ensemble-v5": {
     "arc": 62.63,
     "hellaswag": 83.06,
     "truthfulqa": 53.27,
-    "mmlu": 59.49,
-    "average": 64.61
+    "mmlu": 59.49
   },
   "yeontaek/llama-2-13B-ensemble-v6": {
     "arc": 52.22,
     "hellaswag": 80.95,
     "truthfulqa": 52.64,
-    "mmlu": 57.38,
-    "average": 60.8
+    "mmlu": 57.38
   },
   "yeontaek/llama-2-13b-Beluga-QLoRA": {
     "arc": 59.22,
@@ -17162,50 +17395,43 @@
     "arc": 68.77,
     "hellaswag": 85.36,
     "truthfulqa": 64.51,
-    "mmlu": 68.04,
-    "average": 71.67
+    "mmlu": 68.04
   },
   "yeontaek/llama-2-70B-ensemble-v3": {
     "arc": 68.52,
     "hellaswag": 87.16,
     "truthfulqa": 64.22,
-    "mmlu": 68.15,
-    "average": 72.01
+    "mmlu": 68.15
   },
   "yeontaek/llama-2-70B-ensemble-v4": {
     "arc": 70.9,
     "hellaswag": 87.34,
     "truthfulqa": 62.6,
-    "mmlu": 69.71,
-    "average": 72.64
+    "mmlu": 69.71
   },
   "yeontaek/llama-2-70B-ensemble-v5": {
     "arc": 71.16,
     "hellaswag": 87.24,
     "truthfulqa": 63.45,
-    "mmlu": 69.6,
-    "average": 72.86
+    "mmlu": 69.6
   },
   "yeontaek/llama-2-70B-ensemble-v6": {
     "arc": 70.99,
     "hellaswag": 87.2,
     "truthfulqa": 62.43,
-    "mmlu": 68.07,
-    "average": 72.17
+    "mmlu": 68.07
   },
   "yeontaek/llama-2-70B-ensemble-v7": {
     "arc": 70.31,
     "hellaswag": 87.31,
     "truthfulqa": 63.1,
-    "mmlu": 68.34,
-    "average": 72.27
+    "mmlu": 68.34
   },
   "yeontaek/llama-2-70B-ensemble-v8": {
     "arc": 67.24,
     "hellaswag": 84.56,
     "truthfulqa": 62.11,
-    "mmlu": 63.56,
-    "average": 69.37
+    "mmlu": 63.56
   },
   "yeontaek/llama-2-70b-IA3-guanaco": {
     "arc": 68.52,
@@ -17241,50 +17467,43 @@
     "arc": 54.35,
     "hellaswag": 80.01,
     "truthfulqa": 41.8,
-    "mmlu": 37.44,
-    "average": 53.4
+    "mmlu": 37.44
   },
   "yihan6324/llama-2-7b-instructmining-60k-sharegpt": {
     "arc": 54.44,
     "hellaswag": 78.59,
     "truthfulqa": 52.9,
-    "mmlu": 51.26,
-    "average": 59.3
+    "mmlu": 51.26
   },
   "yihan6324/llama2-13b-instructmining-40k-sharegpt": {
     "arc": 59.98,
     "hellaswag": 83.06,
     "truthfulqa": 52.44,
-    "mmlu": 56.48,
-    "average": 62.99
+    "mmlu": 56.48
   },
   "yihan6324/llama2-7b-instructmining-40k-sharegpt": {
     "arc": 55.12,
     "hellaswag": 78.96,
     "truthfulqa": 53.18,
-    "mmlu": 50.43,
-    "average": 59.42
+    "mmlu": 50.43
   },
   "yihan6324/llama2-7b-instructmining-60k-sharegpt": {
     "arc": 54.44,
     "hellaswag": 78.59,
     "truthfulqa": 52.9,
-    "mmlu": 51.26,
-    "average": 59.3
+    "mmlu": 51.26
   },
   "yihan6324/llama2-7b-instructmining-orca-40k": {
     "arc": 56.74,
     "hellaswag": 80.24,
     "truthfulqa": 51.03,
-    "mmlu": 48.16,
-    "average": 59.04
+    "mmlu": 48.16
   },
   "yihan6324/llama2-7b-instructmining-orca-90k": {
     "arc": 54.44,
     "hellaswag": 80.45,
     "truthfulqa": 49.36,
-    "mmlu": 50.89,
-    "average": 58.79
+    "mmlu": 50.89
   },
   "yulan-team/YuLan-Chat-2-13b-fp16": {
     "arc": 59.04,
@@ -17340,8 +17559,7 @@
     "arc": 56.06,
     "hellaswag": 79.37,
     "truthfulqa": 51.17,
-    "mmlu": 51.45,
-    "average": 59.51
+    "mmlu": 51.45
   },
   "zarakiquemparte/zarafusionex-1.1-l2-7b": {
     "arc": 56.14,
