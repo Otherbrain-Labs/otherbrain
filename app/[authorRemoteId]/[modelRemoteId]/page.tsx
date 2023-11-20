@@ -16,7 +16,6 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import ReviewDialog from "@/components/review-dialog";
 import ReviewsAndSamples from "./reviews-and-samples";
 import { Samples } from "./samples";
-import { Suspense } from "react";
 import Reviews from "./reviews";
 
 export async function loadModel(modelRemoteId: string, authorRemoteId: string) {

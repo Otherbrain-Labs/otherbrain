@@ -1,7 +1,8 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { GeistSans, GeistMono } from "geist/font";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
 import { MainNav } from "@/components/main-nav";
