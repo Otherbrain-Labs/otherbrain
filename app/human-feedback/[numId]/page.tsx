@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Return } from "@prisma/client/runtime/library";
 import LabelSample from "./label-sample";
 import StarRating from "@/components/ui/star-rating";
+import { Badge } from "@/components/ui/badge";
 
 function loadSample(numId: number) {
   console.log("numId", numId);
@@ -21,7 +22,14 @@ function loadSample(numId: number) {
 }
 
 async function loadSuggestedTags() {
-  const first = ["Roleplay", "History", "Science", "Politics", "Philosophy"];
+  const first = [
+    "coding",
+    "roleplay",
+    "history",
+    "science",
+    "politics",
+    "philosophy",
+  ];
   const popular = await prisma.humanFeedbackTag.findMany({
     where: {
       NOT: {
@@ -68,7 +76,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
           </h1>
         </div>
 
-        <div className="flex items-center mt-1.5 text-muted-foreground">
+        <div className="flex items-center mt-1.5 text-muted-foreground mb-1">
           <div className="text-sm">
             {model?.remoteId && (
               <>
@@ -85,6 +93,16 @@ export default async function Home({ params }: { params: { numId: string } }) {
             <StarRating rating={humanFeedback.quality} />
           )}
         </div>
+        {humanFeedback.tags.map((tag) => (
+          <Badge key={tag.name} variant="secondary" className="mr-2">
+            {tag.name}
+          </Badge>
+        ))}
+        {humanFeedback.nsfw && (
+          <Badge variant="secondary" className="mr-1">
+            NSFW
+          </Badge>
+        )}
       </div>
 
       <div className="text-xs mb-10">

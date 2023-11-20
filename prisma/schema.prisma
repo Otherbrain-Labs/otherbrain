@@ -142,6 +142,7 @@ model HumanFeedback {
   client           String
   quality          Int?
   messages         HumanFeedbackMessage[]
+  nsfw             Boolean?
 
   // we connect with a model if we find one via the modelName
   modelId String?
