@@ -21,7 +21,7 @@ jobs:
         run: yarn
       - name: Scrape scores
         run: npx ts-node -T scripts/ci/scrape-scores.ts
-  scrape:
+  scrape-preview:
     environment: Production
     runs-on: ubuntu-latest
     env:
