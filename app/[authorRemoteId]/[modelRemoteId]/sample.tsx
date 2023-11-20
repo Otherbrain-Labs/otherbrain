@@ -21,7 +21,7 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
         <div className="flex items-center justify-between mb-3">
           <Link
             className="hover:underline"
-            href={`/human-feedback/${humanFeedback.id}`}
+            href={`/human-feedback/${humanFeedback.numId}`}
           >
             {humanFeedback.createdAt.toLocaleDateString()}
           </Link>

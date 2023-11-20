@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `HumanFeedback` MODIFY `numId` INTEGER NOT NULL AUTO_INCREMENT;

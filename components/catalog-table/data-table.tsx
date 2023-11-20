@@ -27,6 +27,8 @@ import { DataTablePagination } from "./data-table-pagination";
 import { DataTableToolbar } from "./data-table-toolbar";
 import { useRouter, useSearchParams } from "next/navigation";
 
+const DEFAULT_SORT = "average";
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -41,7 +43,7 @@ export function DataTable<TData, TValue>({
 
   const [sorting, setSorting] = useState<SortingState>([
     {
-      id: searchParams.get("sortingId") || "lastModifiedDate",
+      id: searchParams.get("sortingId") || DEFAULT_SORT,
       desc: searchParams.get("sortingDesc") === "true",
     },
   ]);
@@ -85,7 +87,7 @@ export function DataTable<TData, TValue>({
     const params = new URLSearchParams(searchParams);
     if (
       sorting.length > 0 &&
-      !(sorting[0].id === "lastModifiedDate" && !sorting[0].desc)
+      !(sorting[0].id === DEFAULT_SORT && !sorting[0].desc)
     ) {
       params.set("sortingId", sorting[0].id);
       params.set("sortingDesc", sorting[0].desc ? "true" : "false");
