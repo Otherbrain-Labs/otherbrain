@@ -3,6 +3,16 @@ import { execSync } from "child_process";
 import savedScores from "./data/scores.json";
 import prisma from "../lib/prisma";
 
+const REQUIRED_SCORES = [
+  "arc",
+  "hellaswag",
+  "truthfulqa",
+  "drop",
+  "gsm8k",
+  "winogrande",
+  "mmlu",
+];
+
 const RESULTS_TMP_DIR = process.env.GITHUB_WORKSPACE
   ? `${process.env.GITHUB_WORKSPACE}/llm-leaderboard-scores`
   : `/tmp/llm-leaderboard-scores`;
@@ -104,8 +114,11 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
         }
       }
 
-      const allValues = Object.values(scores);
-      if (allValues.length > 0) {
+      const hasRequiredScores = REQUIRED_SCORES.every(
+        (score) => score in scores
+      );
+      if (hasRequiredScores) {
+        const allValues = Object.values(scores);
         scores.average = roundFloat(
           allValues.reduce((a, b) => a + b) / allValues.length
         );
@@ -142,7 +155,7 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
   const existingIdsFlat = existingIds.map((model) => model.remoteId);
   const scores = useSaved ? savedScores : await scrape(saveData);
 
-  for (const key in scores) {
+  for (let key in scores) {
     if (!scores.hasOwnProperty(key)) {
       continue;
     }
