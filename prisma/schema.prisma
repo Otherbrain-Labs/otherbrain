@@ -134,18 +134,23 @@ model Review {
 
 model HumanFeedback {
   id               String                 @id @default(cuid())
+  numId            Int                    @unique @default(autoincrement())
   createdAt        DateTime               @default(now())
   modelName        String
   promptTemplate   String
   lastSystemPrompt String
   client           String
+  quality          Int?
   messages         HumanFeedbackMessage[]
 
   // we connect with a model if we find one via the modelName
   modelId String?
   model   Model?  @relation(fields: [modelId], references: [id])
 
+  tags HumanFeedbackTag[]
+
   @@index([modelId])
+  @@index(numId)
 }
 
 model HumanFeedbackMessage {
@@ -157,4 +162,10 @@ model HumanFeedbackMessage {
   humanFeedback   HumanFeedback @relation(fields: [humanFeedbackId], references: [id])
 
   @@index([humanFeedbackId])
+}
+
+model HumanFeedbackTag {
+  name String @id @unique
+
+  humanFeedbacks HumanFeedback[]
 }

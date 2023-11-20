@@ -16,7 +16,7 @@ export default function ReviewsForm({ modelId }: { modelId: string }) {
         >
           Stars
         </label>
-        <StarRater rating={2} />
+        <StarRater />
       </div>
 
       <div className="mt-4">

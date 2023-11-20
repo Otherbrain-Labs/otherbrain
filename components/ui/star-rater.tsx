@@ -1,18 +1,19 @@
-// small ui component for inputting a star rating
-// hovering stars lights them up and clicking sets the rating
-
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Star from "./star";
 
-export type StarRaterProps = {
-  rating: number;
+type StarRaterProps = {
+  defaultValue?: number;
 };
 
-export default function StarRater({}: StarRaterProps) {
+export default function StarRater({ defaultValue = 0 }: StarRaterProps) {
   const [hoverRating, setHoverRating] = useState(0);
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(defaultValue);
+
+  useEffect(() => {
+    setRating(defaultValue);
+  }, [defaultValue]);
 
   return (
     <div className="flex items-center">
