@@ -27,9 +27,6 @@ export async function update(humanFeedbackId: string, formData: FormData) {
     },
   });
 
-  console.log("nsfw", formData.get("nsfw"));
-  console.log("formData", formData);
-
   // purge unlinked tags
   await prisma.humanFeedbackTag.deleteMany({
     where: {

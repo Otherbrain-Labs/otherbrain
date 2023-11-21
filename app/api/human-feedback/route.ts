@@ -71,7 +71,7 @@ export async function POST(request: Request) {
     });
   }
 
-  return new Response(JSON.stringify({ id: humanFeedback.id }), {
+  return new Response(JSON.stringify({ id: humanFeedback.numId }), {
     headers: { "content-type": "application/json" },
   });
 }
