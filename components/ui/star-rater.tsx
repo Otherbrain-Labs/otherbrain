@@ -5,9 +5,13 @@ import Star from "./star";
 
 type StarRaterProps = {
   defaultValue?: number;
+  descriptions?: string[];
 };
 
-export default function StarRater({ defaultValue = 0 }: StarRaterProps) {
+export default function StarRater({
+  defaultValue = 0,
+  descriptions,
+}: StarRaterProps) {
   const [hoverRating, setHoverRating] = useState(0);
   const [rating, setRating] = useState(defaultValue);
 
@@ -44,6 +48,12 @@ export default function StarRater({ defaultValue = 0 }: StarRaterProps) {
           </button>
         );
       })}
+
+      {descriptions && (
+        <span className="ml-2 text-xs text-muted-foreground">
+          {descriptions[rating - 1]}
+        </span>
+      )}
     </div>
   );
 }

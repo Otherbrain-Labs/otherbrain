@@ -17,22 +17,20 @@ import { useState } from "react";
 type LabelSampleProps = {
   humanFeedback: HumanFeedback;
   suggestedTags: string[];
+  children: React.ReactNode;
 };
 
 export default function LabelSample({
   humanFeedback,
   suggestedTags,
+  children,
 }: LabelSampleProps) {
   const updateFeedback = update.bind(null, humanFeedback.id);
   const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button size="sm" className="px-3">
-          Label sample
-        </Button>
-      </SheetTrigger>
+      <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent>
         <SheetHeader>Label sample #{humanFeedback.numId}</SheetHeader>
         This info makes your sample more useful for training future models.
@@ -46,6 +44,13 @@ export default function LabelSample({
                 <td align="left" valign="top">
                   <StarRater
                     defaultValue={humanFeedback.quality || undefined}
+                    descriptions={[
+                      "horrible",
+                      "bad",
+                      "useful",
+                      "good",
+                      "impressive",
+                    ]}
                   />
                 </td>
               </tr>

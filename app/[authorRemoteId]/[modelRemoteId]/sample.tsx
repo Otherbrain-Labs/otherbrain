@@ -18,14 +18,14 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
       className="mt-4 border rounded p-4 space-y-4 leading-tight text-xs"
     >
       {!hideDate && (
-        <div className="flex items-center justify-between mb-3">
-          <Link
-            className="hover:underline"
-            href={`/human-feedback/${humanFeedback.numId}`}
-          >
-            {humanFeedback.createdAt.toLocaleDateString()}
-          </Link>
-        </div>
+        <Link
+          className="hover:underline flex items-center justify-between mb-3"
+          href={`/human-feedback/${humanFeedback.numId}`}
+        >
+          <div>Sample #{humanFeedback.numId}</div>
+
+          {humanFeedback.createdAt.toLocaleDateString()}
+        </Link>
       )}
       <Markdown
         className="prose prose-sm dark:prose-invert italic leading-tight text-xs"

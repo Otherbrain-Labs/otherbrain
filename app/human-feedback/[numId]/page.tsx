@@ -7,6 +7,13 @@ import LabelSample from "./label-sample";
 import StarRating from "@/components/ui/star-rating";
 import { Badge } from "@/components/ui/badge";
 import { CheckIcon } from "@radix-ui/react-icons";
+import {
+  CheckCheck,
+  CheckCircle2,
+  CheckCircle2Icon,
+  CheckSquare,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 function loadSample(numId: number) {
   console.log("numId", numId);
@@ -70,21 +77,21 @@ export default async function Home({ params }: { params: { numId: string } }) {
 
   return (
     <div className="max-w-xl mb-20 mx-auto">
-      <div className="text-xs my-10 p-4 bg-green-100">
-        <div className="max-w-xl mx-auto flex flex-col sm:flex-row items-end sm:items-center">
-          <div className="sm:pr-6 pb-4 sm:pb-0">
+      <div className="max-w-lg mx-auto text-xs my-10 p-4 bg-green-100">
+        <div className="mx-auto flex flex-col sm:flex-row items-end sm:items-center">
+          <div className="">
             <div className="pb-1 text-xs font-semibold flex items-center space-x-3">
-              Sample added ✌️, label it
+              <CheckIcon
+                strokeWidth={4}
+                className="mr-2 h-4 w-4 text-green-900"
+              />
+              Sample added to Otherbrain HF
             </div>
             Otherbrain HF is a free human feedback dataset for training open
             LLMs. It's growing every day with contributions like yours. Our hope
             is to accelerate open model training and adoption. Please label your
             sample to make it more useful.
           </div>
-          <LabelSample
-            humanFeedback={humanFeedback}
-            suggestedTags={suggestedTags}
-          />
         </div>
       </div>
 
@@ -93,6 +100,14 @@ export default async function Home({ params }: { params: { numId: string } }) {
           <h1 className="text-3xl mr-2 font-semibold truncate font-mono">
             Sample #{humanFeedback.numId}
           </h1>
+          <LabelSample
+            humanFeedback={humanFeedback}
+            suggestedTags={suggestedTags}
+          >
+            <Button size="sm" className="px-3">
+              Label it
+            </Button>
+          </LabelSample>
         </div>
 
         <div className="flex items-center mt-1.5 text-muted-foreground mb-1">
