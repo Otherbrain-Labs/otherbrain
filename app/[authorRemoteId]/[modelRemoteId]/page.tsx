@@ -67,7 +67,7 @@ export default async function Home({
       <div className="sm:flex justify-between items-top border-b pb-5 md:pb-0">
         <div className="mb-3 md:mb-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl md:text-5xl mr-2 font-semibold">
+            <h1 className="text-3xl md:text-5xl mr-2 font-bold">
               {model.name}
             </h1>
           </div>

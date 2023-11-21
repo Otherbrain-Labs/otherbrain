@@ -35,9 +35,9 @@ export default async function Home({
   const models = await loadModels(author.id);
   return (
     <div className="mt-6">
-      <h1 className="text-2xl font-semibold">{author.name}</h1>
+      <h1 className="text-2xl font-bold">{author.name}</h1>
 
-      <h2 className="text-xl font-semibold mt-4">Models</h2>
+      <h2 className="text-xl font-bold mt-4">Models</h2>
       <Catalog models={models} />
     </div>
   );
