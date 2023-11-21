@@ -97,6 +97,16 @@ export default async function Home({
 
       <h1 className="text-3xl md:text-7xl mr-2 font-semibold">{model.name}</h1>
       <div className="mt-4">
+        {" "}
+        {!model.reviews.find(
+          (review) => review.userId === session?.user?.id
+        ) && (
+          <ReviewDialog model={model}>
+            <Button className="hover:underline hover:bg-primary py-6 px-12 mr-3">
+              Write a review
+            </Button>
+          </ReviewDialog>
+        )}
         {model.remoteId && (
           <Button
             variant="outline"
@@ -112,15 +122,6 @@ export default async function Home({
               <ExternalLinkIcon className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        )}
-        {!model.reviews.find(
-          (review) => review.userId === session?.user?.id
-        ) && (
-          <ReviewDialog model={model}>
-            <Button className="hover:underline hover:bg-primary py-6 px-12">
-              Write a review
-            </Button>
-          </ReviewDialog>
         )}
       </div>
 
