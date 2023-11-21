@@ -77,7 +77,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
 
   return (
     <div className="max-w-xl mb-20 mx-auto">
-      <div className="max-w-lg mx-auto text-xs my-10 p-4 bg-green-100">
+      <div className="max-w-xl mx-auto text-xs my-10 p-4 bg-green-100">
         <div className="mx-auto flex flex-col sm:flex-row items-end sm:items-center">
           <div className="">
             <div className="pb-1 text-xs font-semibold flex items-center space-x-3">
