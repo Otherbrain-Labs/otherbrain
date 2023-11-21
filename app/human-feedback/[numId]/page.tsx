@@ -107,10 +107,21 @@ export default async function Home({ params }: { params: { numId: string } }) {
             humanFeedback={humanFeedback}
             suggestedTags={suggestedTags}
           >
-            <Button className="text-muted-foreground" size="sm" variant="ghost">
-              Edit
-              <PencilLineIcon className="w-3 h-3 ml-1.5" />
-            </Button>
+            {humanFeedback.quality ? (
+              <Button
+                className="text-muted-foreground"
+                size="sm"
+                variant="ghost"
+              >
+                Edit
+                <PencilLineIcon className="w-3 h-3 ml-1.5" />
+              </Button>
+            ) : (
+              <Button size="sm" className="mt-2">
+                Label it
+                <PencilLineIcon className="w-3 h-3 ml-1.5" />
+              </Button>
+            )}
           </LabelChat>
         </div>
       </div>
