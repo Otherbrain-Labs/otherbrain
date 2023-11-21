@@ -11,7 +11,7 @@ export default function MyStar({ filled, className }: StarProps) {
     <Star
       className={cn("w-4 h-4 stroke-none relative -top-px", className, {
         "fill-amber-400": filled,
-        "fill-gray-300": !filled,
+        "fill-gray-400": !filled,
       })}
     />
   );

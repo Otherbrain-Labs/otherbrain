@@ -40,7 +40,7 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
             .map((message, i) => (
               <tr key={message.id}>
                 <td align="right" valign="top">
-                  <div className="font-bold italic row-auto">
+                  <div className="font-semibold italic row-auto">
                     {message.fromUser ? "human" : "bot"}
                   </div>
                 </td>

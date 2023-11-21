@@ -6,6 +6,7 @@ import { Return } from "@prisma/client/runtime/library";
 import LabelSample from "./label-sample";
 import StarRating from "@/components/ui/star-rating";
 import { Badge } from "@/components/ui/badge";
+import { CheckIcon } from "@radix-ui/react-icons";
 
 function loadSample(numId: number) {
   console.log("numId", numId);
@@ -68,10 +69,28 @@ export default async function Home({ params }: { params: { numId: string } }) {
   const { model } = humanFeedback;
 
   return (
-    <div className="mt-6 max-w-xl mb-20 mx-auto">
+    <div className="max-w-xl mb-20 mx-auto">
+      <div className="text-xs my-10 p-4 bg-green-100">
+        <div className="max-w-xl mx-auto flex flex-col sm:flex-row items-end sm:items-center">
+          <div className="sm:pr-6 pb-4 sm:pb-0">
+            <div className="pb-1 text-xs font-semibold flex items-center space-x-3">
+              Sample added ✌️, label it
+            </div>
+            Otherbrain HF is a free human feedback dataset for training open
+            LLMs. It's growing every day with contributions like yours. Our hope
+            is to accelerate open model training and adoption. Please label your
+            sample to make it more useful.
+          </div>
+          <LabelSample
+            humanFeedback={humanFeedback}
+            suggestedTags={suggestedTags}
+          />
+        </div>
+      </div>
+
       <div className="mb-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl md:text-5xl mr-2 font-semibold truncate font-mono">
+          <h1 className="text-3xl mr-2 font-semibold truncate font-mono">
             Sample #{humanFeedback.numId}
           </h1>
         </div>
@@ -103,20 +122,6 @@ export default async function Home({ params }: { params: { numId: string } }) {
             NSFW
           </Badge>
         )}
-      </div>
-
-      <div className="text-xs mb-10">
-        Thanks for adding to Otherbrain Open Samples (OOS), a free dataset for
-        training open models. It is small, but growing every day with
-        contributions like yours. Our hope is to accelerate open model training
-        with user-curated training data and accelerate open model adoption with
-        interesting samples.
-        <br />
-        <br />
-        <LabelSample
-          humanFeedback={humanFeedback}
-          suggestedTags={suggestedTags}
-        />
       </div>
 
       <Sample humanFeedback={humanFeedback} hideDate />

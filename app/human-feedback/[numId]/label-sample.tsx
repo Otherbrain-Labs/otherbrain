@@ -29,22 +29,19 @@ export default function LabelSample({
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <div className="flex justify-end w-full">
-          <Button className="bg-green-300 text-black px-3">
-            Label your sample
-          </Button>
-        </div>
+        <Button size="sm" className="px-3">
+          Label sample
+        </Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>Label sample #{humanFeedback.numId}</SheetHeader>
-        Adding more info about your sample makes it more useful for training
-        future models.
+        This info makes your sample more useful for training future models.
         <form className="mt-4" action={updateFeedback}>
           <table className="table-auto border-separate border-spacing-2 text-xs">
             <tbody>
               <tr>
                 <td align="right" valign="top">
-                  <div className="font-bold italic row-auto">Quality</div>
+                  <div className="font-semibold row-auto">Quality</div>
                 </td>
                 <td align="left" valign="top">
                   <StarRater
@@ -54,7 +51,7 @@ export default function LabelSample({
               </tr>
               <tr>
                 <td align="right" valign="top">
-                  <div className="font-bold italic row-auto">Tags</div>
+                  <div className="font-semibold row-auto">Tags</div>
                 </td>
                 <td align="left" valign="top" className="w-full">
                   <TagPicker
@@ -65,7 +62,7 @@ export default function LabelSample({
               </tr>
               <tr>
                 <td align="right" valign="top">
-                  <label htmlFor="nsfw" className="font-bold italic row-auto">
+                  <label htmlFor="nsfw" className="font-semibold row-auto">
                     NSFW?
                   </label>
                 </td>

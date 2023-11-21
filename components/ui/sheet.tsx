@@ -61,7 +61,7 @@ const SheetContent = React.forwardRef<
     {/* <SheetOverlay /> */}
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ side }), className)}
+      className={cn(sheetVariants({ side }), "bg-gray-100", className)}
       {...props}
     >
       {children}
@@ -80,7 +80,7 @@ const SheetHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "flex flex-col space-y-2 text-center sm:text-left",
+      "flex flex-col space-y-2 text-center sm:text-left font-semibold pb-2",
       className
     )}
     {...props}
