@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { HumanFeedback } from "./samples";
+import { HumanFeedback } from "./chats";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { cn } from "@/lib/utils";
 
-type SampleProps = {
+type ChatProps = {
   humanFeedback: HumanFeedback;
   hideDate?: boolean;
 };
 
-export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
+export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
   const messages = humanFeedback.messages.sort((a, b) => a.index - b.index);
 
   return (
@@ -19,10 +19,10 @@ export default async function Sample({ humanFeedback, hideDate }: SampleProps) {
     >
       {!hideDate && (
         <Link
-          className="hover:underline flex items-center justify-between mb-3"
+          className="hover:underline flex items-center justify-between mb-3 font-mono"
           href={`/human-feedback/${humanFeedback.numId}`}
         >
-          <div>Sample #{humanFeedback.numId}</div>
+          <div>Chat #{humanFeedback.numId}</div>
 
           {humanFeedback.createdAt.toLocaleDateString()}
         </Link>

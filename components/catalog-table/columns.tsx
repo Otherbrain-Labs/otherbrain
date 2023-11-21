@@ -29,7 +29,7 @@ export const idToTitle: Record<string, string> = {
   winogrande: "Winogrande",
   gsm8k: "GSM8K",
   drop: "DROP",
-  numHumanFeedback: "Samples",
+  numHumanFeedback: "Chats",
 };
 
 function SortHeader({ column }: { column: Column<Model> }) {

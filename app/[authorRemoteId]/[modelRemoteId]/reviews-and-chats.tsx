@@ -5,24 +5,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-type ReviewsAndSamplesProps = {
+type ReviewsAndChatsProps = {
   model: Model;
   reviews: React.ReactNode;
-  samples: React.ReactNode;
+  chats: React.ReactNode;
 };
 
-export default function ReviewsAndSamples({
+export default function ReviewsAndChats({
   model,
   reviews,
-  samples,
-}: ReviewsAndSamplesProps) {
+  chats,
+}: ReviewsAndChatsProps) {
   const { numHumanFeedback, numReviews } = model;
   const router = useRouter();
   const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!numReviews && numHumanFeedback)
-      router.replace(`?tab=samples`, { scroll: false });
+      router.replace(`?tab=chats`, { scroll: false });
   }, [router]);
 
   return (
@@ -46,15 +46,15 @@ export default function ReviewsAndSamples({
           Reviews
           {numReviews && numReviews > 0 ? ` (${numReviews})` : ""}
         </TabsTrigger>
-        <TabsTrigger value="samples">
-          Samples
+        <TabsTrigger value="chats">
+          Examples
           {numHumanFeedback && numHumanFeedback > 0
             ? ` (${numHumanFeedback})`
             : ""}
         </TabsTrigger>
       </TabsList>
       <TabsContent value="reviews">{reviews}</TabsContent>
-      <TabsContent value="samples">{samples}</TabsContent>
+      <TabsContent value="chats">{chats}</TabsContent>
     </Tabs>
   );
 }

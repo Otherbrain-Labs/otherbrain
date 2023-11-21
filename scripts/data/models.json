@@ -125545,7 +125545,7 @@
         "coqui/voice-chat-with-mistral",
         "ysharma/Zephyr-Playground",
         "limcheekin/zephyr-7B-beta-GGUF",
-        "library-samples/zephyr-7b",
+        "library-chats/zephyr-7b",
         "openskyml/zephyr-7b-chat",
         "gstaff/KiteWind",
         "pseudolab/K23MiniMed",

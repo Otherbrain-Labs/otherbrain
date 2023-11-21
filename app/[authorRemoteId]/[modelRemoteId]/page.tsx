@@ -14,8 +14,8 @@ import { avgStarsFormatter } from "@/lib/utils";
 import { getServerSession } from "@/lib/auth";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import ReviewDialog from "@/components/review-dialog";
-import ReviewsAndSamples from "./reviews-and-samples";
-import { Samples } from "./samples";
+import ReviewsAndChats from "./reviews-and-chats";
+import { Chats } from "./chats";
 import Reviews from "./reviews";
 
 export async function loadModel(modelRemoteId: string, authorRemoteId: string) {
@@ -190,9 +190,9 @@ export default async function Home({
       )}
 
       <div className="max-w-xl mb-20">
-        <ReviewsAndSamples
+        <ReviewsAndChats
           model={model}
-          samples={<Samples model={model} />}
+          chats={<Chats model={model} />}
           reviews={<Reviews model={model} />}
         />
       </div>

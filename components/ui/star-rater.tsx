@@ -51,7 +51,7 @@ export default function StarRater({
 
       {descriptions && (
         <span className="ml-2 text-xs text-muted-foreground">
-          {descriptions[rating - 1]}
+          {descriptions[hoverRating - 1]}
         </span>
       )}
     </div>

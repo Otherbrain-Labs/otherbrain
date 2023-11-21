@@ -25,6 +25,12 @@ const styles: StylesConfig<unknown, true> = {
       paddingBottom: 0,
     };
   },
+  multiValueLabel(base) {
+    return {
+      ...base,
+      fontSize: "0.75rem",
+    };
+  },
 };
 
 function ClearIndicator(props: ClearIndicatorProps<unknown>) {
@@ -68,12 +74,10 @@ export default function TagPicker({
         components={{ DropdownIndicator, MultiValueRemove, ClearIndicator }}
         theme={(theme) => ({
           ...theme,
-          borderRadius: 0,
+          borderRadius: 8,
           colors: {
             ...theme.colors,
             primary: "hsl(var(--accent-foreground))",
-            // primary75: "var(--destructive-foreground)",
-            // primary50: "var(--destructive-foreground)",
             primary25: "#ccc",
           },
           // spacing: {

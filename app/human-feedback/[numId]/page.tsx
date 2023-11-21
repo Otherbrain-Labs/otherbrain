@@ -1,21 +1,15 @@
-import Sample from "@/app/[authorRemoteId]/[modelRemoteId]/sample";
+import Chat from "@/app/[authorRemoteId]/[modelRemoteId]/chat";
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Return } from "@prisma/client/runtime/library";
-import LabelSample from "./label-sample";
+import LabelChat from "./label-chat";
 import StarRating from "@/components/ui/star-rating";
 import { Badge } from "@/components/ui/badge";
-import { CheckIcon } from "@radix-ui/react-icons";
-import {
-  CheckCheck,
-  CheckCircle2,
-  CheckCircle2Icon,
-  CheckSquare,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PencilLineIcon } from "lucide-react";
 
-function loadSample(numId: number) {
+function loadChat(numId: number) {
   console.log("numId", numId);
   return prisma.humanFeedback.findFirst({
     where: {
@@ -57,7 +51,7 @@ async function loadSuggestedTags() {
   return [...first, ...popular.map((tag) => tag.name)];
 }
 
-export type HumanFeedback = NonNullable<Awaited<Return<typeof loadSample>>>;
+export type HumanFeedback = NonNullable<Awaited<Return<typeof loadChat>>>;
 
 export default async function Home({ params }: { params: { numId: string } }) {
   const numId = parseInt(params.numId);
@@ -66,7 +60,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
   }
 
   const [humanFeedback, suggestedTags] = await Promise.all([
-    loadSample(numId),
+    loadChat(numId),
     loadSuggestedTags(),
   ]);
   if (!humanFeedback) {
@@ -77,37 +71,12 @@ export default async function Home({ params }: { params: { numId: string } }) {
 
   return (
     <div className="max-w-xl mb-20 mx-auto">
-      <div className="max-w-xl mx-auto text-xs my-10 p-4 bg-green-100">
-        <div className="mx-auto flex flex-col sm:flex-row items-end sm:items-center">
-          <div className="">
-            <div className="pb-1 text-xs font-semibold flex items-center space-x-3">
-              <CheckIcon
-                strokeWidth={4}
-                className="mr-2 h-4 w-4 text-green-900"
-              />
-              Sample added to Otherbrain HF
-            </div>
-            Otherbrain HF is a free human feedback dataset for training open
-            LLMs. It's growing every day with contributions like yours. Our hope
-            is to accelerate open model training and adoption. Please label your
-            sample to make it more useful.
-          </div>
-        </div>
-      </div>
-
       <div className="mb-6">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between items-end">
           <h1 className="text-3xl mr-2 font-semibold truncate font-mono">
-            Sample #{humanFeedback.numId}
+            Chat #{humanFeedback.numId},{" "}
+            {humanFeedback.createdAt.toLocaleDateString()}
           </h1>
-          <LabelSample
-            humanFeedback={humanFeedback}
-            suggestedTags={suggestedTags}
-          >
-            <Button size="sm" className="px-3">
-              Label it
-            </Button>
-          </LabelSample>
         </div>
 
         <div className="flex items-center mt-1.5 text-muted-foreground mb-1">
@@ -123,23 +92,30 @@ export default async function Home({ params }: { params: { numId: string } }) {
               </>
             )}
           </div>
+        </div>
+        <div className="flex items-center space-x-2">
           {humanFeedback.quality && (
             <StarRating rating={humanFeedback.quality} />
           )}
+          {humanFeedback.tags.map((tag) => (
+            <Badge key={tag.name} variant="secondary">
+              {tag.name}
+            </Badge>
+          ))}
+          {humanFeedback.nsfw && <Badge variant="secondary">NSFW</Badge>}
+          <LabelChat
+            humanFeedback={humanFeedback}
+            suggestedTags={suggestedTags}
+          >
+            <Button className="text-muted-foreground" size="sm" variant="ghost">
+              Edit
+              <PencilLineIcon className="w-3 h-3 ml-1.5" />
+            </Button>
+          </LabelChat>
         </div>
-        {humanFeedback.tags.map((tag) => (
-          <Badge key={tag.name} variant="secondary" className="mr-2">
-            {tag.name}
-          </Badge>
-        ))}
-        {humanFeedback.nsfw && (
-          <Badge variant="secondary" className="mr-1">
-            NSFW
-          </Badge>
-        )}
       </div>
 
-      <Sample humanFeedback={humanFeedback} hideDate />
+      <Chat humanFeedback={humanFeedback} hideDate />
     </div>
   );
 }

@@ -1,11 +1,13 @@
 "use client";
 
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { HumanFeedback } from "./page";
 import { Button } from "@/components/ui/button";
 import TagPicker from "@/components/ui/tag-picker";
@@ -13,29 +15,39 @@ import { Checkbox } from "@/components/ui/checkbox";
 import StarRater from "@/components/ui/star-rater";
 import { update } from "./actions";
 import { useState } from "react";
+import { CheckIcon } from "@radix-ui/react-icons";
 
-type LabelSampleProps = {
+type LabelChatProps = {
   humanFeedback: HumanFeedback;
   suggestedTags: string[];
   children: React.ReactNode;
 };
 
-export default function LabelSample({
+export default function LabelChat({
   humanFeedback,
   suggestedTags,
   children,
-}: LabelSampleProps) {
+}: LabelChatProps) {
   const updateFeedback = update.bind(null, humanFeedback.id);
   const [open, setOpen] = useState(false);
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>{children}</SheetTrigger>
-      <SheetContent>
-        <SheetHeader>Label sample #{humanFeedback.numId}</SheetHeader>
-        This info makes your sample more useful for training future models.
-        <form className="mt-4" action={updateFeedback}>
-          <table className="table-auto border-separate border-spacing-2 text-xs">
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <div className="flex items-center space-x-3">
+            Next, label your chat
+          </div>
+        </DialogHeader>
+        <DialogDescription className="text-xs">
+          Thanks for contributing to Otherbrain HF, a free human feedback
+          dataset for training open LLMs. It’s growing every day with
+          contributions like yours. Please label your chat to make it more
+          useful for training future models.
+        </DialogDescription>
+        <form className="mt-2" action={updateFeedback}>
+          <table className="table-auto border-separate border-spacing-y-3 border-spacing-x-2 text-xs">
             <tbody>
               <tr>
                 <td align="right" valign="top">
@@ -68,7 +80,7 @@ export default function LabelSample({
               <tr>
                 <td align="right" valign="top">
                   <label htmlFor="nsfw" className="font-semibold row-auto">
-                    NSFW?
+                    NSFW
                   </label>
                 </td>
                 <td align="left" valign="top">
@@ -93,7 +105,7 @@ export default function LabelSample({
             </Button>
           </div>
         </form>
-      </SheetContent>
-    </Sheet>
+      </DialogContent>
+    </Dialog>
   );
 }
