@@ -72,12 +72,10 @@ export default async function Home({ params }: { params: { numId: string } }) {
   return (
     <div className="max-w-xl mb-20 mx-auto">
       <div className="mb-6">
-        <div className="flex justify-between items-end">
-          <h1 className="text-3xl mr-2 font-semibold truncate font-mono">
-            Chat #{humanFeedback.numId},{" "}
-            {humanFeedback.createdAt.toLocaleDateString()}
-          </h1>
-        </div>
+        <h1 className="text-3xl mr-2 font-semibold truncate font-mono">
+          Chat #{humanFeedback.numId},{" "}
+          {humanFeedback.createdAt.toLocaleDateString()}
+        </h1>
 
         <div className="flex items-center mt-1.5 text-muted-foreground mb-1">
           <div className="text-sm">
