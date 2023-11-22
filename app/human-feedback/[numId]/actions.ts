@@ -13,7 +13,7 @@ async function compare(
   storedPassword?: string | null
 ): Promise<boolean> {
   if (!suppliedPassword || !storedPassword) return false;
-  const [hashedPassword, salt] = storedPassword.split(".");
+  const [salt, hashedPassword] = storedPassword.split(":");
   const hashedPasswordBuf = Buffer.from(hashedPassword, "hex");
   const suppliedPasswordBuf = (await scryptAsync(
     suppliedPassword,
@@ -41,6 +41,7 @@ export async function update(humanFeedbackId: string, formData: FormData) {
   }
 
   const editKey = cookies().get(`edit-key-${humanFeedback.numId}`)?.value;
+  console.log("edit key", editKey, humanFeedback.editKeyHash);
 
   if (!(await compare(editKey, humanFeedback.editKeyHash))) {
     throw new Error("Edit key does not match");
