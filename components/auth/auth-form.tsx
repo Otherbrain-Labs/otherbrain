@@ -52,7 +52,7 @@ export default function AuthForm({ type }: { type: "login" | "register" }) {
         <p className="text-center text-sm text-muted-foreground">
           Already have an account?{" "}
           <Link href="/login" className="font-semibold text-foreground">
-            Sign in
+            Log in
           </Link>{" "}
           instead.
         </p>

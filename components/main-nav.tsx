@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "@/components/mode-toggle";
 import AuthNavItem from "@/components/auth/auth-nav-item";
+import { Button } from "./ui/button";
 
 export function MainNav() {
   return (
@@ -16,7 +17,10 @@ export function MainNav() {
         />
       </Link>
 
-      <div className="flex">
+      <div className="flex items-center">
+        <Button variant="ghost" asChild className="mr-2">
+          <Link href="/human-feedback">HF</Link>
+        </Button>
         <AuthNavItem />
         <ModeToggle />
       </div>

@@ -17,7 +17,7 @@ export default function Login() {
               height={40}
             />
           </Link>
-          <h3 className="text-xl font-semibold">Sign In</h3>
+          <h3 className="text-xl font-semibold">Log In</h3>
           <p className="text-sm text-muted-foreground">Expand your mind</p>
         </div>
 

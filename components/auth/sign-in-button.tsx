@@ -13,7 +13,7 @@ export default function SignInButton() {
 
   return (
     <Button variant="ghost" asChild className="mr-2">
-      <Link href="/login">Sign in</Link>
+      <Link href="/login">Log in</Link>
     </Button>
   );
 }

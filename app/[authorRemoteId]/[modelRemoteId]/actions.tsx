@@ -9,7 +9,7 @@ export async function deleteReview(id: string) {
   const userId = session?.user?.id;
 
   if (!userId) {
-    return { message: "Session is required, please sign in." };
+    return { message: "Session is required, please log in." };
   }
 
   await prisma.review.delete({
@@ -23,7 +23,7 @@ export async function createReview(modelId: string, formData: FormData) {
   const session = await getServerSession();
 
   if (!session || !session.user?.email) {
-    return { message: "Session is required, please sign in." };
+    return { message: "Session is required, please log in." };
   }
 
   const user = await prisma.user.findUnique({
