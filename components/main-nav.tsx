@@ -18,7 +18,7 @@ export function MainNav() {
       </Link>
 
       <div className="flex items-center">
-        <Button variant="ghost" asChild className="mr-2">
+        <Button size="sm" variant="ghost" asChild className="mr-2">
           <Link href="/human-feedback">HF</Link>
         </Button>
         <AuthNavItem />
