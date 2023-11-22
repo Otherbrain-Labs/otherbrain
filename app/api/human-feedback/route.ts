@@ -1,5 +1,9 @@
 import { z } from "zod";
 import prisma from "@/lib/prisma";
+import { randomBytes, scrypt as asyncScrypt } from "crypto";
+import { promisify } from "util";
+
+const scrypt = promisify(asyncScrypt);
 
 const HumanFeedback = z.object({
   messages: z.array(
@@ -12,6 +16,7 @@ const HumanFeedback = z.object({
   promptTemplate: z.string(),
   lastSystemPrompt: z.string(),
   client: z.string(),
+  quality: z.number().optional(),
 });
 
 export async function POST(request: Request) {
@@ -35,6 +40,13 @@ export async function POST(request: Request) {
     parts.pop();
   }
 
+  const salt = randomBytes(16).toString("hex");
+  const editKey = randomBytes(16).toString("hex");
+  const editKeyHash =
+    salt + ":" + ((await scrypt(editKey, salt, 64)) as Buffer).toString("hex");
+
+  console.log("juicy fruity", editKey, editKeyHash);
+
   // save with prisma
   const humanFeedback = await prisma.humanFeedback.create({
     data: {
@@ -50,6 +62,8 @@ export async function POST(request: Request) {
           text: message.text,
         })),
       },
+      quality: result.quality,
+      editKeyHash,
     },
   });
 
@@ -71,7 +85,10 @@ export async function POST(request: Request) {
     });
   }
 
-  return new Response(JSON.stringify({ id: humanFeedback.numId }), {
-    headers: { "content-type": "application/json" },
-  });
+  return new Response(
+    JSON.stringify({ id: `${humanFeedback.numId}_${editKey}` }),
+    {
+      headers: { "content-type": "application/json" },
+    }
+  );
 }

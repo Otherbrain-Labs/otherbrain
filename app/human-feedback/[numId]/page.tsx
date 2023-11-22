@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { PencilLineIcon } from "lucide-react";
 
 function loadChat(numId: number) {
-  console.log("numId", numId);
   return prisma.humanFeedback.findFirst({
     where: {
       numId: numId,
@@ -92,7 +91,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          {humanFeedback.tags.length && humanFeedback.quality && (
+          {humanFeedback.tags.length > 0 && humanFeedback.quality && (
             <StarRating rating={humanFeedback.quality} />
           )}
           {humanFeedback.tags.map((tag) => (
@@ -105,7 +104,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
             humanFeedback={humanFeedback}
             suggestedTags={suggestedTags}
           >
-            {humanFeedback.tags.length && humanFeedback.quality ? (
+            {humanFeedback.tags.length > 0 && humanFeedback.quality ? (
               <Button
                 className="text-muted-foreground"
                 size="sm"
