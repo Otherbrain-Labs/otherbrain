@@ -143,6 +143,7 @@ model HumanFeedback {
   quality          Int?
   messages         HumanFeedbackMessage[]
   nsfw             Boolean?
+  editKeyHash      String?
 
   // we connect with a model if we find one via the modelName
   modelId String?

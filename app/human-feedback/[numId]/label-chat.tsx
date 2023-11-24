@@ -14,8 +14,8 @@ import TagPicker from "@/components/ui/tag-picker";
 import { Checkbox } from "@/components/ui/checkbox";
 import StarRater from "@/components/ui/star-rater";
 import { update } from "./actions";
-import { useState } from "react";
-import { CheckIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type LabelChatProps = {
   humanFeedback: HumanFeedback;
@@ -28,8 +28,35 @@ export default function LabelChat({
   suggestedTags,
   children,
 }: LabelChatProps) {
+  const [canLabel, setCanLabel] = useState(false);
   const updateFeedback = update.bind(null, humanFeedback.id);
   const [open, setOpen] = useState(false);
+  const [shouldAutoOpen, setShouldAutoOpen] = useState(true);
+
+  useEffect(() => {
+    // check for cookie matching `edit-key-${numId}`
+    // if it's there, set canLabel to true and setOpen to true if "label" is in searchParams
+
+    const labelKey = `edit-key-${humanFeedback.numId}=`;
+    // check for it iin cookie
+    const cookie = document.cookie
+      .split(";")
+      .map((c) => c.trim())
+      .find((c) => c.startsWith(labelKey));
+    if (!cookie) {
+      return;
+    }
+
+    if (humanFeedback.tags.length === 0 && shouldAutoOpen) {
+      setOpen(true);
+    }
+    setCanLabel(true);
+    setShouldAutoOpen(false);
+  }, [humanFeedback.numId, humanFeedback.tags.length, shouldAutoOpen]);
+
+  if (!canLabel) {
+    return null;
+  }
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
