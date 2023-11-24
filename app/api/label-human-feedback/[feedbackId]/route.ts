@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { RedirectType, redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 export function GET(
@@ -13,5 +13,5 @@ export function GET(
     expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
   });
 
-  redirect(`/human-feedback/${numId}?label=true`);
+  redirect(`/human-feedback/${numIdString}`, RedirectType.replace);
 }

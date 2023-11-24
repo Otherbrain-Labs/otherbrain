@@ -91,7 +91,7 @@ export default async function Home({ params }: { params: { numId: string } }) {
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          {humanFeedback.tags.length > 0 && humanFeedback.quality && (
+          {humanFeedback.quality && (
             <StarRating rating={humanFeedback.quality} />
           )}
           {humanFeedback.tags.map((tag) => (
