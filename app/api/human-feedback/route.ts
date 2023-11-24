@@ -45,8 +45,6 @@ export async function POST(request: Request) {
   const editKeyHash =
     salt + ":" + ((await scrypt(editKey, salt, 64)) as Buffer).toString("hex");
 
-  console.log("juicy fruity", editKey, editKeyHash);
-
   // save with prisma
   const humanFeedback = await prisma.humanFeedback.create({
     data: {

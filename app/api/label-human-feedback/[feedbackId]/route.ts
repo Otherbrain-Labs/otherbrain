@@ -9,8 +9,9 @@ export function GET(
   const [numIdString, secret] = feedbackId.split("_");
   const numId = parseInt(numIdString, 10);
 
+  const oneDay = 24 * 60 * 60 * 1000;
   cookies().set(`edit-key-${numId}`, secret, {
-    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    expires: new Date(Date.now() + oneDay),
   });
 
   redirect(`/human-feedback/${numIdString}`, RedirectType.replace);
