@@ -18,13 +18,13 @@ export default async function OtherbrainHFPage() {
 
         <h2 className="tet-2xl font-bold mt-8">Open models, local AI</h2>
         <p className="text-sm pt-2 pb-0">
-          In the near future we'll all amplify our cognition with AI. To some
-          degree we already do this with search engines and some of the early
-          chatbots. At the limit we'll be 10x smarter, fluidly passing data back
-          and forth between our brains and AI models. The underlying systems
-          must be private and secure for us to feel comfortable using an
-          interface this way. Open models that we can run locally on our own
-          devices offer a promissing path to this future.
+          In the near future we&apos;ll all amplify our cognition with AI. To
+          some degree we already do this with search engines and some of the
+          early chatbots. At the limit we&apos;ll be 10x smarter, fluidly
+          passing data back and forth between our brains and AI models. The
+          underlying systems must be private and secure for us to feel
+          comfortable using an interface this way. Open models that we can run
+          locally on our own devices offer a promissing path to this future.
         </p>
         <p className="text-sm pt-2 pb-0">
           Commercial chatbots get to train on feedback from live users on their
@@ -53,17 +53,17 @@ export default async function OtherbrainHFPage() {
         <p className="text-sm pt-2 pb-0">
           For app developers, Otherbrain HF is an easy path to integrate
           anonymous feedback collection in your app. Just POST a chat then
-          redirect to have the user label it. If you have an app you'd like to
-          add, contact us for help. We'll make sure your client is correctly
-          linked and attributed.
+          redirect to have the user label it. If you have an app you&apos;d like
+          to add, contact us for help. We&apos;ll make sure your client is
+          correctly linked and attributed.
         </p>
 
         <h2 className="tet-2xl font-bold mt-8">Get the data</h2>
         <p className="text-sm pt-2 pb-0">
           Are you training an open model that could benefit from the Otherbrain
-          HF dataset? It's small right now ({count} chats) but growing every
-          day. Contact us for access. When the dataset grows enough to be
-          useful, we'll add automated dumps to Hugging Face.
+          HF dataset? It&apos;s small right now ({count} chats) but growing
+          every day. Contact us for access. When the dataset grows enough to be
+          useful, we&apos;ll add automated dumps to Hugging Face.
         </p>
       </div>
     </div>
