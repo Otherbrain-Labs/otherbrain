@@ -1,16 +1,16 @@
-name: scrape-models
+name: scrape-models-preview
 on:
   push:
     branches:
       - "ci/*"
   schedule:
-    - cron: "2,17,32,47 * * * *"
+    - cron: "2 7 * * *"
 jobs:
   scrape:
     environment: Production
     runs-on: ubuntu-latest
     env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL: ${{ secrets.PREVIEW_DATABASE_URL }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
