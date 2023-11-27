@@ -11,7 +11,9 @@ export default async function OtherbrainHFPage() {
   return (
     <div className="flex h-full w-full">
       <div className="h-full w-full flex flex-col justify-center mb-20  max-w-lg">
-        <h1 className="text-4xl sm:text-6xl pt-16 font-bold">Otherbrain HF</h1>
+        <h1 className="text-4xl sm:text-6xl pt-10 sm:pt-16 font-bold">
+          Otherbrain HF
+        </h1>
         <p className="text-lg pt-3 pb-0">
           Free human feedback dataset for open models
         </p>
