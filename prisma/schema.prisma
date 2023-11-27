@@ -138,7 +138,7 @@ model HumanFeedback {
   createdAt        DateTime               @default(now())
   modelName        String
   promptTemplate   String
-  lastSystemPrompt String
+  lastSystemPrompt String                 @db.LongText
   client           String
   quality          Int?
   messages         HumanFeedbackMessage[]
