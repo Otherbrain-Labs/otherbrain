@@ -54,16 +54,30 @@ export default async function OtherbrainHFPage() {
           For app developers, Otherbrain HF is an easy path to integrate
           anonymous feedback collection in your app. Just POST a chat then
           redirect to have the user label it. If you have an app you&apos;d like
-          to add, contact us for help. We&apos;ll make sure your client is
-          correctly linked and attributed.
+          to add,{" "}
+          <a
+            className="underline"
+            href="mailto:peter@campsh.com?subject=Otherbrain%20HF"
+          >
+            contact us
+          </a>{" "}
+          for help. We&apos;ll make sure your client is correctly linked and
+          attributed.
         </p>
 
         <h2 className="tet-2xl font-bold mt-8">Get the data</h2>
         <p className="text-sm pt-2 pb-0">
           Are you training an open model that could benefit from the Otherbrain
           HF dataset? It&apos;s small right now ({count} chats) but growing
-          every day. Contact us for access. When the dataset grows enough to be
-          useful, we&apos;ll add automated dumps to Hugging Face.
+          every day.{" "}
+          <a
+            className="underline"
+            href="mailto:peter@campsh.com?subject=Otherbrain%20HF"
+          >
+            Contact us
+          </a>{" "}
+          for access. When the dataset grows enough to be useful, we&apos;ll add
+          automated dumps to Hugging Face.
         </p>
       </div>
     </div>
