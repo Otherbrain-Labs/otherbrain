@@ -53,7 +53,7 @@ export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
                 <td align="left" valign="top">
                   <Markdown
                     className={cn(
-                      "prose prose-sm dark:prose-invert leading-tight text-xs ml-2",
+                      "prose prose-sm dark:prose-invert leading-tight text-xs ml-2 break-words w-[92%]",
                       {
                         "mb-3": i !== humanFeedback.messages.length - 1,
                       }
