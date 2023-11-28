@@ -3,6 +3,7 @@ import { HumanFeedback } from "./chats";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { cn } from "@/lib/utils";
+import StarRating from "@/components/ui/star-rating";
 
 type ChatProps = {
   humanFeedback: HumanFeedback;
@@ -22,7 +23,12 @@ export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
           className="hover:underline flex items-center justify-between mb-3 font-mono"
           href={`/human-feedback/${humanFeedback.numId}`}
         >
-          <div>Chat #{humanFeedback.numId}</div>
+          <div className="flex">
+            <div className="pr-4">Chat #{humanFeedback.numId}</div>
+            {!!humanFeedback.quality && (
+              <StarRating rating={humanFeedback.quality} />
+            )}
+          </div>
 
           {humanFeedback.createdAt.toLocaleDateString()}
         </Link>
