@@ -37,7 +37,7 @@ export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
         className="prose prose-sm dark:prose-invert italic leading-tight text-xs"
         remarkPlugins={[remarkGfm]}
       >
-        {humanFeedback.lastSystemPrompt}
+        {humanFeedback.lastSystemPrompt.replaceAll("\n", "  \n")}
       </Markdown>
       <table className="table-auto border-separate">
         <tbody>
@@ -60,7 +60,7 @@ export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
                     )}
                     remarkPlugins={[remarkGfm]}
                   >
-                    {message.text}
+                    {message.text.replaceAll("\n", "  \n")}
                   </Markdown>
                 </td>
               </tr>
