@@ -39,34 +39,20 @@ export default async function Chat({ humanFeedback, hideDate }: ChatProps) {
       >
         {humanFeedback.lastSystemPrompt.replaceAll("\n", "  \n")}
       </Markdown>
-      <table className="table-auto border-separate">
-        <tbody>
-          {messages
-            .sort((a, b) => a.index - b.index)
-            .map((message, i) => (
-              <tr key={message.id}>
-                <td align="right" valign="top">
-                  <div className="font-semibold italic row-auto">
-                    {message.fromUser ? "human" : "bot"}
-                  </div>
-                </td>
-                <td align="left" valign="top">
-                  <Markdown
-                    className={cn(
-                      "prose prose-sm dark:prose-invert leading-tight text-xs ml-2 break-words w-[92%]",
-                      {
-                        "mb-3": i !== humanFeedback.messages.length - 1,
-                      }
-                    )}
-                    remarkPlugins={[remarkGfm]}
-                  >
-                    {message.text.replaceAll("\n", "  \n")}
-                  </Markdown>
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
+      {messages
+        .sort((a, b) => a.index - b.index)
+        .map((message, i) => (
+          <div key={message.id} className="flex spacing-y-2 w-full">
+            <div className="font-semibold italic row-auto min-w-[41px] text-right">
+              {message.fromUser ? "human" : "bot"}
+            </div>
+            <div className="prose prose-sm dark:prose-invert leading-tight text-xs ml-3 break-words w-full overflow-clip">
+              <Markdown remarkPlugins={[remarkGfm]}>
+                {message.text.replaceAll("\n", "  \n")}
+              </Markdown>
+            </div>
+          </div>
+        ))}
     </div>
   );
 }
