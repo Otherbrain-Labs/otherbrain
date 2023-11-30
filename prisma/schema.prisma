@@ -144,6 +144,7 @@ model HumanFeedback {
   messages         HumanFeedbackMessage[]
   nsfw             Boolean?
   editKeyHash      String?
+  ip               String? // for rate-limiting
 
   // we connect with a model if we find one via the modelName
   modelId String?

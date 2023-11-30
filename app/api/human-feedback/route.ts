@@ -19,8 +19,9 @@ const HumanFeedback = z.object({
   quality: z.number().optional(),
 });
 
-export async function POST(request: Request) {
-  const body = await request.json();
+export async function POST(req: Request) {
+  const ip = (req.headers.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
+  const body = await req.json();
   const result = HumanFeedback.parse(body);
 
   // try to find model to link to feedback by iteratively removing extensions from modelName
@@ -62,6 +63,7 @@ export async function POST(request: Request) {
       },
       quality: result.quality,
       editKeyHash,
+      ip,
     },
   });
 
