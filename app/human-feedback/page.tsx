@@ -59,7 +59,7 @@ export default async function OtherbrainHFPage() {
           to add,{" "}
           <a
             className="underline"
-            href="mailto:peter@campsh.com?subject=Otherbrain%20HF"
+            href="mailto:data@otherbrain.world?subject=Otherbrain%20HF"
           >
             contact us
           </a>{" "}
@@ -74,7 +74,7 @@ export default async function OtherbrainHFPage() {
           every day.{" "}
           <a
             className="underline"
-            href="mailto:peter@campsh.com?subject=Otherbrain%20HF"
+            href="mailto:data@otherbrain.world?subject=Otherbrain%20HF"
           >
             Contact us
           </a>{" "}
