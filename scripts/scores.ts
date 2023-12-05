@@ -16,11 +16,11 @@ const RESULTS_TMP_DIR = process.env.GITHUB_WORKSPACE
   ? `${process.env.GITHUB_WORKSPACE}/llm-leaderboard-scores`
   : `/tmp/llm-leaderboard-scores`;
 
-const cloneResults = async () => {
+const cloneResults = () => {
   if (fs.existsSync(RESULTS_TMP_DIR)) {
-    await fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
+    fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
   }
-  await execSync(
+  execSync(
     `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR} && echo "cloned"`
   );
 };
@@ -85,7 +85,7 @@ const parseResults = (data: any) => {
 async function scrape(save: boolean = false, reclone: boolean = false) {
   if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
     console.log("Cloning results...");
-    await cloneResults();
+    cloneResults();
   }
 
   const results: { [key: string]: any } = {};
@@ -101,7 +101,7 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
       for (const file of files) {
         try {
           const data = JSON.parse(
-            await fs.readFileSync(`${RESULTS_TMP_DIR}/${name}/${file}`, "utf8")
+            fs.readFileSync(`${RESULTS_TMP_DIR}/${name}/${file}`, "utf8")
           );
 
           scores = { ...scores, ...parseResults(data) };
@@ -127,7 +127,7 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
   if (save) {
     const jsonString = JSON.stringify(results, null, 2);
 
-    fs.writeFile(`${__dirname}/./data/scores.json`, jsonString, (err) => {
+    fs.writeFile(`${__dirname}/data/scores.json`, jsonString, (err) => {
       if (err) {
         console.error("Error writing JSON to file:", err);
       } else {
