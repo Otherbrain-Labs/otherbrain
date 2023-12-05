@@ -9,6 +9,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Star from "../ui/star";
 import { avgStarsFormatter, dateFormatter } from "@/lib/utils";
+import { ScoreKey } from "../scores";
 
 type Models =
   | Awaited<ReturnType<typeof loadModels>>
@@ -16,7 +17,15 @@ type Models =
 
 type Model = Models[number];
 
-export const idToTitle: Record<string, string> = {
+type ColumnKey =
+  | ScoreKey
+  | "name"
+  | "avgStars"
+  | "lastModifiedDate"
+  | "numParameters"
+  | "numHumanFeedback";
+
+export const idToTitle: Record<ColumnKey, string> = {
   name: "Model",
   avgStars: "Rating",
   lastModifiedDate: "Updated",
@@ -28,7 +37,6 @@ export const idToTitle: Record<string, string> = {
   truthfulqa: "TruthfulQA",
   winogrande: "Winogrande",
   gsm8k: "GSM8K",
-  drop: "DROP",
   numHumanFeedback: "Chats",
 };
 
@@ -40,10 +48,10 @@ function SortHeader({ column }: { column: Column<Model> }) {
       className="w-full justify-start p-0 relative group text-xs"
     >
       <span className="opacity-0" aria-hidden>
-        {idToTitle[column.id]}
+        {idToTitle[column.id as ColumnKey]}
       </span>
       <span className="absolute left-0 flex items-center group-hover:underline">
-        {idToTitle[column.id]}
+        {idToTitle[column.id as ColumnKey]}
 
         {column.getIsSorted() === "desc" && (
           <ChevronUp className="ml-1 h-3.5 w-3.5" />
@@ -183,12 +191,6 @@ export const columns: ColumnDef<Model>[] = [
   },
   {
     accessorKey: "gsm8k",
-    header: ({ column }) => <SortHeader column={column} />,
-    cell: ScoreCell,
-    invertSorting: true,
-  },
-  {
-    accessorKey: "drop",
     header: ({ column }) => <SortHeader column={column} />,
     cell: ScoreCell,
     invertSorting: true,

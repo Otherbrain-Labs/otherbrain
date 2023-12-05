@@ -164,7 +164,7 @@ export async function scrape(save: boolean = false) {
       if (err) {
         console.error("Error writing JSON to file:", err);
       } else {
-        console.log("Saved score data to file!");
+        console.log("Saved model data to file!");
       }
     });
   }

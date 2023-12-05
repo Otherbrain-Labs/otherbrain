@@ -12,7 +12,6 @@ export type ScoreKey = keyof Pick<
   | "hellaswag"
   | "mmlu"
   | "truthfulqa"
-  | "drop"
   | "gsm8k"
   | "winogrande"
 >;
@@ -23,7 +22,6 @@ export const scoreText: Record<ScoreKey, string> = {
   hellaswag: "HellaSwag",
   mmlu: "MMLU",
   truthfulqa: "TruthfulQA",
-  drop: "DROP",
   gsm8k: "GSM8K",
   winogrande: "Winogrande",
 };
@@ -35,7 +33,6 @@ export const scoreDescription: Record<ScoreKey, string> = {
     "a common sense evaluation that's easy for humans, tough for top models",
   mmlu: "a test measuring factual accuracy on various topics like math, history, etc",
   truthfulqa: "evaluates tendency to propagate prevalent online falsehoods",
-  drop: "a reading comprehension test that requires discrete reasoning over paragraphs",
   gsm8k: "a set of grade school math word problems",
   winogrande: "commonsense reasoning",
 };
@@ -45,7 +42,6 @@ export const scoreHref: Partial<Record<ScoreKey, string>> = {
   hellaswag: "https://arxiv.org/abs/1905.07830",
   mmlu: "https://arxiv.org/abs/2009.03300",
   truthfulqa: "https://arxiv.org/abs/2109.07958",
-  drop: "https://arxiv.org/abs/1903.00161",
   gsm8k: "https://arxiv.org/abs/2110.14168",
   winogrande: "https://arxiv.org/abs/1907.10641",
 };

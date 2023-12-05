@@ -7,7 +7,6 @@ const REQUIRED_SCORES = [
   "arc",
   "hellaswag",
   "truthfulqa",
-  "drop",
   "gsm8k",
   "winogrande",
   "mmlu",
@@ -17,11 +16,11 @@ const RESULTS_TMP_DIR = process.env.GITHUB_WORKSPACE
   ? `${process.env.GITHUB_WORKSPACE}/llm-leaderboard-scores`
   : `/tmp/llm-leaderboard-scores`;
 
-const cloneResults = async () => {
+const cloneResults = () => {
   if (fs.existsSync(RESULTS_TMP_DIR)) {
-    await fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
+    fs.rmSync(RESULTS_TMP_DIR, { recursive: true, force: true });
   }
-  await execSync(
+  execSync(
     `git clone https://huggingface.co/datasets/open-llm-leaderboard/results ${RESULTS_TMP_DIR} && echo "cloned"`
   );
 };
@@ -61,9 +60,6 @@ const parseResults = (data: any) => {
       case "harness|truthfulqa:mc|0":
         res["truthfulqa"] = roundFloat(data.results[key].mc2 * 100);
         break;
-      case "harness|drop|3":
-        res["drop"] = roundFloat(data.results[key].f1 * 100);
-        break;
       case "harness|gsm8k|5":
         res["gsm8k"] = roundFloat(data.results[key].acc * 100);
         break;
@@ -89,7 +85,7 @@ const parseResults = (data: any) => {
 async function scrape(save: boolean = false, reclone: boolean = false) {
   if (!fs.existsSync(RESULTS_TMP_DIR) || reclone) {
     console.log("Cloning results...");
-    await cloneResults();
+    cloneResults();
   }
 
   const results: { [key: string]: any } = {};
@@ -105,7 +101,7 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
       for (const file of files) {
         try {
           const data = JSON.parse(
-            await fs.readFileSync(`${RESULTS_TMP_DIR}/${name}/${file}`, "utf8")
+            fs.readFileSync(`${RESULTS_TMP_DIR}/${name}/${file}`, "utf8")
           );
 
           scores = { ...scores, ...parseResults(data) };
@@ -131,7 +127,7 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
   if (save) {
     const jsonString = JSON.stringify(results, null, 2);
 
-    fs.writeFile(`${__dirname}/./data/scores.json`, jsonString, (err) => {
+    fs.writeFile(`${__dirname}/data/scores.json`, jsonString, (err) => {
       if (err) {
         console.error("Error writing JSON to file:", err);
       } else {
