@@ -7,7 +7,6 @@ const REQUIRED_SCORES = [
   "arc",
   "hellaswag",
   "truthfulqa",
-  "drop",
   "gsm8k",
   "winogrande",
   "mmlu",
@@ -60,9 +59,6 @@ const parseResults = (data: any) => {
         break;
       case "harness|truthfulqa:mc|0":
         res["truthfulqa"] = roundFloat(data.results[key].mc2 * 100);
-        break;
-      case "harness|drop|3":
-        res["drop"] = roundFloat(data.results[key].f1 * 100);
         break;
       case "harness|gsm8k|5":
         res["gsm8k"] = roundFloat(data.results[key].acc * 100);
