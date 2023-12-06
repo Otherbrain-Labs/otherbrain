@@ -163,16 +163,14 @@ export async function load(useSaved: boolean = true, saveData: boolean = true) {
 
   const scores = useSaved ? savedScores : await scrape(saveData);
 
-  const updates = [];
   for (let key in scores) {
     if (!scores.hasOwnProperty(key)) {
       continue;
     }
 
     const score = scores[key as keyof typeof scores];
-    updates.push(updateScore(key, score));
+    await updateScore(key, score);
   }
-  await Promise.all(updates);
 
   const finalCount = await prisma.model.count({
     where: { average: { not: null } },
