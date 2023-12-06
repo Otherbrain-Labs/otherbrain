@@ -139,40 +139,40 @@ async function scrape(save: boolean = false, reclone: boolean = false) {
   return results;
 }
 
+async function updateScore(
+  key: string,
+  score: Awaited<ReturnType<typeof scrape>>["number"]
+) {
+  try {
+    const value = await prisma.model.updateMany({
+      where: { remoteId: key },
+      data: score,
+    });
+    if (value.count > 0) {
+      console.log(`Updated scores for model ${key}`);
+    }
+  } catch (error) {
+    console.error(error, key);
+  }
+}
+
 export async function load(useSaved: boolean = true, saveData: boolean = true) {
-  const [originalCount, existingIds] = await prisma.$transaction([
-    prisma.model.count({
-      where: { average: { not: null } },
-    }),
-    prisma.model.findMany({
-      select: { remoteId: true },
-    }),
-  ]);
-  const existingIdsFlat = existingIds.map((model) => model.remoteId);
+  const originalCount = await prisma.model.count({
+    where: { average: { not: null } },
+  });
+
   const scores = useSaved ? savedScores : await scrape(saveData);
 
+  const updates = [];
   for (let key in scores) {
     if (!scores.hasOwnProperty(key)) {
       continue;
     }
 
-    if (!existingIdsFlat.includes(key)) {
-      continue;
-    }
-
     const score = scores[key as keyof typeof scores];
-    try {
-      const value = await prisma.model.updateMany({
-        where: { remoteId: key },
-        data: score,
-      });
-      if (value.count > 0) {
-        console.log(`Updated scores for model ${key}`);
-      }
-    } catch (error) {
-      console.error(error, key);
-    }
+    updates.push(updateScore(key, score));
   }
+  await Promise.all(updates);
 
   const finalCount = await prisma.model.count({
     where: { average: { not: null } },
