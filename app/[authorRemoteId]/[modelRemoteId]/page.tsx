@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
@@ -46,8 +46,8 @@ export default async function Home({
   params: { authorRemoteId: string; modelRemoteId: string };
 }) {
   const session = await getServerSession();
-
-  const model = await loadModel(params.modelRemoteId, params.authorRemoteId);
+  const { authorRemoteId, modelRemoteId } = params;
+  const model = await loadModel(modelRemoteId, authorRemoteId);
 
   if (!model || !model.author) {
     notFound();
@@ -131,13 +131,22 @@ export default async function Home({
           )}
           {!model.reviews.find(
             (review) => review.userId === session?.user?.id
-          ) && (
-            <ReviewDialog model={model}>
-              <Button className="hover:underline hover:bg-primary">
-                Write a review
+          ) &&
+            (session?.user ? (
+              <ReviewDialog model={model}>
+                <Button className="hover:underline hover:bg-primary">
+                  Write a review
+                </Button>
+              </ReviewDialog>
+            ) : (
+              <Button className="hover:underline hover:bg-primary" asChild>
+                <Link
+                  href={`/login?redirect-to=/${authorRemoteId}/${modelRemoteId}`}
+                >
+                  Write a review
+                </Link>
               </Button>
-            </ReviewDialog>
-          )}
+            ))}
         </div>
       </div>
 
